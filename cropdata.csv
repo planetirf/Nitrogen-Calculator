@@ -1,0 +1,8 @@
+Crop,N in harvested part,,Yield unit choices,,,,Ask for straw ,N in residue,,N uptake curve,,,,,,,,,,
+,value,unit,unit,conversion,unit,conversion,removed?,,,either equation,or coordinates,,,,,,,,,
+,,,, to tons/acre,, to tons/acre,,a,b,,1x,1y,2x,2y,3x,3y,4x,4y,5x,5y
+"Wheat, durum",42.1,lbs N/ton @ 12% moisture,tons/acre,1,,,y,0.05,50,,0,0,25,10,50,80,80,96,100,100
+Cucumber,2.16,lbs/ton of fresh weight,tons/acre,1,box (50 lbs),0.025,n,0,90,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,

@@ -1,0 +1,110 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id='input'>
+
+  Field Id:<input type="text" id="FieldId"><br>
+  <div id="input">
+    Select Crop:<select id="cropSelect">
+  <option value="Corn">Corn</option>
+  <option value="Wheat">Wheat</option>
+  <option value="Tomatoes">Tomatoes</option>
+  <option value="Sunflowers">Sunflowers</option>
+</select><br>
+    Expected Yield:<input type="text" id="ExpectedYield">
+      Units:<select id="Units">
+      <option value="lbs/acre">lbs/acre</option>
+      <option value="lbs/ton">lbs/ton</option>
+    </select><br>
+    Straw Removed:<select id="StrawRemoved">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+  </select><br>
+    Percent (%) of Straw Removed:<input type="text" id="PercentRemoved"><br>
+  </div>
+
+  Planting Date:<input type="text" id="PlantingDate"><br>
+  Method of Planting:<input type="text" id="PlantingMethod"><br>
+  Expected Harvest Date:<input type="text" id="HarvestDate"><br>
+
+</div>
+<br><br><br>
+<div id='output'>
+  Nitrogen (N) concentration in harvested product:<p id='NConc'></p><br>
+  N Removed at harvest:<p id='NRemoved'></p><br>
+  N in residue:<p id='NResidue'></p><br>
+  Total N uptake:<p id='NUptake'></p><br>
+  N uptake curve:<p id='NCurve'></p><fbr>
+</div>
+<div id="outputz">
+<h1>Calculate</h1>
+<button type="button" onclick="Calculate()">Calculate</button>
+</div>
+</body>
+
+
+
+<div id="demo">
+<h1>The XMLHttpRequest Object</h1>
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "dataTxt.txt", true);
+  xhttp.send();
+}
+</script>
+
+
+
+
+<script type="text/javascript">
+///////////////// Read Data from CSV file TEST //////////////////////////
+///// *** Javascript difficulties with reading an local file durin
+////////////////////////////////////////////////////////////////////////
+document.getElementById('cropSelect').addEventListener("change", myFunction);
+
+/*  sample array to test calculators */
+var wheatData = ['Wheat',42.1,'lbs/acre','tons/acre',1,'yes',.05,50]
+
+function myFunction() {
+    alert ("Hello World!");
+}
+
+////////// Variables Targeting Input and Output Values ////////////////
+var crop = document.getElementById("cropSelect").value;
+//var expectedYield = document.getElementById("ExpectedYield").value;
+var units = document.getElementById("Units").value;
+var strawRemoved = document.getElementById("StrawRemoved").value;
+//var percentRemoved = document.getElementById("PercentRemoved").value;
+var plantingDate = document.getElementById("PlantingDate").value;
+var plantingMethod = document.getElementById("PlantingMethod").value;
+var harvestDate = document.getElementById("HarvestDate").value;
+
+function Calculate() {
+  var Nconc = document.getElementById('NConc').innerHTML = wheatData[1];
+  var expectedYield = document.getElementById("ExpectedYield").value;
+  var percentRemoved = document.getElementById("PercentRemoved").value;
+  var Nremoved = expectedYield * (Nconc/100);
+  var NinStraw = expectedYield * (percentRemoved/100) * (Nconc/100);
+
+  document.getElementById('NRemoved').innerHTML = Nremoved + " " + units;
+  document.getElementById('NResidue').innerHTML = NinStraw + " " + units;
+
+}
+
+
+</script>
+
+</html>
