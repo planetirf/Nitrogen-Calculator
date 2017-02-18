@@ -24,7 +24,12 @@ var cropJSON = {"crop":"Wheat", "percentN":42.1, "units": ["lbs/acre", "tons/acr
 
 function myFunction() {
     var x = cropJSON.units[1];
-    alert (x);
+    var mydata = data;
+    alert(mydata[0].crops[0].name);
+    alert(mydata[0].crops[0].percentN);
+    alert(mydata[0].crops[1].name);
+    alert(mydata[0].crops[1].percentN);
+
 }
 
 ////////// Variables Targeting Input and Output Values ////////////////
