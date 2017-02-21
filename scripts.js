@@ -20,10 +20,8 @@ function loadData() {
 document.getElementById('cropSelect').addEventListener("change", myFunction);
 
 /*  sample array to test calculators */
-var cropJSON = {"crop":"Wheat", "percentN":42.1, "units": ["lbs/acre", "tons/acre"], "conversionFactor":1,"residueRemoved": true, "slope": .05, "intercept":50};
 
 function myFunction() {
-    var x = cropJSON.units[1];
     var mydata = data;
     alert(mydata[0].crops[0].name);
     alert(mydata[0].crops[0].percentN);
