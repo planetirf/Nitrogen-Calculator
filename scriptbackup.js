@@ -23,7 +23,6 @@ function getData() {
       //console.log(cropChoices[j]['name']);
       name = cropChoices[j]['name'];
        cropSelector += "<option value=" + name + ">" + name + "</option>";
-       console.log(cropSelector);
     }
 
     // close the cropSelector options and add into inputHTML
@@ -34,6 +33,7 @@ function getData() {
   // Build Input Skeleton - will need to refactor to get "moving parts" working
   // Yield Input
 
+  unitsInput += '</select><br><br>';
   yieldInput += unitsInput;
   inputHTML += yieldInput;
   inputHTML += residueRemovedBox;
@@ -54,7 +54,7 @@ document.getElementById('cropSelector').addEventListener("change", unitSelector)
 
 function unitSelector() {
     var cropData = data;
-    var cropChoices = cropData[0]['crops'];
+    var cropChoices = cropData[0]['crops']
     var currentCrop = document.getElementById('cropSelector').value;
     //console.log(currentCrop);
      for (i = 0; i < cropChoices.length; i++) {
@@ -67,17 +67,16 @@ function unitSelector() {
            u = units[j];
            console.log(u);
            unitsInput += "<option value=" + u + ">" + u + "</option>";
-           unitsInput += '</select><br><br>';
-           console.log(unitsInput);
-           inputHTML += unitsInput;
 
          }
+         unitsInput += '</select><br><br>';
+         inputHTML += unitsInput;
        }
      }
 
 }
 
-//Call unitSelector function to initialize units
+// Call unitSelector function to initialize units
 unitSelector();
 
 function myFunction() {
@@ -99,18 +98,18 @@ var percentRemoved = document.getElementById("percentRemovedInput").value;
 // var plantingMethod = document.getElementById("PlantingMethod").value;
 // var harvestDate = document.getElementById("HarvestDate").value;
 //
-// function Calculate() {
-//   var Nconc = document.getElementById('NConc').innerHTML = cropJSON.percentN;
-//   var expectedYield = document.getElementById("ExpectedYield").value;
-//   var percentRemoved = document.getElementById("PercentRemoved").value;
-//   var NUptake = expectedYield * (Nconc/100);
-//   var NinStraw = expectedYield * (percentRemoved/100) * (Nconc/100);
-//   var Nremoved = expectedYield * (Nconc/100) - NinStraw;
-//
-//
-//   document.getElementById('NRemoved').innerHTML = Nremoved + " " + units;
-//   document.getElementById('NResidue').innerHTML = NinStraw + " " + units;
-//   document.getElementById('NUptake').innerHTML = NUptake + " " + units;
-//
-//
-// }
+function Calculate() {
+  var Nconc = document.getElementById('NConc').innerHTML = cropJSON.percentN;
+  var expectedYield = document.getElementById("ExpectedYield").value;
+  var percentRemoved = document.getElementById("PercentRemoved").value;
+  var NUptake = expectedYield * (Nconc/100);
+  var NinStraw = expectedYield * (percentRemoved/100) * (Nconc/100);
+  var Nremoved = expectedYield * (Nconc/100) - NinStraw;
+
+
+  document.getElementById('NRemoved').innerHTML = Nremoved + " " + units;
+  document.getElementById('NResidue').innerHTML = NinStraw + " " + units;
+  document.getElementById('NUptake').innerHTML = NUptake + " " + units;
+
+
+}
