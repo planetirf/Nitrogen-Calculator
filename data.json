@@ -1,4 +1,4 @@
-data = [{"crops":[
+data = ["crops",[
       { "name":"Wheat", "percentN":42.1, "units": ["tons/acre"], "conversionFactor":[1,0],"residueRemoved": true, "slope": 0.05, "intercept":50},
       { "name":"Cucumber", "percentN":2.16, "units": ["tons/acre", "Box (50 lbs)"], "conversionFactor":[1,0.25],"residueRemoved": false, "slope": 0.00, "intercept":0},
       { "name":"CropName", "percentN":0.0, "units": ["lbs/acre", "tons/acre"], "conversionFactor":[1,0],"residueRemoved": true, "slope": 0.00, "intercept":0},
@@ -7,4 +7,4 @@ data = [{"crops":[
       { "name":"CropName", "percentN":0.0, "units": ["lbs/acre", "tons/acre"], "conversionFactor":[1,0],"residueRemoved": true, "slope": 0.00, "intercept":0},
       { "name":"CropName", "percentN":0.0, "units": ["lbs/acre", "tons/acre"], "conversionFactor":[1,0],"residueRemoved": true, "slope": 0.00, "intercept":0},
   ]
-  }];
+  ];
