@@ -23,7 +23,7 @@ function getData() {
       //console.log(cropChoices[j]['name']);
       name = cropChoices[j]['name'];
        cropSelector += "<option value=" + name + ">" + name + "</option>";
-       console.log(cropSelector);
+       //console.log(cropSelector);
     }
 
     // close the cropSelector options and add into inputHTML
@@ -57,21 +57,22 @@ function unitSelector() {
     var cropChoices = cropData[0]['crops'];
     var currentCrop = document.getElementById('cropSelector').value;
     //console.log(currentCrop);
-     for (i = 0; i < cropChoices.length; i++) {
+     for (i in cropChoices) {
        crop = cropChoices[i];
        name = crop.name;
-       units = crop.units;
+       units = crop['units'];
        //console.log(cropChoices[i]['name']);
        if (currentCrop === name) {
-         for (j = 0; j < units.length; j++) {
+         for (j in units) {
            u = units[j];
            console.log(u);
            unitsInput += "<option value=" + u + ">" + u + "</option>";
-           unitsInput += '</select><br><br>';
-           console.log(unitsInput);
-           inputHTML += unitsInput;
+
 
          }
+         unitsInput += "</select><br>";
+         console.log(unitsInput);
+         inputHTML += unitsInput;
        }
      }
 
