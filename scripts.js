@@ -2,12 +2,10 @@
 // Get data from data.json populated crop selector and load <div id='input'> innerHTML.
 
 var cropData = data;
-var inputHTML = '<div>' + 'Field ID: ' + '<input type="text" id="fieldId"><br><br>';
+var cropSelectorDiv = '<div>';
 var cropSelector = 'Select a crop: ' + '<select id="cropSelector">';
-var yieldInput = 'Expected Yield: ' + '<input type="text" id="expectedYield">';
-var unitsInput = ' Units:' + '<select id="units">';
-var residueRemovedBox = 'Check box if residue is removed' + '<input type= "checkbox" id="residueRemoved" /><br><br>';
-var percentRemovedInput = 'Percent of plant residue removed: ' + '<input type="text" id="percentRemovedInput"><br><br>';
+
+
 // Planting and Harvest Date inputs to be added
 
 function getData() {
@@ -28,21 +26,13 @@ function getData() {
 
     // close the cropSelector options and add into inputHTML
     cropSelector += '</select><br><br>';
-    inputHTML += cropSelector;
+    cropSelectorDiv += cropSelector;
 
   }
-  // Build Input Skeleton - will need to refactor to get "moving parts" working
-  // Yield Input
 
-  yieldInput += unitsInput;
-  inputHTML += yieldInput;
-  inputHTML += residueRemovedBox;
-  inputHTML += percentRemovedInput;
-
-
-// close inputHTML
-  inputHTML += ' OHAY ' + '</div>';
-  document.getElementById('input').innerHTML = inputHTML;
+// close cropSelectorDiv
+  cropSelectorDiv += ' OHAY ' + '</div>';
+  document.getElementById('cropInput').innerHTML = cropSelectorDiv;
 };
 // Call getData function to populate input div.
 getData();
@@ -50,36 +40,42 @@ getData();
 
 
 //document.getElementById('cropSelector').addEventListener("load", unitSelector);
-document.getElementById('cropSelector').addEventListener("change", unitSelector);
+document.getElementById('cropSelector').addEventListener("change", unitSelectorFunction);
 
-function unitSelector() {
+function unitSelectorFunction() {
     var cropData = data;
     var cropChoices = cropData[0]['crops'];
     var currentCrop = document.getElementById('cropSelector').value;
+    var unitSelector = document.getElementById('Units');
+
     //console.log(currentCrop);
      for (i in cropChoices) {
-       crop = cropChoices[i];
-       name = crop.name;
-       units = crop['units'];
+       var crop = cropChoices[i];
+       var name = crop.name;
+       var units = crop['units'];
+       var unitsInput = '';
+
        //console.log(cropChoices[i]['name']);
        if (currentCrop === name) {
+         unitSelector.innerHTML = unitsInput;
          for (j in units) {
-           u = units[j];
-           console.log(u);
+
+
+           var u = units[j];
+           //console.log(u);
            unitsInput += "<option value=" + u + ">" + u + "</option>";
 
-
          }
-         unitsInput += "</select><br>";
+         //unitsInput += "</select><br>";
          console.log(unitsInput);
-         inputHTML += unitsInput;
+         unitSelector.innerHTML += unitsInput;
        }
      }
 
 }
 
 //Call unitSelector function to initialize units
-unitSelector();
+unitSelectorFunction();
 
 function myFunction() {
     var mydata = data;
@@ -90,12 +86,25 @@ function myFunction() {
 
 }
 
+document.getElementById('button').addEventListener("click", function () {
+  var Nconc = document.getElementById('NConc').innerHTML = data[0].crops[0].percentN; // <--- REFACTOR THIS INTO A FUNCTION THAT SELECTS APPROPRIATE
+  var expectedYield = document.getElementById("ExpectedYield").value;
+  var percentRemoved = document.getElementById("PercentRemoved").value;
+  var NUptake = expectedYield * (Nconc/100);
+  var NinStraw = expectedYield * (percentRemoved/100) * (Nconc/100);
+  var Nremoved = expectedYield * (Nconc/100) - NinStraw;
+  var units = document.getElementById('Units').value;
+  document.getElementById('NRemoved').innerHTML = Nremoved + " " + units;
+  document.getElementById('NResidue').innerHTML = NinStraw + " " + units;
+  document.getElementById('NUptake').innerHTML = NUptake + " " + units;
+})
+
 ////////// Variables Targeting Input and Output Values ////////////////
 var crop = document.getElementById("cropSelector").value;
-var expectedYield = document.getElementById("expectedYield").value;
-var units = document.getElementById("units").value;
+// var expectedYield = document.getElementById("expectedYield").value;
+// var units = document.getElementById("units").value;
 var residueRemoved = document.getElementById("residueRemovedBox");
-var percentRemoved = document.getElementById("percentRemovedInput").value;
+// var percentRemoved = document.getElementById("percentRemovedInput").value;
 // var plantingDate = document.getElementById("PlantingDate").value;
 // var plantingMethod = document.getElementById("PlantingMethod").value;
 // var harvestDate = document.getElementById("HarvestDate").value;
