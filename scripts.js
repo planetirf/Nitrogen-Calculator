@@ -31,7 +31,7 @@ function getData() {
   }
 
 // close cropSelectorDiv
-  cropSelectorDiv += ' OHAY ' + '</div>';
+  cropSelectorDiv += '</div>';
   document.getElementById('cropInput').innerHTML = cropSelectorDiv;
 };
 // Call getData function to populate input div.
@@ -83,9 +83,25 @@ function myFunction() {
     alert(mydata[0].crops[0].percentN);
     alert(mydata[0].crops[1].name);
     alert(mydata[0].crops[1].percentN);
-
 }
 
+// add event listener to Percent Residue Removed field based on if yes or no
+
+document.getElementById('StrawRemoved').addEventListener('change', function (){
+   var x = document.getElementById('StrawRemoved').value;
+   var y = document.getElementById('residueRemoved');
+   if (x == "yes") {
+     console.log(x);
+     y.style.display = 'inline-block';
+   } else {
+     y.style.display = 'none';
+         console.log(x);
+   };
+
+});
+
+
+// add event listener to calculate button to determine nitrogen values
 document.getElementById('button').addEventListener("click", function () {
   var Nconc = document.getElementById('NConc').innerHTML = data[0].crops[0].percentN; // <--- REFACTOR THIS INTO A FUNCTION THAT SELECTS APPROPRIATE
   var expectedYield = document.getElementById("ExpectedYield").value;
@@ -103,7 +119,7 @@ document.getElementById('button').addEventListener("click", function () {
 var crop = document.getElementById("cropSelector").value;
 // var expectedYield = document.getElementById("expectedYield").value;
 // var units = document.getElementById("units").value;
-var residueRemoved = document.getElementById("residueRemovedBox");
+//var residueRemoved = document.getElementById("residueRemovedBox");
 // var percentRemoved = document.getElementById("percentRemovedInput").value;
 // var plantingDate = document.getElementById("PlantingDate").value;
 // var plantingMethod = document.getElementById("PlantingMethod").value;
