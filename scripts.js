@@ -7,9 +7,7 @@ var cropSelector = 'Select a crop: ' + '<select id="cropSelector">';
 
 
 // Planting and Harvest Date inputs to be added
-
 function getData() {
-
   // fetch crop list
   for (var i in cropData) {
     //cropName = cropData[i]['crops'][i]['name'];
@@ -23,13 +21,10 @@ function getData() {
        cropSelector += "<option value=" + name + ">" + name + "</option>";
        //console.log(cropSelector);
     }
-
     // close the cropSelector options and add into inputHTML
     cropSelector += '</select><br><br>';
     cropSelectorDiv += cropSelector;
-
   }
-
 // close cropSelectorDiv
   cropSelectorDiv += '</div>';
   document.getElementById('cropInput').innerHTML = cropSelectorDiv;
@@ -42,8 +37,8 @@ getData();
 //document.getElementById('cropSelector').addEventListener("load", unitSelector);
 document.getElementById('cropSelector').addEventListener("change", unitSelectorFunction);
 
+
 function unitSelectorFunction() {
-    var cropData = data;
     var cropChoices = cropData[0]['crops'];
     var currentCrop = document.getElementById('cropSelector').value;
     var unitSelector = document.getElementById('Units');
@@ -59,24 +54,22 @@ function unitSelectorFunction() {
        if (currentCrop === name) {
          unitSelector.innerHTML = unitsInput;
          for (j in units) {
-
-
            var u = units[j];
            //console.log(u);
            unitsInput += "<option value=" + u + ">" + u + "</option>";
-
          }
          //unitsInput += "</select><br>";
          console.log(unitsInput);
          unitSelector.innerHTML += unitsInput;
        }
      }
-
 }
 
 //Call unitSelector function to initialize units
 unitSelectorFunction();
 
+
+// test function to get data
 function myFunction() {
     var mydata = data;
     alert(mydata[0].crops[0].name);
@@ -84,12 +77,19 @@ function myFunction() {
     alert(mydata[0].crops[1].name);
     alert(mydata[0].crops[1].percentN);
 }
+// Test function to create a CROP object type to load in the selected crop values, this object will be used for calculations.
+
+function crop(name,percentN,units, conversionFactor, residueRemoved, slope, intercept){
+  
+}
+
+
 
 // add event listener to Percent Residue Removed field based on if yes or no
-
 document.getElementById('StrawRemoved').addEventListener('change', function (){
    var x = document.getElementById('StrawRemoved').value;
    var y = document.getElementById('residueRemoved');
+
    if (x == "yes") {
      console.log(x);
      y.style.display = 'inline-block';
@@ -97,46 +97,33 @@ document.getElementById('StrawRemoved').addEventListener('change', function (){
      y.style.display = 'none';
          console.log(x);
    };
-
 });
 
 
 // add event listener to calculate button to determine nitrogen values
 document.getElementById('button').addEventListener("click", function () {
-  var Nconc = document.getElementById('NConc').innerHTML = data[0].crops[0].percentN; // <--- REFACTOR THIS INTO A FUNCTION THAT SELECTS APPROPRIATE
+  var currentCrop = document.getElementById('cropSelector').value;
+  var Nconc = data[0].crops[0].percentN;
+  var concFunction = function () {
+
+
+  } // <--- REFACTOR THIS INTO A FUNCTION THAT SELECTS APPROPRIATE
+
+
+
   var expectedYield = document.getElementById("ExpectedYield").value;
   var percentRemoved = document.getElementById("PercentRemoved").value;
+  var units = document.getElementById('Units').value;
+
+
+
   var NUptake = expectedYield * (Nconc/100);
   var NinStraw = expectedYield * (percentRemoved/100) * (Nconc/100);
   var Nremoved = expectedYield * (Nconc/100) - NinStraw;
-  var units = document.getElementById('Units').value;
+
+
+
   document.getElementById('NRemoved').innerHTML = Nremoved + " " + units;
   document.getElementById('NResidue').innerHTML = NinStraw + " " + units;
   document.getElementById('NUptake').innerHTML = NUptake + " " + units;
 })
-
-////////// Variables Targeting Input and Output Values ////////////////
-var crop = document.getElementById("cropSelector").value;
-// var expectedYield = document.getElementById("expectedYield").value;
-// var units = document.getElementById("units").value;
-//var residueRemoved = document.getElementById("residueRemovedBox");
-// var percentRemoved = document.getElementById("percentRemovedInput").value;
-// var plantingDate = document.getElementById("PlantingDate").value;
-// var plantingMethod = document.getElementById("PlantingMethod").value;
-// var harvestDate = document.getElementById("HarvestDate").value;
-//
-// function Calculate() {
-//   var Nconc = document.getElementById('NConc').innerHTML = cropJSON.percentN;
-//   var expectedYield = document.getElementById("ExpectedYield").value;
-//   var percentRemoved = document.getElementById("PercentRemoved").value;
-//   var NUptake = expectedYield * (Nconc/100);
-//   var NinStraw = expectedYield * (percentRemoved/100) * (Nconc/100);
-//   var Nremoved = expectedYield * (Nconc/100) - NinStraw;
-//
-//
-//   document.getElementById('NRemoved').innerHTML = Nremoved + " " + units;
-//   document.getElementById('NResidue').innerHTML = NinStraw + " " + units;
-//   document.getElementById('NUptake').innerHTML = NUptake + " " + units;
-//
-//
-// }
