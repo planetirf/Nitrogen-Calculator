@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+
     <style>
       body {
         margin: 0px;
@@ -10,9 +11,14 @@
     </style>
   </head>
   <body>
+
     <canvas id="myCanvas" width="578" height="300"></canvas>
     <script>
+
+    // http://www.html5canvastutorials.com/labs/html5-canvas-graphing-an-equation/
+    
       function Graph(config) {
+
         // user defined properties
         this.canvas = document.getElementById(config.canvasId);
         this.minX = config.minX;
@@ -163,6 +169,8 @@
          */
         context.scale(this.scaleX, -this.scaleY);
       };
+
+
       var myGraph = new Graph({
         canvasId: 'myCanvas',
         minX: -10,

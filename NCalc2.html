@@ -21,28 +21,36 @@
   </div>
 
   Units Converted to tons/acre:<p id="conversion"> <p>
-  Planting Date:<input type="date" id="PlantingDate"><br><br>
+
+  Planting Date:<input type="text" id="PlantingDate"><br><br>
+
   Method of Planting:<input type="text" id="PlantingMethod"><br><br>
-  Expected Harvest Date:<input type="date" id="HarvestDate"><br><br>
+
+  Expected Harvest Date:<input type="text" id="HarvestDate"><br><br>
 
 </div>
+<div id="outputz">
+<h1>Calculate</h1>
+<button id='button' type="button">Calculate</button>
+</div>
 <br><br><br>
+
 <div id='output'>
+  CONVERSION: to tons/acre<p id='conversion'></p>
   Nitrogen (N) concentration in harvested product:<p id='NConc'></p><br>
   N Removed at harvest:<p id='NRemoved'></p><br>
   N in residue:<p id='NResidue'></p><br>
   Total N uptake:<p id='NUptake'></p><br>
   N uptake curve:<p id='NCurve'></p><fbr>
 </div>
-<div id="outputz">
-<h1>Calculate</h1>
-<button id='button' type="button">Calculate</button>
-</div>
+
 </body>
 
 
 <script type="text/javascript" src="data.json"></script>
 <script type="text/javascript" src="scripts.js"></script>
+<script type="text/javascript" src="dateWidget.js"></script>
+
 
 <script>
 

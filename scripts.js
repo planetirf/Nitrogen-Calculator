@@ -6,6 +6,9 @@ var cropSelectorDiv = '<div>';
 var cropSelector = 'Select a crop: ' + '<select id="cropSelector">';
 
 
+
+
+
 // Planting and Harvest Date inputs to be added
 function getData() {
   // fetch crop list
@@ -80,7 +83,7 @@ function myFunction() {
 // Test function to create a CROP object type to load in the selected crop values, this object will be used for calculations.
 
 function crop(name,percentN,units, conversionFactor, residueRemoved, slope, intercept){
-  
+
 }
 
 
@@ -110,7 +113,6 @@ document.getElementById('button').addEventListener("click", function () {
   } // <--- REFACTOR THIS INTO A FUNCTION THAT SELECTS APPROPRIATE
 
 
-
   var expectedYield = document.getElementById("ExpectedYield").value;
   var percentRemoved = document.getElementById("PercentRemoved").value;
   var units = document.getElementById('Units').value;
@@ -126,4 +128,28 @@ document.getElementById('button').addEventListener("click", function () {
   document.getElementById('NRemoved').innerHTML = Nremoved + " " + units;
   document.getElementById('NResidue').innerHTML = NinStraw + " " + units;
   document.getElementById('NUptake').innerHTML = NUptake + " " + units;
-})
+
+
+});
+
+document.getElementById('button').addEventListener("click", function () {
+
+    // get date input values
+    var start = document.getElementById('PlantingDate').value;
+    var end = document.getElementById('HarvestDate').value;
+    console.log(start, end);
+
+    var x = new Date(start);
+    var y = new Date(end);
+
+    console.log(x,y);
+
+    var z = Math.abs(y - x);
+
+    console.log(z);
+
+    var days =  (z / (1000*60*60*24));
+
+    console.log(days);
+
+});
