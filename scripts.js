@@ -163,32 +163,44 @@ document.getElementById('button').addEventListener("click", function () {
 
 });
 
-console.log(days)
+console.log(days);
 
 
 
 ///////////////////////////////////////////////////////
 /////////       Canvas Graphing Functions       ///////
 ///////////////////////////////////////////////////////
-function graph(days) {
+var graph = function () {
 
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 // Draw X axis
 ctx.beginPath();
-ctx.moveTo(50,450);
-ctx.lineTo(450,450);
+ctx.moveTo(50,550);
+ctx.lineTo(850,550);
 ctx.stroke();
 
 // Draw Y axis
 ctx.beginPath();
-ctx.moveTo(50,450);
+ctx.moveTo(50,550);
 ctx.lineTo(50,50);
 ctx.stroke();
 
-
+var image = document.createElement('img');
+image.src = "imgs/Cucumber_N_Curve_Fall.png";
+image.onload = function () {
+  ctx.drawImage(image,51,51);
+}
 
 };
 
 graph();
+
+// var image = document.createElement('img');
+// image.src ='imgs/scream.jpg';
+// image.onload = function () {
+//   var c=document.getElementById('canvas');
+//   var ctx=c.getContext('2d');
+//   ctx.drawImage(image,150,130,50,60,10,10,50,60);
+// };
