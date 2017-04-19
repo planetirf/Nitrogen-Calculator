@@ -1,9 +1,11 @@
 // Irfan Ainuddin
 // Get data from data.json populated crop selector and load <div id='input'> innerHTML.
 
+// Declare global HOST variables
 var cropData = data;
 var cropSelectorDiv = '<div>';
 var cropSelector = 'Select a crop: ' + '<select id="cropSelector">';
+var days = 0;
 
 
 
@@ -93,6 +95,7 @@ document.getElementById('StrawRemoved').addEventListener('change', function (){
    var x = document.getElementById('StrawRemoved').value;
    var y = document.getElementById('residueRemoved');
 
+   // Check if residue removed is "true"
    if (x == "yes") {
      console.log(x);
      y.style.display = 'inline-block';
@@ -112,19 +115,19 @@ document.getElementById('button').addEventListener("click", function () {
 
   } // <--- REFACTOR THIS INTO A FUNCTION THAT SELECTS APPROPRIATE
 
-
+  // Grab input values from text boxes
   var expectedYield = document.getElementById("ExpectedYield").value;
   var percentRemoved = document.getElementById("PercentRemoved").value;
   var units = document.getElementById('Units').value;
 
 
-
+  // calculate important N values
   var NUptake = expectedYield * (Nconc/100);
   var NinStraw = expectedYield * (percentRemoved/100) * (Nconc/100);
   var Nremoved = expectedYield * (Nconc/100) - NinStraw;
 
 
-
+  // get output textboxes and fill with values from calulcations
   document.getElementById('NRemoved').innerHTML = Nremoved + " " + units;
   document.getElementById('NResidue').innerHTML = NinStraw + " " + units;
   document.getElementById('NUptake').innerHTML = NUptake + " " + units;
@@ -139,17 +142,53 @@ document.getElementById('button').addEventListener("click", function () {
     var end = document.getElementById('HarvestDate').value;
     console.log(start, end);
 
+    // pass start and end date into DATE constructor
     var x = new Date(start);
     var y = new Date(end);
 
     console.log(x,y);
 
+    // Calculate difference between dates - returns a value in milliseconds
     var z = Math.abs(y - x);
 
     console.log(z);
 
-    var days =  (z / (1000*60*60*24));
+    // milliseconds converted into number of days
+    days =  (z / (1000*60*60*24));
 
     console.log(days);
 
+    // return days to allow access to the value for graphing functions
+    return days;
+
 });
+
+console.log(days)
+
+
+
+///////////////////////////////////////////////////////
+/////////       Canvas Graphing Functions       ///////
+///////////////////////////////////////////////////////
+function graph(days) {
+
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+
+// Draw X axis
+ctx.beginPath();
+ctx.moveTo(50,450);
+ctx.lineTo(450,450);
+ctx.stroke();
+
+// Draw Y axis
+ctx.beginPath();
+ctx.moveTo(50,450);
+ctx.lineTo(50,50);
+ctx.stroke();
+
+
+
+};
+
+graph();
