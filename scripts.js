@@ -187,25 +187,25 @@ ctx.lineTo(850,550);
 ctx.stroke();
 
 // Draw X axis tick marks
-ctx.beginPath();
-ctx.moveTo(originX + 50,originY + 10);
-ctx.lineTo(originX + 50,originY - 10);
-ctx.stroke();
+// ctx.beginPath();
+// ctx.moveTo(originX + 50,originY + 10);
+// ctx.lineTo(originX + 50,originY - 10);
+// ctx.stroke();
 
 // Function to draw X axis tick marks
 (function () {
-  xIncrement = 50;
+  xIncrement = 80;
   yIncrement = 10;
-  xAxisLabel = 1;
+  xAxisLabel = 10;
 
   while (xIncrement < 850) {
     ctx.beginPath();
     ctx.moveTo(originX + xIncrement, originY + yIncrement);
     ctx.lineTo(originX + xIncrement, originY - yIncrement);
     ctx.stroke();
-    ctx.fillText(xAxisLabel, originX + xIncrement - 3, originY + yIncrement + 10);
-    xIncrement += 50;
-    xAxisLabel ++;
+    ctx.fillText(xAxisLabel + "%", originX + xIncrement - 8, originY + yIncrement + 10);
+    xIncrement += 80;
+    xAxisLabel +=10;
   }
 
 })();
@@ -228,19 +228,22 @@ ctx.stroke();
 (function () {
   xIncrement = 10;
   yIncrement = 50;
-  yAxisLabel = 1;
+  yAxisLabel = 10;
 
   while (yIncrement < 550) {
     ctx.beginPath();
     ctx.moveTo(originX - xIncrement, originY - yIncrement);
     ctx.lineTo(originX + xIncrement, originY - yIncrement);
     ctx.stroke();
-    ctx.fillText(yAxisLabel, originX - xIncrement - 10, originY - yIncrement + 3)
+    ctx.fillText(yAxisLabel + "%", originX - xIncrement - 25, originY - yIncrement + 3)
     yIncrement += 50;
-    yAxisLabel += 1;
+    yAxisLabel += 10;
   }
 
 })();
+
+// TEST FUNCTION: Draw a sigmoidal 
+
 
 
 // Draw graph image from png
