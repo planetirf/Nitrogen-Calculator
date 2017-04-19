@@ -175,11 +175,41 @@ var graph = function () {
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
+
+// define graph origin position
+var originX = 50;
+var originY = 550;
+
 // Draw X axis
 ctx.beginPath();
 ctx.moveTo(50,550);
 ctx.lineTo(850,550);
 ctx.stroke();
+
+// Draw X axis tick marks
+ctx.beginPath();
+ctx.moveTo(originX + 50,originY + 10);
+ctx.lineTo(originX + 50,originY - 10);
+ctx.stroke();
+
+// Function to draw X axis tick marks
+(function () {
+  xIncrement = 50;
+  yIncrement = 10;
+  xAxisLabel = 1;
+
+  while (xIncrement < 850) {
+    ctx.beginPath();
+    ctx.moveTo(originX + xIncrement, originY + yIncrement);
+    ctx.lineTo(originX + xIncrement, originY - yIncrement);
+    ctx.stroke();
+    ctx.fillText(xAxisLabel, originX + xIncrement - 3, originY + yIncrement + 10);
+    xIncrement += 50;
+    xAxisLabel ++;
+  }
+
+})();
+
 
 // Draw Y axis
 ctx.beginPath();
@@ -187,6 +217,33 @@ ctx.moveTo(50,550);
 ctx.lineTo(50,50);
 ctx.stroke();
 
+// Draw Y axis tick marks
+ctx.beginPath();
+ctx.moveTo(60,500);
+ctx.lineTo(40,500);
+ctx.stroke();
+
+
+// Function to draw Y axis tick marks
+(function () {
+  xIncrement = 10;
+  yIncrement = 50;
+  yAxisLabel = 1;
+
+  while (yIncrement < 550) {
+    ctx.beginPath();
+    ctx.moveTo(originX - xIncrement, originY - yIncrement);
+    ctx.lineTo(originX + xIncrement, originY - yIncrement);
+    ctx.stroke();
+    ctx.fillText(yAxisLabel, originX - xIncrement - 10, originY - yIncrement + 3)
+    yIncrement += 50;
+    yAxisLabel += 1;
+  }
+
+})();
+
+
+// Draw graph image from png
 var image = document.createElement('img');
 image.src = "imgs/Cucumber_N_Curve_Fall.png";
 image.onload = function () {
@@ -196,11 +253,3 @@ image.onload = function () {
 };
 
 graph();
-
-// var image = document.createElement('img');
-// image.src ='imgs/scream.jpg';
-// image.onload = function () {
-//   var c=document.getElementById('canvas');
-//   var ctx=c.getContext('2d');
-//   ctx.drawImage(image,150,130,50,60,10,10,50,60);
-// };
