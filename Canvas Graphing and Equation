@@ -16,7 +16,7 @@
     <script>
 
     // http://www.html5canvastutorials.com/labs/html5-canvas-graphing-an-equation/
-    
+
       function Graph(config) {
 
         // user defined properties
