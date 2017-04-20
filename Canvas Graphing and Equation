@@ -180,17 +180,17 @@
         unitsPerTick: 1
       });
 
-      myGraph.drawEquation(function(x) {
-        return 5 * Math.sin(x);
-      }, 'green', 3);
-
-      myGraph.drawEquation(function(x) {
-        return x * x;
-      }, 'blue', 3);
-
-      myGraph.drawEquation(function(x) {
-        return 1 * x;
-      }, 'red', 3);
+      // myGraph.drawEquation(function(x) {
+      //   return 5 * Math.sin(x);
+      // }, 'green', 3);
+      //
+      // myGraph.drawEquation(function(x) {
+      //   return x * x;
+      // }, 'blue', 3);
+      //
+      // myGraph.drawEquation(function(x) {
+      //   return 1 * x;
+      // }, 'red', 3);
 
       myGraph.drawEquation(function(x) {
         return x / Math.sqrt(1 + x * x);

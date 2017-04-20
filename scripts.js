@@ -84,7 +84,7 @@ function myFunction() {
 }
 // Test function to create a CROP object type to load in the selected crop values, this object will be used for calculations.
 
-function crop(name,percentN,units, conversionFactor, residueRemoved, slope, intercept){
+function crop(name,percentN,units, conversionFactor, residueRemoved, slope, intercept, graph){
 
 }
 
@@ -96,7 +96,7 @@ document.getElementById('StrawRemoved').addEventListener('change', function (){
    var y = document.getElementById('residueRemoved');
 
    // Check if residue removed is "true"
-   if (x == "yes") {
+   if (x === "yes") {
      console.log(x);
      y.style.display = 'inline-block';
    } else {
@@ -113,7 +113,7 @@ document.getElementById('button').addEventListener("click", function () {
   var concFunction = function () {
 
 
-  } // <--- REFACTOR THIS INTO A FUNCTION THAT SELECTS APPROPRIATE
+  } // <--- REFACTOR THIS INTO A FUNCTION THAT SELECTS APPROPRIATE CROP N CONC VALUES
 
   // Grab input values from text boxes
   var expectedYield = document.getElementById("ExpectedYield").value;
@@ -186,6 +186,13 @@ ctx.moveTo(50,550);
 ctx.lineTo(850,550);
 ctx.stroke();
 
+// Draw X Axis label
+ctx.save();
+ctx.font = ("30px Arial");
+ctx.textAlign = "center";
+ctx.fillText("Days after planting", 450, 650);
+ctx.restore();
+
 // Draw X axis tick marks
 // ctx.beginPath();
 // ctx.moveTo(originX + 50,originY + 10);
@@ -203,7 +210,7 @@ ctx.stroke();
     ctx.moveTo(originX + xIncrement, originY + yIncrement);
     ctx.lineTo(originX + xIncrement, originY - yIncrement);
     ctx.stroke();
-    ctx.fillText(xAxisLabel + "%", originX + xIncrement - 8, originY + yIncrement + 10);
+    ctx.fillText(xAxisLabel + "%", originX + xIncrement, originY + yIncrement + 10);
     xIncrement += 80;
     xAxisLabel +=10;
   }
@@ -214,45 +221,46 @@ ctx.stroke();
 // Draw Y axis
 ctx.beginPath();
 ctx.moveTo(50,550);
-ctx.lineTo(50,50);
+ctx.lineTo(50,90);
 ctx.stroke();
 
-// Draw Y axis tick marks
-ctx.beginPath();
-ctx.moveTo(60,500);
-ctx.lineTo(40,500);
-ctx.stroke();
+// // Draw Y axis tick marks
+// ctx.beginPath();
+// ctx.moveTo(60,500);
+// ctx.lineTo(40,500);
+// ctx.stroke();
 
 
 // Function to draw Y axis tick marks
 (function () {
   xIncrement = 10;
-  yIncrement = 50;
+  yIncrement = 46;
   yAxisLabel = 10;
 
-  while (yIncrement < 550) {
+  while (yIncrement < 500) {
     ctx.beginPath();
     ctx.moveTo(originX - xIncrement, originY - yIncrement);
     ctx.lineTo(originX + xIncrement, originY - yIncrement);
     ctx.stroke();
     ctx.fillText(yAxisLabel + "%", originX - xIncrement - 25, originY - yIncrement + 3)
-    yIncrement += 50;
+    yIncrement += 46;
     yAxisLabel += 10;
   }
 
 })();
 
-// TEST FUNCTION: Draw a sigmoidal 
+// TEST FUNCTION: Draw a sigmoidal
 
 
 
 // Draw graph image from png
 var image = document.createElement('img');
-image.src = "imgs/Cucumber_N_Curve_Fall.png";
+image.src = data[0].crops[1].graph; // will change once crop-object-model
 image.onload = function () {
-  ctx.drawImage(image,51,51);
+  ctx.drawImage(image,51,90);
 }
 
 };
-
+document.getElementById('button').addEventListener("click", function () {
 graph();
+});
