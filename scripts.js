@@ -96,7 +96,7 @@ document.getElementById('StrawRemoved').addEventListener('change', function (){
    var y = document.getElementById('residueRemoved');
 
    // Check if residue removed is "true"
-   if (x === "yes") {
+   if (x === "Yes") {
      console.log(x);
      y.style.display = 'inline-block';
    } else {
@@ -113,7 +113,7 @@ document.getElementById('button').addEventListener("click", function () {
   var concFunction = function () {
 
 
-  } // <--- REFACTOR THIS INTO A FUNCTION THAT SELECTS APPROPRIATE CROP N CONC VALUES
+  }; // <--- REFACTOR THIS INTO A FUNCTION THAT SELECTS APPROPRIATE CROP N CONC VALUES
 
   // Grab input values from text boxes
   var expectedYield = document.getElementById("ExpectedYield").value;
@@ -212,7 +212,7 @@ ctx.restore();
     ctx.stroke();
     ctx.fillText(xAxisLabel + "%", originX + xIncrement, originY + yIncrement + 10);
     xIncrement += 80;
-    xAxisLabel +=10;
+    xAxisLabel += 10;
   }
 
 })();
@@ -255,12 +255,16 @@ ctx.stroke();
 
 // Draw graph image from png
 var image = document.createElement('img');
+
 image.src = data[0].crops[1].graph; // will change once crop-object-model
+
 image.onload = function () {
+  console.log(image.height);
   ctx.drawImage(image,51,90);
 }
 
 };
+
 document.getElementById('button').addEventListener("click", function () {
 graph();
 });
