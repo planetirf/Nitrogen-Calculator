@@ -74,17 +74,9 @@ function unitSelectorFunction() {
 unitSelectorFunction();
 
 
-// test function to get data
-function myFunction() {
-    var mydata = data;
-    alert(mydata[0].crops[0].name);
-    alert(mydata[0].crops[0].percentN);
-    alert(mydata[0].crops[1].name);
-    alert(mydata[0].crops[1].percentN);
-}
 // Test function to create a CROP object type to load in the selected crop values, this object will be used for calculations.
 
-function crop(name,percentN,units, conversionFactor, residueRemoved, slope, intercept, graph){
+function Crop(name,percentN,units, conversionFactor, residueRemoved, slope, intercept, graph){
 
 }
 
@@ -203,16 +195,16 @@ ctx.restore();
 (function () {
   xIncrement = 80;
   yIncrement = 10;
-  xAxisLabel = 10;
+  xAxisLabel = Math.floor(days / 10);
 
   while (xIncrement < 850) {
     ctx.beginPath();
     ctx.moveTo(originX + xIncrement, originY + yIncrement);
     ctx.lineTo(originX + xIncrement, originY - yIncrement);
     ctx.stroke();
-    ctx.fillText(xAxisLabel + "%", originX + xIncrement, originY + yIncrement + 10);
+    ctx.fillText(xAxisLabel + " Days", originX + xIncrement - 12, originY + yIncrement + 10);
     xIncrement += 80;
-    xAxisLabel += 10;
+    xAxisLabel += Math.floor(days / 10);
   }
 
 })();
@@ -256,10 +248,39 @@ ctx.stroke();
 // Draw graph image from png
 var image = document.createElement('img');
 
-image.src = data[0].crops[1].graph; // will change once crop-object-model
+//image.src = data[0].crops[1].graph; // will change once crop-object-model
+
+/////////////////////////////////////////////////////
+///////       Image Selector Function        ///////
+/////////////////////////////////////////////////////
+
+function imageSelect() {
+    var cropChoices = cropData[0]['crops'];
+    var currentCrop = document.getElementById('cropSelector').value;
+
+    // console.log(currentCrop);
+     for (i in cropChoices) {
+       var crop = cropChoices[i];
+       var name = crop.name;
+
+       // set image source to currentCrop's value.
+       if (currentCrop === name) {
+         image.src = cropChoices[i]['graph'];
+       }
+     }
+};
+
+//Call imageSelect to load image
+imageSelect();
+
+
+
+
+
 
 image.onload = function () {
-  console.log(image.height);
+  console.log('image height:' + image.height);
+  console.log('image width:' + image.width);
   ctx.drawImage(image,51,90);
 }
 
