@@ -13,7 +13,7 @@ data = [{"crops":[
       { "name":"Cucumber",
         "percentN":2.16,
         "units": ["tons/acre", "Box (50 lbs)"],
-        "conversionFactor":[1,0.25],
+        "conversionFactor":[1,0.025],
         "residueRemoved": false,
         "slope": 0.00,
         "intercept":0,

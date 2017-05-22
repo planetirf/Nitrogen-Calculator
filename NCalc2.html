@@ -11,25 +11,27 @@
   </div>
     Expected Yield:<input type="text" id="ExpectedYield"> Units:<select id="Units"></select>
 
-    Straw Removed:<select id="StrawRemoved">
-    <option value="Yes">Yes</option>
-    <option value="No">No</option>
-  </select><br><br>
+    Residue Removed:<select id="StrawRemoved">
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select><br><br>
   <div id="residueRemoved">
-    Percent (%) of Straw Removed:<input type="text" id="PercentRemoved"><br><br>
+    Percent (%) of Residue Removed:<input type="text" id="PercentRemoved"><br><br>
   </div>
-  </div>
 
-  Units Converted to tons/acre:<p id="conversion"> <p>
+<div>
 
-  Planting Date:<input type="text" id="PlantingDate"><br><br>
+  Planting Date:<input type="text" id="PlantingDate" placeholder="mm/dd/yy"><br><br>
 
-  Method of Planting:<input type="text" id="PlantingMethod"><br><br>
+  Method of Planting:<select id="PlantingMethod">
+                          <option value="Seedling">Seedling</option>
+                          <option value="Transplant">Transplant</option>
+                      </select><br><br>
 
-  Expected Harvest Date:<input type="text" id="HarvestDate"><br><br>
+  Expected Harvest Date:<input type="text" id="HarvestDate" placeholder="mm/dd/yy"><br><br>
 
 </div>
-
+  </div>
 <div id="outputz">
 <button id='button' type="button">Calculate</button>
 </div>
@@ -40,13 +42,11 @@
 </canvas>
 
 </div>
-
-
 <br><br><br>
 
 <div id='output'>
   CONVERSION: to tons/acre<p id='conversion'></p>
-  Nitrogen (N) concentration in harvested product:<p id='NConc'></p><br>
+  Nitrogen (N) concentration in harvested product:<p id='NConcInYield'></p><br>
   N Removed at harvest:<p id='NRemoved'></p><br>
   N in residue:<p id='NResidue'></p><br>
   Total N uptake:<p id='NUptake'></p><br>
@@ -58,8 +58,6 @@
 
 <script type="text/javascript" src="data.json"></script>
 <script type="text/javascript" src="scripts.js"></script>
-
-
 <script>
 
 // function Calculate() {

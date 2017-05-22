@@ -6,7 +6,8 @@ var cropData = data;
 var cropSelectorDiv = '<div>';
 var cropSelector = 'Select a crop: ' + '<select id="cropSelector">';
 var days = 0;
-
+var start = document.getElementById('PlantingDate').value;
+var end = document.getElementById('HarvestDate').value;
 
 
 
@@ -74,13 +75,6 @@ function unitSelectorFunction() {
 unitSelectorFunction();
 
 
-// Test function to create a CROP object type to load in the selected crop values, this object will be used for calculations.
-
-function Crop(name,percentN,units, conversionFactor, residueRemoved, slope, intercept, graph){
-
-}
-
-
 
 // add event listener to Percent Residue Removed field based on if yes or no
 document.getElementById('StrawRemoved').addEventListener('change', function (){
@@ -101,11 +95,22 @@ document.getElementById('StrawRemoved').addEventListener('change', function (){
 // add event listener to calculate button to determine nitrogen values
 document.getElementById('button').addEventListener("click", function () {
   var currentCrop = document.getElementById('cropSelector').value;
-  var Nconc = data[0].crops[0].percentN;
-  var concFunction = function () {
+  var cropChoices = cropData[0]['crops'];
+  var Nconc = "";
 
 
-  }; // <--- REFACTOR THIS INTO A FUNCTION THAT SELECTS APPROPRIATE CROP N CONC VALUES
+  // console.log(currentCrop);
+   for (i in cropChoices) {
+     var crop = cropChoices[i];
+     var name = crop.name;
+
+     // set image source to currentCrop's value.
+     if (currentCrop === name) {
+       Nconc = cropChoices[i]['percentN'];
+       console.log(Nconc);
+     }
+   }
+
 
   // Grab input values from text boxes
   var expectedYield = document.getElementById("ExpectedYield").value;
@@ -114,15 +119,18 @@ document.getElementById('button').addEventListener("click", function () {
 
 
   // calculate important N values
+
   var NUptake = expectedYield * (Nconc/100);
   var NinStraw = expectedYield * (percentRemoved/100) * (Nconc/100);
   var Nremoved = expectedYield * (Nconc/100) - NinStraw;
+  var NHarvested = expectedYield * (Nconc/100) * 2000;
 
 
   // get output textboxes and fill with values from calulcations
-  document.getElementById('NRemoved').innerHTML = Nremoved + " " + units;
-  document.getElementById('NResidue').innerHTML = NinStraw + " " + units;
-  document.getElementById('NUptake').innerHTML = NUptake + " " + units;
+  document.getElementById('NConcInYield').innerHTML = Number(Math.round(NHarvested + 'e2') + 'e-2') + " " + "lbs/ton";
+  document.getElementById('NRemoved').innerHTML = Number(Math.round(Nremoved + 'e2') + 'e-2') + " " + units;
+  document.getElementById('NResidue').innerHTML = Number(Math.round(NinStraw + 'e3') + 'e-3') + " " + units;
+  document.getElementById('NUptake').innerHTML = Number(Math.round(NUptake + 'e2') + 'e-2') + " " + units;
 
 
 });
@@ -157,6 +165,44 @@ document.getElementById('button').addEventListener("click", function () {
 
 console.log(days);
 
+///////////////////////////////////////////////////////
+/////////       Date Validatiion                ///////
+///////////////////////////////////////////////////////
+
+
+// Validates that the input string is a valid date formatted as "mm/dd/yyyy"
+function isValidDate(dateString)
+{
+    // First check for the pattern
+    if(!/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(dateString))
+        return false;
+
+    // Parse the date parts to integers
+    var parts = dateString.split("/");
+    var day = parseInt(parts[1], 10);
+    var month = parseInt(parts[0], 10);
+    var year = parseInt(parts[2], 10);
+
+    // Check the ranges of month and year
+    if(year < 1000 || year > 3000 || month == 0 || month > 12)
+        return false;
+
+    var monthLength = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
+
+    // Adjust for leap years
+    if(year % 400 == 0 || (year % 100 != 0 && year % 4 == 0))
+        monthLength[1] = 29;
+
+    // Check the range of the day
+    return day > 0 && day <= monthLength[month - 1];
+};
+
+document.getElementById('button').addEventListener("click", function (start) {
+isValidDate();
+});
+
+
+
 
 
 ///////////////////////////////////////////////////////
@@ -166,23 +212,23 @@ var graph = function () {
 
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
-
+ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 // define graph origin position
-var originX = 50;
+var originX = 100;
 var originY = 550;
 
 // Draw X axis
 ctx.beginPath();
-ctx.moveTo(50,550);
-ctx.lineTo(850,550);
+ctx.moveTo(100,550);
+ctx.lineTo(880,550);
 ctx.stroke();
 
 // Draw X Axis label
 ctx.save();
 ctx.font = ("30px Arial");
 ctx.textAlign = "center";
-ctx.fillText("Days after planting", 450, 650);
+ctx.fillText("Days after planting", 500, 625);
 ctx.restore();
 
 // Draw X axis tick marks
@@ -193,7 +239,7 @@ ctx.restore();
 
 // Function to draw X axis tick marks
 (function () {
-  xIncrement = 80;
+  xIncrement = 78;
   yIncrement = 10;
   xAxisLabel = Math.floor(days / 10);
 
@@ -203,7 +249,7 @@ ctx.restore();
     ctx.lineTo(originX + xIncrement, originY - yIncrement);
     ctx.stroke();
     ctx.fillText(xAxisLabel + " Days", originX + xIncrement - 12, originY + yIncrement + 10);
-    xIncrement += 80;
+    xIncrement += 78;
     xAxisLabel += Math.floor(days / 10);
   }
 
@@ -212,10 +258,18 @@ ctx.restore();
 
 // Draw Y axis
 ctx.beginPath();
-ctx.moveTo(50,550);
-ctx.lineTo(50,90);
+ctx.moveTo(100,550);
+ctx.lineTo(100,90);
 ctx.stroke();
 
+// Draw Y Axis label
+ctx.save();
+ctx.translate(40,325);
+ctx.font = ("30px Arial");
+ctx.rotate(- Math.PI / 2);
+ctx.textAlign = "center";
+ctx.fillText("N Uptake (% of Total)", 0, 0);
+ctx.restore();
 // // Draw Y axis tick marks
 // ctx.beginPath();
 // ctx.moveTo(60,500);
@@ -240,6 +294,8 @@ ctx.stroke();
   }
 
 })();
+
+
 
 // TEST FUNCTION: Draw a sigmoidal
 
@@ -274,14 +330,10 @@ function imageSelect() {
 imageSelect();
 
 
-
-
-
-
 image.onload = function () {
   console.log('image height:' + image.height);
   console.log('image width:' + image.width);
-  ctx.drawImage(image,51,90);
+  ctx.drawImage(image,101,90);
 }
 
 };
@@ -289,3 +341,7 @@ image.onload = function () {
 document.getElementById('button').addEventListener("click", function () {
 graph();
 });
+
+
+
+// Date Validation //
