@@ -74,21 +74,57 @@ function unitSelectorFunction() {
 //Call unitSelector function to initialize units
 unitSelectorFunction();
 
+// add event listener to display residue removal on page load.
+document.getElementById('cropSelector').addEventListener('change', function (){
+   var currentCrop = document.getElementById('cropSelector').value;
+   var cropChoices = cropData[0]['crops'];
+   var w = document.getElementById('ResidueRemovedDiv');
+   var x = document.getElementById('ResidueRemovedSelector').value;
+   var y = document.getElementById('precentRemovedDiv');
+
+   for (i in cropChoices) {
+     var crop = cropChoices[i];
+     var name = crop.name;
+
+     // set image source to currentCrop's value.
+     if (currentCrop === name) {
+       var residueRemovedBool = cropChoices[i]['residueRemoved'];
+
+       if (residueRemovedBool == false){
+         w.style.display = 'none';
+         y.style.display = 'none';
+       } else {
+         w.style.display = 'inline-block';
+         y.style.display = 'inline-block';
+       }
+     }
+   }
+});
 
 
 // add event listener to Percent Residue Removed field based on if yes or no
-document.getElementById('StrawRemoved').addEventListener('change', function (){
-   var x = document.getElementById('StrawRemoved').value;
-   var y = document.getElementById('residueRemoved');
+document.getElementById('ResidueRemovedSelector').addEventListener('change', function (){
+   var currentCrop = document.getElementById('cropSelector').value;
+   var cropChoices = cropData[0]['crops'];
+   var w = document.getElementById('ResidueRemovedSelector');
+   var x = document.getElementById('ResidueRemovedSelector').value;
+   var y = document.getElementById('precentRemovedDiv');
 
-   // Check if residue removed is "true"
-   if (x === "Yes") {
-     console.log(x);
-     y.style.display = 'inline-block';
-   } else {
-     y.style.display = 'none';
+   for (i in cropChoices) {
+     var crop = cropChoices[i];
+     var name = crop.name;
+
+     // set image source to currentCrop's value.
+     if (currentCrop === name) {
+       if (x === "Yes") {
          console.log(x);
-   };
+         y.style.display = 'inline-block';
+       } else {
+         y.style.display = 'none';
+             console.log(x);
+       };
+     }
+   }
 });
 
 
@@ -97,7 +133,9 @@ document.getElementById('button').addEventListener("click", function () {
   var currentCrop = document.getElementById('cropSelector').value;
   var cropChoices = cropData[0]['crops'];
   var Nconc = "";
-
+  var conversionFactor = "";
+  var unitsConcentration = "";
+  var NHI = "";
 
   // console.log(currentCrop);
    for (i in cropChoices) {
@@ -107,30 +145,52 @@ document.getElementById('button').addEventListener("click", function () {
      // set image source to currentCrop's value.
      if (currentCrop === name) {
        Nconc = cropChoices[i]['percentN'];
+       unitsConcentration = cropChoices[i]['unitsConc'];
+       NHI = cropChoices[i]['nhi'];
+       console.log("NHI" + NHI);
        console.log(Nconc);
+       console.log("this line" + unitsConcentration);
      }
    }
-
-
   // Grab input values from text boxes
   var expectedYield = document.getElementById("ExpectedYield").value;
-  var percentRemoved = document.getElementById("PercentRemoved").value;
+  var percentRemoved = (document.getElementById("PercentRemoved").value) / 100;
   var units = document.getElementById('Units').value;
+  units = "lbs/acre"
+
+//  Get ConversionFactor -
+  // for (i in cropChoices) {
+  //   var crop = cropChoices[i];
+  //   var name = units;
+  //
+  //   // set image source to currentCrop's value.
+  //   if (currentCrop === name) {
+  //     Nconc = cropChoices[i]['percentN'];
+  //     console.log(Nconc);
+  //   }
+  // }
 
 
   // calculate important N values
+  var NUptake = expectedYield * (Nconc/100) * 100;
+  var NinResidue = ((1/NHI)-1) * NUptake;
+  var TotalN = NUptake + NinResidue;
+  var NHarvested = NUptake + (NinResidue * percentRemoved);
 
-  var NUptake = expectedYield * (Nconc/100);
-  var NinStraw = expectedYield * (percentRemoved/100) * (Nconc/100);
-  var Nremoved = expectedYield * (Nconc/100) - NinStraw;
-  var NHarvested = expectedYield * (Nconc/100) * 2000;
+
+  console.log("NUptake: " + NUptake);
+  console.log("NinResidue: " + NinResidue);
+  console.log("NHarvested: " + NHarvested);
+  console.log("TotalN: "  + TotalN);
 
 
   // get output textboxes and fill with values from calulcations
-  document.getElementById('NConcInYield').innerHTML = Number(Math.round(NHarvested + 'e2') + 'e-2') + " " + "lbs/ton";
-  document.getElementById('NRemoved').innerHTML = Number(Math.round(Nremoved + 'e2') + 'e-2') + " " + units;
-  document.getElementById('NResidue').innerHTML = Number(Math.round(NinStraw + 'e3') + 'e-3') + " " + units;
-  document.getElementById('NUptake').innerHTML = Number(Math.round(NUptake + 'e2') + 'e-2') + " " + units;
+  document.getElementById('NConcInYield').innerHTML = Nconc + " " + unitsConcentration;
+  document.getElementById('NInProduct').innerHTML = Number(Math.round(NUptake + 'e2') + 'e-2') + " " + units;
+  document.getElementById('NUptake').innerHTML = Number(Math.round(TotalN + 'e2') + 'e-2') + " " + units;
+  document.getElementById('NResidue').innerHTML = Number(Math.round(NinResidue + 'e3') + 'e-3') + " " + units;
+  document.getElementById('NRemoved').innerHTML = Number(Math.round(NHarvested + 'e3') + 'e-3') + " " + units;
+
 
 
 });

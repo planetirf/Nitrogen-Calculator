@@ -2,21 +2,22 @@ data = [{"crops":[
 
       { "name":"Wheat",
         "percentN":42.1,
+        "unitsConc": "lbs/ton @ 12% moisture",
         "units": ["tons/acre"],
         "conversionFactor":[1,0],
         "residueRemoved": true,
-        "slope": 0.05,
+        "nhi": 0.75,
         "intercept":50,
         "graph": "imgs/Wheat_Durum_N_Curve_units.png"
       },
 
       { "name":"Cucumber",
         "percentN":2.16,
+        "unitsConc": "lbs/ton fresh weight",
         "units": ["tons/acre", "Box (50 lbs)"],
         "conversionFactor":[1,0.025],
         "residueRemoved": false,
-        "slope": 0.00,
-        "intercept":0,
+        "nhi": 0.50,
         "graph": "imgs/Cucumber_N_Curve_Spring_no_units.png",
       },
 
@@ -25,8 +26,7 @@ data = [{"crops":[
         "units": ["lbs/acre", "tons/acre"],
         "conversionFactor":[1,0],
         "residueRemoved": true,
-        "slope": 0.00,
-        "intercept":0
+        "nhi": 0.00,
       },
 
       { "name":"CropName3",
@@ -34,8 +34,7 @@ data = [{"crops":[
         "units": ["lbs/acre", "tons/acre"],
         "conversionFactor":[1,0],
         "residueRemoved": true,
-        "slope": 0.00,
-        "intercept":0
+        "nhi": 0.00,
       },
 
       { "name":"CropName4",
@@ -43,8 +42,7 @@ data = [{"crops":[
         "units": ["lbs/acre", "tons/acre"],
         "conversionFactor":[1,0],
         "residueRemoved": true,
-        "slope": 0.00,
-        "intercept":0
+        "nhi": 0.00,
       },
 
       { "name":"CropName5",
@@ -52,8 +50,7 @@ data = [{"crops":[
         "units": ["lbs/acre", "tons/acre"],
         "conversionFactor":[1,0],
         "residueRemoved": true,
-        "slope": 0.00,
-        "intercept":0
+        "nhi": 0.00,
       },
 
       { "name":"CropName6",
@@ -61,8 +58,7 @@ data = [{"crops":[
         "units": ["lbs/acre", "tons/acre"],
         "conversionFactor":[1,0],
         "residueRemoved": true,
-        "slope": 0.00,
-        "intercept":0
+        "nhi": 0.00,
       },
 
   ]

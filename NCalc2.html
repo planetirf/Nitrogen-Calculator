@@ -10,12 +10,14 @@
   </select><br><br>
   </div>
     Expected Yield:<input type="text" id="ExpectedYield"> Units:<select id="Units"></select>
-
-    Residue Removed:<select id="StrawRemoved">
+<div id="ResidueRemovedDiv" style="display: inline-block">
+    Residue Removed:<select id="ResidueRemovedSelector">
                       <option value="Yes">Yes</option>
                       <option value="No">No</option>
-                    </select><br><br>
-  <div id="residueRemoved">
+                    </select>
+</div>
+                  <br><br>
+  <div id="precentRemovedDiv">
     Percent (%) of Residue Removed:<input type="text" id="PercentRemoved"><br><br>
   </div>
 
@@ -36,21 +38,22 @@
 <button id='button' type="button">Calculate</button>
 </div>
 
+
+<br><br><br>
+
+<div id='output'>
+  Nitrogen (N) concentration in harvested product:<p id='NConcInYield'></p><br>
+  N in product at harvest:<p id='NInProduct'></p><br>
+  Total N uptake:<p id='NUptake'></p><br>
+  N in residue:<p id='NResidue'></p><br>
+  N removed at harvest: <p id="NRemoved"></p><br>
+</div>
+
 <div id="canvasContainer">
 <canvas id="canvas" width="1000" height="800" style="border:1px solid #000000">
 
 </canvas>
 
-</div>
-<br><br><br>
-
-<div id='output'>
-  CONVERSION: to tons/acre<p id='conversion'></p>
-  Nitrogen (N) concentration in harvested product:<p id='NConcInYield'></p><br>
-  N Removed at harvest:<p id='NRemoved'></p><br>
-  N in residue:<p id='NResidue'></p><br>
-  Total N uptake:<p id='NUptake'></p><br>
-  N uptake curve:<p id='NCurve'></p><fbr>
 </div>
 
 </body>
