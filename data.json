@@ -14,7 +14,7 @@ data = [{"crops":[
       { "name":"Cucumber",
         "percentN":2.16,
         "unitsConc": "lbs/ton fresh weight",
-        "units": ["tons/acre", "Box (50 lbs)"],
+        "units": ["tons/acre", "Box 50lbs"],
         "conversionFactor":[1,0.025],
         "residueRemoved": false,
         "nhi": 0.50,

@@ -61,6 +61,7 @@ function unitSelectorFunction() {
          unitSelector.innerHTML = unitsInput;
          for (j in units) {
            var u = units[j];
+          //  console.log("units j" + units[j]);
            //console.log(u);
            unitsInput += "<option value=" + u + ">" + u + "</option>";
          }
@@ -137,26 +138,41 @@ document.getElementById('button').addEventListener("click", function () {
   var unitsConcentration = "";
   var NHI = "";
 
+  // Grab input values from text boxes
+  var expectedYield = document.getElementById("ExpectedYield").value;
+  var percentRemoved = (document.getElementById("PercentRemoved").value) / 100;
+  var units = document.getElementById('Units').value;
+  // units = "lbs/acre"
+
   // console.log(currentCrop);
    for (i in cropChoices) {
      var crop = cropChoices[i];
      var name = crop.name;
+     var unitsS = crop['units'];
 
      // set image source to currentCrop's value.
      if (currentCrop === name) {
        Nconc = cropChoices[i]['percentN'];
        unitsConcentration = cropChoices[i]['unitsConc'];
        NHI = cropChoices[i]['nhi'];
-       console.log("NHI" + NHI);
-       console.log(Nconc);
-       console.log("this line" + unitsConcentration);
+       console.log("NHI " + NHI);
+       console.log("Nconc " + Nconc);
+       console.log("unitsConcentration " + unitsConcentration);
+
+       for (j in unitsS){
+         if (units === unitsS[j]) {
+         console.log("J" + unitsS[j]);
+       } else {
+         console.log("ERRROR");
+       }
+        //  if ("J " + units[j] === units){
+        //    console.log("ZZZ" + units[j]);
+        //  };
+       }
      }
    }
-  // Grab input values from text boxes
-  var expectedYield = document.getElementById("ExpectedYield").value;
-  var percentRemoved = (document.getElementById("PercentRemoved").value) / 100;
-  var units = document.getElementById('Units').value;
-  units = "lbs/acre"
+
+
 
 //  Get ConversionFactor -
   // for (i in cropChoices) {
@@ -263,8 +279,6 @@ isValidDate();
 
 
 
-
-
 ///////////////////////////////////////////////////////
 /////////       Canvas Graphing Functions       ///////
 ///////////////////////////////////////////////////////
@@ -290,12 +304,6 @@ ctx.font = ("30px Arial");
 ctx.textAlign = "center";
 ctx.fillText("Days after planting", 500, 625);
 ctx.restore();
-
-// Draw X axis tick marks
-// ctx.beginPath();
-// ctx.moveTo(originX + 50,originY + 10);
-// ctx.lineTo(originX + 50,originY - 10);
-// ctx.stroke();
 
 // Function to draw X axis tick marks
 (function () {
@@ -330,12 +338,6 @@ ctx.rotate(- Math.PI / 2);
 ctx.textAlign = "center";
 ctx.fillText("N Uptake (% of Total)", 0, 0);
 ctx.restore();
-// // Draw Y axis tick marks
-// ctx.beginPath();
-// ctx.moveTo(60,500);
-// ctx.lineTo(40,500);
-// ctx.stroke();
-
 
 // Function to draw Y axis tick marks
 (function () {
@@ -354,11 +356,6 @@ ctx.restore();
   }
 
 })();
-
-
-
-// TEST FUNCTION: Draw a sigmoidal
-
 
 
 // Draw graph image from png
