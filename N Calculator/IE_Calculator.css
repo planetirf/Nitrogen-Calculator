@@ -1,0 +1,98 @@
+    <!-- ----------------------------------------------------------- -->
+    <!--                                                             -->
+    <!--                   Code for main content                     -->
+    <!--                                                             -->
+    <!-- ----------------------------------------------------------- -->
+
+      
+	body {
+
+	}
+	#fullpage {
+	  width: 960px;
+	  margin: auto;
+	  padding: 0px; 
+	  font-size: 14px;
+	  font-family: Verdana, Arial, sans-serif;
+	}
+	
+
+    /**********************************************************/
+    /*                                                        */
+    /*                     Site specific code                 */
+    /*                                                        */
+    /**********************************************************/
+
+	h1 {
+	  font-size: 2em;
+	  border-width: 0px;
+	  color: #000;
+	}
+	h6 {
+	  font-size: 0.9em;
+	  border-width: 0px;
+	  color: #000;
+	}
+	.Intro  {
+	  border-width: 0px;
+	}
+	.box .box-works {
+	  position: relative;
+	  width: 400px;
+	  z-index: 50;
+	}
+	.Intro p, .Intro h4 {
+	  padding-left: 10%; 
+	  padding-right: 10%; 
+	}
+	.Intro p {
+	  font-size: 1em;
+	}
+	#lists {
+	  padding-left: 13%; 
+	  padding-right: 10%; 
+	}
+	.Left_Panel {
+	  display: block;
+	  width: 200px;
+	  float: left; 
+	  margin-right: 0; 
+	}
+	.links_bottom {
+	  display: none;
+	}
+	#CDFA {
+	  width: 12%;
+	}
+	#FREP {
+	  width: 7%;
+	}
+	#UCD {
+	  width: 20%;
+	  padding-right: 5px;
+	}
+	#popup1 {
+          left: 0px;
+	}
+	#a_acknowledgments {
+	  margin-left: 0%;
+	  width: 40%;
+	}
+	#a_info {
+	  margin-left: 10%;
+	  width: 30%;
+	}
+	#lists li{
+	  text-align: left;
+	  font-size: 1em;
+	  font-weight: normal;
+	  font-family: Verdana, Arial, sans-serif;
+	}
+
+
+
+
+
+
+
+

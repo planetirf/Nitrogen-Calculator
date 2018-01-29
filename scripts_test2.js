@@ -28,7 +28,7 @@ function getData() {
        //console.log(cropSelector);
     }
     // close the cropSelector options and add into inputHTML
-    cropSelector += "</select><br><br>";
+    cropSelector += "</select><br>";
     cropSelectorDiv += cropSelector;
   }
 // close cropSelectorDiv
@@ -165,16 +165,16 @@ document.getElementById("button").addEventListener("click", function () {
        Nconc = cropChoices[i]["percentN"];
        unitsConcentration = cropChoices[i]["unitsConc"];
        NHI = cropChoices[i]["nhi"];
-       console.log("NHI " + NHI);
-       console.log("Nconc " + Nconc);
-       console.log("unitsConcentration " + unitsConcentration);
+       console.log("NHI " + NHI);   // print to console test
+       console.log("Nconc " + Nconc);  // print to console test
+       console.log("unitsConcentration " + unitsConcentration);  // print to console test
 
        for (j in unitsSelected){
          if (units === unitsSelected[j]) {
-         console.log("J" + unitsSelected[j]);
+         console.log("J" + unitsSelected[j]); // print to console test
          var position = unitsSelected.indexOf(unitsSelected[j]);
          cFactor = cropChoices[i]["conversionFactor"][j];
-         console.log("cFactor " + cropChoices[i]["conversionFactor"][j]);
+         console.log("cFactor " + cropChoices[i]["conversionFactor"][j]); // print to console test
          break;
 
        } else {
@@ -201,9 +201,9 @@ document.getElementById("button").addEventListener("click", function () {
 
   units = "lbs/acre"
   // get output textboxes and fill with values from calulcations
-  document.getElementById("NConcInYield").innerHTML = Nconc + " " + unitsConcentration;
-  document.getElementById("NInProduct").innerHTML = Number(Math.round(NUptake + "e2") + "e-2") + " " + units;
-  document.getElementById("NUptake").innerHTML = Number(Math.round(TotalN + "e2") + "e-2") + " " + units;
+  document.getElementById("NConcInYield").innerHTML =  Nconc + " " + unitsConcentration;
+  document.getElementById("NInProduct").innerHTML =  Number(Math.round(NUptake + "e2") + "e-2") + " " + units;
+  document.getElementById("NUptake").innerHTML =  Number(Math.round(TotalN + "e2") + "e-2") + " " + units;
   document.getElementById("NResidue").innerHTML = Number(Math.round(NinResidue + "e3") + "e-3") + " " + units;
   document.getElementById("NRemoved").innerHTML = Number(Math.round(NHarvested + "e3") + "e-3") + " " + units;
 
@@ -244,40 +244,8 @@ document.getElementById("button").addEventListener("click", function () {
 console.log(days);
 
 ///////////////////////////////////////////////////////
-/////////       Date Validatiion                ///////
+/////////                     ///////
 ///////////////////////////////////////////////////////
-
-
-// Validates that the input string is a valid date formatted as "mm/dd/yyyy"
-function isValidDate(dateString)
-{
-    // First check for the pattern
-    if(!/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(dateString))
-        return false;
-
-    // Parse the date parts to integers
-    var parts = dateString.split("/");
-    var day = parseInt(parts[1], 10);
-    var month = parseInt(parts[0], 10);
-    var year = parseInt(parts[2], 10);
-
-    // Check the ranges of month and year
-    if(year < 1000 || year > 3000 || month == 0 || month > 12)
-        return false;
-
-    var monthLength = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
-
-    // Adjust for leap years
-    if(year % 400 == 0 || (year % 100 != 0 && year % 4 == 0))
-        monthLength[1] = 29;
-
-    // Check the range of the day
-    return day > 0 && day <= monthLength[month - 1];
-};
-
-document.getElementById("button").addEventListener("click", function (start) {
-isValidDate();
-});
 
 
 ///////////////////////////////////////////////////////
@@ -290,35 +258,35 @@ var ctx = canvas.getContext("2d");
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 // define graph origin position
-var originX = 100;
-var originY = 550;
+var originX = 35;
+var originY = 246;
 
 // Draw X axis
 ctx.beginPath();
-ctx.moveTo(100,550);
-ctx.lineTo(880,550);
+ctx.moveTo(35,246);
+ctx.lineTo(386,246);
 ctx.stroke();
 
 // Draw X Axis label
 ctx.save();
-ctx.font = ("30px Arial");
+ctx.font = ("12px Arial");
 ctx.textAlign = "center";
-ctx.fillText("Days after planting", 500, 625);
+ctx.fillText("Days after planting", 224, 280.5);
 ctx.restore();
 
 // Function to draw X axis tick marks
 (function () {
-  xIncrement = 78;
-  yIncrement = 10;
+  xIncrement = 35;
+  yIncrement = 5;
   xAxisLabel = Math.floor(days / 10);
 
-  while (xIncrement < 850) {
+  while (xIncrement < 385) {
     ctx.beginPath();
     ctx.moveTo(originX + xIncrement, originY + yIncrement);
     ctx.lineTo(originX + xIncrement, originY - yIncrement);
     ctx.stroke();
-    ctx.fillText(xAxisLabel + " Days", originX + xIncrement - 12, originY + yIncrement + 10);
-    xIncrement += 78;
+    ctx.fillText(xAxisLabel + "", originX + xIncrement - 4, originY + yIncrement + 10 );
+    xIncrement += 35;
     xAxisLabel += Math.floor(days / 10);
   }
 
@@ -327,14 +295,14 @@ ctx.restore();
 
 // Draw Y axis
 ctx.beginPath();
-ctx.moveTo(100,550);
-ctx.lineTo(100,90);
+ctx.moveTo(35,246);
+ctx.lineTo(35,40.5);
 ctx.stroke();
 
 // Draw Y Axis label
 ctx.save();
-ctx.translate(40,325);
-ctx.font = ("30px Arial");
+ctx.translate(10,146);
+ctx.font = ("12px Arial");
 ctx.rotate(- Math.PI / 2);
 ctx.textAlign = "center";
 ctx.fillText("N Uptake (% of Total)", 0, 0);
@@ -342,17 +310,17 @@ ctx.restore();
 
 // Function to draw Y axis tick marks
 (function () {
-  xIncrement = 10;
-  yIncrement = 46;
+  xIncrement = 4.5;
+  yIncrement = 20.6;
   yAxisLabel = 10;
 
-  while (yIncrement < 500) {
+  while (yIncrement < 224) {
     ctx.beginPath();
     ctx.moveTo(originX - xIncrement, originY - yIncrement);
     ctx.lineTo(originX + xIncrement, originY - yIncrement);
     ctx.stroke();
-    ctx.fillText(yAxisLabel + "%", originX - xIncrement - 25, originY - yIncrement + 3)
-    yIncrement += 46;
+    ctx.fillText(yAxisLabel + "", originX - xIncrement - 15, originY - yIncrement + 3)
+    yIncrement += 20.6;
     yAxisLabel += 10;
   }
 
@@ -390,16 +358,15 @@ function imageSelect() {
 //Call imageSelect to load image
 imageSelect();
 
-
 image.onload = function () {
   console.log("image height:" + image.height);
   console.log("image width:" + image.width);
-  ctx.drawImage(image,101,90);
+  ctx.drawImage(image,35,39);
 }
 
 };
 
-// #I 
+// #I
 document.getElementById("button").addEventListener("click", function () {
 graph();
 });
