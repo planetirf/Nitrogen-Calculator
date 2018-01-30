@@ -4,7 +4,7 @@
 // Declare global HOST variables
 var cropData = data;
 var cropSelectorDiv = "<div>";
-var cropSelector = "Select a crop: " + "<select id=\"cropSelector\">";
+var cropSelector = "Select a crop:" + "<select id=\"cropSelector\">";
 var days = 0;
 var start = document.getElementById("PlantingDate").value;
 var end = document.getElementById("HarvestDate").value;
