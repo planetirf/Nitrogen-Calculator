@@ -75,7 +75,7 @@
 	  border: 0px solid #111;
 	  margin: 0px;
 	  overflow: hidden;
-	  /*background: #E9F3C2; */  /*  removed to fix "total green background" when closing the intro div*/
+	  background: #E9F3C2;   /*  removed to fix "total green background" when closing the intro div*/
 	}
 	.Left_Panel {
 	  border: 0px solid #111;
