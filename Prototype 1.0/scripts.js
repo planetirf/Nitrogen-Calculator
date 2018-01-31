@@ -82,6 +82,33 @@ function unitSelectorFunction() {
 //Call unitSelector function to initialize units
 unitSelectorFunction();
 
+
+document.getElementById("cropSelector").addEventListener("change", SeasonCheckFunction);
+
+function SeasonCheckFunction (){
+  var cropChoices = cropData[0]["crops"];
+  var currentCrop = document.getElementById("cropSelector").value;
+  var seasonBox = document.getElementById("lateSeason");
+
+  for (i in cropChoices) {
+    var crop = cropChoices[i];
+    var name = crop.name;
+
+    // Check current name against selected crop name
+    if (currentCrop === name) {
+      var seasonBool = cropChoices[i]["lateSeason"];
+      console.log("SEASONBOOL" + seasonBool)
+
+      if (seasonBool == false){
+        seasonBox.style.display = "none";
+      } else {
+        seasonBox.style.display = "";
+      }
+    }
+  }
+}
+
+SeasonCheckFunction();
 // D# add event listener to display residue removal on page load.
 document.getElementById("cropSelector").addEventListener("change", function (){
    var currentCrop = document.getElementById("cropSelector").value;
@@ -89,7 +116,6 @@ document.getElementById("cropSelector").addEventListener("change", function (){
    var w = document.getElementById("ResidueRemovedDiv");
    var x = document.getElementById("ResidueRemovedSelector").value;
    var y = document.getElementById("precentRemovedDiv");
-
    // get current crop
    for (i in cropChoices) {
      var crop = cropChoices[i];
@@ -109,6 +135,8 @@ document.getElementById("cropSelector").addEventListener("change", function (){
      }
    }
 });
+
+
 
 
 // E# add event listener to Percent Residue Removed field based on if yes or no

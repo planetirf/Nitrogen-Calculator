@@ -1,6 +1,6 @@
 data = [{"crops":[
 
-      { "name":"Wheat",
+      { "name":"WheatDurum",
         "percentN":42.1,
         "unitsConc": "lbs/ton @ 12% moisture",
         "units": ["tons/acre"],
@@ -9,6 +9,7 @@ data = [{"crops":[
         "nhi": 0.75,
         "intercept":50,
         "graph": "imgs/WheatDurum_Curve.png",
+        "lateSeason":false,
         "graphLate": ""
       },
 
@@ -20,6 +21,7 @@ data = [{"crops":[
         "residueRemoved": false,
         "nhi": 0.50,
         "graph": "imgs/Cucumber_Curve_Spring.png",
+        "lateSeason":true,
         "graphLate": "imgs/Cucumber_Curve_Fall.png"
       },
 
@@ -31,10 +33,11 @@ data = [{"crops":[
         "residueRemoved": false,
         "nhi": 0.45,
         "graph": "imgs/Eggplant_Curve.png",
+        "lateSeason":false,
         "graphLate": ""
       },
 
-      { "name":"Tomatoes_fresh",
+      { "name":"TomatoesFreshMarket",
         "percentN":2.61,
         "unitsConc": "lbs/ton fresh weight",
         "units": ["tons/acre","lbs/acre","Box(100lbs)","Box(50lbs)","Box(33lbs)","Box(30lbs)","Box(25lbs)","Box(20lbs)","Box(15lbs)","Box(10lbs)"],
@@ -42,10 +45,11 @@ data = [{"crops":[
         "residueRemoved": false,
         "nhi": 0.54,
         "graph": "imgs/TomatoFresh_Curve.png",
+        "lateSeason":false,
         "graphLate": ""
       },
 
-      { "name":"Peppers_Chilli_Red",
+      { "name":"PeppersRedChili",
         "percentN":7.25,
         "unitsConc": "lbs/ton fresh weight",
         "units": ["tons/acre","lbs/acre","Box(100lbs)","Box(50lbs)","Box(33lbs)","Box(30lbs)","Box(25lbs)","Box(20lbs)","Box(15lbs)","Box(10lbs)"],
@@ -53,10 +57,11 @@ data = [{"crops":[
         "residueRemoved": false,
         "nhi": 0.37,
         "graph": "imgs/PepperChili_Curve_Red.png",
+        "lateSeason":false,
         "graphLate": ""
       },
 
-      { "name":"Peppers_Chilli_Green",
+      { "name":"PeppersGreenChili",
         "percentN":7.25,
         "unitsConc": "lbs/ton fresh weight",
         "units": ["tons/acre","lbs/acre","Box(100lbs)","Box(50lbs)","Box(33lbs)","Box(30lbs)","Box(25lbs)","Box(20lbs)","Box(15lbs)","Box(10lbs)"],
@@ -64,10 +69,11 @@ data = [{"crops":[
         "residueRemoved": false,
         "nhi": 0.37,
         "graph": "imgs/PepperChili_Curve_Green.png",
+        "lateSeason":false,
         "graphLate": ""
       },
 
-      { "name":"Peppers_Bell",
+      { "name":"PeppersBell",
         "percentN":3.31,
         "unitsConc": "lbs/ton fresh weight",
         "units": ["tons/acre","lbs/acre","Box(100lbs)","Box(50lbs)","Box(33lbs)","Box(30lbs)","Box(25lbs)","Box(20lbs)","Box(15lbs)","Box(10lbs)"],
@@ -75,6 +81,7 @@ data = [{"crops":[
         "residueRemoved": false,
         "nhi": 0.49,
         "graph": "imgs/PepperBell_Curve_Summer.png",
+        "lateSeason":true,
         "graphLate": "imgs/PepperBell_Curve_Winter.png"
       },
   ]

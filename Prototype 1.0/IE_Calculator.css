@@ -1,287 +1,287 @@
-    <!-- ----------------------------------------------------------- -->
-    <!--                                                             -->
-    <!--                   Code for main content                     -->
-    <!--                                                             -->
-    <!-- ----------------------------------------------------------- -->
+<!-- ----------------------------------------------------------- -->
+<!--                                                             -->
+<!--                   Code for main content                     -->
+<!--                                                             -->
+<!-- ----------------------------------------------------------- -->
 /* SELECTORS: .class #id */
 
 {}
-    /**********************************************************/
-    /*                                                        */
-    /*                   FOR N CALCULATOR                     */
-    /*                                                        */
-    /**********************************************************/
-    .part1{
-      margin-top:10%;
-    }
-    #ContentCalc {
-  	  background:white;
-  	}
-    .InputDivs {
-      margin-left: 10%;
-      margin-top: .5%;
+/**********************************************************/
+/*                                                        */
+/*                   FOR N CALCULATOR                     */
+/*                                                        */
+/**********************************************************/
+.part1{
+  margin-top:10%;
+}
+#ContentCalc {
+  background:white;
+}
+.InputDivs {
+  margin-left: 10%;
+  margin-top: .5%;
 
-    }
+}
 
-    .CalcButtonDiv {
-      margin-left: 25%;
-      margin-top: 1%;
-      margin-bottom: 1%;
-    }
+.CalcButtonDiv {
+  margin-left: 25%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
 
-    .NOutputDivs  {
-      margin-left: 10%;
-      font-size: 14px;
-      font-family: Verdana, Arial, sans-serif;
-    }
+.NOutputDivs  {
+  margin-left: 10%;
+  font-size: 14px;
+  font-family: Verdana, Arial, sans-serif;
+}
 
-    .NOutputDivs p {
-      display:none;
-      border-radius:5px;
-      border-style:solid;
+.NOutputDivs p {
+  display:none;
+  border-radius:5px;
+  border-style:solid;
+  border-width:1px;
+  border-color:#926C44;
+  background-color:#F7F2EE;
+  margin-top:1%;
+  margin-bottom:1%;
+  padding-right:12px;
+  font-size: 14px;
+  font-family: Verdana, Arial, sans-serif;
+
+}
+
+.NOutputDivs h3 {
+  font-size: 14px;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+
+/*#NConcInYield{
       border-width:1px;
       border-color:#926C44;
       background-color:#F7F2EE;
-      margin-top:1%;
-      margin-bottom:1%;
-      padding-right:12px;
-      font-size: 14px;
-      font-family: Verdana, Arial, sans-serif;
-
     }
-
-    .NOutputDivs h3 {
-      font-size: 14px;
-      font-family: Verdana, Arial, sans-serif;
-    }
-
-
-    /*#NConcInYield{
-          border-width:1px;
-          border-color:#926C44;
-          background-color:#F7F2EE;
-        }
-    #NInProduct{
-          border-width:1px;
-          border-color:#926C44;
-          background-color:#F7F2EE;
-        }
-    #NUptake{
-          border-width:1px;
-          border-color:#926C44;
-          background-color:#F7F2EE;
-        }
-    #NResidue{
-          border-width:1px;
-          border-color:#926C44;
-          background-color:#F7F2EE;
-        }
-    #NRemoved{
-          border-width:1px;
-          border-color:#926C44;
-          background-color:#F7F2EE;
-        }*/
-
-    .CanvasOutputDiv {
-      margin-left: 5%;
-
-    }
-
-    #button {
-      padding-bottom: 2%;
-      padding-top: 2%;
-      padding-left: 5%;
-      padding-right: 5%;
-      border-color: #A2BC13;
-      border-radius: 5px;
-      background-color: #E9F3C2;
-      font-size: 14px;
-      font-family: Verdana, Arial, sans-serif;
-    }
-
-    select {
+#NInProduct{
+      border-width:1px;
       border-color:#926C44;
       background-color:#F7F2EE;
-      font-size: 12px;
-      font-family: Verdana, Arial, sans-serif;
     }
-
-    input {
-      width: 75px;
-      border-color:#926C44;
-      border-radius:5px;
+#NUptake{
       border-width:1px;
+      border-color:#926C44;
       background-color:#F7F2EE;
-      font-size: 12px;
-      font-family: Verdana, Arial, sans-serif;
     }
-
-    option {
-
-
-    }
-
-    .lateSeasonBox {
-      border-color:#926C44;
-      border-radius:5px;
+#NResidue{
       border-width:1px;
+      border-color:#926C44;
+      background-color:#F7F2EE;
     }
+#NRemoved{
+      border-width:1px;
+      border-color:#926C44;
+      background-color:#F7F2EE;
+    }*/
 
-    #top {
-      text-align:center;
-      background-color:white;
-    }
+.CanvasOutputDiv {
+  margin-left: 5%;
 
-    #footer p {
-      background-color:white;
+}
 
-    }
+#button {
+  padding-bottom: 2%;
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-color: #A2BC13;
+  border-radius: 5px;
+  background-color: #E9F3C2;
+  font-size: 14px;
+  font-family: Verdana, Arial, sans-serif;
+}
 
-    #footer {
-      width: auto;
-      background-color:white;
-     }
+select {
+  border-color:#926C44;
+  background-color:#F7F2EE;
+  font-size: 12px;
+  font-family: Verdana, Arial, sans-serif;
+}
 
+input {
+  width: 75px;
+  border-color:#926C44;
+  border-radius:5px;
+  border-width:1px;
+  background-color:#F7F2EE;
+  font-size: 12px;
+  font-family: Verdana, Arial, sans-serif;
+}
 
-     @media only screen and (min-width: 400px) {
-       .CanvasOutputDiv {
-         margin-left: 0%;
-       }
-       .InputDivs {
-         margin:1%;
-
-       }
-
-       .NOutputDivs  {
-         margin-left: 0%;
-         
-       }
-
-       .NOutputDivs p {
-         display:none;
-         border-radius:5px;
-         border-style:solid;
-         border-width:1px;
-         border-color:#926C44;
-         background-color:#F7F2EE;
-         margin-top:1%;
-         margin-bottom:1%;
-         padding-right:10px;
-
-       }
+option {
 
 
-       }
+}
+
+.lateSeasonBox {
+  border-color:#926C44;
+  border-radius:5px;
+  border-width:1px;
+}
+
+#top {
+  text-align:center;
+  background-color:white;
+}
+
+#footer p {
+  background-color:white;
+
+}
+
+#footer {
+  width: auto;
+  background-color:white;
+ }
 
 
-     }
+ @media only screen and (min-width: 400px) {
+   .CanvasOutputDiv {
+     margin-left: 0%;
+   }
+   .InputDivs {
+     margin:1%;
 
-     @media only screen and (min-width: 455px) {
+   }
 
-     }
+   .NOutputDivs  {
+     margin-left: 0%;
 
-     @media only screen and (min-width: 760px) {
+   }
 
-     }
+   .NOutputDivs p {
+     display:none;
+     border-radius:5px;
+     border-style:solid;
+     border-width:1px;
+     border-color:#926C44;
+     background-color:#F7F2EE;
+     margin-top:1%;
+     margin-bottom:1%;
+     padding-right:10px;
 
-     @media only screen and (min-width: 960px) {
-
-     }
-
-     @media only screen and (min-width: 1200px) {
-
-     }
-
-
-    /**********************************************************/
-    /*                                                        */
-    /*                   END N CALCULATOR                     */
-    /*                                                        */
-    /**********************************************************/
-
-
-	body {
-
-	}
+   }
 
 
-	#fullpage {
-	  max-width: 1200px;
-	  margin: auto;
-	  padding: 0px;
-	  font-size: 14px;
-	  font-family: Verdana, Arial, sans-serif;
-	}
+   }
 
 
-    /**********************************************************/
-    /*                                                        */
-    /*                     Site specific code                 */
-    /*                                                        */
-    /**********************************************************/
+ }
 
-	h1 {
-	  font-size: 2em;
-	  border-width: 0px;
-	  color: #000;
-	}
-	h6 {
-	  font-size: 0.9em;
-	  border-width: 0px;
-	  color: #000;
-	}
-	.Intro  {
-	  border-width: 0px;
-	}
-	.box .box-works {
-	  position: relative;
-	  width: 400px;
-	  z-index: 50;
-	}
-	.Intro p, .Intro h4 {
-	  padding-left: 10%;
-	  padding-right: 10%;
-	}
-	.Intro p {
-	  font-size: 1em;
-	}
-	#lists {
-	  padding-left: 13%;
-	  padding-right: 10%;
-	}
-	.Left_Panel {
-	  display: block;
-	  width: 200px;
-	  float: left;
-	  margin-right: 0;
-	}
-	.links_bottom {
-	  display: none;
-	}
-	#CDFA {
-	  width: 12%;
-	}
-	#FREP {
-	  width: 7%;
-	}
-	#UCD {
-	  width: 20%;
-	  padding-right: 5px;
-	}
-	#popup1 {
-          left: 0px;
-	}
-	#a_acknowledgments {
-	  margin-left: 0%;
-	  width: 40%;
-	}
-	#a_info {
-	  margin-left: 10%;
-	  width: 30%;
-	}
-	#lists li{
-	  text-align: left;
-	  font-size: 1em;
-	  font-weight: normal;
-	  font-family: Verdana, Arial, sans-serif;
-	}
+ @media only screen and (min-width: 455px) {
+
+ }
+
+ @media only screen and (min-width: 760px) {
+
+ }
+
+ @media only screen and (min-width: 960px) {
+
+ }
+
+ @media only screen and (min-width: 1200px) {
+
+ }
+
+
+/**********************************************************/
+/*                                                        */
+/*                   END N CALCULATOR                     */
+/*                                                        */
+/**********************************************************/
+
+
+body {
+
+}
+
+
+#fullpage {
+max-width: 1200px;
+margin: auto;
+padding: 0px;
+font-size: 14px;
+font-family: Verdana, Arial, sans-serif;
+}
+
+
+/**********************************************************/
+/*                                                        */
+/*                     Site specific code                 */
+/*                                                        */
+/**********************************************************/
+
+h1 {
+font-size: 2em;
+border-width: 0px;
+color: #000;
+}
+h6 {
+font-size: 0.9em;
+border-width: 0px;
+color: #000;
+}
+.Intro  {
+border-width: 0px;
+}
+.box .box-works {
+position: relative;
+width: 400px;
+z-index: 50;
+}
+.Intro p, .Intro h4 {
+padding-left: 10%;
+padding-right: 10%;
+}
+.Intro p {
+font-size: 1em;
+}
+#lists {
+padding-left: 13%;
+padding-right: 10%;
+}
+.Left_Panel {
+display: block;
+width: 200px;
+float: left;
+margin-right: 0;
+}
+.links_bottom {
+display: none;
+}
+#CDFA {
+width: 12%;
+}
+#FREP {
+width: 7%;
+}
+#UCD {
+width: 20%;
+padding-right: 5px;
+}
+#popup1 {
+      left: 0px;
+}
+#a_acknowledgments {
+margin-left: 0%;
+width: 40%;
+}
+#a_info {
+margin-left: 10%;
+width: 30%;
+}
+#lists li{
+text-align: left;
+font-size: 1em;
+font-weight: normal;
+font-family: Verdana, Arial, sans-serif;
+}
