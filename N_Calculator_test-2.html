@@ -400,7 +400,129 @@
       </div>
 
       </div>  <!-- end part 1 -->
+      <div class="part2">
+      <div class="part2Input">
+      <div class="irrigationSystemSelectorDiv">
+        Irrigation System:
+        <select id="irrigationSystemSelector">
+          <option value=""> Drip</option>
+          <option value=""> Furrow</option>
+          <option value=""> Sprinkler</option>
+          <option value=""> Flood</option>
+          <option value=""> Center Pivot</option>
+          <option value=""> Microsprayer</option>
+        </select>
+      </div>
+      <div class="waterUseInput">
+        Water Use Effeciency:
+        <input id="wue" type="text">
+      </div>
+      <div class="waterApplied">
+        Water Applied:
+        <input id="wue" type="text"> inches
+      </div>
 
+      <div class="nitrogenConcentration">
+        Nitrogen Concentration: <input type="text">
+        Units:
+          <select id="">
+            <option value="">ppm NO3</option>
+            <option value="">ppm NO3-N</option>
+            <option value=""></option>
+          </select>
+
+      </div>
+
+      <div class="regionSelectorDiv">
+        Region:
+        <select id="regionSelector">
+          <option value=""> San Juaquin Valley</option>
+          <option value=""> Sacramento Valley</option>
+          <option value=""> Imperial Valley</option>
+          <option value=""> Delta</option>
+          <option value=""> Central Coast</option>
+          <option value=""> Southern Coast</option>
+          <option value=""> Northern Coast</option>
+          <option value=""> Tule Lake</option>
+        </select>
+      </div>
+
+      <div class="soilTypeSelectorDiv">
+        Soil Type:
+        <select id="soilTypeSelector">
+          <option value=""> Sand </option>
+          <option value=""> Loamy Sand</option>
+          <option value=""> Sandy Loam</option>
+          <option value=""> Loam</option>
+          <option value=""> Silt Loam</option>
+          <option value=""> Silt </option>
+          <option value=""> Silty Clay Loam</option>
+          <option value=""> Silty Clay</option>
+          <option value=""> Clay Loam</option>
+          <option value=""> Sandy Clay Loam</option>
+          <option value=""> Sandy Loam</option>
+          <option value=""> Sandy Clay</option>
+          <option value=""> Clay</option>
+        </select>
+      </div>
+
+      <div class="residualNitrate">
+        Residual Soil Nitrate: <input type="text">
+        Units:
+          <select id="">
+            <option value="">ppm NO3</option>
+            <option value="">ppm NO3-N</option>
+            <option value=""></option>
+          </select>
+
+      </div>
+
+      <div class="soilOrganicMatter">
+        Soil Organic Matter Content: <input type="text">
+        Units:
+          <select id="">
+            <option value="">%</option>
+            <option value="">g/kg</option>
+            <option value="">lbs/acre</option>
+          </select>
+
+      </div>
+
+
+      <div class="">
+        Sampling Depth:
+        <input id="depth"type="text">
+      </div>
+
+      <div class="">
+      </div>
+
+      <div class="">
+      </div>
+
+
+
+
+
+
+
+
+       <!-- End part2Input -->
+      </div>
+
+      <div class="part2Output">
+        Total N Uptake:<p id='totalNUptake2'></p><br>
+        Residual Soil Nitrate:<p id='residualN'></p><br>
+        N in irrigation water applied:<p id='nInIrrigation'></p><br>
+        N Fertilizer need:<p id='nNeed'></p><br>
+
+
+
+        <!-- End part2Output -->
+      </div>
+
+
+      </div>
 
 </div>
 <!--

@@ -11,8 +11,8 @@
 /*                   FOR N CALCULATOR                     */
 /*                                                        */
 /**********************************************************/
-.part1{
-  margin-top:10%;
+#part1{
+  padding-left: 20%;
 }
 #ContentCalc {
   background:white;
@@ -144,6 +144,11 @@ option {
 
 
  @media only screen and (min-width: 400px) {
+
+   #part1{
+     padding-left:5%;
+   }
+
    .CanvasOutputDiv {
      margin-left: 0%;
    }
@@ -249,12 +254,7 @@ font-size: 1em;
 padding-left: 13%;
 padding-right: 10%;
 }
-.Left_Panel {
-display: block;
-width: 200px;
-float: left;
-margin-right: 0;
-}
+
 .links_bottom {
 display: none;
 }
