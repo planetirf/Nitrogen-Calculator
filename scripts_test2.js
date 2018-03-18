@@ -9,8 +9,31 @@ var days = 0;
 var start = document.getElementById("PlantingDate").value;
 var end = document.getElementById("HarvestDate").value;
 
+const lbs_to_kg = .453592;
+const acre_to_ha = .404686;
+const acre_to_square_m = 4046.86;
+const foot_to_m = .3048;
+const density_g_to_kg = 1000;
+const acre_inch_to_kg = 102790.2118;
+const acre_inch_to_lbs =  226613.8821;
+const ppm_NO3N_to_lbs_N = 0.226613882;
+const NO3_to_NO3N = 0.2259;
+const NO3N_to_NO3 = 4.4268;
+const acre = 43560;
+const density_water_lbs = 62.43;
 
-
+var soil_bulk_densities = { Sand: '1.46',
+                            LoamySand:'1.47',
+                            SandyLoam:'1.49',
+                            Loam:'1.47',
+                            SiltyLoam:'1.41',
+                            Silt:'1.41',
+                            SandyClayLoam:'1.50',
+                            ClayLoam:'1.42',
+                            SiltyClayLoam:'1.33',
+                            SiltyClay:'1.26',
+                            Clay:'1.25',
+                          };
 
 // A# Planting and Harvest Date inputs to be added
 function getData() {
@@ -236,7 +259,6 @@ document.getElementById("button").addEventListener("click", function () {
   document.getElementById("NRemoved").innerHTML = Number(Math.round(NHarvested + "e3") + "e-3") + " " + units;
 
 
-
 });
 
 
@@ -409,3 +431,109 @@ document.getElementById("NRemoved").style.display = "inline-flex"
 
 
 // Date Validation //
+
+//********* PART 2  **********//
+
+  // copied the part 1 calculate function and as a starting template.probably lots to clean up
+document.getElementById("button2").addEventListener("click", function () {
+
+  var currentCrop = document.getElementById("cropSelector").value;
+  var cropChoices = cropData[0]["crops"];
+  var Nconc = "";
+  var conversionFactor = "";
+  var unitsConcentration = "";
+  var NHI = "";
+
+  // Grab input values from text boxes
+  var expectedYield = document.getElementById("ExpectedYield").value;
+  var percentRemoved = (document.getElementById("PercentRemoved").value) / 100;
+  var units = document.getElementById("Units").value;
+  // units = "lbs/acre"
+
+  // console.log(currentCrop);
+
+  // get current crop
+   for (i in cropChoices) {
+     var crop = cropChoices[i];
+     var name = crop.name;
+     var unitsSelected = crop["units"];
+
+     // set image source to currentCrop"s value.
+     if (currentCrop === name) {
+       Nconc = cropChoices[i]["percentN"];
+       unitsConcentration = cropChoices[i]["unitsConc"];
+       NHI = cropChoices[i]["nhi"];
+      //  console.log("NHI " + NHI);   // print to console test
+      //  console.log("Nconc " + Nconc);  // print to console test
+      //  console.log("unitsConcentration " + unitsConcentration);  // print to console test
+
+       for (j in unitsSelected){
+         if (units === unitsSelected[j]) {
+        //  console.log("J" + unitsSelected[j]); // print to console test
+         var position = unitsSelected.indexOf(unitsSelected[j]);
+         cFactor = cropChoices[i]["conversionFactor"][j];
+        //  console.log("cFactor " + cropChoices[i]["conversionFactor"][j]); // print to console test
+         break;
+
+       } else {
+         console.log("ERRROR");
+       }
+        //  if ("J " + units[j] === units){
+        //    console.log("ZZZ" + units[j]);
+        //  };
+       }
+     }
+   }
+   var depth_water_applied = document.getElementById("inchesOfWater").value;
+   var ppm = document.getElementById("NppmWater").value;
+   var NppmWaterUnits = document.getElementById("NppmWaterUnits").value;
+   var soilTexture = document.getElementById("soilTypeSelector").value;
+   var sampling_depth = document.getElementById("samplingDepth").value;
+   var residual_soil_N = document.getElementById("NppmSoil").value;
+   var residual_soil_N_units = document.getElementById("NppmSoilUnits").value
+
+  // calculate important N values
+  var NUptake = expectedYield * (Nconc/100) * 100 * cFactor;
+  var NinResidue = ((1/NHI)-1) * NUptake;
+  var TotalN = NUptake + NinResidue;
+  var NHarvested = NUptake + (NinResidue * percentRemoved);
+
+  console.log("depth_water_applied" + depth_water_applied);
+  console.log("PPM" + ppm);
+  console.log("soiLTexture: "+  soilTexture);
+
+  if (NppmWaterUnits === "NO3") {
+    var NInIrrWater = ppm * NO3_to_NO3N * depth_water_applied * ppm_NO3N_to_lbs_N;
+    document.getElementById("nInIrrigation").innerHTML = NInIrrWater + " lbs/acre";
+  } else {
+    var NInIrrWater = ppm * depth_water_applied * ppm_NO3N_to_lbs_N;
+    document.getElementById("nInIrrigation").innerHTML = NInIrrWater + " lbs/acre";
+    // console.log(NInIrrWater + "NO3n !!!!!!!");
+  };
+
+  if (residual_soil_N_units === "NO3") {
+    var residual_soil_N = residual_soil_N * NO3_to_NO3N;
+
+  };
+
+  for (d in soil_bulk_densities) {
+    if(d === soilTexture) {
+      var bulk_density = soil_bulk_densities[d];
+      console.log(bulk_density);
+      var acre_density = ((bulk_density * acre * density_water_lbs)/12) * sampling_depth;
+      var dFactor = (acre_density)/1000000;
+      console.log(dFactor);
+
+      var soilN = dFactor * residual_soil_N;
+      document.getElementById("residualN").innerHTML = soilN + " lbs/acre";
+      document.getElementById("nNeed").innerHTML = TotalN - soilN - NInIrrWater + " lbs/acre";
+
+    };
+  };
+
+
+  units = "lbs/acre";
+  // get output textboxes and fill with values from calulcations
+  document.getElementById("totalNUptake2").innerHTML =  Number(Math.round(TotalN + "e2") + "e-2") + " " + units;
+
+  });

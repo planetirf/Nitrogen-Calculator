@@ -418,16 +418,16 @@
         <input id="wue" type="text">
       </div>
       <div class="waterApplied">
-        Water Applied:
-        <input id="wue" type="text"> inches
+        Acre Inches of Water Applied:
+        <input id="inchesOfWater" type="text" placeholder="10"> inches
       </div>
 
       <div class="nitrogenConcentration">
-        Nitrogen Concentration: <input type="text">
+        Nitrogen Concentration: <input id="NppmWater" type="text" placeholder="10">
         Units:
-          <select id="">
-            <option value="">ppm NO3</option>
-            <option value="">ppm NO3-N</option>
+          <select id="NppmWaterUnits">
+            <option value="NO3">ppm NO3</option>
+            <option value="NO3N">ppm NO3-N</option>
             <option value=""></option>
           </select>
 
@@ -450,35 +450,35 @@
       <div class="soilTypeSelectorDiv">
         Soil Type:
         <select id="soilTypeSelector">
-          <option value=""> Sand </option>
-          <option value=""> Loamy Sand</option>
-          <option value=""> Sandy Loam</option>
-          <option value=""> Loam</option>
-          <option value=""> Silt Loam</option>
-          <option value=""> Silt </option>
-          <option value=""> Silty Clay Loam</option>
-          <option value=""> Silty Clay</option>
-          <option value=""> Clay Loam</option>
-          <option value=""> Sandy Clay Loam</option>
-          <option value=""> Sandy Loam</option>
-          <option value=""> Sandy Clay</option>
-          <option value=""> Clay</option>
+          <option value="Sand"> Sand </option>
+          <option value="LoamySand"> Loamy Sand</option>
+          <option value="SandyLoam"> Sandy Loam</option>
+          <option value="Loam"> Loam</option>
+          <option value="SiltyLoam"> Silty Loam</option>
+          <option value="Silt"> Silt </option>
+          <option value="SiltyClayLoam"> Silty Clay Loam</option>
+          <option value="SiltyClay"> Silty Clay</option>
+          <option value="ClayLoam"> Clay Loam</option>
+          <option value="SandyClayLoam"> Sandy Clay Loam</option>
+          <option value="SandyLoam"> Sandy Loam</option>
+          <option value="SandyClay"> Sandy Clay</option>
+          <option value="Clay"> Clay</option>
         </select>
       </div>
 
       <div class="residualNitrate">
-        Residual Soil Nitrate: <input type="text">
+        Residual Soil Nitrate: <input id="NppmSoil"type="text">
         Units:
-          <select id="">
-            <option value="">ppm NO3</option>
-            <option value="">ppm NO3-N</option>
+          <select id="NppmSoilUnits">
+            <option value="NO3">ppm NO3</option>
+            <option value="NO3-N">ppm NO3-N</option>
             <option value=""></option>
           </select>
 
       </div>
 
       <div class="soilOrganicMatter">
-        Soil Organic Matter Content: <input type="text">
+        Soil Organic Matter Content: <input id= "" type="text">
         Units:
           <select id="">
             <option value="">%</option>
@@ -491,9 +491,13 @@
 
       <div class="">
         Sampling Depth:
-        <input id="depth"type="text">
+        <input id="samplingDepth"type="text"> inches
       </div>
 
+      <div class="CalcButtonDiv">
+            <button id='button2' type="button">Calculate</button>
+          </div>
+        </div>
       <div class="">
       </div>
 
@@ -511,6 +515,7 @@
       </div>
 
       <div class="part2Output">
+
         Total N Uptake:<p id='totalNUptake2'></p><br>
         Residual Soil Nitrate:<p id='residualN'></p><br>
         N in irrigation water applied:<p id='nInIrrigation'></p><br>
