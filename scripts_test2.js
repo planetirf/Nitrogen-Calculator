@@ -504,11 +504,11 @@ document.getElementById("button2").addEventListener("click", function () {
 
   if (NppmWaterUnits === "NO3") {
     var NInIrrWater = ppm * NO3_to_NO3N * depth_water_applied * ppm_NO3N_to_lbs_N;
-    document.getElementById("nInIrrigation").innerHTML = NInIrrWater + " lbs/acre";
+    document.getElementById("nInIrrigation").innerHTML = Number(Math.round(NInIrrWater + "e2") + "e-2") + " lbs/acre";
   } else {
     var NInIrrWater = ppm * depth_water_applied * ppm_NO3N_to_lbs_N;
-    document.getElementById("nInIrrigation").innerHTML = NInIrrWater + " lbs/acre";
-    // console.log(NInIrrWater + "NO3n !!!!!!!");
+    document.getElementById("nInIrrigation").innerHTML = Number(Math.round(NInIrrWater + "e2") + "e-2") + " lbs/acre";
+    // console.log(NInIrrWater + "NO3n !!!!!!!");Number(Math.round(NInIrrWater + "e2") + "e-2") + " lbs/acre";
   };
 
   if (residual_soil_N_units === "NO3") {
@@ -525,8 +525,8 @@ document.getElementById("button2").addEventListener("click", function () {
       console.log(dFactor);
 
       var soilN = dFactor * residual_soil_N;
-      document.getElementById("residualN").innerHTML = soilN + " lbs/acre";
-      document.getElementById("nNeed").innerHTML = TotalN - soilN - NInIrrWater + " lbs/acre";
+      document.getElementById("residualN").innerHTML = Number(Math.round(soilN + "e2") + "e-2") + " lbs/acre";
+      document.getElementById("nNeed").innerHTML = Number(Math.round( TotalN - soilN - NInIrrWater + "e2") + "e-2")+ " lbs/acre";
 
     };
   };
