@@ -35,6 +35,23 @@ var soil_bulk_densities = { Sand: '1.46',
                             Clay:'1.25',
                           };
 
+var soil_bulk_densities_nest = { Sand: [1.52,1.39,1.26],
+                            LoamySand:[1.53,1.40,1.26],
+                            SandyLoam:[1.56,1.42,1.28],
+                            Loam:[1.54,1.40,1.25],
+                            SiltyLoam:[1.50,1.32,1.14],
+                            Silt:[1.52,1.30,1.07],
+                            SandyClayLoam:[1.55,1.44,1.07],
+                            ClayLoam:[1.47,1.36,1.26],
+                            SiltyClayLoam:[1.39,1.27,1.14],
+                            SiltyClay:[1.22,1.23,1.17],
+                            Clay:[1.26,1.24,1.22],
+                          };
+
+
+
+
+
 // A# Planting and Harvest Date inputs to be added
 function getData() {
   // fetch crop list
@@ -105,7 +122,7 @@ function unitSelectorFunction() {
 //Call unitSelector function to initialize units
 unitSelectorFunction();
 
-
+// check if season box is checked
 document.getElementById("cropSelector").addEventListener("change", SeasonCheckFunction);
 
 function SeasonCheckFunction (){
@@ -253,10 +270,10 @@ document.getElementById("button").addEventListener("click", function () {
   units = "lbs/acre"
   // get output textboxes and fill with values from calulcations
   document.getElementById("NConcInYield").innerHTML =  Nconc + " " + unitsConcentration;
-  document.getElementById("NInProduct").innerHTML =  Number(Math.round(NUptake + "e2") + "e-2") + " " + units;
-  document.getElementById("NUptake").innerHTML =  Number(Math.round(TotalN + "e2") + "e-2") + " " + units;
-  document.getElementById("NResidue").innerHTML = Number(Math.round(NinResidue + "e3") + "e-3") + " " + units;
-  document.getElementById("NRemoved").innerHTML = Number(Math.round(NHarvested + "e3") + "e-3") + " " + units;
+  document.getElementById("NInProduct").innerHTML =  Number(Math.round(NUptake)) + " " + units;
+  document.getElementById("NUptake").innerHTML =  Number(Math.round(TotalN)) + " " + units;
+  document.getElementById("NResidue").innerHTML = Number(Math.round(NinResidue)) + " " + units;
+  document.getElementById("NRemoved").innerHTML = Number(Math.round(NHarvested)) + " " + units;
 
 
 });
@@ -504,10 +521,10 @@ document.getElementById("button2").addEventListener("click", function () {
 
   if (NppmWaterUnits === "NO3") {
     var NInIrrWater = ppm * NO3_to_NO3N * depth_water_applied * ppm_NO3N_to_lbs_N;
-    document.getElementById("nInIrrigation").innerHTML = Number(Math.round(NInIrrWater + "e2") + "e-2") + " lbs/acre";
+    document.getElementById("nInIrrigation").innerHTML = Number(Math.round(NInIrrWater)) + " lbs/acre";
   } else {
     var NInIrrWater = ppm * depth_water_applied * ppm_NO3N_to_lbs_N;
-    document.getElementById("nInIrrigation").innerHTML = Number(Math.round(NInIrrWater + "e2") + "e-2") + " lbs/acre";
+    document.getElementById("nInIrrigation").innerHTML = Number(Math.round(NInIrrWater)) + " lbs/acre";
     // console.log(NInIrrWater + "NO3n !!!!!!!");Number(Math.round(NInIrrWater + "e2") + "e-2") + " lbs/acre";
   };
 
@@ -525,9 +542,10 @@ document.getElementById("button2").addEventListener("click", function () {
       console.log(dFactor);
 
       var soilN = dFactor * residual_soil_N;
-      document.getElementById("residualN").innerHTML = Number(Math.round(soilN + "e2") + "e-2") + " lbs/acre";
-      document.getElementById("nNeed").innerHTML = Number(Math.round( TotalN - soilN - NInIrrWater + "e2") + "e-2")+ " lbs/acre";
-
+      document.getElementById("residualN").innerHTML = Number(Math.round(soilN)) + " lbs/acre";
+      document.getElementById("nNeed").innerHTML = Number(Math.round( TotalN - soilN - NInIrrWater))+ " lbs/acre";
+      document.getElementById("leachingRisk").innerHTML = Number(Math.round()) + " lbs/acre";
+      document.getElementById("nMineralized").innerHTML = Number(Math.round()) + " lbs/acre";
     };
   };
 
@@ -535,5 +553,17 @@ document.getElementById("button2").addEventListener("click", function () {
   units = "lbs/acre";
   // get output textboxes and fill with values from calulcations
   document.getElementById("totalNUptake2").innerHTML =  Number(Math.round(TotalN + "e2") + "e-2") + " " + units;
+
+  });
+
+
+  document.getElementById("button2").addEventListener("click", function () {
+  document.getElementById('totalNUptake2').style.display = "inline-flex"
+  document.getElementById('nInIrrigation').style.display = "inline-flex"
+  document.getElementById('residualN').style.display = "inline-flex"
+  document.getElementById('nNeed').style.display = "inline-flex"
+  document.getElementById('leachingRisk').style.display = "inline-flex"
+  document.getElementById('nMineralized').style.display = "inline-flex"
+
 
   });
