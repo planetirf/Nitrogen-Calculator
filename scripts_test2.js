@@ -35,22 +35,63 @@ var soil_bulk_densities = { Sand: '1.46',
                             Clay:'1.25',
                           };
 
-var soil_bulk_densities_nest = { Sand: [1.52,1.39,1.26],
-                            LoamySand:[1.53,1.40,1.26],
-                            SandyLoam:[1.56,1.42,1.28],
-                            Loam:[1.54,1.40,1.25],
-                            SiltyLoam:[1.50,1.32,1.14],
-                            Silt:[1.52,1.30,1.07],
-                            SandyClayLoam:[1.55,1.44,1.07],
-                            ClayLoam:[1.47,1.36,1.26],
-                            SiltyClayLoam:[1.39,1.27,1.14],
-                            SiltyClay:[1.22,1.23,1.17],
-                            Clay:[1.26,1.24,1.22],
+var soil_bulk_densities_nest = {
+                            "Sand": {
+                              "low":1.52,
+                              "med":1.39,
+                              "high":1.26,
+                            },
+                            "LoamySand": {
+                              "low":1.53,
+                              "med":1.40,
+                              "high":1.26,
+                            },
+                            "SandyLoam": {
+                              "low":1.56,
+                              "med":1.42,
+                              "high":1.28,
+                            },
+                            "Loam": {
+                              "low":1.54,
+                              "med":1.40,
+                              "high":1.25,
+                            },
+                            "SiltyLoam": {
+                              "low":1.50,
+                              "med":1.32,
+                              "high":1.14,
+                            },
+                            "Silt": {
+                              "low":1.52,
+                              "med":1.30,
+                              "high":1.07,
+                            },
+                            "SandyClayLoam": {
+                              "low":1.55,
+                              "med":1.44,
+                              "high":1.07,
+                            },
+                            "ClayLoam": {
+                              "low":1.47,
+                              "med":1.36,
+                              "high":1.26,
+                            },
+                            "SiltyClayLoam": {
+                              "low":1.39,
+                              "med":1.27,
+                              "high":1.14,
+                            },
+                            "SiltyClay": {
+                              "low":1.22,
+                              "med":1.23,
+                              "high":1.17,
+                            },
+                            "Clay": {
+                              "low":1.26,
+                              "med":1.24,
+                              "high":1.22,
+                            },
                           };
-
-
-
-
 
 // A# Planting and Harvest Date inputs to be added
 function getData() {
@@ -451,6 +492,36 @@ document.getElementById("NRemoved").style.display = "inline-flex"
 
 //********* PART 2  **********//
 
+document.getElementById('irrigationSystemSelector').addEventListener("change", function() {
+  var wae_range = document.getElementById('irrigationSystemSelector').value;
+
+  document.getElementById('wae').placeholder = 10;
+
+  if(wae_range === "Drip") {
+    document.getElementById('wae').value = "";
+    document.getElementById('wae').placeholder = ">" + 95 + "%";
+  } else if (wae_range === "Furrow") {
+    document.getElementById('wae').value = "";
+    document.getElementById('wae').placeholder = 45 + " - " + 80 + "%";
+  } else if (wae_range === "Sprinkler") {
+    document.getElementById('wae').value = "";
+    document.getElementById('wae').placeholder = 65 + " - " + 85 + "%";
+  } else if (wae_range === "Flood") {
+    document.getElementById('wae').value = "";
+    document.getElementById('wae').placeholder = 40 + " - " + 80 + "%";
+  } else if (wae_range === "Center Pivot") {
+    document.getElementById('wae').value = "";
+    document.getElementById('wae').placeholder = 75 + " - " + 85 + "%";
+  } else if (wae_range === "Linear Move") {
+    document.getElementById('wae').value = "";
+    document.getElementById('wae').placeholder = 85 + " - " + 90 + "%";
+  } else if (wae_range === "Microsprayer") {
+    document.getElementById('wae').value = "";
+    document.getElementById('wae').placeholder = 75 + " - " + 85 + "%";
+  }
+
+});
+
   // copied the part 1 calculate function and as a starting template.probably lots to clean up
 document.getElementById("button2").addEventListener("click", function () {
 
@@ -508,6 +579,11 @@ document.getElementById("button2").addEventListener("click", function () {
    var sampling_depth = document.getElementById("samplingDepth").value;
    var residual_soil_N = document.getElementById("NppmSoil").value;
    var residual_soil_N_units = document.getElementById("NppmSoilUnits").value
+   var inSeasonNMineralized = document.getElementById('regionSelector').value;;
+   var wae = (document.getElementById("wae").value)/100;
+   var som = document.getElementById("som").value;
+   var som_units = document.getElementById('som_units').value;
+
 
   // calculate important N values
   var NUptake = expectedYield * (Nconc/100) * 100 * cFactor;
@@ -515,9 +591,9 @@ document.getElementById("button2").addEventListener("click", function () {
   var TotalN = NUptake + NinResidue;
   var NHarvested = NUptake + (NinResidue * percentRemoved);
 
-  console.log("depth_water_applied" + depth_water_applied);
-  console.log("PPM" + ppm);
-  console.log("soiLTexture: "+  soilTexture);
+  // console.log("depth_water_applied" + depth_water_applied);
+  // console.log("PPM" + ppm);
+  // console.log("soiLTexture: "+  soilTexture);
 
   if (NppmWaterUnits === "NO3") {
     var NInIrrWater = ppm * NO3_to_NO3N * depth_water_applied * ppm_NO3N_to_lbs_N;
@@ -532,20 +608,41 @@ document.getElementById("button2").addEventListener("click", function () {
     var residual_soil_N = residual_soil_N * NO3_to_NO3N;
 
   };
+  // convert som g/kg to percent to determine bulk density value
+  if (som_units === "g/kg") {
+    var som = som / 10;
+    // console.log("som converted" + som)
+  };
 
-  for (d in soil_bulk_densities) {
+  for (d in soil_bulk_densities_nest) {
     if(d === soilTexture) {
-      var bulk_density = soil_bulk_densities[d];
-      console.log(bulk_density);
+      console.log("TEXTURE:" + soilTexture);
+      console.log("d:" + d);
+
+      for(o in soil_bulk_densities_nest){
+        if(som < 2) {
+          var bulk_density = soil_bulk_densities_nest[soilTexture].low;
+          console.log("LOW" + bulk_density);
+        } else if (som >= 2 && som < 4) {
+          var bulk_density = soil_bulk_densities_nest[soilTexture].med;
+          console.log("MED" + bulk_density);
+        } else {
+          var bulk_density = soil_bulk_densities_nest[soilTexture].high;
+          console.log("HIGH" + bulk_density);
+        }
+
+      };
+      // console.log(bulk_density);
       var acre_density = ((bulk_density * acre * density_water_lbs)/12) * sampling_depth;
       var dFactor = (acre_density)/1000000;
       console.log(dFactor);
 
       var soilN = dFactor * residual_soil_N;
       document.getElementById("residualN").innerHTML = Number(Math.round(soilN)) + " lbs/acre";
-      document.getElementById("nNeed").innerHTML = Number(Math.round( TotalN - soilN - NInIrrWater))+ " lbs/acre";
-      document.getElementById("leachingRisk").innerHTML = Number(Math.round()) + " lbs/acre";
+      document.getElementById("nNeed").innerHTML = Number(Math.round( TotalN - soilN - NInIrrWater - inSeasonNMineralized ))+ " lbs/acre";
+      document.getElementById("leachingRisk").innerHTML = Number(Math.round( (1- wae) * (TotalN - soilN - NInIrrWater - inSeasonNMineralized))) + " lbs/acre";
       document.getElementById("nMineralized").innerHTML = Number(Math.round()) + " lbs/acre";
+      document.getElementById('nMineralized').innerHTML = Number(Math.round( inSeasonNMineralized )) + " lbs/acre"
     };
   };
 

@@ -403,17 +403,18 @@
       <div class="InputDivs" id="irrigationSystemSelectorDiv">
         Irrigation System:
         <select class="InputDivs"id="irrigationSystemSelector">
-          <option value=""> Drip</option>
-          <option value=""> Furrow</option>
-          <option value=""> Sprinkler</option>
-          <option value=""> Flood</option>
-          <option value=""> Center Pivot</option>
-          <option value=""> Microsprayer</option>
+          <option value="Drip"> Drip</option>
+          <option value="Furrow"> Furrow</option>
+          <option value="Sprinkler"> Sprinkler</option>
+          <option value="Flood"> Flood</option>
+          <option value="Center Pivot"> Center Pivot</option>
+          <option value="Linear Move"> Linear Move</option>
+          <option value="Microsprayer"> Microsprayer</option>
         </select>
       </div>
-      <div class="InputDivs" id="waterUseInput">
-        Water Use Effeciency:
-        <input id="wue" type="text">
+      <div class="InputDivs" id="waterAppliedEfficiency">
+        Water Application Effeciency:
+        <input id="wae" type="text" value="75">
       </div>
       <div class="InputDivs" id="waterApplied">
         Acre Inches of Water Applied:
@@ -426,7 +427,6 @@
           <select id="NppmWaterUnits">
             <option value="NO3">ppm NO3</option>
             <option value="NO3N">ppm NO3-N</option>
-            <option value=""></option>
           </select>
 
       </div>
@@ -434,14 +434,14 @@
       <div class="InputDivs" id="regionSelectorDiv">
         Region:
         <select id="regionSelector">
-          <option value=""> San Juaquin Valley</option>
-          <option value=""> Sacramento Valley</option>
-          <option value=""> Imperial Valley</option>
-          <option value=""> Delta</option>
-          <option value=""> Central Coast</option>
-          <option value=""> Southern Coast</option>
-          <option value=""> Northern Coast</option>
-          <option value=""> Tule Lake</option>
+          <option value="50"> San Juaquin Valley</option>
+          <option value="40"> Sacramento Valley</option>
+          <option value="40"> Imperial Valley</option>
+          <option value="40"> Delta</option>
+          <option value="40"> Central Coast</option>
+          <option value="40"> Southern Coast</option>
+          <option value="40"> Northern Coast</option>
+          <option value="40"> Tule Lake</option>
         </select>
       </div>
 
@@ -470,18 +470,17 @@
           <select id="NppmSoilUnits">
             <option value="NO3">ppm NO3</option>
             <option value="NO3-N">ppm NO3-N</option>
-            <option value=""></option>
           </select>
 
       </div>
 
       <div class="InputDivs" id="soilOrganicMatter">
-        Soil Organic Matter Content: <input id= "" type="text">
+        Soil Organic Matter Content: <input id= "som" type="text">
         Units:
-          <select id="">
-            <option value="">%</option>
-            <option value="">g/kg</option>
-            <option value="">lbs/acre</option>
+          <select id="som_units">
+            <option value="%">%</option>
+            <option value="g/kg">g/kg</option>
+            <!-- <option value="lbs/acre">lbs/acre</option> -->
           </select>
 
       </div>
