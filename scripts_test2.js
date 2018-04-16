@@ -4,7 +4,7 @@
 // Declare global HOST variables
 var cropData = data;
 var cropSelectorDiv = "";
-var cropSelector = "<label for=\"cropSelector\">" + "Select a Crop:" + "</label>" + "<select id=\"cropSelector\">";
+var cropSelector = "<label for=\"cropSelector\">" + "2. Select a Crop:" + "</label>" + "<select id=\"cropSelector\">";
 var days = 0;
 var start = document.getElementById("PlantingDate").value;
 var end = document.getElementById("HarvestDate").value;
@@ -667,7 +667,7 @@ document.getElementById("button2").addEventListener("click", function () {
 
   units = "lbs/acre";
   // get output textboxes and fill with values from calulcations
-  document.getElementById("totalNUptake2").innerHTML =  Number(Math.round(TotalN + "e2") + "e-2") + " " + units;
+  document.getElementById("totalNUptake2").innerHTML =  Number(Math.round(TotalN)) + " " + units;
 
   });
 
