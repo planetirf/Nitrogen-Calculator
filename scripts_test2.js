@@ -3,8 +3,8 @@
 
 // Declare global HOST variables
 var cropData = data;
-var cropSelectorDiv = "<div>";
-var cropSelector = "Select a crop:" + "<select id=\"cropSelector\">";
+var cropSelectorDiv = "";
+var cropSelector = "<label for=\"cropSelector\">" + "Select a Crop:" + "</label>" + "<select id=\"cropSelector\">";
 var days = 0;
 var start = document.getElementById("PlantingDate").value;
 var end = document.getElementById("HarvestDate").value;
@@ -109,11 +109,11 @@ function getData() {
        //console.log(cropSelector);
     }
     // close the cropSelector options and add into inputHTML
-    cropSelector += "</select><br>";
+    cropSelector += "</select>";
     cropSelectorDiv += cropSelector;
   }
 // close cropSelectorDiv
-  cropSelectorDiv += "</div>";
+  cropSelectorDiv += "";
   document.getElementById("cropInput").innerHTML = cropSelectorDiv;
 };
 // Call getData function to populate input div.
@@ -217,9 +217,6 @@ document.getElementById("cropSelector").addEventListener("change", function (){
    }
 });
 
-
-
-
 // E# add event listener to Percent Residue Removed field based on if yes or no
 document.getElementById("ResidueRemovedSelector").addEventListener("change", function (){
    var currentCrop = document.getElementById("cropSelector").value;
@@ -321,7 +318,7 @@ document.getElementById("button").addEventListener("click", function () {
 
 
 // G#
-document.getElementById("button").addEventListener("click", function () {
+document.getElementById("button2").addEventListener("click", function () {
 
     // get date input values
     var start = document.getElementById("PlantingDate").value;
@@ -372,7 +369,7 @@ var originY = 246;
 // Draw X axis
 ctx.beginPath();
 ctx.moveTo(30,246);
-ctx.lineTo(381,246);
+ctx.lineTo(355,246);
 ctx.stroke();
 
 // Draw X Axis label
@@ -384,17 +381,17 @@ ctx.restore();
 
 // Function to draw X axis tick marks
 (function () {
-  xIncrement = 35;
+  xIncrement = 32.5;
   yIncrement = 5;
   xAxisLabel = Math.floor(days / 10);
 
-  while (xIncrement < 385) {
+  while (xIncrement < 355) {
     ctx.beginPath();
     ctx.moveTo(originX + xIncrement, originY + yIncrement);
     ctx.lineTo(originX + xIncrement, originY - yIncrement);
     ctx.stroke();
     ctx.fillText(xAxisLabel + "", originX + xIncrement - 8, originY + yIncrement + 10 );
-    xIncrement += 35;
+    xIncrement += 32.5;
     xAxisLabel += Math.floor(days / 10);
   }
 
@@ -404,7 +401,7 @@ ctx.restore();
 // Draw Y axis
 ctx.beginPath();
 ctx.moveTo(30,246);
-ctx.lineTo(30,40.5);
+ctx.lineTo(30,55);
 ctx.stroke();
 
 // Draw Y Axis label
@@ -419,16 +416,16 @@ ctx.restore();
 // Function to draw Y axis tick marks
 (function () {
   xIncrement = 4.5;
-  yIncrement = 20.6;
+  yIncrement = 19.1;
   yAxisLabel = 10;
 
-  while (yIncrement < 224 ) {
+  while (yIncrement < 191 ) {
     ctx.beginPath();
     ctx.moveTo(originX - xIncrement, originY - yIncrement);
     ctx.lineTo(originX + xIncrement, originY - yIncrement);
     ctx.stroke();
     ctx.fillText(yAxisLabel + "", originX - xIncrement - 10, originY - yIncrement - 2)
-    yIncrement += 20.6;
+    yIncrement += 19.1;
     yAxisLabel += 10;
   }
 
@@ -469,7 +466,7 @@ imageSelect();
 image.onload = function () {
   console.log("image height:" + image.height);
   console.log("image width:" + image.width);
-  ctx.drawImage(image,30,39);
+  ctx.drawImage(image,30,53);
 }
 
 };
@@ -480,11 +477,11 @@ graph();
 });
 
 document.getElementById("button").addEventListener("click", function () {
-document.getElementById("NConcInYield").style.display = "inline-flex"
-document.getElementById("NInProduct").style.display = "inline-flex"
-document.getElementById("NUptake").style.display = "inline-flex"
-document.getElementById("NResidue").style.display = "inline-flex"
-document.getElementById("NRemoved").style.display = "inline-flex"
+document.getElementById("NConcInYield").style.display = ""
+document.getElementById("NInProduct").style.display = ""
+document.getElementById("NUptake").style.display = ""
+document.getElementById("NResidue").style.display = ""
+document.getElementById("NRemoved").style.display = ""
 });
 
 
@@ -643,6 +640,27 @@ document.getElementById("button2").addEventListener("click", function () {
       document.getElementById("leachingRisk").innerHTML = Number(Math.round( (1- wae) * (TotalN - soilN - NInIrrWater - inSeasonNMineralized))) + " lbs/acre";
       document.getElementById("nMineralized").innerHTML = Number(Math.round()) + " lbs/acre";
       document.getElementById('nMineralized').innerHTML = Number(Math.round( inSeasonNMineralized )) + " lbs/acre"
+      document.getElementById("NConcInYield").innerHTML =  Nconc + " " + unitsConcentration;
+      document.getElementById("NInProduct").innerHTML =  Number(Math.round(NUptake)) + " " + units;
+      document.getElementById("NUptake").innerHTML =  Number(Math.round(TotalN)) + " " + units;
+      document.getElementById("NResidue").innerHTML = Number(Math.round(NinResidue)) + " " + units;
+      document.getElementById("NRemoved").innerHTML = Number(Math.round(NHarvested)) + " " + units;
+
+      graph();
+
+      document.getElementById('totalNUptake2').style.display = "";
+      document.getElementById('nInIrrigation').style.display = "";
+      document.getElementById('residualN').style.display = "";
+      document.getElementById('nNeed').style.display = "";
+      document.getElementById('leachingRisk').style.display = "";
+      document.getElementById('nMineralized').style.display = "";
+      document.getElementById("NConcInYield").style.display = "";
+      document.getElementById("NInProduct").style.display = "";
+      document.getElementById("NUptake").style.display = "";
+      document.getElementById("NResidue").style.display = "";
+      document.getElementById("NRemoved").style.display = "";
+
+
     };
   };
 
@@ -655,12 +673,7 @@ document.getElementById("button2").addEventListener("click", function () {
 
 
   document.getElementById("button2").addEventListener("click", function () {
-  document.getElementById('totalNUptake2').style.display = "inline-flex"
-  document.getElementById('nInIrrigation').style.display = "inline-flex"
-  document.getElementById('residualN').style.display = "inline-flex"
-  document.getElementById('nNeed').style.display = "inline-flex"
-  document.getElementById('leachingRisk').style.display = "inline-flex"
-  document.getElementById('nMineralized').style.display = "inline-flex"
+
 
 
   });

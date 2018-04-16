@@ -14,180 +14,182 @@
     /*#part1{
       padding-left: 20%;
     }*/
-    .part2{
-      padding-left: 20%;
-    }
-    #ContentCalc {
-  	  background:white;
-  	}
-    .InputDivs {
-      margin-left: 8%;
-      margin-top: .5%;
-
-    }
-
-    .CalcButtonDiv {
-      margin-left: 25%;
-      margin-top: 1%;
-      margin-bottom: 1%;
-    }
-
-    .NOutputDivs  {
-      margin-left: 10%;
-      font-size: 14px;
-      font-family: Verdana, Arial, sans-serif;
-    }
-
-    .NOutputDivs p {
-      border-radius:5px;
-      border-style:solid;
-      border-width:1px;
-      border-color:#926C44;
-      background-color:#F7F2EE;
-      margin-top:1%;
-      margin-bottom:1%;
-      padding-right:12px;
-      font-size: 14px;
-      font-family: Verdana, Arial, sans-serif;
-
-    }
-
-    .NOutputDivs h3 {
-      font-size: 14px;
-      font-family: Verdana, Arial, sans-serif;
-    }
-
-
-    /*#NConcInYield{
-          border-width:1px;
-          border-color:#926C44;
-          background-color:#F7F2EE;
-        }
-    #NInProduct{
-          border-width:1px;
-          border-color:#926C44;
-          background-color:#F7F2EE;
-        }
-    #NUptake{
-          border-width:1px;
-          border-color:#926C44;
-          background-color:#F7F2EE;
-        }
-    #NResidue{
-          border-width:1px;
-          border-color:#926C44;
-          background-color:#F7F2EE;
-        }
-    #NRemoved{
-          border-width:1px;
-          border-color:#926C44;
-          background-color:#F7F2EE;
-        }*/
-
-    .CanvasOutputDiv {
-      margin-left: 5%;
-
-    }
-
-    #button {
-      padding-bottom: 2%;
-      padding-top: 2%;
-      padding-left: 5%;
-      padding-right: 5%;
-      border-color: #A2BC13;
-      border-radius: 5px;
-      background-color: #E9F3C2;
-      font-size: 14px;
-      font-family: Verdana, Arial, sans-serif;
-    }
-
-    select {
-      border-color:#926C44;
-      background-color:#F7F2EE;
-      font-size: 12px;
-      font-family: Verdana, Arial, sans-serif;
-    }
-
-    input {
-      width: 75px;
-      border-color:#926C44;
-      border-radius:5px;
-      border-width:1px;
-      background-color:#F7F2EE;
-      font-size: 12px;
-      font-family: Verdana, Arial, sans-serif;
-    }
-
-    option {
-
-
-    }
-
-    .lateSeasonBox {
-      border-color:#926C44;
-      border-radius:5px;
-      border-width:1px;
-    }
-
-    #top {
-      text-align:center;
-      background-color:white;
-    }
-
-    #footer p {
-      background-color:white;
-
-    }
-
-    #footer {
-      width: auto;
-      background-color:white;
-     }
 
 
      @media only screen and (min-width: 400px) {
 
-       #part1{
-         padding-left:5%;
+       html {
+            box-sizing: border-box;
+          }
+          *, *:before, *:after {
+            box-sizing: inherit;
+          }
+
+       #top {
+         text-align:center;
+         background-color:white;
        }
+
+       #ContentCalc {
+         background:white;
+       }
+
+       #calcContainer {
+         background:white;
+         /*display:flex;*/
+       }
+
+
+       .CalcButtonDiv {
+         text-align:center;
+       }
+
 
        .CanvasOutputDiv {
-         margin-left: 0%;
-       }
-       .InputDivs {
-         margin:;
+         text-align:center;
 
+       }
+
+       #button2 {
+         color:white;
+         margin:5%;
+         padding: 2% 5% 2% 5%;
+         border-color: #A2BC13;
+         border-radius: 5px;
+         background-color: #A2BC13;
+         font-size: 14px;
+         font-family: Verdana, Arial, sans-serif;
+       }
+
+       #PlantingDate {
+         width:50px;
+       }
+
+       #HarvestDate {
+         width:50px;
+       }
+
+      #part1 h3{
+        text-align: center;
+        border-bottom: 3px solid #926C44;
+
+      }
+
+       .lateSeasonBox {
+         border-color:#926C44;
+         border-radius:5px;
+         border-width:1px;
+       }
+
+       .InputDivs {
+         display: inline-block;
+         background-color: #926C44;
+         color:white;
+         border: 2px solid black;
+         border-radius: 5px;
+         margin:1%;
+         padding:1%;
+         font-size: 14px;
+         align-items: center;
+         align-content:center;
+         justify-content: flex-start;
+       }
+
+       .InputDivs label {
+         /*display:;*/
+         text-align: center;
+         align-self: center;
+         justify-content: center;
+
+       }
+
+       .InputDivs input {
+         color:#414F12;
+         border-color:#e0e9bb;
+         border-radius:5px;
+         border-width:1px;
+         background-color:#F7F2EE;
+         font-size: 14px;
+         font-family: Verdana, Arial, sans-serif;
+         text-align:center;
+         width:40px;
+
+       }
+
+       .InputDivs select {
+         border-color:#e0e9bb;
+         border-radius:5px;
+         border-width:1px;
+         background-color:#F7F2EE;
+         font-size: 14px;
+         font-family: Verdana, Arial, sans-serif;
+
+       }
+
+
+       .soil, .Irrigation, .fieldCrop {
+         text-align: left;
+
+       }
+       #PlantingDate, #HarvestDate{
+         width:75px;
        }
 
        .NOutputDivs  {
-         margin:;
+         display:flex;
+         border: dotted solid 1px;
+         margin:1%;
+         font-size: 14px;
+         font-family: Verdana, Arial, sans-serif;
 
        }
 
+       .NOutputDivs span {
+         text-align: left;
+         flex-grow:2;
+         flex-basis:50px;
+         align-self: center;
+         justify-content: center;
+         font-size: 14px;
+         font-family: Verdana, Arial, sans-serif;
+
+       }
        .NOutputDivs p {
-         display:none;
-         border-radius:5px;
-         border-style:solid;
-         border-width:1px;
-         border-color:#926C44;
+         text-align: center;
+         flex-grow:1;
+         flex-basis:50px;
+         align-self: center;
+         justify-content: center;
+         font-size: 14px;
+         font-family: Verdana, Arial, sans-serif;
+
+         /*flex-grow:1;*/
+         /*border-radius:5px;
+         border: #926C44 solid 1px;
          background-color:#F7F2EE;
-         margin-top:1%;
-         margin-bottom:1%;
-         padding-right:10px;
+         font-size: 14px;
+         font-family: Verdana, Arial, sans-serif;*/
 
        }
 
+       #footer p {
+         background-color:white;
+       }
+
+       #footer {
+         width: auto;
+         background-color:white;
+        }
 
        }
 
-
-     }
 
      @media only screen and (min-width: 455px) {
 
      }
 
      @media only screen and (min-width: 760px) {
+
 
      }
 

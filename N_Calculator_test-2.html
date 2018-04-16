@@ -346,182 +346,219 @@
       <!--                 INSERT CALCULATOR HERE                    -->
       <!-- --------------------------------------------------------- -->
 <!-- <link rel="stylesheet" type="text/css" href="IE_Calculator.css"> -->
-
+      <form method="POST" action="/">
       <div id='part1'>
-      <div id='inputContainer'>
+      <section class="fieldCrop">
+      <div id='basicContainer'>
+        <h3> Field and Crop</h3>
+        <div class="InputDivs">
+          <label for="FieldId">Field Id: </label>
+          <input type="text" id="FieldId">
+        </div>
 
-        <div class="InputDivs">Field Id: <input type="text" id="FieldId"><br> </div>
+        <!-- cropInput built in js file -->
         <div class="InputDivs" id="cropInput">
-          Select Crop:<select id="cropSelect">
-        </select>
         </div>
 
         <div class="InputDivs" id="yieldInput">
-          Expected Yield: <input type="text" value="5" id="ExpectedYield"> Units: <select id="Units"></select>
+          <label for="ExpectedYield">Expected Yield:</label>
+          <input type="text" value="5" id="ExpectedYield" required>
+          <label for="Units">Units: </label>
+          <select id="Units"></select>
         </div>
 
-        <div class="InputDivs">Planting Date: <input type="text" id="PlantingDate" placeholder="mm/dd/yy" value="1/1/18"><br>
+
+        <div class="InputDivs">
+          <label for="PlantingDate">Planting Date: </label>
+          <input type="text" id="PlantingDate" placeholder="mm/dd/yy" value="1/1/18" required>
         </div>
-      <div class="InputDivs">Method of Planting: <select id="PlantingMethod">
-                                <option value="Seeding">Seeding</option>
-                                <option value="Transplant">Transplant</option>
-                            </select><br>
-                        </div>
-<div class="InputDivs">Expected Harvest Date: <input type="text" id="HarvestDate" placeholder="mm/dd/yy" value="3/1/18"><br>
-</div>
 
-<div class="InputDivs" id="ResidueRemovedDiv" style="display: inline-block">
-    Residue Removed: <select id="ResidueRemovedSelector">
-                      <option value="Yes">Yes</option>
-                      <option value="No">No</option>
-                    </select>
-</div>
-<div class="InputDivs" id="lateSeason">Late Season Planting: <input id="lateSeasonBox"type="checkbox">
-</div>
-<div class="InputDivs" id="precentRemovedDiv">
-  Percent (%) of Residue Removed: <input type="text" id="PercentRemoved"><br>
-</div>
-
-      <div class="CalcButtonDiv">
-            <button id='button' type="button">Calculate</button>
-          </div>
-        </div>
-        <!-- end inputContainer -->
-
-      <div id='output'>
-        <div class='NOutputDivs'><h3>Nitrogen (N) concentration in harvested product:</h3><p id='NConcInYield'></p></div>
-        <div class='NOutputDivs'><h3>N in product at harvest:</h3><p id='NInProduct'></p></div>
-        <div class='NOutputDivs'><h3>Total N uptake:</h3><p id='NUptake'></p></div>
-        <div class='NOutputDivs'><h3>N in residue:</h3><p id='NResidue'></p></div>
-        <div class='NOutputDivs'><h3>N removed at harvest:</h3><p id="NRemoved"></p></div>
-        <div class='CanvasOutputDiv'>
-          <canvas id="canvas" width="400" height="300" style=""></canvas>
-        </div>
+      <div class="InputDivs">
+         <label for="HarvestDate">Harvest Date: </label>
+         <input type="text" id="HarvestDate" placeholder="mm/dd/yy" value="3/1/18" required>
       </div>
 
-      <div class="part2Input">
-      <div class="InputDivs" id="irrigationSystemSelectorDiv">
-        Irrigation System:
-        <select class="InputDivs"id="irrigationSystemSelector">
-          <option value="Drip"> Drip</option>
-          <option value="Furrow"> Furrow</option>
-          <option value="Sprinkler"> Sprinkler</option>
-          <option value="Flood"> Flood</option>
-          <option value="Center Pivot"> Center Pivot</option>
-          <option value="Linear Move"> Linear Move</option>
-          <option value="Microsprayer"> Microsprayer</option>
-        </select>
-      </div>
-      <div class="InputDivs" id="waterAppliedEfficiency">
-        Water Application Effeciency:
-        <input id="wae" type="text" value="75">
-      </div>
-      <div class="InputDivs" id="waterApplied">
-        Acre Inches of Water Applied:
-        <input id="inchesOfWater" type="text" value="10"> inches
-      </div>
-
-      <div class="InputDivs" id="nitrogenConcentration">
-        Nitrogen Concentration: <input id="NppmWater" type="text" value="10">
-        Units:
-          <select id="NppmWaterUnits">
-            <option value="NO3">ppm NO3</option>
-            <option value="NO3N">ppm NO3-N</option>
+      <div class="InputDivs">
+        <label for="">Method of Planting:</label>
+          <select id="PlantingMethod">
+              <option value="Seeding">Seeding</option>
+              <option value="Transplant">Transplant</option>
           </select>
+                </div>
 
-      </div>
-
-      <div class="InputDivs" id="regionSelectorDiv">
-        Region:
-        <select id="regionSelector">
-          <option value="50"> San Juaquin Valley</option>
-          <option value="40"> Sacramento Valley</option>
-          <option value="40"> Imperial Valley</option>
-          <option value="40"> Delta</option>
-          <option value="40"> Central Coast</option>
-          <option value="40"> Southern Coast</option>
-          <option value="40"> Northern Coast</option>
-          <option value="40"> Tule Lake</option>
-        </select>
-      </div>
-
-      <div class="InputDivs" id="soilTypeSelectorDiv">
-        Soil Type:
-        <select id="soilTypeSelector">
-          <option value="Sand"> Sand </option>
-          <option value="LoamySand"> Loamy Sand</option>
-          <option value="SandyLoam"> Sandy Loam</option>
-          <option value="Loam"> Loam</option>
-          <option value="SiltyLoam"> Silty Loam</option>
-          <option value="Silt"> Silt </option>
-          <option value="SiltyClayLoam"> Silty Clay Loam</option>
-          <option value="SiltyClay"> Silty Clay</option>
-          <option value="ClayLoam"> Clay Loam</option>
-          <option value="SandyClayLoam"> Sandy Clay Loam</option>
-          <option value="SandyLoam"> Sandy Loam</option>
-          <option value="SandyClay"> Sandy Clay</option>
-          <option value="Clay"> Clay</option>
-        </select>
-      </div>
-
-      <div class="InputDivs" id="residualNitrate">
-        Residual Soil Nitrate: <input id="NppmSoil" value="10" type="text">
-        Units:
-          <select id="NppmSoilUnits">
-            <option value="NO3">ppm NO3</option>
-            <option value="NO3-N">ppm NO3-N</option>
+      <div class="InputDivs" id="ResidueRemovedDiv" style="">
+        <label for="ResidueRemovedSelector">Residue Removed:</label>
+          <select id="ResidueRemovedSelector">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
           </select>
-
       </div>
 
-      <div class="InputDivs" id="soilOrganicMatter">
-        Soil Organic Matter Content: <input id= "som" type="text">
-        Units:
-          <select id="som_units">
-            <option value="%">%</option>
-            <option value="g/kg">g/kg</option>
-            <!-- <option value="lbs/acre">lbs/acre</option> -->
-          </select>
-
+      <div class="InputDivs" id="lateSeason">
+        <label for="lateSeasonBox">Late Season Planting:</label>
+        <input id="lateSeasonBox"type="checkbox">
       </div>
 
-
-      <div class="InputDivs" class="">
-        Sampling Depth:
-        <input id="samplingDepth" value="6" type="text"> inches
+      <div class="InputDivs" id="precentRemovedDiv">
+        <label for="PercentRemoved">Percent (%) of Residue Removed:</label>
+         <input type="number" id="PercentRemoved">
       </div>
 
       <div class="CalcButtonDiv">
-            <button id='button2' type="button">Calculate</button>
+            <button id='button' type="button" style="display:none;">Calculate</button>
           </div>
         </div>
+      </section>
+          <!-- end basic Container -->
+
+        <!--  BEGIN: ADVANCED INPUT -->
+
+        <div class="part2Input">
+          <section class="Irrigation">
+          <h3> Water and Irrigation </h3>
+        <div class="InputDivs" id="irrigationSystemSelectorDiv">
+          <label for="irrigationSystemSelector">Irrigation System:</label>
+          <select id="irrigationSystemSelector">
+            <option value="Drip"> Drip</option>
+            <option value="Furrow"> Furrow</option>
+            <option value="Sprinkler"> Sprinkler</option>
+            <option value="Flood"> Flood</option>
+            <option value="Center Pivot"> Center Pivot</option>
+            <option value="Linear Move"> Linear Move</option>
+            <option value="Microsprayer"> Microsprayer</option>
+          </select>
+        </div>
+        <div class="InputDivs" id="waterAppliedEfficiency">
+          <label for="wae">Water Application Effeciency:</label>
+          <input id="wae" type="number" value="75" style="width:75px">
+        </div>
+        <div class="InputDivs" id="waterApplied">
+          <label for="inchesOfWater">Acre Inches of Water Applied:</label>
+          <input id="inchesOfWater" type="number" value="10">
+
+        </div>
+
+        <div class="InputDivs" id="nitrogenConcentration">
+          <label for="NppmWater">Nitrate Concentration:</label>
+          <input id="NppmWater" type="number" value="10">
+
+          <label for="NppmWaterUnits">Units:</label>
+            <select id="NppmWaterUnits">
+              <option value="NO3">ppm NO3</option>
+              <option value="NO3N">ppm NO3-N</option>
+            </select>
+
+        </div>
+      </section>
+      <section class="soil">
+        <h3> Soil </h3>
+        <div class="InputDivs" id="regionSelectorDiv">
+          <label for="regionSelector"> Region: </label>
+          <select id="regionSelector">
+            <option value="40"> San Juaquin Valley</option>
+            <option value="40"> Sacramento Valley</option>
+            <option value="40"> Imperial Valley</option>
+            <option value="40"> Delta</option>
+            <option value="40"> Central Coast</option>
+            <option value="40"> Southern Coast</option>
+            <option value="40"> Northern Coast</option>
+            <option value="40"> Tule Lake</option>
+          </select>
+        </div>
+
+        <div class="InputDivs" id="soilTypeSelectorDiv">
+          <label for="soilTypeSelector"> Soil Type: </label>
+          <select id="soilTypeSelector">
+            <option value="Sand"> Sand </option>
+            <option value="LoamySand"> Loamy Sand</option>
+            <option value="SandyLoam"> Sandy Loam</option>
+            <option value="Loam"> Loam</option>
+            <option value="SiltyLoam"> Silty Loam</option>
+            <option value="Silt"> Silt </option>
+            <option value="SiltyClayLoam"> Silty Clay Loam</option>
+            <option value="SiltyClay"> Silty Clay</option>
+            <option value="ClayLoam"> Clay Loam</option>
+            <option value="SandyClayLoam"> Sandy Clay Loam</option>
+            <option value="SandyLoam"> Sandy Loam</option>
+            <option value="SandyClay"> Sandy Clay</option>
+            <option value="Clay"> Clay</option>
+          </select>
+        </div>
+
+        <div class="InputDivs" id="residualNitrate">
+          <label for="NppmSoil"> Residual Soil Nitrate:  </label>
+          <input id="NppmSoil" value="10" type="number" step="">
+
+          <label for="NppmSoilUnits"> Units:</label>
+            <select id="NppmSoilUnits">
+              <option value="NO3">ppm NO3</option>
+              <option value="NO3-N">ppm NO3-N</option>
+            </select>
 
 
+        </div>
 
-       <!-- End part2Input -->
+        <div class="InputDivs" id="soilOrganicMatter">
+          <label for="som"> Soil Organic Matter Content:</label>
+          <input id= "som" type="number" step="0.5">
+          <label for="som_units"> Units:</label>
+            <select id="som_units">
+              <option value="%">%</option>
+              <option value="g/kg">g/kg</option>
+              <!-- <option value="lbs/acre">lbs/acre</option> -->
+            </select>
+        </div><br>
 
 
+        <div class="InputDivs" class="">
+          <label for="samplingDepth"> Sampling Depth (inches):</label>
+          <input id="samplingDepth" value="6" type="number">
+        </div>
+      </section>
+
+        <div class="CalcButtonDiv">
+              <button id='button2' type="button">Calculate</button>
+            </div>
+          </div>
+
+          <!-- BEGIN: BASIC OUTPUT -->
+      <div class='output'>
+        <h3> FIELD AND CROP OUTPUT </h3>
+        <div class='NOutputDivs'><span>Nitrogen (N) concentration in harvested product:</span><p id='NConcInYield'></p></div>
+        <div class='NOutputDivs'><span>N in product at harvest:</span><p id='NInProduct'></p></div>
+        <div class='NOutputDivs'><span>Total N uptake:</span><p id='NUptake'></p></div>
+        <div class='NOutputDivs'><span>N in residue:</span><p id='NResidue'></p></div>
+        <div class='NOutputDivs'><span>N removed at harvest:</span><p id="NRemoved"></p></div>
+      </div>  <!-- END: BASIC OUTPUT -->
+
+       <!-- BEGIN: ADVANCED OUTPUT -->
       <div class="part2Output">
-
-        <div class='NOutputDivs'><h3>Total N Uptake:</h3><p id='totalNUptake2'></p><br></div>
-        <div class='NOutputDivs'><h3>Residual Soil Nitrate: </h3><p id='residualN'></p><br></div>
-        <div class='NOutputDivs'><h3>N in irrigation water applied: </h3><p id='nInIrrigation'></p><br></div>
-        <div class='NOutputDivs'><h3>N Fertilizer need WITHOUT leaching:</h3> <p id='nNeed'></p><br></div>
-        <div class='NOutputDivs'><h3>Nitrate at risk of leaching: </h3><p id='leachingRisk'></p><br></div>
-        <div class='NOutputDivs'><h3>Estimated in Season N mineralization:</h3><p id='nMineralized'></p><br></div>
-
-
+        <h3> IRRIGATION AND SOIL OUTPUT  </h3>
+        <div class='NOutputDivs'><span>Total N Uptake:</span><p id='totalNUptake2'></p></div>
+        <div class='NOutputDivs'><span>Residual Soil Nitrate: </span><p id='residualN'></p></div>
+        <div class='NOutputDivs'><span>N applied with Irrigation: </span><p id='nInIrrigation'></p></div>
+        <div class='NOutputDivs'><span>N Fertilizer need WITHOUT leaching:</span> <p id='nNeed'></p></div>
+        <div class='NOutputDivs'><span>Nitrate at risk of leaching: </span><p id='leachingRisk'></p></div>
+        <div class='NOutputDivs'><span>Estimated in Season N mineralization:</span><p id='nMineralized'></p></div>
       </div>
-        <!-- End part2Output -->
-      </div>
+      <!-- END: ADVANCED OUTPUT -->
 
-      </div>  <!-- end part 1 -->
-      <div class="part2">
-
-
-
+      <div class='CanvasOutputDiv'>
+        <h3> Nitrogen Uptake Curve </h3>
+        <canvas id="canvas" width="400" height="300" style=""></canvas>
       </div>
 
+          <!-- End: class="part1Form" -->
+      </div>
+    </form>
+    <div class="references">
+      <ol id="references">
+      </ol>
+    </div>
+        <!-- END: class="content" -->
+      </div>
+
+<!-- END: class="content" -->
 </div>
 <!--
 	<p>
