@@ -4,7 +4,7 @@
 // Declare global HOST variables
 var cropData = data;
 var cropSelectorDiv = "";
-var cropSelector = "<label for=\"cropSelector\">" + "2. Select a Crop:" + "</label>" + "<select id=\"cropSelector\">";
+var cropSelector =  "<label for=\"cropSelector\">" + "2. Select a Crop:" + "</label>" + "<select id=\"cropSelector\">";
 var days = 0;
 var start = document.getElementById("PlantingDate").value;
 var end = document.getElementById("HarvestDate").value;
@@ -22,18 +22,6 @@ const NO3N_to_NO3 = 4.4268;
 const acre = 43560;
 const density_water_lbs = 62.43;
 
-var soil_bulk_densities = { Sand: '1.46',
-                            LoamySand:'1.47',
-                            SandyLoam:'1.49',
-                            Loam:'1.47',
-                            SiltyLoam:'1.41',
-                            Silt:'1.41',
-                            SandyClayLoam:'1.50',
-                            ClayLoam:'1.42',
-                            SiltyClayLoam:'1.33',
-                            SiltyClay:'1.26',
-                            Clay:'1.25',
-                          };
 
 var soil_bulk_densities_nest = {
                             "Sand": {
@@ -153,7 +141,7 @@ function unitSelectorFunction() {
 
            unitsInput += "<option value=" + u + ">" + u + "</option>";
          }
-          // unitsInput += "</select><br>";
+          unitsInput += "</select><br>";
          console.log(unitsInput);
          unitSelector.innerHTML += unitsInput;
        }
@@ -207,8 +195,8 @@ document.getElementById("cropSelector").addEventListener("change", function (){
        var residueRemovedBool = cropChoices[i]["residueRemoved"];
 
        if (residueRemovedBool == false){
-         w.style.display = "none";
-         y.style.display = "none";
+         w.style.display = "disabled";
+         y.style.display = "disabled";
        } else {
          w.style.display = "inline-block";
          y.style.display = "inline-block";
@@ -499,22 +487,22 @@ document.getElementById('irrigationSystemSelector').addEventListener("change", f
     document.getElementById('wae').placeholder = ">" + 95 + "%";
   } else if (wae_range === "Furrow") {
     document.getElementById('wae').value = "";
-    document.getElementById('wae').placeholder = 45 + " - " + 80 + "%";
+    document.getElementById('wae').placeholder = 45 + "-" + 80 + "%";
   } else if (wae_range === "Sprinkler") {
     document.getElementById('wae').value = "";
-    document.getElementById('wae').placeholder = 65 + " - " + 85 + "%";
+    document.getElementById('wae').placeholder = 65 + "-" + 85 + "%";
   } else if (wae_range === "Flood") {
     document.getElementById('wae').value = "";
-    document.getElementById('wae').placeholder = 40 + " - " + 80 + "%";
+    document.getElementById('wae').placeholder = 40 + "-" + 80 + "%";
   } else if (wae_range === "Center Pivot") {
     document.getElementById('wae').value = "";
-    document.getElementById('wae').placeholder = 75 + " - " + 85 + "%";
+    document.getElementById('wae').placeholder = 75 + "-" + 85 + "%";
   } else if (wae_range === "Linear Move") {
     document.getElementById('wae').value = "";
-    document.getElementById('wae').placeholder = 85 + " - " + 90 + "%";
+    document.getElementById('wae').placeholder = 85 + "-" + 90 + "%";
   } else if (wae_range === "Microsprayer") {
     document.getElementById('wae').value = "";
-    document.getElementById('wae').placeholder = 75 + " - " + 85 + "%";
+    document.getElementById('wae').placeholder = 75 + "-" + 85 + "%";
   }
 
 });
@@ -633,8 +621,8 @@ document.getElementById("button2").addEventListener("click", function () {
       var acre_density = ((bulk_density * acre * density_water_lbs)/12) * sampling_depth;
       var dFactor = (acre_density)/1000000;
       console.log(dFactor);
-
       var soilN = dFactor * residual_soil_N;
+      units = "lbs/acre";
       document.getElementById("residualN").innerHTML = Number(Math.round(soilN)) + " lbs/acre";
       document.getElementById("nNeed").innerHTML = Number(Math.round( TotalN - soilN - NInIrrWater - inSeasonNMineralized ))+ " lbs/acre";
       document.getElementById("leachingRisk").innerHTML = Number(Math.round( (1- wae) * (TotalN - soilN - NInIrrWater - inSeasonNMineralized))) + " lbs/acre";

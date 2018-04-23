@@ -18,12 +18,12 @@
 
      @media only screen and (min-width: 400px) {
 
-       html {
+       /*html {
             box-sizing: border-box;
           }
           *, *:before, *:after {
             box-sizing: inherit;
-          }
+          }*/
 
        #top {
          text-align:center;
@@ -50,6 +50,17 @@
 
        }
 
+       #button {
+         color:#926C44;
+         margin:5%;
+         padding: 2% 5% 2% 5%;
+         border-color: #A2BC13;
+         border-radius: 5px;
+         background-color: #E9F3C2;
+         font-size: 14px;
+         font-family: Verdana, Arial, sans-serif;
+       }
+
        #button2 {
          color:white;
          margin:5%;
@@ -61,13 +72,6 @@
          font-family: Verdana, Arial, sans-serif;
        }
 
-       #PlantingDate {
-         width:50px;
-       }
-
-       #HarvestDate {
-         width:50px;
-       }
 
       #part1 h3{
         text-align: center;
@@ -82,65 +86,108 @@
        }
 
        .InputDivs {
-         display: inline-block;
+         display:flex;
          background-color:;
          color:;
-         border: 2px solid black;
-         border-radius: 5px;
-         margin:1%;
-         padding:1%;
-         font-size: 14px;
-         align-items: center;
+         border: 1px dotted black;
+         /*align-items: center;
          align-content:center;
-         justify-content: flex-start;
+         justify-content: ;
+         flex:auto;
+         flex-grow:1;
+         flex-basis:auto;*/
+       }
+       #NppmSoilUnits, #som_units, #NppmWaterUnits {
+         text-align: left;
+         width:;
+
+       }
+       .InputDivs > label {
+         /*display:;*/
+         text-align: left;
+         flex-grow:9;
+         flex-basis:;
+         align-self: center;
+         justify-content: center;
+
        }
 
-       .InputDivs label {
-         /*display:;*/
+       .InputDivs > input {
+         width:25px;
+         color:#414F12;
+         background-color:#F7F2EE;
+         text-align: center;
+         flex-grow:1;
+         flex-basis:;
+         align-self: center;
+         justify-content: center;
+
+       }
+
+       .InputDivs > span {
+         display:none;
+         flex-grow:1;
+         flex-basis:;
          text-align: center;
          align-self: center;
          justify-content: center;
 
        }
 
-       .InputDivs input {
-         color:#414F12;
+
+       .InputDivs > select {
          border-color:#e0e9bb;
-         border-radius:5px;
-         border-width:1px;
          background-color:#F7F2EE;
-         font-size: 14px;
-         font-family: Verdana, Arial, sans-serif;
-         text-align:center;
-         width:40px;
+         text-align: center;
+         flex-grow:1;
+         flex-basis:;
+         align-self: center;
+         justify-content: center;
 
        }
 
-       .InputDivs select {
-         border-color:#e0e9bb;
-         border-radius:5px;
-         border-width:1px;
-         background-color:#F7F2EE;
-         font-size: 14px;
-         font-family: Verdana, Arial, sans-serif;
+       .InputDivs select   {
 
        }
 
 
-       .soil, .Irrigation, .fieldCrop {
-         text-align: left;
+
+       .soil, .Irrigation, .fieldCrop, .part2Output, .CanvasOutputDiv, .CalcButtonDiv, .intro {
+         max-width: 500px;
 
        }
-       #PlantingDate, #HarvestDate{
-         width:75px;
+
+       input[type="date"] {
+         width:33%;
+
        }
+
+       input[type="text"] {
+         width: ;
+
+       }
+
+       #ExpectedYield {
+         width:;
+       }
+
+       #Units {
+         width:;
+       }
+
+       #cropSelector {
+         width:;
+       }
+
+       select{
+         width:20%;
+
+       }
+
 
        .NOutputDivs  {
          display:flex;
-         border: dotted solid 1px;
          margin:1%;
-         font-size: 14px;
-         font-family: Verdana, Arial, sans-serif;
 
        }
 
@@ -150,8 +197,6 @@
          flex-basis:50px;
          align-self: center;
          justify-content: center;
-         font-size: 14px;
-         font-family: Verdana, Arial, sans-serif;
 
        }
        .NOutputDivs p {
@@ -160,8 +205,6 @@
          flex-basis:50px;
          align-self: center;
          justify-content: center;
-         font-size: 14px;
-         font-family: Verdana, Arial, sans-serif;
 
          /*flex-grow:1;*/
          /*border-radius:5px;
