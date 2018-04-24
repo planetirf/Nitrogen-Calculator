@@ -253,7 +253,7 @@ document.getElementById("button").addEventListener("click", function () {
      var crop = cropChoices[i];
      var name = crop.name;
      var unitsSelected = crop["units"];
-     var refs = [];
+
 
      // GET: crop data from currentCrop
      if (currentCrop === name) {
@@ -264,18 +264,30 @@ document.getElementById("button").addEventListener("click", function () {
       //  console.log("Nconc " + Nconc);  // print to console test
       //  console.log("unitsConcentration " + unitsConcentration);  // print to console test
 
+      // GET: Crop Specific notes
+      var note = cropChoices[i]["note"];
+      var links = cropChoices[i]["links"];
+      var links = cropChoices[i]["linkText"];
+      var notesText = note;
+
+      console.log(notesText);
+      document.getElementById("cropNotes").innerHTML = notesText;
+
+
+
       // GET: References list
-      var text =  "";
+      var refs = [];
+      var refText =  "";
       refs = cropChoices[i]["refs"];
 
        // Iterate through References list and populate list
        for (var q = 0; q < refs.length; q++ ) {
         var item = "<li> " + refs[q] + " </li>";
-        text += item;
-        console.log("ITEM:  " + item);
+        refText += item;
+        // console.log("ITEM:  " + item);
       }
 
-      document.getElementById('references').innerHTML = text;
+      document.getElementById('references').innerHTML = refText;
 
 
 
