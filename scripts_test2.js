@@ -142,7 +142,7 @@ function unitSelectorFunction() {
            unitsInput += "<option value=" + u + ">" + u + "</option>";
          }
           unitsInput += "</select><br>";
-         console.log(unitsInput);
+        //  console.log(unitsInput);
          unitSelector.innerHTML += unitsInput;
        }
      }
@@ -166,7 +166,7 @@ function SeasonCheckFunction (){
     // Check current name against selected crop name
     if (currentCrop === name) {
       var seasonBool = cropChoices[i]["lateSeason"];
-      console.log("SEASONBOOL" + seasonBool)
+      // console.log("SEASONBOOL" + seasonBool)
 
       if (seasonBool == false){
         seasonBox.style.display = "none";
@@ -220,11 +220,11 @@ document.getElementById("ResidueRemovedSelector").addEventListener("change", fun
      // set image source to currentCrop"s value.
      if (currentCrop === name) {
        if (x === "Yes") {
-         console.log(x);
+        //  console.log(x);
          y.style.display = "inline-block";
        } else {
          y.style.display = "none";
-             console.log(x);
+            //  console.log(x);
        };
      }
    }
@@ -253,30 +253,44 @@ document.getElementById("button").addEventListener("click", function () {
      var crop = cropChoices[i];
      var name = crop.name;
      var unitsSelected = crop["units"];
+     var refs = [];
 
-     // set image source to currentCrop"s value.
+     // GET: crop data from currentCrop
      if (currentCrop === name) {
        Nconc = cropChoices[i]["percentN"];
        unitsConcentration = cropChoices[i]["unitsConc"];
        NHI = cropChoices[i]["nhi"];
-       console.log("NHI " + NHI);   // print to console test
-       console.log("Nconc " + Nconc);  // print to console test
-       console.log("unitsConcentration " + unitsConcentration);  // print to console test
+      //  console.log("NHI " + NHI);   // print to console test
+      //  console.log("Nconc " + Nconc);  // print to console test
+      //  console.log("unitsConcentration " + unitsConcentration);  // print to console test
+
+      // GET: References list
+      var text =  "";
+      refs = cropChoices[i]["refs"];
+
+       // Iterate through References list and populate list
+       for (var q = 0; q < refs.length; q++ ) {
+        var item = "<li> " + refs[q] + " </li>";
+        text += item;
+        console.log("ITEM:  " + item);
+      }
+
+      document.getElementById('references').innerHTML = text;
+
+
 
        for (j in unitsSelected){
          if (units === unitsSelected[j]) {
-         console.log("J" + unitsSelected[j]); // print to console test
+        //  console.log("J" + unitsSelected[j]); // print to console test
          var position = unitsSelected.indexOf(unitsSelected[j]);
          cFactor = cropChoices[i]["conversionFactor"][j];
-         console.log("cFactor " + cropChoices[i]["conversionFactor"][j]); // print to console test
+         // console.log("cFactor " + cropChoices[i]["conversionFactor"][j]); // print to console test
          break;
 
        } else {
-         console.log("ERRROR");
+         console.log("ERRROR: no conversion factior");
        }
-        //  if ("J " + units[j] === units){
-        //    console.log("ZZZ" + units[j]);
-        //  };
+
        }
      }
    }
@@ -288,10 +302,10 @@ document.getElementById("button").addEventListener("click", function () {
   var NHarvested = NUptake + (NinResidue * percentRemoved);
 
 
-  console.log("NUptake: " + NUptake);
-  console.log("NinResidue: " + NinResidue);
-  console.log("NHarvested: " + NHarvested);
-  console.log("TotalN: "  + TotalN);
+  // console.log("NUptake: " + NUptake);
+  // console.log("NinResidue: " + NinResidue);
+  // console.log("NHarvested: " + NHarvested);
+  // console.log("TotalN: "  + TotalN);
 
   units = "lbs/acre"
   // get output textboxes and fill with values from calulcations
@@ -311,30 +325,29 @@ document.getElementById("button2").addEventListener("click", function () {
     // get date input values
     var start = document.getElementById("PlantingDate").value;
     var end = document.getElementById("HarvestDate").value;
-    console.log(start, end);
+    // console.log(start, end);
 
-    // pass start and end date into DATE constructor
+    // pass start and end date into DATE
     var x = new Date(start);
     var y = new Date(end);
 
-    console.log(x,y);
+    // console.log(x,y);
 
     // Calculate difference between dates - returns a value in milliseconds
     var z = Math.abs(y - x);
 
-    console.log(z);
+    // console.log(z);
 
     // milliseconds converted into number of days
     days =  (z / (1000*60*60*24));
 
-    console.log(days);
-
+    // console.log(days);
     // return days to allow access to the value for graphing functions
     return days;
 
 });
 
-console.log(days);
+// console.log(days);
 
 ///////////////////////////////////////////////////////
 /////////                     ///////
@@ -437,7 +450,7 @@ function imageSelect() {
      for (i in cropChoices) {
        var crop = cropChoices[i];
        var name = crop.name;
-       console.log("season" + season);
+      //  console.log("season" + season);
 
        // set image source to currentCrop"s value.
        if (currentCrop === name && season === false) {
@@ -452,8 +465,8 @@ function imageSelect() {
 imageSelect();
 
 image.onload = function () {
-  console.log("image height:" + image.height);
-  console.log("image width:" + image.width);
+  // console.log("image height:" + image.height);
+  // console.log("image width:" + image.width);
   ctx.drawImage(image,30,53);
 }
 

@@ -2,26 +2,65 @@ data = [{
 	"crops": [
 
 		{
-			"name": "WheatDurum",
-			"percentN": 42.1,
-			"unitsConc": "lbs/ton @ 12% moisture",
-			"units": ["tons/acre"],
-			"conversionFactor": [1, 0],
-			"residueRemoved": true,
-			"nhi": 0.75,
-			"intercept": 50,
-			"graph": "imgs/WheatDurum_Curve.png",
+			"name": "Beetroot",
+			"percentN": 4.6,
+			"unitsConc": "lbs/ton fresh weight",
+			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
+			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
+			"residueRemoved": false,
+			"nhi": 0.54,
+			"graph": "imgs/beetroot_curve.png",
 			"lateSeason": false,
 			"graphLate": "",
 			"note": "",
-			"links": "http://smallgrains.ucanr.edu/",
-			"linkText": "University of California Small Grains Research and Information",
+			"links": "http://anrcatalog.ucanr.edu/pdf/8096.pdf",
+			"linkText": "Beetroot and swiss chard production in California",
 			"refs": [
-				"Kutman, U.B., Yildiz, H., Cakmak, I., 2011. Effect of nitrogen on uptake, remobilization and partitioning of zinc and iron throughout the development of durum wheat. Plant and Soil 342, 149-164. ",
-				"Liang, Z., Bronson, K.F., Thorp, K.R., Mon, J., Badaruddin, M., Wang, G., 2014. Cultivar and N fertilizer rate affect yield and N use efficiency in irrigated durum wheat. Crop Science 54, 1175-1183. "
+				"Feller, C., Fink, M., 2002. Nitrogen uptake by table beet--validation of a model. Journal of the American Society for Horticultural Science 127, 1013-1017. ",
+				"",
+				""
 			]
 		},
 
+		{
+			"name": "CornSweet",
+			"percentN": 7.17,
+			"unitsConc": "lbs/ton fresh weight",
+			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
+			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
+			"residueRemoved": false,
+			"nhi": 0.49,
+			"graph": "imgs/corn_curve.png",
+			"lateSeason": false,
+			"graphLate": "",
+			"note": "",
+			"links": "http://anrcatalog.ucanr.edu/pdf/7223.pdf",
+			"linkText": "Sweet corn production in California",
+			"refs": [
+				"Doerge, T. A., Stroehlein, J. L., Tucker, T. C., Fangmeier, D. D., Oebker, N. F., McCreary, T. W., Husman, S. H., 1990. Effects of Nitrogen and Water Rates on Nitrogen Uptake Dynamics in Drip Irrigated Sweet Corn. University of Arizona Vegetable Report, 1990. ",
+				"Doerge, T. A., Stroehlein, J. L., Tucker, T. C., Fangmeier, D. D., Oebker, N. F., McCreary, T. W., Husman, S. H., Lakatos, E.A., 1990. Nitrogen and Water Effects on the Growth, Yield and Quality of Drip Irrigated Sweet Corn. University of Arizona Vegetable Report, 1989. ",
+				"Wu, P., Dai, Q., Tao, Q., 1993. Effect of fertilizer rates on the growth, yield and kernel composition of sweet corn. Communications in Soil Science and Plant Analysis, 24, 237-253. "
+			]
+		},
+
+		{
+			"name": "CabbageWhite",
+			"percentN": 4.01,
+			"unitsConc": "lbs/ton fresh weight",
+			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
+			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
+			"residueRemoved": false,
+			"nhi": 0.53,
+			"graph": "imgs/cabbage_white.png",
+			"lateSeason": false,
+			"graphLate": "",
+			"note": "",
+			"links": "http://anrcatalog.ucanr.edu/pdf/7208.pdf",
+			"linkText": "Cabbage production in California",
+			"refs": [
+				"Smith, R., Cahn, M., Hartz, T., Love, P., Farrara, B., 2016. Nitrogen dynamics of cole crop production: implications for fertility management and environmental protection. HortScience 51, 1586-1591."
+			]
+		},
 
 		{
 			"name": "Cucumber",
@@ -66,25 +105,66 @@ data = [{
 			]
 		},
 
-
 		{
-			"name": "TomatoesFreshMarket",
-			"percentN": 2.61,
-			"unitsConc": "lbs/ton fresh weight",
+			"name": "ForageSmallGrainEarly",
+			"percentN": 13.35,
+			"unitsConc": "lbs/ton silage @ 70% moisture",
 			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
 			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
 			"residueRemoved": false,
-			"nhi": 0.54,
-			"graph": "imgs/TomatoFresh_Curve.png",
+			"nhi": 0.025,
+			"graph": "imgs/oat_gran_curve.png",
 			"lateSeason": false,
 			"graphLate": "",
-			"note": "",
-			"links": "",
-			"linkText": "",
+			"note": "The earlier the harvest stage, the more N will be removed per ton of yield.  Early stage  N removal data represents an average for several small grain varieties harvested from boot through mid flowering. ",
+			"links": "http://anrcatalog.ucanr.edu/pdf/8173.pdf",
+			"linkText": "UCANR Small grain forage production manual",
 			"refs": [
-				"Scholberg, J., McNeal, B., Boote, K.J., Jones, J.W., Locascio, S.J., Olson, S.M., 2000. Nitrogen stress effects on grown and nitrogen accumulation by field-grown tomato. Additional info in: Scholberg, J., McNeal, B.L., Jones, J.W., Boote, K.J., Stanley, C.D., Obreza, T.A., 2000. Growth and canopy characteristics of field-grown tomato. Agronomy Journal 92, 152-159.  ",
-				"Zotarelli, L., Dukes, M.D., Scholberg, J.M.S., Munoz-Carpena, R., Icerman, J., 2009. Tomato nitrogen accumulation and fertilizer use efficiency on a sandy soil, as affected by nitrogen rate and irrigation scheduling. Agricultural Water Management 96, 1247-1258. ",
-				"Ren, T., Christie, P., Wang, J., Chen, Q., Zhang, F., 2010. Root zone soil nitrogen management to maintain high tomato yields and minimum nitrogen losses to the environment. Scientia Horticultuarae 125, 25-33. "
+				"",
+				"",
+				""
+			]
+		},
+
+		{
+			"name": "ForageSmallGrainLate",
+			"percentN": 13.35,
+			"unitsConc": "lbs/ton silage @ 70% moisture",
+			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
+			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
+			"residueRemoved": false,
+			"nhi": 0.025,
+			"graph": "imgs/oat_gran_curve.png",
+			"lateSeason": false,
+			"graphLate": "",
+			"note": "The earlier the harvest stage, the more N will be removed per ton of yield.  This N removal data represents an average of several small grain varieties harvested from from mid-flowering through soft dough stage. ",
+			"links": "http://anrcatalog.ucanr.edu/pdf/8173.pdf",
+			"linkText": "UCANR Small grain forage production manual",
+			"refs": [
+				"",
+				"",
+				""
+			]
+		},
+
+		{
+			"name": "OatGrain",
+			"percentN": 37.66,
+			"unitsConc": "lbs/ton @ 12% moisture",
+			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
+			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
+			"residueRemoved": false,
+			"nhi": 0.70,
+			"graph": "imgs/oat_gran_curve.png",
+			"lateSeason": true,
+			"graphLate": "",
+			"note": " The period of slow uptake between sowing and after tillering depends on the temperature. Small grains planted in spring have a much shorter lag period than if they are planted in fall or winter. ",
+			"links": "http://smallgrains.ucanr.edu/",
+			"linkText": "University of California Small Grains Research and Information",
+			"refs": [
+				"Malhi, S.S., Johnston, A.M., Schoenau, J.J., Wang, Z.H., Vera, C.L., 2012. Seasonal biomass accumulation and nutrient uptake of wheat, barley and oat on a Blank Chernozem soil in Saskatchewan. Canadian Journal of Plant Science 86, 1005-1014.",
+				"Neugschwandtner, R.,W., Wagentrist, H., Kaul, H.-P., 2014. Nitrogen concentrations and nitrogen yields of above-ground dry matter and chickpea during crop growth compared to pea, barley and oat in central Europe. Turkish Journal of Field Crops 19(1), 136-141. ",
+				"Zhou, Q.-P., Biswas, D.K., Ma, B.-L., 2013. Comparisons among cultivars of wheat, hulless and hulled oats: dry matter, N and P accumulation and partitioning as affected by N supply. Journal of Plant Nutrition and Soil Science 176, 929-941. "
 			]
 		},
 
@@ -152,128 +232,6 @@ data = [{
 				"Gimenez, C., Gallardo, M., Martinez-Gaitan, C., Stockle, C.O., Thompson, R.B., Granados, M.R., 2013. VegSyst, a simulation model of daily crop growth, nitrogen uptake and evapotranspiration for pepper crops for use in an on-farm decision support system. Irrigation Science 2013, 464-477. ",
 				"Contreras, J.I., Lopez, J.G., Lao, M.T., Eymar, E.,. Segura, M.L., 2013. Dry-matter allocation and nutrient uptake dynamic in pepper plant irrigated with recycled water by different nitrogen and potassium rate. Communications in Soil Science and Plant Analysis 44, 758-766.",
 				"Contreras, J.I., Lopez, J.G., Lao, M.T., Eymar, E.E., Segura, M.L., 2013. Dry-Matter allocation and nutrient uptake dynamic in pepper plant irrigated with recycled water by different nitrogen and potassium rate. Communications in Soil Science and Plant Analysis 44, 758-766."
-			]
-		},
-
-		{
-			"name": "Beetroot",
-			"percentN": 4.6,
-			"unitsConc": "lbs/ton fresh weight",
-			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
-			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
-			"residueRemoved": false,
-			"nhi": 0.54,
-			"graph": "imgs/beetroot_curve.png",
-			"lateSeason": false,
-			"graphLate": "",
-			"note": "",
-			"links": "http://anrcatalog.ucanr.edu/pdf/8096.pdf",
-			"linkText": "Beetroot and swiss chard production in California",
-			"refs": [
-				"Feller, C., Fink, M., 2002. Nitrogen uptake by table beet--validation of a model. Journal of the American Society for Horticultural Science 127, 1013-1017. ",
-				"",
-				""
-			]
-		},
-
-		{
-			"name": "CabbageWhite",
-			"percentN": 4.01,
-			"unitsConc": "lbs/ton fresh weight",
-			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
-			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
-			"residueRemoved": false,
-			"nhi": 0.53,
-			"graph": "imgs/cabbage_white.png",
-			"lateSeason": false,
-			"graphLate": "",
-			"note": "",
-			"links": "http://anrcatalog.ucanr.edu/pdf/7208.pdf",
-			"linkText": "Cabbage production in California",
-			"refs": "Smith, R., Cahn, M., Hartz, T., Love, P., Farrara, B., 2016. Nitrogen dynamics of cole crop production: implications for fertility management and environmental protection. HortScience 51, 1586-1591."
-		},
-
-		{
-			"name": "CornSweet",
-			"percentN": 7.17,
-			"unitsConc": "lbs/ton fresh weight",
-			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
-			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
-			"residueRemoved": false,
-			"nhi": 0.49,
-			"graph": "imgs/corn_curve.png",
-			"lateSeason": false,
-			"graphLate": "",
-			"note": "",
-			"links": "http://anrcatalog.ucanr.edu/pdf/7223.pdf",
-			"linkText": "Sweet corn production in California",
-			"refs": [
-				"Doerge, T. A., Stroehlein, J. L., Tucker, T. C., Fangmeier, D. D., Oebker, N. F., McCreary, T. W., Husman, S. H., 1990. Effects of Nitrogen and Water Rates on Nitrogen Uptake Dynamics in Drip Irrigated Sweet Corn. University of Arizona Vegetable Report, 1990. ",
-				"Doerge, T. A., Stroehlein, J. L., Tucker, T. C., Fangmeier, D. D., Oebker, N. F., McCreary, T. W., Husman, S. H., Lakatos, E.A., 1990. Nitrogen and Water Effects on the Growth, Yield and Quality of Drip Irrigated Sweet Corn. University of Arizona Vegetable Report, 1989. ",
-				"Wu, P., Dai, Q., Tao, Q., 1993. Effect of fertilizer rates on the growth, yield and kernel composition of sweet corn. Communications in Soil Science and Plant Analysis, 24, 237-253. "
-			]
-		},
-
-		{
-			"name": "ForageSmallGrainEarly",
-			"percentN": 13.35,
-			"unitsConc": "lbs/ton silage @ 70% moisture",
-			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
-			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
-			"residueRemoved": false,
-			"nhi": 0.025,
-			"graph": "imgs/oat_gran_curve.png",
-			"lateSeason": false,
-			"graphLate": "",
-			"note": "The earlier the harvest stage, the more N will be removed per ton of yield.  Early stage  N removal data represents an average for several small grain varieties harvested from boot through mid flowering. ",
-			"links": "http://anrcatalog.ucanr.edu/pdf/8173.pdf",
-			"linkText": "UCANR Small grain forage production manual",
-			"refs": [
-				"",
-				"",
-				""
-			]
-		},
-
-		{
-			"name": "ForageSmallGrainLate",
-			"percentN": 13.35,
-			"unitsConc": "lbs/ton silage @ 70% moisture",
-			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
-			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
-			"residueRemoved": false,
-			"nhi": 0.025,
-			"graph": "imgs/oat_gran_curve.png",
-			"lateSeason": false,
-			"graphLate": "",
-			"note": "The earlier the harvest stage, the more N will be removed per ton of yield.  This N removal data represents an average of several small grain varieties harvested from from mid-flowering through soft dough stage. ",
-			"links": "http://anrcatalog.ucanr.edu/pdf/8173.pdf",
-			"linkText": "UCANR Small grain forage production manual",
-			"refs": [
-				"",
-				"",
-				""
-			]
-		},
-
-		{
-			"name": "OatGrain",
-			"percentN": 37.66,
-			"unitsConc": "lbs/ton @ 12% moisture",
-			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
-			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
-			"residueRemoved": false,
-			"nhi": 0.70,
-			"graph": "imgs/oat_gran_curve.png",
-			"lateSeason": true,
-			"graphLate": "",
-			"note": " The period of slow uptake between sowing and after tillering depends on the temperature. Small grains planted in spring have a much shorter lag period than if they are planted in fall or winter. ",
-			"links": "http://smallgrains.ucanr.edu/",
-			"linkText": "University of California Small Grains Research and Information",
-			"refs": [
-				"Malhi, S.S., Johnston, A.M., Schoenau, J.J., Wang, Z.H., Vera, C.L., 2012. Seasonal biomass accumulation and nutrient uptake of wheat, barley and oat on a Blank Chernozem soil in Saskatchewan. Canadian Journal of Plant Science 86, 1005-1014.",
-				"Neugschwandtner, R.,W., Wagentrist, H., Kaul, H.-P., 2014. Nitrogen concentrations and nitrogen yields of above-ground dry matter and chickpea during crop growth compared to pea, barley and oat in central Europe. Turkish Journal of Field Crops 19(1), 136-141. ",
-				"Zhou, Q.-P., Biswas, D.K., Ma, B.-L., 2013. Comparisons among cultivars of wheat, hulless and hulled oats: dry matter, N and P accumulation and partitioning as affected by N supply. Journal of Plant Nutrition and Soil Science 176, 929-941. "
 			]
 		},
 
@@ -362,27 +320,6 @@ data = [{
 		},
 
 		{
-			"name": "Zucchini",
-			"percentN": 3.83,
-			"unitsConc": "lbs/ton fresh weight",
-			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
-			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
-			"residueRemoved": false,
-			"nhi": 0.43,
-			"graph": "imgs/squash_curve.png",
-			"lateSeason": false,
-			"graphLate": "",
-			"note": "The N requirement is lower for zucchini that are harvested when they are very small, since yield depends on zucchini size at harvest. ",
-			"links": "http://anrcatalog.ucanr.edu/pdf/7245.pdf",
-			"linkText": "Summer squash production in California",
-			"refs": [
-				"Zotarelli, L., Dukes, M.D., Scholberg, J.M.S., Hanselman, T., Le Femminella, K.,  Munoz-Carpena, R., 2008. Nitrogen use and water use efficiency of zucchini squash for a plastic mulch bed system on a sandy soil. Scientia Horticulturae 116, 8-16. ",
-				"Rodas-Gaitan, H., A., Rodriguez-Fuentes, H., Ojeda-Zacarias, M. del, Vidales-Contreras, J.A., Luna-Maldonado, A.I., 2012. Curvas de absorbcion de macronutrientes en calabacita italiana (Cucurbita pepo L.). Rev. Fitotec. Mex. 35(5), 57-60. ",
-				""
-			]
-		},
-
-		{
 			"name": "Sugarbeet",
 			"percentN": 5.38,
 			"unitsConc": "lbs/ton fresh weight",
@@ -421,6 +358,27 @@ data = [{
 				"Osaki, M., Ueda, H., Shinano, T., Matsui, H., Tadano, T., 1995b. Accumulation of carbon and nitrogen compounds in sweet potato plants grown under deficiency of N, P or K nutrients. Soil Science and Plant Nutrition 41, 557-566",
 				"Osaki, M., Ueda, H., Shinano, T., Matsui, H., Tadano, T., 1995a. Accumulation of carbon and nitrogen compounds in sweet potato plants grown under different nitrogen application rates. Soil Science and Plant Nutrition 41, 547-555",
 				"Echer, F.R., Dominato, J.C., Creste, J.E., 2009. Absorbacao de nutrientes e distribuicao da massa fresca e seca  entre orgaos de batata-doce. Horticultura Brasiliera 27, 176-182."
+			]
+		},
+
+		{
+			"name": "TomatoesFreshMarket",
+			"percentN": 2.61,
+			"unitsConc": "lbs/ton fresh weight",
+			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
+			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
+			"residueRemoved": false,
+			"nhi": 0.54,
+			"graph": "imgs/TomatoFresh_Curve.png",
+			"lateSeason": false,
+			"graphLate": "",
+			"note": "",
+			"links": "",
+			"linkText": "",
+			"refs": [
+				"Scholberg, J., McNeal, B., Boote, K.J., Jones, J.W., Locascio, S.J., Olson, S.M., 2000. Nitrogen stress effects on grown and nitrogen accumulation by field-grown tomato. Additional info in: Scholberg, J., McNeal, B.L., Jones, J.W., Boote, K.J., Stanley, C.D., Obreza, T.A., 2000. Growth and canopy characteristics of field-grown tomato. Agronomy Journal 92, 152-159.  ",
+				"Zotarelli, L., Dukes, M.D., Scholberg, J.M.S., Munoz-Carpena, R., Icerman, J., 2009. Tomato nitrogen accumulation and fertilizer use efficiency on a sandy soil, as affected by nitrogen rate and irrigation scheduling. Agricultural Water Management 96, 1247-1258. ",
+				"Ren, T., Christie, P., Wang, J., Chen, Q., Zhang, F., 2010. Root zone soil nitrogen management to maintain high tomato yields and minimum nitrogen losses to the environment. Scientia Horticultuarae 125, 25-33. "
 			]
 		},
 
@@ -464,6 +422,48 @@ data = [{
 				"Grangeiro, L.C., Cecilio Filho, A.B., 2004. Acumulo e exportacao de macronutrientes pelo hibrido de melancia Tide. Horticultura Brasiliera 22 (1), 93-97.",
 				"Grangeiro, L.C., Cecilio Filho, A.B., 2005. Acumulo e exportacao de macronutrientes em melancia sem sementes. Horticultura Brasiliera 22 (1), 93-97.",
 				"Doerge, T.A., Pritchard, K.H., Pier, J.W., Fernández, P., McCreary, T.W., 1991. Nitrogen utilization efficiency in melons using soluble and slow release fertilizers. University of Arizona College of Agriculture, Vegetable Report. "
+			]
+		},
+
+		{
+			"name": "WheatDurum",
+			"percentN": 42.1,
+			"unitsConc": "lbs/ton @ 12% moisture",
+			"units": ["tons/acre"],
+			"conversionFactor": [1, 0],
+			"residueRemoved": true,
+			"nhi": 0.75,
+			"intercept": 50,
+			"graph": "imgs/WheatDurum_Curve.png",
+			"lateSeason": false,
+			"graphLate": "",
+			"note": "",
+			"links": "http://smallgrains.ucanr.edu/",
+			"linkText": "University of California Small Grains Research and Information",
+			"refs": [
+				"Kutman, U.B., Yildiz, H., Cakmak, I., 2011. Effect of nitrogen on uptake, remobilization and partitioning of zinc and iron throughout the development of durum wheat. Plant and Soil 342, 149-164. ",
+				"Liang, Z., Bronson, K.F., Thorp, K.R., Mon, J., Badaruddin, M., Wang, G., 2014. Cultivar and N fertilizer rate affect yield and N use efficiency in irrigated durum wheat. Crop Science 54, 1175-1183. "
+			]
+		},
+
+		{
+			"name": "Zucchini",
+			"percentN": 3.83,
+			"unitsConc": "lbs/ton fresh weight",
+			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
+			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
+			"residueRemoved": false,
+			"nhi": 0.43,
+			"graph": "imgs/squash_curve.png",
+			"lateSeason": false,
+			"graphLate": "",
+			"note": "The N requirement is lower for zucchini that are harvested when they are very small, since yield depends on zucchini size at harvest. ",
+			"links": "http://anrcatalog.ucanr.edu/pdf/7245.pdf",
+			"linkText": "Summer squash production in California",
+			"refs": [
+				"Zotarelli, L., Dukes, M.D., Scholberg, J.M.S., Hanselman, T., Le Femminella, K.,  Munoz-Carpena, R., 2008. Nitrogen use and water use efficiency of zucchini squash for a plastic mulch bed system on a sandy soil. Scientia Horticulturae 116, 8-16. ",
+				"Rodas-Gaitan, H., A., Rodriguez-Fuentes, H., Ojeda-Zacarias, M. del, Vidales-Contreras, J.A., Luna-Maldonado, A.I., 2012. Curvas de absorbcion de macronutrientes en calabacita italiana (Cucurbita pepo L.). Rev. Fitotec. Mex. 35(5), 57-60. ",
+				""
 			]
 		}
 

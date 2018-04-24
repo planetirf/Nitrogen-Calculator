@@ -39,6 +39,11 @@
          /*display:flex;*/
        }
 
+       form {
+         display: flex;
+         justify-content: center;
+       }
+
 
        .CalcButtonDiv {
          text-align:center;
