@@ -4,7 +4,7 @@
 // Declare global HOST variables
 var cropData = data;
 var cropSelectorDiv = "";
-var cropSelector =  "<label for=\"cropSelector\">" + "2. Select a Crop:" + "</label>" + "<select id=\"cropSelector\">";
+var cropSelector =  "<label for=\"cropSelector\">" + "2. Select a Crop:" + "</label>" + "<a class=\"infoIcon\"> &#9432;</a>" + "<select id=\"cropSelector\">";
 var days = 0;
 var start = document.getElementById("PlantingDate").value;
 var end = document.getElementById("HarvestDate").value;
@@ -267,11 +267,12 @@ document.getElementById("button").addEventListener("click", function () {
       // GET: Crop Specific notes
       var note = cropChoices[i]["note"];
       var links = cropChoices[i]["links"];
-      var links = cropChoices[i]["linkText"];
+      console.log(links);
+      // var links = cropChoices[i]["linkText"];
       var notesText = note;
 
       console.log(notesText);
-      document.getElementById("cropNotes").innerHTML = notesText;
+      document.getElementById("cropNotes").innerHTML = notesText + links;
 
 
 
@@ -321,11 +322,11 @@ document.getElementById("button").addEventListener("click", function () {
 
   units = "lbs/acre"
   // get output textboxes and fill with values from calulcations
-  document.getElementById("NConcInYield").innerHTML =  Nconc + " " + unitsConcentration;
-  document.getElementById("NInProduct").innerHTML =  Number(Math.round(NUptake)) + " " + units;
-  document.getElementById("NUptake").innerHTML =  Number(Math.round(TotalN)) + " " + units;
-  document.getElementById("NResidue").innerHTML = Number(Math.round(NinResidue)) + " " + units;
-  document.getElementById("NRemoved").innerHTML = Number(Math.round(NHarvested)) + " " + units;
+  document.getElementById("NConcInYield").innerHTML =  "<a class=\"infoIcon\"> &#9432;</a>" + Nconc + " " + unitsConcentration;
+  document.getElementById("NInProduct").innerHTML =  "<a class=\"infoIcon\"> &#9432;</a>" + Number(Math.round(NUptake)) + " " + units;
+  document.getElementById("NUptake").innerHTML =  "<a class=\"infoIcon\"> &#9432;</a>" + Number(Math.round(TotalN)) + " " + units;
+  document.getElementById("NResidue").innerHTML = "<a class=\"infoIcon\"> &#9432;</a>" + Number(Math.round(NinResidue)) + " " + units;
+  document.getElementById("NRemoved").innerHTML = "<a class=\"infoIcon\"> &#9432;</a>" + Number(Math.round(NHarvested)) + " " + units;
 
 
 });
@@ -565,6 +566,32 @@ document.getElementById("button2").addEventListener("click", function () {
       //  console.log("Nconc " + Nconc);  // print to console test
       //  console.log("unitsConcentration " + unitsConcentration);  // print to console test
 
+      // GET: Crop Specific notes
+      var note = cropChoices[i]["note"];
+      var links = cropChoices[i]["links"];
+      console.log(links);
+      // var links = cropChoices[i]["linkText"];
+      var notesText = note;
+
+      console.log(notesText);
+      document.getElementById("cropNotes").innerHTML = notesText + links;
+
+
+
+      // GET: References list
+      var refs = [];
+      var refText =  "";
+      refs = cropChoices[i]["refs"];
+
+       // Iterate through References list and populate list
+       for (var q = 0; q < refs.length; q++ ) {
+        var item = "<li> " + refs[q] + " </li>";
+        refText += item;
+        // console.log("ITEM:  " + item);
+      }
+
+      document.getElementById('references').innerHTML = refText;
+
        for (j in unitsSelected){
          if (units === unitsSelected[j]) {
         //  console.log("J" + unitsSelected[j]); // print to console test
@@ -607,10 +634,10 @@ document.getElementById("button2").addEventListener("click", function () {
 
   if (NppmWaterUnits === "NO3") {
     var NInIrrWater = ppm * NO3_to_NO3N * depth_water_applied * ppm_NO3N_to_lbs_N;
-    document.getElementById("nInIrrigation").innerHTML = Number(Math.round(NInIrrWater)) + " lbs/acre";
+    document.getElementById("nInIrrigation").innerHTML = "<a class=\"infoIcon\"> &#9432;</a>" + Number(Math.round(NInIrrWater)) + " lbs/acre";
   } else {
     var NInIrrWater = ppm * depth_water_applied * ppm_NO3N_to_lbs_N;
-    document.getElementById("nInIrrigation").innerHTML = Number(Math.round(NInIrrWater)) + " lbs/acre";
+    document.getElementById("nInIrrigation").innerHTML = "<a class=\"infoIcon\"> &#9432;</a>" + Number(Math.round(NInIrrWater)) + " lbs/acre";
     // console.log(NInIrrWater + "NO3n !!!!!!!");Number(Math.round(NInIrrWater + "e2") + "e-2") + " lbs/acre";
   };
 
@@ -648,16 +675,16 @@ document.getElementById("button2").addEventListener("click", function () {
       console.log(dFactor);
       var soilN = dFactor * residual_soil_N;
       units = "lbs/acre";
-      document.getElementById("residualN").innerHTML = Number(Math.round(soilN)) + " lbs/acre";
-      document.getElementById("nNeed").innerHTML = Number(Math.round( TotalN - soilN - NInIrrWater - inSeasonNMineralized ))+ " lbs/acre";
-      document.getElementById("leachingRisk").innerHTML = Number(Math.round( (1- wae) * (TotalN - soilN - NInIrrWater - inSeasonNMineralized))) + " lbs/acre";
-      document.getElementById("nMineralized").innerHTML = Number(Math.round()) + " lbs/acre";
-      document.getElementById('nMineralized').innerHTML = Number(Math.round( inSeasonNMineralized )) + " lbs/acre"
-      document.getElementById("NConcInYield").innerHTML =  Nconc + " " + unitsConcentration;
-      document.getElementById("NInProduct").innerHTML =  Number(Math.round(NUptake)) + " " + units;
-      document.getElementById("NUptake").innerHTML =  Number(Math.round(TotalN)) + " " + units;
-      document.getElementById("NResidue").innerHTML = Number(Math.round(NinResidue)) + " " + units;
-      document.getElementById("NRemoved").innerHTML = Number(Math.round(NHarvested)) + " " + units;
+      document.getElementById("residualN").innerHTML = "<a class=\"infoIcon\"> &#9432;</a>" + Number(Math.round(soilN)) + " lbs/acre";
+      document.getElementById("nNeed").innerHTML = "<a class=\"infoIcon\"> &#9432;</a>" + Number(Math.round( TotalN - soilN - NInIrrWater - inSeasonNMineralized ))+ " lbs/acre";
+      document.getElementById("leachingRisk").innerHTML = "<a class=\"infoIcon\"> &#9432;</a>" + Number(Math.round( (1- wae) * (TotalN - soilN - NInIrrWater - inSeasonNMineralized))) + " lbs/acre";
+      document.getElementById("nMineralized").innerHTML = "<a class=\"infoIcon\"> &#9432;</a>" + Number(Math.round()) + " lbs/acre";
+      document.getElementById('nMineralized').innerHTML = "<a class=\"infoIcon\"> &#9432;</a>" + Number(Math.round( inSeasonNMineralized )) + " lbs/acre"
+      document.getElementById("NConcInYield").innerHTML =  "<a class=\"infoIcon\"> &#9432;</a>" + Nconc + " " + unitsConcentration;
+      document.getElementById("NInProduct").innerHTML =  "<a class=\"infoIcon\"> &#9432;</a>" + Number(Math.round(NUptake)) + " " + units;
+      document.getElementById("NUptake").innerHTML =  "<a class=\"infoIcon\"> &#9432;</a>" + Number(Math.round(TotalN)) + " " + units;
+      document.getElementById("NResidue").innerHTML = "<a class=\"infoIcon\"> &#9432;</a>" + Number(Math.round(NinResidue)) + " " + units;
+      document.getElementById("NRemoved").innerHTML = "<a class=\"infoIcon\"> &#9432;</a>" + Number(Math.round(NHarvested)) + " " + units;
 
       graph();
 
@@ -680,7 +707,7 @@ document.getElementById("button2").addEventListener("click", function () {
 
   units = "lbs/acre";
   // get output textboxes and fill with values from calulcations
-  document.getElementById("totalNUptake2").innerHTML =  Number(Math.round(TotalN)) + " " + units;
+  document.getElementById("totalNUptake2").innerHTML = "<a class=\"infoIcon\"> &#9432;</a>" + Number(Math.round(TotalN)) + " " + units;
 
   });
 

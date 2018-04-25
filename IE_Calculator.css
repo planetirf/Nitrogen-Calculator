@@ -90,6 +90,10 @@
          border-width:1px;
        }
 
+       .infoIcon {
+         margin-right:1%;
+       }
+
        .InputDivs {
          display:flex;
          background-color:;
@@ -292,7 +296,7 @@
 	}
 	.box .box-works {
 	  position: relative;
-	  width: 400px;
+	  width: ;
 	  z-index: 50;
 	}
 	.Intro p, .Intro h4 {

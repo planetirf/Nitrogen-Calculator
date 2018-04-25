@@ -353,7 +353,7 @@
         <h3> Basic Inputs: Field and Crop</h3>
         <div class="InputDivs">
           <label for="FieldId">1. Field Id: </label>
-          <a &#9432;> </a>
+          <a class="infoIcon"> &#9432;</a>
           <input type="text" id="FieldId">
         </div><br>
 
@@ -363,6 +363,7 @@
 
         <div class="InputDivs" id="yieldInput">
           <label for="ExpectedYield">3. Expected Yield:</label>
+          <a class="infoIcon"> &#9432;</a>
           <input type="number" value="5" id="ExpectedYield" required>
           <span for="Units">Units: </span>
           <select id="Units"></select>
@@ -371,16 +372,18 @@
 
         <div class="InputDivs">
           <label for="PlantingDate">4. Planting Date: </label>
+          <a class="infoIcon"> &#9432;</a>
           <input type="date" id="PlantingDate" placeholder="" value="2018-01-01" required>
         </div><br>
 
       <div class="InputDivs">
          <label for="HarvestDate">5. Harvest Date: </label>
+         <a class="infoIcon"> &#9432;</a>
          <input type="date" id="HarvestDate" placeholder="" value="2018-03-01" required>
       </div><br>
 
       <div class="InputDivs">
-        <label for="PlantingMethod">6. Method of Planting:</label>
+        <label for="PlantingMethod">6. Method of Planting:</label><a class="infoIcon"> &#9432;</a>
           <select id="PlantingMethod" >
               <option value="Seeding">Seeding</option>
               <option value="Transplant">Transplant</option>
@@ -388,7 +391,7 @@
         </div><br>
 
       <div class="InputDivs" id="ResidueRemovedDiv" style="">
-        <label for="ResidueRemovedSelector">7. Residue Removed:</label>
+        <label for="ResidueRemovedSelector">7. Residue Removed:</label><a class="infoIcon"> &#9432;</a>
           <select id="ResidueRemovedSelector">
             <option value="Yes">Yes</option>
             <option value="No">No</option>
@@ -396,18 +399,36 @@
       </div><br>
 
       <div class="InputDivs" id="lateSeason">
-        <label for="lateSeasonBox">8. Late Season Planting:</label>
+        <label for="lateSeasonBox">8. Late Season Planting:</label><a class="infoIcon"> &#9432;</a>
         <input id="lateSeasonBox"type="checkbox">
       </div><br>
 
       <div class="InputDivs" id="precentRemovedDiv">
-        <label for="PercentRemoved">9. Percent (%) of Residue Removed:</label>
+        <label for="PercentRemoved">9. Percent (%) of Residue Removed:</label><a class="infoIcon"> &#9432;</a>
          <input type="number" id="PercentRemoved">
       </div><br>
 
       <div class="CalcButtonDiv">
             <button id='button' type="button" style="">Calculate</button>
           </div>
+
+
+<!--  TESTING    -->
+          <!-- <div class="box">
+                  <div class="frame_a" id="a_soil_N"> <a href="#" onclick="toggle2('N2'); return false">
+                      <h3>Soil Test <img src="Expand.png" alt="" height="12" width="16"></h3>
+                    </a>
+                    <div id="N2" style="display: block;">
+                      <div class="box-works frame" id="popup1">
+                        <h4>Soil Nitrate Test<a href="#" onclick="toggle2('N2'); return false">
+                          <div class="close"><img src="Close.png" alt="" height="20" width="20"></div></a></h4>
+
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
 
           <!-- BEGIN: BASIC OUTPUT -->
       <div class='output'>
@@ -438,6 +459,7 @@
           <h3> Irrigation </h3>
         <div class="InputDivs" id="irrigationSystemSelectorDiv">
           <label for="irrigationSystemSelector">10. Irrigation System:</label>
+          <a class="infoIcon"> &#9432;</a>
           <select id="irrigationSystemSelector">
             <option value="Drip"> Drip</option>
             <option value="Furrow"> Furrow</option>
@@ -451,16 +473,19 @@
 
         <div class="InputDivs" id="waterAppliedEfficiency">
           <label for="wae">11. Water Application Effeciency:</label>
+          <a class="infoIcon"> &#9432;</a>
           <input id="wae" type="number" value="75" >
         </div><br>
 
         <div class="InputDivs" id="waterApplied">
           <label for="inchesOfWater">12. Acre Inches of Water Applied:</label>
+          <a class="infoIcon"> &#9432;</a>
           <input id="inchesOfWater" type="number" value="10">
         </div><br>
 
         <div class="InputDivs" id="nitrogenConcentration">
           <label for="NppmWater">13. <strong>N</strong> Concentration:</label>
+          <a class="infoIcon"> &#9432;</a>
           <input id="NppmWater" type="number" value="10">
 
           <span for="NppmWaterUnits">Units:</span>
@@ -479,6 +504,7 @@
         <h3> Soil </h3>
         <div class="InputDivs" id="regionSelectorDiv">
           <label for="regionSelector"> 14. Region: </label>
+          <a class="infoIcon"> &#9432;</a>
           <select id="regionSelector">
             <option value="40"> San Joaquin Valley</option>
             <option value="40"> Sacramento Valley</option>
@@ -493,6 +519,7 @@
 
         <div class="InputDivs" id="soilTypeSelectorDiv">
           <label for="soilTypeSelector"> 15. Soil Type: </label>
+          <a class="infoIcon"> &#9432;</a>
           <select id="soilTypeSelector">
             <option value="Sand"> Sand </option>
             <option value="LoamySand"> Loamy Sand</option>
@@ -512,6 +539,7 @@
 
         <div class="InputDivs" id="residualNitrate">
           <label for="NppmSoil">17.  Residual Soil <strong>N</strong>:  </label>
+          <a class="infoIcon"> &#9432;</a>
           <input id="NppmSoil" value="10" type="number" step="">
 
           <span for="NppmSoilUnits"> Units:</span>
@@ -523,6 +551,7 @@
 
         <div class="InputDivs" id="soilOrganicMatter">
           <label for="som">18.  Soil Organic Matter:</label>
+          <a class="infoIcon"> &#9432;</a>
           <input id= "som" type="number" step="0.5">
           <span for="som_units"> Units:</span>
             <select id="som_units">
@@ -535,6 +564,7 @@
 
         <div class="InputDivs" class="">
           <label for="samplingDepth"> 19. Sampling Depth (inches):</label>
+          <a class="infoIcon"> &#9432;</a>
           <input id="samplingDepth" value="6" type="number">
         </div>
       </section>
@@ -556,16 +586,20 @@
         <div class='NOutputDivs'><span>Required <strong>N</strong> without leaching</span> <p id='nNeed'></p></div>
         <div class='NOutputDivs'><span><strong>N</strong> at risk of leaching: </span><p id='leachingRisk'></p></div>
 
+        <div class="references">
+          <h3> References </h3>
+          <ol id="references">
+          </ol>
+        </div>
       </div>
       <!-- END: ADVANCED OUTPUT -->
 
           <!-- End: class="part1Form" -->
       </div>
     </form>
-    <div class="references">
-      <ol id="references">
-      </ol>
-    </div>
+
+
+
         <!-- END: class="content" -->
       </div>
 
@@ -581,9 +615,10 @@
     <!--                           Footer                          -->
     <!-- --------------------------------------------------------- -->
 <div id="footer" class="footer">
+  <br><br>
   <p id="top" >
         <a class="top" href="#top">TOP OF PAGE</a> <a name="top2"></a>
-	</p><br><br>
+	</p>
         <hr>
         <p style="font-size:0.8em;">
 	  * Irfan Ainuddin is a Junior Specialist in the Department

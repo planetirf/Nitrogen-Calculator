@@ -13,12 +13,10 @@ data = [{
 			"lateSeason": false,
 			"graphLate": "",
 			"note": "",
-			"links": "http://anrcatalog.ucanr.edu/pdf/8096.pdf",
-			"linkText": "Beetroot and swiss chard production in California",
+			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/8096.pdf\" target=\"_blank\"> Beetroot and swiss chard production in California</a>",
+			"linkText": "",
 			"refs": [
-				"Feller, C., Fink, M., 2002. Nitrogen uptake by table beet--validation of a model. Journal of the American Society for Horticultural Science 127, 1013-1017. ",
-				"",
-				""
+				"Feller, C., Fink, M., 2002. Nitrogen uptake by table beet--validation of a model. Journal of the American Society for Horticultural Science 127, 1013-1017. "
 			]
 		},
 
@@ -34,8 +32,8 @@ data = [{
 			"lateSeason": false,
 			"graphLate": "",
 			"note": "",
-			"links": "http://anrcatalog.ucanr.edu/pdf/7223.pdf",
-			"linkText": "Sweet corn production in California",
+			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/7223.pdf\" target=\"_blank\">Sweet corn production in California</a>",
+			"linkText": "",
 			"refs": [
 				"Doerge, T. A., Stroehlein, J. L., Tucker, T. C., Fangmeier, D. D., Oebker, N. F., McCreary, T. W., Husman, S. H., 1990. Effects of Nitrogen and Water Rates on Nitrogen Uptake Dynamics in Drip Irrigated Sweet Corn. University of Arizona Vegetable Report, 1990. ",
 				"Doerge, T. A., Stroehlein, J. L., Tucker, T. C., Fangmeier, D. D., Oebker, N. F., McCreary, T. W., Husman, S. H., Lakatos, E.A., 1990. Nitrogen and Water Effects on the Growth, Yield and Quality of Drip Irrigated Sweet Corn. University of Arizona Vegetable Report, 1989. ",
@@ -55,8 +53,8 @@ data = [{
 			"lateSeason": false,
 			"graphLate": "",
 			"note": "",
-			"links": "http://anrcatalog.ucanr.edu/pdf/7208.pdf",
-			"linkText": "Cabbage production in California",
+			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/7208.pdf\" target=\"_blank\">Cabbage production in California</a>",
+			"linkText": "",
 			"refs": [
 				"Smith, R., Cahn, M., Hartz, T., Love, P., Farrara, B., 2016. Nitrogen dynamics of cole crop production: implications for fertility management and environmental protection. HortScience 51, 1586-1591."
 			]
@@ -74,12 +72,11 @@ data = [{
 			"lateSeason": true,
 			"graphLate": "imgs/Cucumber_Curve_Fall.png",
 			"note": "Cucumbers are harvested at different maturity levels. Therefore, the yield, uptake and N allocated to the fruit varies widely. These numbers have not been tested for modern California cucumber varieties.",
-			"links": "http://anrcatalog.ucanr.edu/pdf/8050.pdf",
-			"linkText": "Cucumber production in California",
+			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/8050.pdf\" target=\"_blank\">Cucumber production in California</a>",
+			"linkText": "",
 			"refs": [
 				"Guo, R., Li, X., Christie, P., Chen, Q., Fusuo, Z., 2008. Seasonal temperatures have more influence than nitrogen fertilizer rates on cucumber yield and nitrogen uptake in a double cropping system. Environmental Pollution 151, 443-451.",
-				"Gallardo, M., Gimenez, R.B.C., Fernández, M.D., Padilla, F.M., Thompson, R.B., 2015. Use of the VegSyst model to calculate crop N uptake and ETc of autumn and spring grown cucumber in Mediterranean greenhouses. Oral Presentation at MODEL-IT 2015. http://hortilink.nl/hams/hams-model-it/modules/request.php?module=oc_proceedings&action=summary.php&id=13&a=Accept+Oral",
-				""
+				"Gallardo, M., Gimenez, R.B.C., Fernández, M.D., Padilla, F.M., Thompson, R.B., 2015. Use of the VegSyst model to calculate crop N uptake and ETc of autumn and spring grown cucumber in Mediterranean greenhouses. Oral Presentation at MODEL-IT 2015. http://hortilink.nl/hams/hams-model-it/modules/request.php?module=oc_proceedings&action=summary.php&id=13&a=Accept+Oral"
 			]
 		},
 
@@ -96,12 +93,11 @@ data = [{
 			"lateSeason": false,
 			"graphLate": "",
 			"note": "",
-			"links": "http://anrcatalog.ucanr.edu/pdf/7235.pdf",
-			"linkText": "Eggplant production in California",
+			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/7235.pdf\" target=\"_blank\">Eggplant production in California</a>",
+			"linkText": "",
 			"refs": [
 				"Rosati, A., Troisi, A., 2001. Seasonal patterns of N uptake in eggplant (Solanum melongena L.) grown with different N fertigation levels. Acta Horticulturae 563, 195-200.",
-				"Pessarakli, M., Tucker, T.C., 1988. Nitrogen-15 uptake by eggplant under sodium chloride stress. Soil Science Society of America Journal 52, 1673-1676. ",
-				""
+				"Pessarakli, M., Tucker, T.C., 1988. Nitrogen-15 uptake by eggplant under sodium chloride stress. Soil Science Society of America Journal 52, 1673-1676. "
 			]
 		},
 
@@ -117,8 +113,8 @@ data = [{
 			"lateSeason": false,
 			"graphLate": "",
 			"note": "The earlier the harvest stage, the more N will be removed per ton of yield.  Early stage  N removal data represents an average for several small grain varieties harvested from boot through mid flowering. ",
-			"links": "http://anrcatalog.ucanr.edu/pdf/8173.pdf",
-			"linkText": "UCANR Small grain forage production manual",
+			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/8173.pdf\" target=\"_blank\"> UCANR Small grain forage production manual</a>",
+			"linkText": "",
 			"refs": [
 				"",
 				"",
@@ -138,8 +134,8 @@ data = [{
 			"lateSeason": false,
 			"graphLate": "",
 			"note": "The earlier the harvest stage, the more N will be removed per ton of yield.  This N removal data represents an average of several small grain varieties harvested from from mid-flowering through soft dough stage. ",
-			"links": "http://anrcatalog.ucanr.edu/pdf/8173.pdf",
-			"linkText": "UCANR Small grain forage production manual",
+			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/8173.pdf\" target=\"_blank\"> UCANR Small grain forage production manual</a>",
+			"linkText": "",
 			"refs": [
 				"",
 				"",
@@ -159,8 +155,8 @@ data = [{
 			"lateSeason": true,
 			"graphLate": "",
 			"note": " The period of slow uptake between sowing and after tillering depends on the temperature. Small grains planted in spring have a much shorter lag period than if they are planted in fall or winter. ",
-			"links": "http://smallgrains.ucanr.edu/",
-			"linkText": "University of California Small Grains Research and Information",
+			"links": "<a href=\"http://smallgrains.ucanr.edu/\" target=\"_blank\"> University of California Small Grains Research and Information</a>",
+			"linkText": "",
 			"refs": [
 				"Malhi, S.S., Johnston, A.M., Schoenau, J.J., Wang, Z.H., Vera, C.L., 2012. Seasonal biomass accumulation and nutrient uptake of wheat, barley and oat on a Blank Chernozem soil in Saskatchewan. Canadian Journal of Plant Science 86, 1005-1014.",
 				"Neugschwandtner, R.,W., Wagentrist, H., Kaul, H.-P., 2014. Nitrogen concentrations and nitrogen yields of above-ground dry matter and chickpea during crop growth compared to pea, barley and oat in central Europe. Turkish Journal of Field Crops 19(1), 136-141. ",
@@ -203,12 +199,10 @@ data = [{
 			"lateSeason": false,
 			"graphLate": "",
 			"note": "",
-			"links": "http://anrcatalog.ucanr.edu/pdf/7244.pdf",
-			"linkText": "Chile pepper production in California",
+			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/7244.pdf\" target=\"_blank\"> Chile pepper production in California</a>",
+			"linkText": "",
 			"refs": [
-				"Soto-Ortiz, R., 2008. Crop phenology, dry matter production, and nutrient uptake and partitioning in cantaloupe (Cucumis melo L.) and chile (Capsicum annuum L.). Dissertation. Available online at: http://hdl.handle.net/10150/194813",
-				"",
-				""
+				"Soto-Ortiz, R., 2008. Crop phenology, dry matter production, and nutrient uptake and partitioning in cantaloupe (Cucumis melo L.) and chile (Capsicum annuum L.). Dissertation. Available online at: http://hdl.handle.net/10150/194813"
 			]
 		},
 
@@ -225,8 +219,8 @@ data = [{
 			"lateSeason": true,
 			"graphLate": "imgs/PepperBell_Curve_Winter.png",
 			"note": "",
-			"links": "http://anrcatalog.ucanr.edu/pdf/7217.pdf",
-			"linkText": "Bell pepper production in California",
+			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/7217.pdf\" target=\"_blank\"> Bell pepper production in California</a>",
+			"linkText": "",
 			"refs": [
 				"Marcussi, F.F.N., Villas Boas, R.L., Godoy, L.J.G.d., Goto, R., 2004. Macronutrient accumulation and partioning in fertigated sweet pepper plants. Scientia Agricola (Piracicaba, Brazil) 61, 62-68. ",
 				"Gimenez, C., Gallardo, M., Martinez-Gaitan, C., Stockle, C.O., Thompson, R.B., Granados, M.R., 2013. VegSyst, a simulation model of daily crop growth, nitrogen uptake and evapotranspiration for pepper crops for use in an on-farm decision support system. Irrigation Science 2013, 464-477. ",
@@ -247,8 +241,8 @@ data = [{
 			"lateSeason": true,
 			"graphLate": "imgs/rye_grain_curve.png",
 			"note": " The period of slow uptake between sowing and after tillering depends on the temperature. Small grains planted in spring have a much shorter lag period than if they are planted in fall or winter. ",
-			"links": "http://smallgrains.ucanr.edu/",
-			"linkText": "University of California Small Grains Research and Information",
+			"links": "<a href=\"http://smallgrains.ucanr.edu/\" target=\"_blank\"> University of California Small Grains Research and Information</a>",
+			"linkText": "",
 			"refs": [
 				"Mugwira, L.M., Bishnoi, U.R., 1980. Triticale, wheat and rye growth rates and mineral accumulation at various growth stages. Communications in Soil Science and Plant Analysis 11, 1129-1146. ",
 				"Rumberg and Sneva, 1970. Accumulation and loss of nitrogen during growth and maturation of cereal rye (Secale cereale). Agronomy Journal 62, 311-313.",
@@ -259,7 +253,7 @@ data = [{
 		{
 			"name": "SorghumGrain",
 			"percentN": 33.00,
-			"unitsConc": "lbston @ 13.5% moisture",
+			"unitsConc": "lbs/ton @ 13.5% moisture",
 			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
 			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
 			"residueRemoved": false,
@@ -267,7 +261,7 @@ data = [{
 			"graph": "imgs/sorgum_grain_curve.png",
 			"lateSeason": true,
 			"graphLate": "imgs/sorgum_grain_curve.png",
-			"note": "http://sorghum.ucanr.edu/",
+			"note": "<a href=\"http://sorghum.ucanr.edu/\" target=\"_blank\">",
 			"links": "",
 			"linkText": "",
 			"refs": [
@@ -289,12 +283,11 @@ data = [{
 			"lateSeason": false,
 			"graphLate": "",
 			"note": "'Summer squash' belong to a wide variety of species and are harvested at many different maturity levels, so the total N uptake and allocation to the fruit vary widely by type. These numbers have not been tested for California summer squash varieties.",
-			"links": "http://anrcatalog.ucanr.edu/pdf/7245.pdf",
-			"linkText": "Summer squash production in California",
+			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/7245.pdf\" target=\"_blank\"> Summer squash production in California</a>",
+			"linkText": "",
 			"refs": [
 				"Swiader, J.M., 1985. Seasonal growth and composition and accumulation of N-P-K in dryland and irrigated pumpkins. Journal of Plant Nutrition 8, 909-919. ",
-				"Vidigal, S.M., Pacheco, D.D., Facion, C.E., 2007. Crescimento e ecumulo de nutrientes pela abobora hybrida tipo Tetsukabuto. Horticultura Brasileira 25, 375-380.",
-				""
+				"Vidigal, S.M., Pacheco, D.D., Facion, C.E., 2007. Crescimento e ecumulo de nutrientes pela abobora hybrida tipo Tetsukabuto. Horticultura Brasileira 25, 375-380."
 			]
 		},
 
@@ -310,12 +303,11 @@ data = [{
 			"lateSeason": false,
 			"graphLate": "",
 			"note": "A wide variety of species are referred to as 'winter squash', and so the total N uptake and allocation to the fruit vary widely by type. These numbers have not been tested for California pumpkin and winter squash varieties. ",
-			"links": "http://anrcatalog.ucanr.edu/pdf/7222.pdf",
-			"linkText": "Pumpkin production in California",
+			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/7222.pdf\" target=\"_blank\"> Pumpkin production in California</a>",
+			"linkText": "",
 			"refs": [
 				"Swiader, J.M., 1985. Seasonal growth and composition and accumulation of N-P-K in dryland and irrigated pumpkins. Journal of Plant Nutrition 8, 909-919. ",
-				"Vidigal, S.M., Pacheco, D.D., Facion, C.E., 2007. Crescimento e ecumulo de nutrientes pela abobora hybrida tipo Tetsukabuto. Horticultura Brasileira 25, 375-380.",
-				""
+				"Vidigal, S.M., Pacheco, D.D., Facion, C.E., 2007. Crescimento e ecumulo de nutrientes pela abobora hybrida tipo Tetsukabuto. Horticultura Brasileira 25, 375-380."
 			]
 		},
 
@@ -331,12 +323,10 @@ data = [{
 			"lateSeason": false,
 			"graphLate": "",
 			"note": "Sugarbeet is efficient at scavenging soil N, and sugar content is negatively affected by too much N. Therefore it's important to take deep soil N into account, and in-season applications need to be guided by petiole analysis. ",
-			"links": "http://sugarbeet.ucdavis.edu/",
-			"linkText": "University of California Sugarbeet Research and Information",
+			"links": "<a href=\"http://sugarbeet.ucdavis.edu/\" target=\"_blank\"> University of California Sugarbeet Research and Information</a>",
+			"linkText": "",
 			"refs": [
-				"Mackenzie, A.J., Stockinger, K.R., Krantz, B.A., 1957. Growth and Nutrient Uptake of Sugar Beets in the Imperial Valley, California. Journal of the American Society of Sugar Beet Technology 9,400-407. ",
-				"",
-				""
+				"Mackenzie, A.J., Stockinger, K.R., Krantz, B.A., 1957. Growth and Nutrient Uptake of Sugar Beets in the Imperial Valley, California. Journal of the American Society of Sugar Beet Technology 9,400-407. "
 			]
 		},
 
@@ -352,8 +342,8 @@ data = [{
 			"lateSeason": false,
 			"graphLate": "",
 			"note": "",
-			"links": "http://anrcatalog.ucanr.edu/pdf/7237.pdf",
-			"linkText": "Sweetpotato production in California",
+			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/7237.pdf\" target=\"_blank\">Sweetpotato production in California</a>",
+			"linkText": "",
 			"refs": [
 				"Osaki, M., Ueda, H., Shinano, T., Matsui, H., Tadano, T., 1995b. Accumulation of carbon and nitrogen compounds in sweet potato plants grown under deficiency of N, P or K nutrients. Soil Science and Plant Nutrition 41, 557-566",
 				"Osaki, M., Ueda, H., Shinano, T., Matsui, H., Tadano, T., 1995a. Accumulation of carbon and nitrogen compounds in sweet potato plants grown under different nitrogen application rates. Soil Science and Plant Nutrition 41, 547-555",
@@ -394,12 +384,10 @@ data = [{
 			"lateSeason": false,
 			"graphLate": "",
 			"note": "The period of slow uptake between sowing and after tillering depends on the temperature. Small grains planted in spring have a much shorter lag period than if they are planted in fall or winter.",
-			"links": "http://smallgrains.ucanr.edu/",
-			"linkText": "University of California Small Grains Research and Information",
+			"links": "<a href=\"http://smallgrains.ucanr.edu/\" target=\"_blank\"> University of California Small Grains Research and Information </a>",
+			"linkText": "",
 			"refs": [
-				"Mugwira, L.M., Bishnoi, U.R., 1980. Triticale, wheat and rye growth rates and mineral accumulation at various growth stages. Communications in Soil Science and Plant Analysis 11, 1129-1146. ",
-				"",
-				""
+				"Mugwira, L.M., Bishnoi, U.R., 1980. Triticale, wheat and rye growth rates and mineral accumulation at various growth stages. Communications in Soil Science and Plant Analysis 11, 1129-1146. "
 			]
 		},
 
@@ -415,8 +403,8 @@ data = [{
 			"lateSeason": false,
 			"graphLate": "",
 			"note": "",
-			"links": "http://anrcatalog.ucanr.edu/pdf/7213.pdf",
-			"linkText": "Watermelon production in California",
+			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/7213.pdf\" target=\"_blank\"> Watermelon production in California </a>",
+			"linkText": "",
 			"refs": [
 				"Macedo de Lucena, R.R., Zuleide de Negreiros, M., de Medieros, J.F., Costa Grangeiro, L., de Tarcio Pereira Marrocos, S., 2011. Crescimento e acumulo de macronutrientes em malancia 'Quetzale' cultivada sob diferentes niveis de salinidade da agua de irrigacao. Revista Caatinga 24 (1), 34-42.",
 				"Grangeiro, L.C., Cecilio Filho, A.B., 2004. Acumulo e exportacao de macronutrientes pelo hibrido de melancia Tide. Horticultura Brasiliera 22 (1), 93-97.",
@@ -438,8 +426,8 @@ data = [{
 			"lateSeason": false,
 			"graphLate": "",
 			"note": "",
-			"links": "http://smallgrains.ucanr.edu/",
-			"linkText": "University of California Small Grains Research and Information",
+			"links": "<a href=\"http://smallgrains.ucanr.edu/\" target=\"_blank\">University of California Small Grains Research and Information<a> ",
+			"linkText": "",
 			"refs": [
 				"Kutman, U.B., Yildiz, H., Cakmak, I., 2011. Effect of nitrogen on uptake, remobilization and partitioning of zinc and iron throughout the development of durum wheat. Plant and Soil 342, 149-164. ",
 				"Liang, Z., Bronson, K.F., Thorp, K.R., Mon, J., Badaruddin, M., Wang, G., 2014. Cultivar and N fertilizer rate affect yield and N use efficiency in irrigated durum wheat. Crop Science 54, 1175-1183. "
@@ -458,15 +446,12 @@ data = [{
 			"lateSeason": false,
 			"graphLate": "",
 			"note": "The N requirement is lower for zucchini that are harvested when they are very small, since yield depends on zucchini size at harvest. ",
-			"links": "http://anrcatalog.ucanr.edu/pdf/7245.pdf",
-			"linkText": "Summer squash production in California",
+			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/7245.pdf\" target=\"_blank\"> Summer squash production in California </a>",
+			"linkText": "",
 			"refs": [
 				"Zotarelli, L., Dukes, M.D., Scholberg, J.M.S., Hanselman, T., Le Femminella, K.,  Munoz-Carpena, R., 2008. Nitrogen use and water use efficiency of zucchini squash for a plastic mulch bed system on a sandy soil. Scientia Horticulturae 116, 8-16. ",
-				"Rodas-Gaitan, H., A., Rodriguez-Fuentes, H., Ojeda-Zacarias, M. del, Vidales-Contreras, J.A., Luna-Maldonado, A.I., 2012. Curvas de absorbcion de macronutrientes en calabacita italiana (Cucurbita pepo L.). Rev. Fitotec. Mex. 35(5), 57-60. ",
-				""
+				"Rodas-Gaitan, H., A., Rodriguez-Fuentes, H., Ojeda-Zacarias, M. del, Vidales-Contreras, J.A., Luna-Maldonado, A.I., 2012. Curvas de absorbcion de macronutrientes en calabacita italiana (Cucurbita pepo L.). Rev. Fitotec. Mex. 35(5), 57-60. "
 			]
 		}
-
-
 	]
 }];
