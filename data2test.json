@@ -76,7 +76,7 @@ data = [{
 			"linkText": "",
 			"refs": [
 				"Guo, R., Li, X., Christie, P., Chen, Q., Fusuo, Z., 2008. Seasonal temperatures have more influence than nitrogen fertilizer rates on cucumber yield and nitrogen uptake in a double cropping system. Environmental Pollution 151, 443-451.",
-				"Gallardo, M., Gimenez, R.B.C., Fernández, M.D., Padilla, F.M., Thompson, R.B., 2015. Use of the VegSyst model to calculate crop N uptake and ETc of autumn and spring grown cucumber in Mediterranean greenhouses. Oral Presentation at MODEL-IT 2015. http://hortilink.nl/hams/hams-model-it/modules/request.php?module=oc_proceedings&action=summary.php&id=13&a=Accept+Oral"
+				"Gallardo, M., Gimenez, R.B.C., Fernández, M.D., Padilla, F.M., Thompson, R.B., 2015. Use of the VegSyst model to calculate crop N uptake and ETc of autumn and spring grown cucumber in Mediterranean greenhouses. Oral Presentation at MODEL-IT 2015 <a href= 'http://hortilink.nl/hams/hams-model-it/modules/request.php?module=oc_proceedings&action=summary.php&id=13&a=Accept+Oral'> Available Online: http://hortilink.nl/hams/hams-model-it/modules/request.php?module=oc_proceedings&action=summary.php&id=13&a=Accept+Oral </a>"
 			]
 		},
 
@@ -202,7 +202,7 @@ data = [{
 			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/7244.pdf\" target=\"_blank\"> Chile pepper production in California</a>",
 			"linkText": "",
 			"refs": [
-				"Soto-Ortiz, R., 2008. Crop phenology, dry matter production, and nutrient uptake and partitioning in cantaloupe (Cucumis melo L.) and chile (Capsicum annuum L.). Dissertation. Available online at: http://hdl.handle.net/10150/194813"
+				"Soto-Ortiz, R., 2008. Crop phenology, dry matter production, and nutrient uptake and partitioning in cantaloupe (Cucumis melo L.) and chile (Capsicum annuum L.). Dissertation. Available online at: <a href='http://hdl.handle.net/10150/194813'>http://hdl.handle.net/10150/194813</a>"
 			]
 		},
 
@@ -224,8 +224,7 @@ data = [{
 			"refs": [
 				"Marcussi, F.F.N., Villas Boas, R.L., Godoy, L.J.G.d., Goto, R., 2004. Macronutrient accumulation and partioning in fertigated sweet pepper plants. Scientia Agricola (Piracicaba, Brazil) 61, 62-68. ",
 				"Gimenez, C., Gallardo, M., Martinez-Gaitan, C., Stockle, C.O., Thompson, R.B., Granados, M.R., 2013. VegSyst, a simulation model of daily crop growth, nitrogen uptake and evapotranspiration for pepper crops for use in an on-farm decision support system. Irrigation Science 2013, 464-477. ",
-				"Contreras, J.I., Lopez, J.G., Lao, M.T., Eymar, E.,. Segura, M.L., 2013. Dry-matter allocation and nutrient uptake dynamic in pepper plant irrigated with recycled water by different nitrogen and potassium rate. Communications in Soil Science and Plant Analysis 44, 758-766.",
-				"Contreras, J.I., Lopez, J.G., Lao, M.T., Eymar, E.E., Segura, M.L., 2013. Dry-Matter allocation and nutrient uptake dynamic in pepper plant irrigated with recycled water by different nitrogen and potassium rate. Communications in Soil Science and Plant Analysis 44, 758-766."
+				"Contreras, J.I., Lopez, J.G., Lao, M.T., Eymar, E.,. Segura, M.L., 2013. Dry-matter allocation and nutrient uptake dynamic in pepper plant irrigated with recycled water by different nitrogen and potassium rate. Communications in Soil Science and Plant Analysis 44, 758-766."
 			]
 		},
 
@@ -322,7 +321,7 @@ data = [{
 			"graph": "imgs/sugarbeet_curve.png",
 			"lateSeason": false,
 			"graphLate": "",
-			"note": "Sugarbeet is efficient at scavenging soil N, and sugar content is negatively affected by too much N. Therefore it's important to take deep soil N into account, and in-season applications need to be guided by petiole analysis. ",
+			"note": "Sugarbeet is efficient at scavenging soil N, and sugar content is negatively affected by too much N. Therefore it's important to take deep soil N into account, and in-season applications need to be guided by petiole analysis. <br><br>",
 			"links": "<a href=\"http://sugarbeet.ucdavis.edu/\" target=\"_blank\"> University of California Sugarbeet Research and Information</a>",
 			"linkText": "",
 			"refs": [

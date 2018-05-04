@@ -20,23 +20,23 @@
 	</script>
     <script type="text/javascript" src="http://www.cdfa.ca.gov/v4/_js/googleanalytics.js"></script>
     <script type="text/javascript">
-    (function() {
-      var opened_element = null;
-
-      window.toggle2 = function(id) {
-       var ee = document.getElementById(id);
-       if (opened_element && opened_element !== ee) {
-           opened_element.style.display = 'none';
-       }
-       if(ee.style.display == 'block') {
-          ee.style.display = 'none';
-       }
-       else {
-          ee.style.display = 'block';
-       }
-       opened_element = ee;
-      };
-    }());
+    // (function() {
+    //   var opened_element = null;
+    //
+    //   window.toggle2 = function(id) {
+    //    var ee = document.getElementById(id);
+    //    if (opened_element && opened_element !== ee) {
+    //        opened_element.style.display = 'none';
+    //    }
+    //    if(ee.style.display == 'block') {
+    //       ee.style.display = 'none';
+    //    }
+    //    else {
+    //       ee.style.display = 'block';
+    //    }
+    //    opened_element = ee;
+    //   };
+    // }());
 
 
     (function() {
@@ -175,7 +175,7 @@
 
 	.box .box-works {
 	  position: relative;
-	  z-index: 50;
+	  z-index:;
 	  width: 400px;
 	}
 	.Intro p {
@@ -335,7 +335,7 @@
 
 		<u>instructions</u></a> on how to enable JavaScript in your web browser.</h1><br>
 
-	    </div>
+  </div><br><br>
 	    <script>
 
 	        document.getElementById("NoScriptPopup").style.display = 'none';
@@ -352,8 +352,8 @@
       <div id='basicContainer'>
         <h3> Basic Inputs: Field and Crop</h3>
         <div class="InputDivs">
-          <label for="FieldId">1. Field Id: </label>
-          <a class="infoIcon"> &#9432;</a>
+          <label for="FieldId">A. Field Id: </label>
+
           <input type="text" id="FieldId">
         </div><br>
 
@@ -362,8 +362,8 @@
         </div><br>
 
         <div class="InputDivs" id="yieldInput">
-          <label for="ExpectedYield">3. Expected Yield:</label>
-          <a class="infoIcon"> &#9432;</a>
+          <label for="ExpectedYield">C. Expected Yield:</label>
+
           <input type="number" value="5" id="ExpectedYield" required>
           <span for="Units">Units: </span>
           <select id="Units"></select>
@@ -371,19 +371,19 @@
 
 
         <div class="InputDivs">
-          <label for="PlantingDate">4. Planting Date: </label>
-          <a class="infoIcon"> &#9432;</a>
+          <label for="PlantingDate">D. Planting Date: </label>
+
           <input type="date" id="PlantingDate" placeholder="" value="2018-01-01" required>
         </div><br>
 
       <div class="InputDivs">
-         <label for="HarvestDate">5. Harvest Date: </label>
-         <a class="infoIcon"> &#9432;</a>
+         <label for="HarvestDate">E. Harvest Date: </label>
+
          <input type="date" id="HarvestDate" placeholder="" value="2018-03-01" required>
       </div><br>
 
       <div class="InputDivs">
-        <label for="PlantingMethod">6. Method of Planting:</label><a class="infoIcon"> &#9432;</a>
+        <label for="PlantingMethod">F. Method of Planting:</label>
           <select id="PlantingMethod" >
               <option value="Seeding">Seeding</option>
               <option value="Transplant">Transplant</option>
@@ -391,20 +391,20 @@
         </div><br>
 
       <div class="InputDivs" id="ResidueRemovedDiv" style="">
-        <label for="ResidueRemovedSelector">7. Residue Removed:</label><a class="infoIcon"> &#9432;</a>
+        <label for="ResidueRemovedSelector">G. Residue Removed:</label>
           <select id="ResidueRemovedSelector">
-            <option value="Yes">Yes</option>
             <option value="No">No</option>
+            <option value="Yes">Yes</option>
           </select>
       </div><br>
 
       <div class="InputDivs" id="lateSeason">
-        <label for="lateSeasonBox">8. Late Season Planting:</label><a class="infoIcon"> &#9432;</a>
+        <label for="lateSeasonBox">H. Late Season Planting:</label>
         <input id="lateSeasonBox"type="checkbox">
       </div><br>
 
       <div class="InputDivs" id="precentRemovedDiv">
-        <label for="PercentRemoved">9. Percent (%) of Residue Removed:</label><a class="infoIcon"> &#9432;</a>
+        <label for="PercentRemoved">I. Percent (%) of Residue Removed:</label>
          <input type="number" id="PercentRemoved">
       </div><br>
 
@@ -413,39 +413,73 @@
           </div>
 
 
-<!--  TESTING    -->
-          <!-- <div class="box">
-                  <div class="frame_a" id="a_soil_N"> <a href="#" onclick="toggle2('N2'); return false">
-                      <h3>Soil Test <img src="Expand.png" alt="" height="12" width="16"></h3>
-                    </a>
-                    <div id="N2" style="display: block;">
-                      <div class="box-works frame" id="popup1">
-                        <h4>Soil Nitrate Test<a href="#" onclick="toggle2('N2'); return false">
-                          <div class="close"><img src="Close.png" alt="" height="20" width="20"></div></a></h4>
-
-
-
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
-
           <!-- BEGIN: BASIC OUTPUT -->
-      <div class='output'>
-        <h3> Estimated Crop Nitrogen Uptake and Removal: </h3>
-        <div class='NOutputDivs'><span>Nitrogen [<strong>N</strong>] in harvested product:</span><p id='NConcInYield'></p></div>
-        <div class='NOutputDivs'><span><strong>N</strong> in product at harvest:</span><p id='NInProduct'></p></div>
-        <div class='NOutputDivs'><span>Total <strong>N</strong> uptake:</span><p id='NUptake'></p></div>
-        <div class='NOutputDivs'><span><strong>N</strong> in residue:</span><p id='NResidue'></p></div>
-        <div class='NOutputDivs'><span><strong>N</strong> removed at harvest:</span><p id="NRemoved"></p></div>
+      <div class='output box'>
+        <h3> Estimated Crop Nitrogen (<strong>N</strong>) Uptake and Removal: </h3>
+
+
+        <div class='NOutputDivs'><span>1. <strong>N</strong>  in harvested product:</span><p id='NConcInYield'></p>
+          <a onclick="toggle2('output1')" class="infoIcon"> &#9432;</a>
+          </div>
+          <!--  OUTPUT 1. -->
+          <div  class="box-works frame" id="output1" style="display:none">
+          Average N concentration in the product protion of the plant. Crop specific value generated from reference materials.
+          </div>
+
+
+        <div class='NOutputDivs'><span>2. <strong>N</strong> in product at harvest:</span><p id='NInProduct'></p>
+          <a onclick="toggle2('output2')" class="infoIcon"> &#9432;</a>
+          </div>
+          <!-- OUTPUT 2 -->
+          <div  class="box-works frame" id="output2" style="display:none">
+            Pounds(lbs) of Nitrogen in the plant product at Harvest per acre.  (C. Expected Yield ) * (1. Avg N Conc in plant product)
+          </div>
+
+          <!-- OUTPUT 3 -->
+        <div class='NOutputDivs'><span>3. Total <strong>N</strong> uptake:</span><p id='NUptake'></p>
+          <a onclick="toggle2('output3')" class="infoIcon"> &#9432;</a>
+        </div>
+
+        <div  class="box-works frame" id="output3" style="display:none">
+          Total pounds (lbs) of Nitrogen taken up by the entire plant  per acre. (2. N in Product)
+        </div>
+
+
+        <!-- OUTPUT 4 -->
+        <div class='NOutputDivs'><span>4. <strong>N</strong> in residue:</span><p id='NResidue'></p>
+          <a onclick="toggle2('output4')" class="infoIcon"> &#9432;</a>
+        </div>
+
+        <div  class="box-works frame" id="output4" style="display:none">
+          Total Pounds Nitrogen in plant residues. A Nitrogen Harvest Index (NHI) was developed from published crop specific data in the references.
+          NHI * (3. Total N uptake)
+        </div>
+
+
+        <!-- OUTPUT 5 -->
+        <div class='NOutputDivs'><span>5. <strong>N</strong> removed at harvest:</span><p id="NRemoved"></p>
+          <a onclick="toggle2('output5')" class="infoIcon"> &#9432;</a>
+        </div>
+        <div  class="box-works frame" id="output5" style="display:none">
+          Nitrogen removed from the field in the plant product and plant residues removed at harvest time. (3. N Uptake) * ((4. N in Residue) * (I. Percent (%) Residue))
+        </div><br><br>
+
+
+
         <div class='CanvasOutputDiv'>
           <h3> Nitrogen Uptake Curve </h3>
           <canvas id="canvas" width="400" height="300" style=""></canvas>
         </div>
       <div id="cropNotes">
-      </div>  <!-- END: BASIC OUTPUT -->
 
-        </div>
+      </div>
+      <div id="cropLinks">
+      </div>
+
+
+
+    </div><br><br>
+        <!-- END: BASIC OUTPUT -->
       </section>
           <!-- end basic Container -->
 
@@ -455,11 +489,18 @@
           <!--  -->
           <!-- BEGIN: Irrigation INPUTS-->
           <!--  -->
-          <section class="Irrigation">
+          <section class="Irrigation box">
           <h3> Irrigation </h3>
         <div class="InputDivs" id="irrigationSystemSelectorDiv">
-          <label for="irrigationSystemSelector">10. Irrigation System:</label>
-          <a class="infoIcon"> &#9432;</a>
+          <label for="irrigationSystemSelector">J. Irrigation System:</label>
+          <a onclick="toggle2('IrrInfo')" class="infoIcon"> &#9432;</a>
+          <div  class="box-works frame" id="IrrInfo" style="display:none">
+            Nitrogen removed from the field in the plant product and plant residues removed at harvest time. (3. N Uptake) * ((4. N in Residue) * (I. Percent (%) Residue))<br><br>
+            Irmak, Suat; Odhiambo, Lameck O.; Kranz, William L.; and Eisenhauer, Dean E., "Irrigation Efficiency and Uniformity, and Crop
+            Water Use Efficiency" (2011). Biological Systems Engineering: Papers and Publications. 451.
+            <a href="https://digitalcommons.unl.edu/biosysengfacpub/451">https://digitalcommons.unl.edu/biosysengfacpub/451</a>
+          </div>
+
           <select id="irrigationSystemSelector">
             <option value="Drip"> Drip</option>
             <option value="Furrow"> Furrow</option>
@@ -472,20 +513,26 @@
         </div><br>
 
         <div class="InputDivs" id="waterAppliedEfficiency">
-          <label for="wae">11. Water Application Effeciency:</label>
-          <a class="infoIcon"> &#9432;</a>
+          <label for="wae">K. Water Application Effeciency:</label>
+          <a onclick="toggle2('WaeInfo')" class="infoIcon"> &#9432;</a>
+          <div  class="box-works frame" id="WaeInfo" style="display:none">
+            Water Application Efficicency = (Water stored in rootzone / Water delivered to farm) * 100<br><br>
+            Irmak, Suat; Odhiambo, Lameck O.; Kranz, William L.; and Eisenhauer, Dean E., "Irrigation Efficiency and Uniformity, and Crop
+            Water Use Efficiency" (2011). Biological Systems Engineering: Papers and Publications. 451.
+            <a href="https://digitalcommons.unl.edu/biosysengfacpub/451">https://digitalcommons.unl.edu/biosysengfacpub/451</a>
+          </div>
           <input id="wae" type="number" value="75" >
         </div><br>
 
         <div class="InputDivs" id="waterApplied">
-          <label for="inchesOfWater">12. Acre Inches of Water Applied:</label>
-          <a class="infoIcon"> &#9432;</a>
+          <label for="inchesOfWater">L. Acre Inches of Water Applied:</label>
+
           <input id="inchesOfWater" type="number" value="10">
         </div><br>
 
         <div class="InputDivs" id="nitrogenConcentration">
-          <label for="NppmWater">13. <strong>N</strong> Concentration:</label>
-          <a class="infoIcon"> &#9432;</a>
+          <label for="NppmWater">M. <strong>N</strong> Concentration:</label>
+
           <input id="NppmWater" type="number" value="10">
 
           <span for="NppmWaterUnits">Units:</span>
@@ -503,8 +550,8 @@
       <section class="soil">
         <h3> Soil </h3>
         <div class="InputDivs" id="regionSelectorDiv">
-          <label for="regionSelector"> 14. Region: </label>
-          <a class="infoIcon"> &#9432;</a>
+          <label for="regionSelector"> N. Region: </label>
+
           <select id="regionSelector">
             <option value="40"> San Joaquin Valley</option>
             <option value="40"> Sacramento Valley</option>
@@ -518,8 +565,8 @@
         </div><br>
 
         <div class="InputDivs" id="soilTypeSelectorDiv">
-          <label for="soilTypeSelector"> 15. Soil Type: </label>
-          <a class="infoIcon"> &#9432;</a>
+          <label for="soilTypeSelector"> O. Soil Type: </label>
+
           <select id="soilTypeSelector">
             <option value="Sand"> Sand </option>
             <option value="LoamySand"> Loamy Sand</option>
@@ -538,8 +585,8 @@
         </div><br>
 
         <div class="InputDivs" id="residualNitrate">
-          <label for="NppmSoil">17.  Residual Soil <strong>N</strong>:  </label>
-          <a class="infoIcon"> &#9432;</a>
+          <label for="NppmSoil">P.  Residual Soil <strong>N</strong>:  </label>
+
           <input id="NppmSoil" value="10" type="number" step="">
 
           <span for="NppmSoilUnits"> Units:</span>
@@ -550,8 +597,8 @@
         </div><br>
 
         <div class="InputDivs" id="soilOrganicMatter">
-          <label for="som">18.  Soil Organic Matter:</label>
-          <a class="infoIcon"> &#9432;</a>
+          <label for="som">Q.  Soil Organic Matter:</label>
+
           <input id= "som" type="number" step="0.5">
           <span for="som_units"> Units:</span>
             <select id="som_units">
@@ -563,8 +610,8 @@
 
 
         <div class="InputDivs" class="">
-          <label for="samplingDepth"> 19. Sampling Depth (inches):</label>
-          <a class="infoIcon"> &#9432;</a>
+          <label for="samplingDepth"> R. Sampling Depth (inches):</label>
+
           <input id="samplingDepth" value="6" type="number">
         </div>
       </section>
@@ -572,19 +619,63 @@
         <div class="CalcButtonDiv">
               <button id='button2' type="button">Calculate</button>
             </div>
-          </div>
+          </div><br>
 
 
 
        <!-- BEGIN: ADVANCED OUTPUT -->
-      <div class="part2Output">
+      <div class="part2Output box">
         <h3> Potential Nitrate Leachings Risks </h3>
-        <div class='NOutputDivs'><span>Total <strong>N</strong> Uptake:</span><p id='totalNUptake2'></p></div>
-        <div class='NOutputDivs'><span>Residual Soil <strong>N</strong>: </span><p id='residualN'></p></div>
-        <div class='NOutputDivs'><span><strong>N</strong> applied with Irrigation: </span><p id='nInIrrigation'></p></div>
-        <div class='NOutputDivs'><span>In Season <strong>N</strong> mineralization:</span><p id='nMineralized'></p></div>
-        <div class='NOutputDivs'><span>Required <strong>N</strong> without leaching</span> <p id='nNeed'></p></div>
-        <div class='NOutputDivs'><span><strong>N</strong> at risk of leaching: </span><p id='leachingRisk'></p></div>
+
+        <!-- OUTPUT 6 -->
+        <div class='NOutputDivs'><span>6. Total <strong>N</strong> Uptake:</span><p id='totalNUptake2'></p>
+          <a onclick="toggle2('output6')" class="infoIcon"> &#9432;</a>
+        </div>
+        <div  class="box-works frame" id="output6" style="display:none">
+          Total pounds (lbs) of Nitrogen taken up by the entire plant  per acre. (2. N in Product)
+        </div>
+
+        <!-- OUTPUT 7 -->
+        <div class='NOutputDivs'><span>7. Residual Soil <strong>N</strong>: </span><p id='residualN'></p>
+          <a onclick="toggle2('output7')" class="infoIcon"> &#9432;</a>
+        </div>
+        <div  class="box-works frame" id="output7" style="display:none">
+          Determined by (O. Soil Texture, Q. Soil Organic Matter, P. Residual Soil N, R. Sampling Depth)
+        </div>
+
+        <!-- OUTPUT 8 -->
+        <div class='NOutputDivs'><span>8. <strong>N</strong> applied with Irrigation: </span><p id='nInIrrigation'></p>
+          <a onclick="toggle2('output8')" class="infoIcon"> &#9432;</a>
+        </div>
+        <div  class="box-works frame" id="output8" style="display:none">
+          Acre inches of water applied mulitplied by the Nitrogen concentration in Applied Irrigation Water.
+        </div>
+
+        <!-- OUTPUT 9 -->
+        <div class='NOutputDivs'><span>9. In Season <strong>N</strong> mineralization:</span><p id='nMineralized'></p>
+          <a onclick="toggle2('output9')" class="infoIcon"> &#9432;</a>
+        </div>
+        <div  class="box-works frame" id="output9" style="display:none">
+           Estimated regional nitrogen mineralization rates from UC Cooperative Extension research
+        </div>
+
+        <!-- OUTPUT 10 -->
+        <div class='NOutputDivs'><span>10. Required <strong>N</strong> without leaching</span> <p id='nNeed'></p>
+          <a onclick="toggle2('output10')" class="infoIcon"> &#9432;</a>
+        </div>
+        <div  class="box-works frame" id="output10" style="display:none">
+          Total pounds (lbs) nitrogen needed for crop growth assuming zero leaching and 100% water application effeciency.
+          (3/6. Total Soil N) - (O. Soil Texture - 8. N Irr. Water - 9. In season N Mineralized)
+
+        </div>
+
+        <!-- OUTPUT 11 -->
+        <div class='NOutputDivs'><span>11. <strong>N</strong> at risk of leaching: </span><p id='leachingRisk'></p>
+          <a onclick="toggle2('output11')" class="infoIcon"> &#9432;</a>
+        </div>
+        <div  class="box-works frame" id="output11" style="display:none">
+          Nitrate at risk of leaching. (10. Required N * Water Application Efficiency)
+        </div><br><br>
 
         <div class="references">
           <h3> References </h3>
