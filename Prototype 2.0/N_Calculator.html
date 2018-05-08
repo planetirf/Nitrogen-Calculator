@@ -1,0 +1,750 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Field-Specific Adjustments</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ----------------------------------------------------------- -->
+    <!--                                                             -->
+    <!--                         Javascript                          -->
+    <!--                                                             -->
+    <!-- ----------------------------------------------------------- -->
+    <!-- begin javascript -->
+    <script type="text/javascript">
+	function getSectionID() {
+		return 2;
+	}
+	</script>
+    <script type="text/javascript" src="http://www.cdfa.ca.gov/v4/_js/googleanalytics.js"></script>
+    <script type="text/javascript">
+    // (function() {
+    //   var opened_element = null;
+    //
+    //   window.toggle2 = function(id) {
+    //    var ee = document.getElementById(id);
+    //    if (opened_element && opened_element !== ee) {
+    //        opened_element.style.display = 'none';
+    //    }
+    //    if(ee.style.display == 'block') {
+    //       ee.style.display = 'none';
+    //    }
+    //    else {
+    //       ee.style.display = 'block';
+    //    }
+    //    opened_element = ee;
+    //   };
+    // }());
+
+
+    (function() {
+      var opened_element = null;
+
+      window.toggle3 = function(id) {
+       var eee = document.getElementById(id);
+       if (opened_element && opened_element !== eee) {
+           opened_element.style.display = 'none';
+       }
+       if(eee.style.display == 'block') {
+          eee.style.display = 'none';
+       }
+       else {
+          eee.style.display = 'block';
+       }
+       opened_element = eee;
+      };
+    }());
+    </script>
+
+
+    <link rel="stylesheet" type="text/css" href="crops.css">
+    <link rel="stylesheet" type="text/css" href="IE_Calculator.css">
+
+
+    <style type="text/css">
+
+	.Intro h1 {
+	  padding-left: 5px;
+	  padding-right: 5px;
+	  text-align: center;
+	}
+	.Intro h4 {
+	  border: 0px;
+	  line-height: 2em;
+	  font-size: 1.2em;
+	  font-family: Times, serif;
+	  color: #362819;
+	  padding-left: 10px;
+	  padding-bottom: 0px;
+	  padding-top: 0px;
+	  margin: 0 0 0 0px;
+	  text-align: left;
+	}
+	.Intro h6 {
+	  font-weight: normal;
+	  font-size: 0.9em;
+	  padding-left: 5px;
+	  padding-right: 5px;
+	  line-height: 1.3;
+	  text-align: center;
+	}
+	.Intro p {
+	  background: #FFF;
+	  margin: 0px 0px;
+	  line-height: 1.4em;
+	  color: #000;
+	  text-indent: 1em;
+	  text-align: left;
+	  font-size: 1em;
+	  font-family: Verdana, Arial, sans-serif;
+	}
+	.links_bottom h4{
+	  border-top: 1px solid;
+	  border-left: 3px solid;
+	  line-height: 1.4;
+	  font-size: 1.5em;
+	  font-family: Times, serif;
+	  color: #362819;
+	  padding-bottom: 0px;
+	  padding-top: 0px;
+	  margin: 2px 0px;
+	  text-align: center;
+	}
+	.links_bottom h5{
+	  text-align: left;
+	  padding-left: 1em;
+	}
+	#a_info{
+	  max-width: 1200px;
+	  padding-left: 0%;
+	  padding-right: 0%;
+	}
+	#lists li{
+	  list-style-type: disc;
+	  line-height: 1.4em;
+	  padding-left: 1em;
+	  color: #000;
+	}
+	#lists li a{
+	  text-decoration: underline;
+	  color: #0000EE;
+	}
+
+
+    /**********************************************************/
+    /*                                                        */
+    /*                     Responsive Design                  */
+    /*                                                        */
+    /**********************************************************/
+
+    @media only screen and (min-width: 400px) {
+
+      .Left_Panel {
+        display:none;
+      }
+
+	#CDFA {
+	  width: 18%;
+	}
+	#FREP {
+	  width: 10.5%;
+	}
+	#UCD {
+	  width: 30%;
+	  padding-right: 5px;
+	}
+	h1 {
+	  font-size: 2em;
+	}
+	.Intro p {
+	  padding-left: 0%;
+	  padding-right: 0%;
+	}
+	#lists {
+	  padding-left: 4%;
+	  padding-right: 0%;
+	}
+    }
+
+    @media only screen and (min-width: 455px) {
+      .Left_Panel {
+        display:none;
+      }
+
+	.box .box-works {
+	  position: relative;
+	  z-index:;
+	  width: 400px;
+	}
+	.Intro p {
+	  padding-left: 10%;
+	  padding-right: 10%;
+	}
+	#lists {
+	  padding-left: 13%;
+	  padding-right: 10%;
+	}
+	.links_bottom h4 {
+	  padding-right: 0%;
+	}
+
+
+    }
+
+    @media only screen and (min-width: 760px) {
+	.Left_Panel {
+	  display: block;
+	  width: 200px;
+	  float: left;
+	  margin-right: 0;
+	}
+	.links_bottom {
+	  display: none;
+	}
+	#CDFA {
+	  width: 12%;
+	}
+	#FREP {
+	  width: 7%;
+	}
+	#UCD {
+	  width: 20%;
+	  padding-right: 5px;
+	}
+	h1 {
+	  font-size: 2em;
+	}
+	.Intro h6 {
+	  font-size: 1.1em;
+	}
+	#popup1 {
+          left: 0px;
+	}
+	#a_acknowledgments {
+	  margin-left: 0%;
+	  width: 40%;
+	}
+	#a_info {
+	  margin-left: 10%;
+	  width: 30%;
+	}
+    }
+
+    @media only screen and (min-width: 960px) {
+	.Top3 {
+	  margin-top: -40px;
+	}
+	.Intro p, .Intro h4, .map_box {
+	  padding-left: 20%;
+	  padding-right: 20%;
+	}
+	#lists {
+	  padding-left: 23%;
+	  padding-right: 20%;
+	}
+	.Stages {
+	  padding-left: 10%;
+	  padding-right: 10%;
+	}
+    }
+
+    @media only screen and (min-width: 1200px) {
+
+    }
+
+    </style>
+
+    <!--[if (lt IE 9) & (!IEMobile)]>
+		<link rel="stylesheet" href="IE_Calculator.css" />
+	<![endif]-->
+  </head>
+  <!-- ------------------------------------------------------- -->
+  <!--                                                         -->
+  <!--                         Body                            -->
+  <!--                                                         -->
+  <!-- ------------------------------------------------------- -->
+  <body>
+    <div id="fullpage"> <a name="top" id="top"></a>
+
+
+      <div class="Top2">
+	  <h1 style="font-size:0.9em">&nbsp;&nbsp;A collaboration between</h1>
+          <a href="http://www.cdfa.ca.gov/" target="_new"><img id="CDFA"
+             src="CDFA_Logo.png" alt="CDFA" ></a>
+          <a href="http://www.cdfa.ca.gov/is/ffldrs/frep.html"
+             target="_new"><img id="FREP" src="FREP_Logo_Transp.png" alt="FREP"
+             ></a>
+          <a href="http://www.ucdavis.edu/" target="_new"><img id="UCD" align="right"
+             src="UCD_Logo.png" alt="UCD"> </a> <br><br>
+      </div>  		      <!-- class="Top2" -->
+
+      <!-- --------------------------------------------------------- -->
+      <!--               <div style="clear:both;"></div>             -->
+      <!-- --------------------------------------------------------- -->
+		<div class="clear_both">X</div>
+
+      <div class="Top3"> <img src="Line.png" alt="">
+      </div>
+
+
+
+      <div class="Content">
+
+
+
+      <!-- --------------------------------------------------------- -->
+      <!--                                                           -->
+      <!--                         Left Panel                        -->
+      <!--                                                           -->
+      <!-- --------------------------------------------------------- -->
+      <div class="Left_Panel">
+        <br>
+	<h5><a href="Guidelines.html" target="_new" link-title=""><b>Guidelines Home</b></a>
+        </h5><br><br>
+
+        <h3>Overview:</h3><br>
+
+        <h5><a href="#top2">Field Crops</a></h5>
+
+
+
+
+        </div> 		        <!-- class="Left_Panel" -->
+
+      <!-- --------------------------------------------------------- -->
+      <!--                                                           -->
+      <!--                            Map                            -->
+      <!--                                                           -->
+      <!-- --------------------------------------------------------- -->
+        <div class=" Content ContentCalc" id="ContentCalc">
+          <div class="Intro">
+
+
+              <h1>Nitrogen Calculator</h1>
+              <h6> <i><b>Created by Irfan Ainuddin, Patricia Lazicki and Daniel Geisseler* </b></i></h6>
+
+	    <div id="NoScriptPopup"><h1 style="font-size:1.1em; color:red">Javascript is disabled on your browser.
+
+	For full functionality of this site it is necessary to enable
+
+	JavaScript. Follow this link for
+
+	<a href="http://www.enable-javascript.com/" target="_new">
+
+		<u>instructions</u></a> on how to enable JavaScript in your web browser.</h1><br>
+
+  </div><br><br>
+	    <script>
+
+	        document.getElementById("NoScriptPopup").style.display = 'none';
+
+	    </script>
+</div>
+      <!-- --------------------------------------------------------- -->
+      <!--                 INSERT CALCULATOR HERE                    -->
+      <!-- --------------------------------------------------------- -->
+<!-- <link rel="stylesheet" type="text/css" href="IE_Calculator.css"> -->
+      <form method="POST" action="/">
+      <div id='part1'>
+      <section class="fieldCrop">
+      <div id='basicContainer'>
+        <h3> Basic Inputs: Field and Crop</h3>
+        <div class="InputDivs">
+          <label for="FieldId">A. Field Id: </label>
+
+          <input type="text" id="FieldId">
+        </div><br>
+
+        <!-- cropInput built in js file -->
+        <div class="InputDivs" id="cropInput">
+        </div><br>
+
+        <div class="InputDivs" id="yieldInput">
+          <label for="ExpectedYield">C. Expected Yield:</label>
+
+          <input type="number" value="" id="ExpectedYield" required>
+          <span for="Units">Units: </span>
+          <select id="Units"></select>
+        </div><br>
+
+
+        <div class="InputDivs">
+          <label for="PlantingDate">D. Planting Date: </label>
+
+          <input type="date" id="PlantingDate" placeholder="" value="" required>
+        </div><br>
+
+      <div class="InputDivs">
+         <label for="HarvestDate">E. Harvest Date: </label>
+
+         <input type="date" id="HarvestDate" placeholder="" value="" required>
+      </div><br>
+
+      <div class="InputDivs">
+        <label for="PlantingMethod">F. Method of Planting:</label>
+          <select id="PlantingMethod" >
+              <option value="Seeding">Seeding</option>
+              <option value="Transplant">Transplant</option>
+          </select>
+        </div><br>
+
+      <div class="InputDivs" id="ResidueRemovedDiv" style="">
+        <label for="ResidueRemovedSelector">G. Residue Removed:</label>
+          <select id="ResidueRemovedSelector">
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+      </div><br>
+
+      <div class="InputDivs" id="lateSeason">
+        <label for="lateSeasonBox">H. Late Season Planting:</label>
+        <input id="lateSeasonBox"type="checkbox">
+      </div><br>
+
+      <div class="InputDivs" id="precentRemovedDiv">
+        <label for="PercentRemoved">I. Percent (%) of Residue Removed:</label>
+         <input type="number" id="PercentRemoved">
+      </div><br>
+
+      <div class="CalcButtonDiv">
+            <button id='button' type="button" style="">Calculate</button>
+          </div>
+
+
+          <!-- BEGIN: BASIC OUTPUT -->
+      <div class='output box'>
+        <h3> Estimated Crop Nitrogen (<strong>N</strong>) Uptake and Removal: </h3>
+
+
+        <div class='NOutputDivs'><span>1. <strong>N</strong>  in plant product:</span><p id='NConcInYield'></p>
+          <a onclick="toggle2('output1')" class="infoIcon"> &#9432;</a>
+          </div>
+          <!--  OUTPUT 1. -->
+          <div  class="box-works frame" id="output1" style="display:none">
+          Average N concentration in the product protion of the plant. Crop specific value generated from reference materials.
+          </div>
+
+
+        <div class='NOutputDivs'><span>2. <strong>N</strong> in product at harvest:</span><p id='NInProduct'></p>
+          <a onclick="toggle2('output2')" class="infoIcon"> &#9432;</a>
+          </div>
+          <!-- OUTPUT 2 -->
+          <div  class="box-works frame" id="output2" style="display:none">
+            Pounds (lbs) of Nitrogen in the plant product at Harvest per acre.  <br>
+            <strong> 2. </strong> = (<strong>C.</strong> Expected Yield ) * (<strong>1.</strong> Avg <strong>N</strong> Conc. in plant product)
+          </div>
+
+          <!-- OUTPUT 3 -->
+        <div class='NOutputDivs'><span>3. Total <strong>N</strong> uptake:</span><p id='NUptake'></p>
+          <a onclick="toggle2('output3')" class="infoIcon"> &#9432;</a>
+        </div>
+
+        <div  class="box-works frame" id="output3" style="display:none">
+          Total pounds (lbs) of Nitrogen taken up by the entire plant  per acre. <br>
+           (<strong>2. </strong>Total <strong>N</strong> in product at harvest) + (<strong> 4.</strong> N In plant residue)
+        </div>
+
+
+        <!-- OUTPUT 4 -->
+        <div class='NOutputDivs'><span>4. <strong>N</strong> in residue:</span><p id='NResidue'></p>
+          <a onclick="toggle2('output4')" class="infoIcon"> &#9432;</a>
+        </div>
+
+        <div  class="box-works frame" id="output4" style="display:none">
+          Total Pounds Nitrogen in plant residues. A Nitrogen Harvest Index (<strong>NHI</strong>) was developed from published crop specific data in the references.
+          <strong>NHI</strong> * (<strong>3.</strong>  Total <strong>N</strong> uptake)
+        </div>
+
+
+        <!-- OUTPUT 5 -->
+        <div class='NOutputDivs'><span>5. <strong>N</strong> removed at harvest:</span><p id="NRemoved"></p>
+          <a onclick="toggle2('output5')" class="infoIcon"> &#9432;</a>
+        </div>
+        <div  class="box-works frame" id="output5" style="display:none">
+          Nitrogen removed from the field in the plant product and plant residues removed at harvest time. <br>
+          (<strong>3.</strong> N Uptake) * ((<strong>4.</strong> N in Residue) * (<strong>I.</strong> Percent (%) Residue))
+        </div><br><br>
+
+
+
+        <div class='CanvasOutputDiv'>
+          <h3> Nitrogen Uptake Curve </h3>
+          <canvas id="canvas" width="400" height="300" style=""></canvas>
+        </div>
+      <div id="cropNotes">
+
+      </div>
+      <div id="cropLinks">
+      </div>
+
+
+
+    </div><br><br>
+        <!-- END: BASIC OUTPUT -->
+      </section>
+          <!-- end basic Container -->
+
+        <!--  BEGIN: ADVANCED INPUT -->
+
+        <div class="part2Input">
+          <!--  -->
+          <!-- BEGIN: Irrigation INPUTS-->
+          <!--  -->
+          <section class="Irrigation box">
+          <h3> Irrigation </h3>
+        <div class="InputDivs" id="irrigationSystemSelectorDiv">
+          <label for="irrigationSystemSelector">J. Irrigation System:</label>
+          <a onclick="toggle2('IrrInfo')" class="infoIcon"> &#9432;</a>
+
+          <select id="irrigationSystemSelector">
+            <option value="Drip"> Drip</option>
+            <option value="Furrow"> Furrow</option>
+            <option value="Sprinkler"> Sprinkler</option>
+            <option value="Flood"> Flood</option>
+            <option value="Center Pivot"> Center Pivot</option>
+            <option value="Linear Move"> Linear Move</option>
+            <option value="Microsprayer"> Microsprayer</option>
+          </select>
+        </div><br>
+
+        <div  class="box-works frame" id="IrrInfo" style="display:none">
+          Nitrogen removed from the field in the plant product and plant residues removed at harvest time. <br>(3. N Uptake) * ((4. N in Residue) * (I. Percent (%) Residue))<br><br>
+          Irmak, Suat; Odhiambo, Lameck O.; Kranz, William L.; and Eisenhauer, Dean E., "Irrigation Efficiency and Uniformity, and Crop
+          Water Use Efficiency" (2011). Biological Systems Engineering: Papers and Publications. 451.
+          <a href="https://digitalcommons.unl.edu/biosysengfacpub/451">https://digitalcommons.unl.edu/biosysengfacpub/451</a>
+        </div>
+
+        <div class="InputDivs" id="waterAppliedEfficiency">
+          <label for="wae">K. Water Application Effeciency:</label>
+          <a onclick="toggle2('WaeInfo')" class="infoIcon"> &#9432;</a>
+          <input id="wae" type="number" value="" >
+        </div><br>
+
+        <div  class="box-works frame" id="WaeInfo" style="display:none">
+          Water Application Efficicency = (Water stored in rootzone / Water delivered to farm) * 100<br><br>
+          Irmak, Suat; Odhiambo, Lameck O.; Kranz, William L.; and Eisenhauer, Dean E., "Irrigation Efficiency and Uniformity, and Crop
+          Water Use Efficiency" (2011). Biological Systems Engineering: Papers and Publications. 451.
+          <a href="https://digitalcommons.unl.edu/biosysengfacpub/451">https://digitalcommons.unl.edu/biosysengfacpub/451</a>
+        </div>
+
+        <div class="InputDivs" id="waterApplied">
+          <label for="inchesOfWater">L. Acre Inches of Water Applied:</label>
+
+          <input id="inchesOfWater" type="number" value="">
+        </div><br>
+
+        <div class="InputDivs" id="nitrogenConcentration">
+          <label for="NppmWater">M. <strong>N</strong> Concentration:</label>
+
+          <input id="NppmWater" type="number" value="">
+
+          <span for="NppmWaterUnits">Units:</span>
+            <select id="NppmWaterUnits">
+              <option value="NO3">ppm NO3</option>
+              <option value="NO3N">ppm NO3-N</option>
+            </select>
+        </div><br>
+
+      </section>
+
+      <!--  -->
+      <!-- BEGIN: SOIL INPUTS-->
+      <!--  -->
+      <section class="soil">
+        <h3> Soil </h3>
+        <div class="InputDivs" id="regionSelectorDiv">
+          <label for="regionSelector"> N. Region: </label>
+
+          <select id="regionSelector">
+            <option value="40"> San Joaquin Valley</option>
+            <option value="40"> Sacramento Valley</option>
+            <option value="40"> Imperial Valley</option>
+            <option value="40"> Delta</option>
+            <option value="40"> Central Coast</option>
+            <option value="40"> Southern Coast</option>
+            <option value="40"> Northern Coast</option>
+            <option value="40"> Tule Lake</option>
+          </select>
+        </div><br>
+
+        <div class="InputDivs" id="soilTypeSelectorDiv">
+          <label for="soilTypeSelector"> O. Soil Type: </label>
+
+          <select id="soilTypeSelector">
+            <option value="Sand"> Sand </option>
+            <option value="LoamySand"> Loamy Sand</option>
+            <option value="SandyLoam"> Sandy Loam</option>
+            <option value="Loam"> Loam</option>
+            <option value="SiltyLoam"> Silty Loam</option>
+            <option value="Silt"> Silt </option>
+            <option value="SiltyClayLoam"> Silty Clay Loam</option>
+            <option value="SiltyClay"> Silty Clay</option>
+            <option value="ClayLoam"> Clay Loam</option>
+            <option value="SandyClayLoam"> Sandy Clay Loam</option>
+            <option value="SandyLoam"> Sandy Loam</option>
+            <option value="SandyClay"> Sandy Clay</option>
+            <option value="Clay"> Clay</option>
+          </select>
+        </div><br>
+
+        <div class="InputDivs" id="residualNitrate">
+          <label for="NppmSoil">P.  Residual Soil <strong>N</strong>:  </label>
+
+          <input id="NppmSoil" value="" type="number" step="">
+
+          <span for="NppmSoilUnits"> Units:</span>
+            <select id="NppmSoilUnits">
+              <option value="NO3">ppm NO3</option>
+              <option value="NO3-N">ppm NO3-N</option>
+            </select>
+        </div><br>
+
+        <div class="InputDivs" id="soilOrganicMatter">
+          <label for="som">Q.  Soil Organic Matter:</label>
+
+          <input id= "som" type="number" step="0.5">
+          <span for="som_units"> Units:</span>
+            <select id="som_units">
+              <option value="%">%</option>
+              <option value="g/kg">g/kg</option>
+              <!-- <option value="lbs/acre">lbs/acre</option> -->
+            </select>
+        </div><br>
+
+
+        <div class="InputDivs" class="">
+          <label for="samplingDepth"> R. Sampling Depth (inches):</label>
+
+          <input id="samplingDepth" value="" type="number">
+        </div>
+      </section>
+
+        <div class="CalcButtonDiv">
+              <button id='button2' type="button">Calculate</button>
+            </div>
+          </div><br>
+
+
+
+       <!-- BEGIN: ADVANCED OUTPUT -->
+      <div class="part2Output box">
+        <h3> Potential Nitrate Leachings Risks </h3>
+
+        <!-- OUTPUT 6 -->
+        <div class='NOutputDivs'><span>6. Total <strong>N</strong> Uptake:</span><p id='totalNUptake2'></p>
+          <a onclick="toggle2('output6')" class="infoIcon"> &#9432;</a>
+        </div>
+        <div  class="box-works frame" id="output6" style="display:none">
+          Total pounds (lbs) of Nitrogen taken up by the entire plant  per acre. <br>
+          (<strong>2.</strong> N in Product)
+        </div>
+
+        <!-- OUTPUT 7 -->
+        <div class='NOutputDivs'><span>7. Residual Soil <strong>N</strong>: </span><p id='residualN'></p>
+          <a onclick="toggle2('output7')" class="infoIcon"> &#9432;</a>
+        </div>
+        <div  class="box-works frame" id="output7" style="display:none">
+          Determined by (<strong>O.</strong> Soil Texture, <strong>Q.</strong> Soil Organic Matter, <strong>P.</strong> Residual Soil N, <strong>R.</strong> Sampling Depth)
+        </div>
+
+        <!-- OUTPUT 8 -->
+        <div class='NOutputDivs'><span>8. <strong>N</strong> applied with Irrigation: </span><p id='nInIrrigation'></p>
+          <a onclick="toggle2('output8')" class="infoIcon"> &#9432;</a>
+        </div>
+        <div  class="box-works frame" id="output8" style="display:none">
+          Acre inches of water applied mulitplied by the Nitrogen concentration in Applied Irrigation Water.
+        </div>
+
+        <!-- OUTPUT 9 -->
+        <div class='NOutputDivs'><span>9. In Season <strong>N</strong> mineralization:</span><p id='nMineralized'></p>
+          <a onclick="toggle2('output9')" class="infoIcon"> &#9432;</a>
+        </div>
+        <div  class="box-works frame" id="output9" style="display:none">
+           Estimated regional nitrogen mineralization rates from UC Cooperative Extension research
+        </div>
+
+        <!-- OUTPUT 10 -->
+        <div class='NOutputDivs'><span>10. Required <strong>N</strong> without leaching</span> <p id='nNeed'></p>
+          <a onclick="toggle2('output10')" class="infoIcon"> &#9432;</a>
+        </div>
+        <div  class="box-works frame" id="output10" style="display:none">
+          Total pounds (lbs) nitrogen needed for crop growth assuming zero leaching and 100% water application effeciency.
+          <br>
+          (<strong>6.</strong> Total Soil N) - (<strong>O.</strong> Soil Texture) - (<strong>8.</strong> N Irr. Water) - (<strong>9.</strong> In season N Mineralized)
+
+        </div>
+
+        <!-- OUTPUT 11 -->
+        <div class='NOutputDivs'><span>11. <strong>N</strong> at risk of leaching: </span><p id='leachingRisk'></p>
+          <a onclick="toggle2('output11')" class="infoIcon"> &#9432;</a>
+        </div>
+        <div  class="box-works frame" id="output11" style="display:none">
+          Nitrate at risk of leaching. <br>
+          (<strong>10.</strong> Required <strong>N</strong> * Water Application Efficiency)
+        </div><br><br>
+
+        <div class="references">
+          <h3> References </h3>
+          <ol id="references">
+          </ol>
+        </div>
+      </div>
+      <!-- END: ADVANCED OUTPUT -->
+
+          <!-- End: class="part1Form" -->
+      </div>
+    </form>
+
+
+
+        <!-- END: class="content" -->
+      </div>
+
+<!-- END: class="content" -->
+</div>
+<!--
+	<p>
+        <a class="top" href="#top">TOP OF PAGE</a> <a name="top2"></a>
+	</p><br><br> -->
+
+
+    <!-- --------------------------------------------------------- -->
+    <!--                           Footer                          -->
+    <!-- --------------------------------------------------------- -->
+<div id="footer" class="footer">
+  <br><br>
+  <p id="top" >
+        <a class="top" href="#top">TOP OF PAGE</a> <a name="top2"></a>
+	</p>
+        <hr>
+        <p style="font-size:0.8em;">
+	  * Irfan Ainuddin is a Junior Specialist in the Department
+	  of Land, Air and Water Resources at the University of California,
+	  Patricia Lazicki is an Assistant Specialist in the Department
+	  of Land, Air and Water Resources at the University of California,
+	  Davis. Daniel Geisseler is an Extension Specialist in the
+	  Department of Land, Air and Water Resources at the University
+	  of California, Davis.
+	</p>
+
+<!-- end footer -->
+</div>
+	 </div> <!-- class="Intro" -->
+
+
+
+          <div class="Spacer" style="height: 0px">
+     </div>          <!-- class="Spacer" -->
+
+
+    </div>        <!-- class="Content" -->
+    </div>      <!-- id=fullpage -->
+   </div>
+  </body>
+<!-- N calc scripts -->
+  <script type="text/javascript" src="data.json"></script>
+  <script type="text/javascript" src="scripts.js"></script>
+
+</html>
