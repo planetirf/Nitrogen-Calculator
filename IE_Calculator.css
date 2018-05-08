@@ -125,7 +125,7 @@
        }
 
        .InputDivs > input {
-         width:25px;
+         width: 15px;
          color:#414F12;
          background-color:#F7F2EE;
          text-align: center;
@@ -158,6 +158,19 @@
 
        }
 
+       .InputDivs > a {
+         text-align: center;
+         flex-grow:1;
+         flex-basis:;
+         align-self: center;
+         justify-content: center;
+
+       }
+
+       #precentRemovedDiv {
+         
+       }
+
        .InputDivs select   {
 
        }
@@ -165,6 +178,20 @@
        #IrrInfo {
          float:right;
        }
+
+       #cropLinks a{
+         color: blue;
+
+       }
+
+       #cropLinks a:visited{
+         color: purple;
+
+       }
+
+
+
+
 
 
 
@@ -179,7 +206,7 @@
        }
 
        input[type="text"] {
-         width: ;
+         width:  ;
 
        }
 
@@ -191,9 +218,15 @@
          width:;
        }
 
-       #cropSelector {
-         width:;
+       #som_units,#NppmSoilUnits, #NppmWaterUnits {
+         width:45px;
        }
+
+       #NppmSoil {
+         width:1px;
+
+       }
+
 
        select{
          width:20%;
@@ -226,6 +259,7 @@
          flex-basis:50px;
          align-self: center;
          justify-content: center;
+         height:20px
 
          /*flex-grow:1;*/
          /*border-radius:5px;

@@ -4,7 +4,7 @@
 // Declare global HOST variables
 var cropData = data;
 var cropSelectorDiv = "";
-var cropSelector =  "<label for=\"cropSelector\">" + "B. Select a Crop:" + "</label>" + "<a class=\"infoIcon\"> &#9432;</a>" + "<select id=\"cropSelector\">";
+var cropSelector =  "<label for=\"cropSelector\">" + "B. Select a Crop:" + "</label>" + "<select id=\"cropSelector\">";
 var days = 0;
 var start = document.getElementById("PlantingDate").value;
 var end = document.getElementById("HarvestDate").value;
@@ -193,18 +193,18 @@ document.getElementById("cropSelector").addEventListener("change", function (){
      var crop = cropChoices[i];
      var name = crop.name;
 
-     // set image source to currentCrop"s value.
+     // s.
      if (currentCrop === name) {
        var residueRemovedBool = cropChoices[i]["residueRemoved"];
 
        if (residueRemovedBool == false){
-         w.style.display = "none";
+         w.style.display = "";
          y.style.display = "none";
-         x.disabled = false;
+         x.disabled = true;
          console.log("RES REMOVAL CHECK");
        } else {
-         w.style.display = "inline-block";
-         y.style.display = "inline-block";
+         w.style.display = "";
+         y.style.display = "";
 
        }
      }
@@ -227,7 +227,7 @@ document.getElementById("ResidueRemovedSelector").addEventListener("change", fun
      if (currentCrop === name) {
        if (x === "Yes") {
         //  console.log(x);
-         y.style.display = "inline-block";
+         y.style.display = "";
        } else {
          y.style.display = "none";
             //  console.log(x);
@@ -343,10 +343,38 @@ document.getElementById("button").addEventListener("click", function () {
   document.getElementById("NRemoved").innerHTML =  Number(Math.round(NRemoved)) + " " + units ;
 
 
+
 });
 
 
 // G#
+document.getElementById("button").addEventListener("click", function () {
+
+    // get date input values
+    var start = document.getElementById("PlantingDate").value;
+    var end = document.getElementById("HarvestDate").value;
+    // console.log(start, end);
+
+    // pass start and end date into DATE
+    var x = new Date(start);
+    var y = new Date(end);
+
+    // console.log(x,y);
+
+    // Calculate difference between dates - returns a value in milliseconds
+    var z = Math.abs(y - x);
+
+    // console.log(z);
+
+    // milliseconds converted into number of days
+    days =  (z / (1000*60*60*24));
+
+    // console.log(days);
+    // return days to allow access to the value for graphing functions
+    return days;
+
+});
+
 document.getElementById("button2").addEventListener("click", function () {
 
     // get date input values
@@ -373,6 +401,7 @@ document.getElementById("button2").addEventListener("click", function () {
     return days;
 
 });
+
 
 // console.log(days);
 

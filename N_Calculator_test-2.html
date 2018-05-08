@@ -418,7 +418,7 @@
         <h3> Estimated Crop Nitrogen (<strong>N</strong>) Uptake and Removal: </h3>
 
 
-        <div class='NOutputDivs'><span>1. <strong>N</strong>  in harvested product:</span><p id='NConcInYield'></p>
+        <div class='NOutputDivs'><span>1. <strong>N</strong>  in plant product:</span><p id='NConcInYield'></p>
           <a onclick="toggle2('output1')" class="infoIcon"> &#9432;</a>
           </div>
           <!--  OUTPUT 1. -->
@@ -432,7 +432,8 @@
           </div>
           <!-- OUTPUT 2 -->
           <div  class="box-works frame" id="output2" style="display:none">
-            Pounds(lbs) of Nitrogen in the plant product at Harvest per acre.  (C. Expected Yield ) * (1. Avg N Conc in plant product)
+            Pounds (lbs) of Nitrogen in the plant product at Harvest per acre.  <br>
+            <strong> 2. </strong> = (<strong>C.</strong> Expected Yield ) * (<strong>1.</strong> Avg <strong>N</strong> Conc. in plant product)
           </div>
 
           <!-- OUTPUT 3 -->
@@ -441,7 +442,8 @@
         </div>
 
         <div  class="box-works frame" id="output3" style="display:none">
-          Total pounds (lbs) of Nitrogen taken up by the entire plant  per acre. (2. N in Product)
+          Total pounds (lbs) of Nitrogen taken up by the entire plant  per acre. <br>
+           (<strong>2. </strong>Total <strong>N</strong> in product at harvest) + (<strong> 4.</strong> N In plant residue)
         </div>
 
 
@@ -451,8 +453,8 @@
         </div>
 
         <div  class="box-works frame" id="output4" style="display:none">
-          Total Pounds Nitrogen in plant residues. A Nitrogen Harvest Index (NHI) was developed from published crop specific data in the references.
-          NHI * (3. Total N uptake)
+          Total Pounds Nitrogen in plant residues. A Nitrogen Harvest Index (<strong>NHI</strong>) was developed from published crop specific data in the references.
+          <strong>NHI</strong> * (<strong>3.</strong>  Total <strong>N</strong> uptake)
         </div>
 
 
@@ -461,7 +463,8 @@
           <a onclick="toggle2('output5')" class="infoIcon"> &#9432;</a>
         </div>
         <div  class="box-works frame" id="output5" style="display:none">
-          Nitrogen removed from the field in the plant product and plant residues removed at harvest time. (3. N Uptake) * ((4. N in Residue) * (I. Percent (%) Residue))
+          Nitrogen removed from the field in the plant product and plant residues removed at harvest time. <br>
+          (<strong>3.</strong> N Uptake) * ((<strong>4.</strong> N in Residue) * (<strong>I.</strong> Percent (%) Residue))
         </div><br><br>
 
 
@@ -494,12 +497,6 @@
         <div class="InputDivs" id="irrigationSystemSelectorDiv">
           <label for="irrigationSystemSelector">J. Irrigation System:</label>
           <a onclick="toggle2('IrrInfo')" class="infoIcon"> &#9432;</a>
-          <div  class="box-works frame" id="IrrInfo" style="display:none">
-            Nitrogen removed from the field in the plant product and plant residues removed at harvest time. (3. N Uptake) * ((4. N in Residue) * (I. Percent (%) Residue))<br><br>
-            Irmak, Suat; Odhiambo, Lameck O.; Kranz, William L.; and Eisenhauer, Dean E., "Irrigation Efficiency and Uniformity, and Crop
-            Water Use Efficiency" (2011). Biological Systems Engineering: Papers and Publications. 451.
-            <a href="https://digitalcommons.unl.edu/biosysengfacpub/451">https://digitalcommons.unl.edu/biosysengfacpub/451</a>
-          </div>
 
           <select id="irrigationSystemSelector">
             <option value="Drip"> Drip</option>
@@ -512,17 +509,25 @@
           </select>
         </div><br>
 
+        <div  class="box-works frame" id="IrrInfo" style="display:none">
+          Nitrogen removed from the field in the plant product and plant residues removed at harvest time. <br>(3. N Uptake) * ((4. N in Residue) * (I. Percent (%) Residue))<br><br>
+          Irmak, Suat; Odhiambo, Lameck O.; Kranz, William L.; and Eisenhauer, Dean E., "Irrigation Efficiency and Uniformity, and Crop
+          Water Use Efficiency" (2011). Biological Systems Engineering: Papers and Publications. 451.
+          <a href="https://digitalcommons.unl.edu/biosysengfacpub/451">https://digitalcommons.unl.edu/biosysengfacpub/451</a>
+        </div>
+
         <div class="InputDivs" id="waterAppliedEfficiency">
           <label for="wae">K. Water Application Effeciency:</label>
           <a onclick="toggle2('WaeInfo')" class="infoIcon"> &#9432;</a>
-          <div  class="box-works frame" id="WaeInfo" style="display:none">
-            Water Application Efficicency = (Water stored in rootzone / Water delivered to farm) * 100<br><br>
-            Irmak, Suat; Odhiambo, Lameck O.; Kranz, William L.; and Eisenhauer, Dean E., "Irrigation Efficiency and Uniformity, and Crop
-            Water Use Efficiency" (2011). Biological Systems Engineering: Papers and Publications. 451.
-            <a href="https://digitalcommons.unl.edu/biosysengfacpub/451">https://digitalcommons.unl.edu/biosysengfacpub/451</a>
-          </div>
           <input id="wae" type="number" value="75" >
         </div><br>
+
+        <div  class="box-works frame" id="WaeInfo" style="display:none">
+          Water Application Efficicency = (Water stored in rootzone / Water delivered to farm) * 100<br><br>
+          Irmak, Suat; Odhiambo, Lameck O.; Kranz, William L.; and Eisenhauer, Dean E., "Irrigation Efficiency and Uniformity, and Crop
+          Water Use Efficiency" (2011). Biological Systems Engineering: Papers and Publications. 451.
+          <a href="https://digitalcommons.unl.edu/biosysengfacpub/451">https://digitalcommons.unl.edu/biosysengfacpub/451</a>
+        </div>
 
         <div class="InputDivs" id="waterApplied">
           <label for="inchesOfWater">L. Acre Inches of Water Applied:</label>
@@ -632,7 +637,8 @@
           <a onclick="toggle2('output6')" class="infoIcon"> &#9432;</a>
         </div>
         <div  class="box-works frame" id="output6" style="display:none">
-          Total pounds (lbs) of Nitrogen taken up by the entire plant  per acre. (2. N in Product)
+          Total pounds (lbs) of Nitrogen taken up by the entire plant  per acre. <br>
+          (<strong>2.</strong> N in Product)
         </div>
 
         <!-- OUTPUT 7 -->
@@ -640,7 +646,7 @@
           <a onclick="toggle2('output7')" class="infoIcon"> &#9432;</a>
         </div>
         <div  class="box-works frame" id="output7" style="display:none">
-          Determined by (O. Soil Texture, Q. Soil Organic Matter, P. Residual Soil N, R. Sampling Depth)
+          Determined by (<strong>O.</strong> Soil Texture, <strong>Q.</strong> Soil Organic Matter, <strong>P.</strong> Residual Soil N, <strong>R.</strong> Sampling Depth)
         </div>
 
         <!-- OUTPUT 8 -->
@@ -665,7 +671,8 @@
         </div>
         <div  class="box-works frame" id="output10" style="display:none">
           Total pounds (lbs) nitrogen needed for crop growth assuming zero leaching and 100% water application effeciency.
-          (3/6. Total Soil N) - (O. Soil Texture - 8. N Irr. Water - 9. In season N Mineralized)
+          <br>
+          (<strong>6.</strong> Total Soil N) - (<strong>O.</strong> Soil Texture) - (<strong>8.</strong> N Irr. Water) - (<strong>9.</strong> In season N Mineralized)
 
         </div>
 
@@ -674,7 +681,8 @@
           <a onclick="toggle2('output11')" class="infoIcon"> &#9432;</a>
         </div>
         <div  class="box-works frame" id="output11" style="display:none">
-          Nitrate at risk of leaching. (10. Required N * Water Application Efficiency)
+          Nitrate at risk of leaching. <br>
+          (<strong>10.</strong> Required <strong>N</strong> * Water Application Efficiency)
         </div><br><br>
 
         <div class="references">
