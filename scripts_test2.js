@@ -701,6 +701,9 @@ document.getElementById("button2").addEventListener("click", function () {
       units = "lbs/acre";
       var reqN = TotalN - soilN - NInIrrWater - inSeasonNMineralized;
       var lRisk = soilN + NInIrrWater + reqN;
+      var addN = lRisk / wae;
+
+      console.log("ADD N : " + addN)
 
       if (reqN <= 0) {
         reqN = 0;
@@ -710,6 +713,7 @@ document.getElementById("button2").addEventListener("click", function () {
         lRisk = 0
       };
 
+      document.getElementById("additionalN").innerHTML = Number(Math.round(addN)) + "lbs/acre";
       document.getElementById("NConcInYield").innerHTML =   Nconc + " " + unitsConcentration;
       document.getElementById("NInProduct").innerHTML =   Number(Math.round(NUptake)) + " " + units;
       document.getElementById("NUptake").innerHTML =   Number(Math.round(TotalN)) + " " + units;
@@ -717,11 +721,9 @@ document.getElementById("button2").addEventListener("click", function () {
       document.getElementById("NRemoved").innerHTML =  Number(Math.round(NRemoved)) + " " + units;
       document.getElementById("residualN").innerHTML =  Number(Math.round(soilN)) + " lbs/acre";
       document.getElementById('nMineralized').innerHTML =  Number(Math.round( inSeasonNMineralized )) + " lbs/acre";
-      document.getElementById("nNeed").innerHTML =  Number(Math.round( reqN))+ " lbs/acre";
-      // document.getElementById("leachingRisk").innerHTML =  Number(Math.round( (1- wae) * (TotalN - soilN - NInIrrWater - inSeasonNMineralized))) + " lbs/acre";
-      document.getElementById("leachingRisk").innerHTML = Number(Math.round(lRisk)) + " lbs/acre"
-      document.getElementById("additionalN").innnerHTMl = Number(Math.round(lRisk / wae)) + "lbs/acre";
-      // document.getElementById("nMineralized").innerHTML =  Number(Math.round()) + " lbs/acre";
+      document.getElementById("nNeed").innerHTML =  Number(Math.round(reqN))+ " lbs/acre";
+      document.getElementById("leachingRisk").innerHTML = Number(Math.round(lRisk)) + " lbs/acre";
+      
 
 
       graph();
@@ -737,6 +739,7 @@ document.getElementById("button2").addEventListener("click", function () {
       document.getElementById("NUptake").style.display = "";
       document.getElementById("NResidue").style.display = "";
       document.getElementById("NRemoved").style.display = "";
+      document.getElementById("additionalN").style.display = "";
 
 
     };
@@ -746,6 +749,7 @@ document.getElementById("button2").addEventListener("click", function () {
   units = "lbs/acre";
   // get output textboxes and fill with values from calulcations
   document.getElementById("totalNUptake2").innerHTML = Number(Math.round(TotalN)) + " " + units;
+
 
   });
 
