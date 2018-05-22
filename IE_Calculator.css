@@ -56,12 +56,12 @@
        }
 
        #button {
-         color:#926C44;
+         color:white;
          margin:5%;
          padding: 2% 5% 2% 5%;
          border-color: #A2BC13;
          border-radius: 5px;
-         background-color: #E9F3C2;
+         background-color: #A2BC13;
          font-size: 14px;
          font-family: Verdana, Arial, sans-serif;
        }
@@ -168,7 +168,7 @@
        }
 
        #precentRemovedDiv {
-         
+
        }
 
        .InputDivs select   {

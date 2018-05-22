@@ -4,7 +4,7 @@
 // Declare global HOST variables
 var cropData = data;
 var cropSelectorDiv = "";
-var cropSelector =  "<label for=\"cropSelector\">" + "B. Select a Crop:" + "</label>" + "<select id=\"cropSelector\">";
+var cropSelector =  "<label for=\"cropSelector\">" + "B. Select a crop:" + "</label>" + "<select id=\"cropSelector\">";
 var days = 0;
 var start = document.getElementById("PlantingDate").value;
 var end = document.getElementById("HarvestDate").value;
@@ -151,36 +151,6 @@ function unitSelectorFunction() {
 //Call unitSelector function to initialize units
 unitSelectorFunction();
 
-// check if season box is checked
-document.getElementById("cropSelector").addEventListener("change", SeasonCheckFunction);
-
-function SeasonCheckFunction (){
-  var cropChoices = cropData[0]["crops"];
-  var currentCrop = document.getElementById("cropSelector").value;
-  var seasonBox = document.getElementById("lateSeasonBox");
-
-  for (i in cropChoices) {
-    var crop = cropChoices[i];
-    var name = crop.name;
-
-    // Check current name against selected crop name
-    if (currentCrop === name) {
-      var seasonBool = cropChoices[i]["lateSeason"];
-      // console.log("SEASONBOOL" + seasonBool)
-
-      if (seasonBool == false){
-        seasonBox.disabled = true;
-        document.getElementById('lateSeason').style.display = "none";
-        // console.log("SEASON CHECK TRUE")
-      } else {
-        seasonBox.disabled = false;
-        document.getElementById('lateSeason').style.display = "";
-      }
-    }
-  }
-}
-
-SeasonCheckFunction();
 // D# add event listener to display residue removal on page load.
 document.getElementById("cropSelector").addEventListener("change", function (){
    var currentCrop = document.getElementById("cropSelector").value;
@@ -315,7 +285,7 @@ document.getElementById("button").addEventListener("click", function () {
          break;
 
        } else {
-         console.log("ERRROR: no conversion factior");
+         console.log("ERRROR: no conversion factor");
        }
 
        }
@@ -500,7 +470,7 @@ var image = document.createElement("img");
 function imageSelect() {
     var cropChoices = cropData[0]["crops"];
     var currentCrop = document.getElementById("cropSelector").value;
-    var season = document.getElementById("lateSeasonBox").checked;
+
 
     // console.log(currentCrop);
      for (i in cropChoices) {
@@ -509,10 +479,8 @@ function imageSelect() {
       //  console.log("season" + season);
 
        // set image source to currentCrop"s value.
-       if (currentCrop === name && season === false) {
+       if (currentCrop === name) {
          image.src = cropChoices[i]["graph"];
-       } else if (currentCrop === name && season === true){
-         image.src = cropChoices[i]["graphLate"];
        }
      }
 };
@@ -670,6 +638,7 @@ document.getElementById("button2").addEventListener("click", function () {
    var wae = (document.getElementById("wae").value)/100;
    var som = document.getElementById("som").value;
    var som_units = document.getElementById('som_units').value;
+   var NInIrrWater = 0;
 
 
   // calculate important N values
@@ -684,11 +653,16 @@ document.getElementById("button2").addEventListener("click", function () {
 
   if (NppmWaterUnits === "NO3") {
     var NInIrrWater = ppm * NO3_to_NO3N * depth_water_applied * ppm_NO3N_to_lbs_N;
+    var NInIrrWater = parseInt(NInIrrWater, 10);
     document.getElementById("nInIrrigation").innerHTML =Number(Math.round(NInIrrWater)) + " lbs/acre" ;
+
+
   } else {
     var NInIrrWater = ppm * depth_water_applied * ppm_NO3N_to_lbs_N;
     document.getElementById("nInIrrigation").innerHTML =  Number(Math.round(NInIrrWater)) + " lbs/acre";
+    var NInIrrWater = parseInt(NInIrrWater, 10);
     // console.log(NInIrrWater + "NO3n !!!!!!!");Number(Math.round(NInIrrWater + "e2") + "e-2") + " lbs/acre";
+
   };
 
   if (residual_soil_N_units === "NO3") {
@@ -725,6 +699,16 @@ document.getElementById("button2").addEventListener("click", function () {
       console.log(dFactor);
       var soilN = dFactor * residual_soil_N;
       units = "lbs/acre";
+      var reqN = TotalN - soilN - NInIrrWater - inSeasonNMineralized;
+      var lRisk = soilN + NInIrrWater + reqN;
+
+      if (reqN <= 0) {
+        reqN = 0;
+      };
+
+      if (lRisk <= 0) {
+        lRisk = 0
+      };
 
       document.getElementById("NConcInYield").innerHTML =   Nconc + " " + unitsConcentration;
       document.getElementById("NInProduct").innerHTML =   Number(Math.round(NUptake)) + " " + units;
@@ -733,8 +717,10 @@ document.getElementById("button2").addEventListener("click", function () {
       document.getElementById("NRemoved").innerHTML =  Number(Math.round(NRemoved)) + " " + units;
       document.getElementById("residualN").innerHTML =  Number(Math.round(soilN)) + " lbs/acre";
       document.getElementById('nMineralized').innerHTML =  Number(Math.round( inSeasonNMineralized )) + " lbs/acre";
-      document.getElementById("nNeed").innerHTML =  Number(Math.round( TotalN - soilN - NInIrrWater - inSeasonNMineralized ))+ " lbs/acre";
-      document.getElementById("leachingRisk").innerHTML =  Number(Math.round( (1- wae) * (TotalN - soilN - NInIrrWater - inSeasonNMineralized))) + " lbs/acre";
+      document.getElementById("nNeed").innerHTML =  Number(Math.round( reqN))+ " lbs/acre";
+      // document.getElementById("leachingRisk").innerHTML =  Number(Math.round( (1- wae) * (TotalN - soilN - NInIrrWater - inSeasonNMineralized))) + " lbs/acre";
+      document.getElementById("leachingRisk").innerHTML = Number(Math.round(lRisk)) + " lbs/acre"
+      document.getElementById("additionalN").innnerHTMl = Number(Math.round(lRisk / wae)) + "lbs/acre";
       // document.getElementById("nMineralized").innerHTML =  Number(Math.round()) + " lbs/acre";
 
 
