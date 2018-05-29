@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+<title>N mineralization calculator</title>
+  <meta charset="utf-8">
+<style>
+
+
+
+
+
+</style>
+
+  <script>
+  
+function NMineralizationIE() {
+    var string = document.getElementById('PlantingDate').value;
+    var numbersP = string.match(/[+-]?\d+(?:\.\d+)?/g).map(Number);
+    var MonthP = numbersP[0];
+    var DayP = numbersP[1];
+    var YearP = numbersP[2];
+    var string = document.getElementById('HarvestDate').value;
+    var numbersH = string.match(/[+-]?\d+(?:\.\d+)?/g).map(Number);
+    var MonthH = numbersH[0];
+    var DayH = numbersH[1];
+    var YearH = numbersH[2];
+
+// Calculate day of the year for planting and harvest date
+    var DoYP = 0;
+    var DoYH = 0;
+
+    if (MonthP == 1) DoYP=DayP;
+    else if (MonthP == 2) DoYP=DayP + 31;
+    else if (MonthP == 3) DoYP=DayP + 59;
+    else if (MonthP == 4) DoYP=DayP + 90;
+    else if (MonthP == 5) DoYP=DayP + 120;
+    else if (MonthP == 6) DoYP=DayP + 151;
+    else if (MonthP == 7) DoYP=DayP + 181;
+    else if (MonthP == 8) DoYP=DayP + 212;
+    else if (MonthP == 9) DoYP=DayP + 243;
+    else if (MonthP == 10) DoYP=DayP + 273;
+    else if (MonthP == 11) DoYP=DayP + 304;
+    else (DoYP = DayP + 334);
+
+    if (MonthH == 1) DoYH=DayH;
+    else if (MonthH == 2) DoYH=DayH + 31;
+    else if (MonthH == 3) DoYH=DayH + 59;
+    else if (MonthH == 4) DoYH=DayH + 90;
+    else if (MonthH == 5) DoYH=DayH + 120;
+    else if (MonthH == 6) DoYH=DayH + 151;
+    else if (MonthH == 7) DoYH=DayH + 181;
+    else if (MonthH == 8) DoYH=DayH + 212;
+    else if (MonthH == 9) DoYH=DayH + 243;
+    else if (MonthH == 10) DoYH=DayH + 273;
+    else if (MonthH == 11) DoYH=DayH + 304;
+    else (DoYH = DayH + 334);
+
+// Calculate in-season N minerlization rate
+    var RangeMin = 0.2; //value depends on region
+    var RangeMax = 1;   //value depends on region
+    var MinAnnual = 80; //value depends on region
+
+    var Range = RangeMax - RangeMin;
+    var RangeAv = (RangeMax + RangeMin)/2;
+    var miner = 0;
+    var minerTot = 0;
+    var planting = YearP * 365 + DoYP;
+    var harvest = YearH * 365 + DoYH;
+    var LengthOfSeason = harvest - planting;
+    var DoY = planting ;
+
+    for (var i = planting ; i <= harvest; i++) {
+	miner = (Math.sin(((DoY)/365*4+3)*Math.PI/2)/2*Range+RangeAv)/RangeAv*MinAnnual/365;
+	minerTot = minerTot + miner;
+	DoY = DoY + 1;
+        }
+// Display results
+    document.getElementById('output2').innerHTML = "The planting date is:<br/>"
+    + MonthP + "/" + DayP + "/" + YearP + "<br/><br/>The harvest date is:<br/>" 
+    + MonthH + "/" + DayH + "/" + YearH + "<br/><br/>The day of planting is:<br/>"
+    + DoYP + "<br/><br/>The day of harvest is:<br/>" + DoYH 
+    + "<br/><br/>The length of the season is:<br/>" + LengthOfSeason + " days" 
+    + "<br/><br/>The in-season N mineralization rate is:<br/>" +minerTot.toFixed(0);
+
+document.getElementById('output2').style.display = 'block';
+}
+
+
+
+
+
+
+
+
+function NMineralization() {
+  document.getElementById('parseButton').onclick = function() {
+    var PlantingDate = document.getElementById('datePlant').valueAsDate;
+    var DayP = PlantingDate.getDate();
+    var MonthP = PlantingDate.getMonth();
+    var MonthPC = MonthP+1;
+    var YearP = PlantingDate.getFullYear();
+
+    var HarvestDate = document.getElementById('dateHarvest').valueAsDate;
+    var DayH = HarvestDate.getDate();
+    var MonthH = HarvestDate.getMonth();
+    var MonthHC = MonthH+1;
+    var YearH = HarvestDate.getFullYear();
+
+
+// Calculate day of the year for planting and harvest date
+    var DoYP = 0;
+    var DoYH = 0;
+
+    if (MonthP == 0) DoYP=DayP;
+    else if (MonthP == 1) DoYP=DayP + 31;
+    else if (MonthP == 2) DoYP=DayP + 59;
+    else if (MonthP == 3) DoYP=DayP + 90;
+    else if (MonthP == 4) DoYP=DayP + 120;
+    else if (MonthP == 5) DoYP=DayP + 151;
+    else if (MonthP == 6) DoYP=DayP + 181;
+    else if (MonthP == 7) DoYP=DayP + 212;
+    else if (MonthP == 8) DoYP=DayP + 243;
+    else if (MonthP == 9) DoYP=DayP + 273;
+    else if (MonthP == 10) DoYP=DayP + 304;
+    else (DoYP = DayP + 334);
+
+    if (MonthH == 0) DoYH=DayH;
+    else if (MonthH == 1) DoYH=DayH + 31;
+    else if (MonthH == 2) DoYH=DayH + 59;
+    else if (MonthH == 3) DoYH=DayH + 90;
+    else if (MonthH == 4) DoYH=DayH + 120;
+    else if (MonthH == 5) DoYH=DayH + 151;
+    else if (MonthH == 6) DoYH=DayH + 181;
+    else if (MonthH == 7) DoYH=DayH + 212;
+    else if (MonthH == 8) DoYH=DayH + 243;
+    else if (MonthH == 9) DoYH=DayH + 273;
+    else if (MonthH == 10) DoYH=DayH + 304;
+    else (DoYH = DayH + 334);
+
+// Calculate in-season N minerlization rate
+    var RangeMin = 0.2; //value depends on region
+    var RangeMax = 1;   //value depends on region
+    var MinAnnual = 80; //value depends on region
+
+    var Range = RangeMax - RangeMin;
+    var RangeAv = (RangeMax + RangeMin)/2;
+    var miner = 0;
+    var minerTot = 0;
+    var planting = YearP * 365 + DoYP;
+    var harvest = YearH * 365 + DoYH;
+    var LengthOfSeason = harvest - planting;
+    var DoY = planting ;
+
+    if (LengthOfSeason < 0) {
+	alert("The harvest date is before the planting date.\nPlease correct.");}
+
+    for (var i = planting ; i <= harvest; i++) {
+	miner = (Math.sin(((DoY)/365*4+3)*Math.PI/2)/2*Range+RangeAv)/RangeAv*MinAnnual/365;
+	minerTot = minerTot + miner;
+	DoY = DoY + 1;
+        }
+
+// Display results
+    document.getElementById('output').innerHTML = "The planting date is:<br/>"
+    + MonthPC + "/" + DayP + "/" + YearP + "<br/><br/>The harvest date is:<br/>" 
+    + MonthHC + "/" + DayH + "/" + YearH + "<br/><br/>The day of planting is:<br/>"
+    + DoYP + "<br/><br/>The day of harvest is:<br/>" + DoYH 
+    + "<br/><br/>The length of the season is:<br/>" + LengthOfSeason + " days" 
+    + "<br/><br/>The in-season N mineralization rate is:<br/>" +minerTot.toFixed(0);
+
+
+
+  }
+
+}
+</script>
+  
+</head>
+
+<body onload = "document.getElementById('output2').style.display = 'none';"
+};>
+<p id="bcd" style="display:none"> The planting date is: <input id="datePlant" type="date"/><br/>
+    The harvest date is: <input id="dateHarvest" type="date"/><br/><br/>
+
+    <button id="parseButton">Display Results</button>
+</p>
+    <p id="output"></p>
+  
+<p id="abc"> The planting date is <br/>
+    <input id="PlantingDate" type="text" onfocus="this.value=''" value="mm/dd/yyyy"><br/>
+    The harvest date is <br/> 
+    <input id="HarvestDate" type="text" onfocus="this.value=''" value="mm/dd/yyyy"><br/>   
+    <button onclick="NMineralizationIE()">Display Results</button><br/>
+</p>
+
+
+
+    <p id="output2" style="display:block"></p>
+        <script type="text/javascript">
+
+
+	// test whether a new date input falls back to a text input or not
+	let test = document.createElement('input');
+	test.type = 'date';
+	// if it does, run the code inside the if() {} block
+	if (test.type === 'text') {
+	document.getElementById("abc").style.display = "block";
+	document.getElementById("bcd").style.display = "none";
+	NMineralizationIE();
+	// date input not supported
+	}
+	else {
+	document.getElementById("abc").style.display = "none";
+	document.getElementById("bcd").style.display = "block";
+        NMineralization();
+	}
+
+        </script>
+</body>
+</html>  
+
