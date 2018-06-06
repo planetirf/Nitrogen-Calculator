@@ -6,6 +6,7 @@ var cropData = data;
 var cropSelectorDiv = "";
 var cropSelector =  "<label for=\"cropSelector\">" + "B. Select a crop:" + "</label>" + "<select id=\"cropSelector\">";
 var days = 0;
+var minerTot = 0;
 var start = document.getElementById("PlantingDate").value;
 var end = document.getElementById("HarvestDate").value;
 
@@ -349,6 +350,167 @@ document.getElementById("button2").addEventListener("click", function () {
 
 });
 
+/// DANIELS SSCRIPTS
+
+  let test = document.createElement('input');
+	test.type = 'date';
+	// if it does, run the code inside the if() {} block
+	if (test.type === 'text') {
+	document.getElementById("abc").style.display = "block";
+	document.getElementById("bcd").style.display = "none";
+	NMineralizationIE();
+	// date input not supported
+	}
+	else {
+	document.getElementById("abc").style.display = "none";
+	document.getElementById("bcd").style.display = "block";
+        // NMineralization();
+	}
+
+
+  function NMineralizationIE() {
+      var string = document.getElementById('PlantingDate').value;
+      var numbersP = string.match(/[+-]?\d+(?:\.\d+)?/g).map(Number);
+      var MonthP = numbersP[0];
+      var DayP = numbersP[1];
+      var YearP = numbersP[2];
+      var string = document.getElementById('HarvestDate').value;
+      var numbersH = string.match(/[+-]?\d+(?:\.\d+)?/g).map(Number);
+      var MonthH = numbersH[0];
+      var DayH = numbersH[1];
+      var YearH = numbersH[2];
+
+  // Calculate day of the year for planting and harvest date
+      var DoYP = 0;
+      var DoYH = 0;
+
+      if (MonthP == 1) DoYP=DayP;
+      else if (MonthP == 2) DoYP=DayP + 31;
+      else if (MonthP == 3) DoYP=DayP + 59;
+      else if (MonthP == 4) DoYP=DayP + 90;
+      else if (MonthP == 5) DoYP=DayP + 120;
+      else if (MonthP == 6) DoYP=DayP + 151;
+      else if (MonthP == 7) DoYP=DayP + 181;
+      else if (MonthP == 8) DoYP=DayP + 212;
+      else if (MonthP == 9) DoYP=DayP + 243;
+      else if (MonthP == 10) DoYP=DayP + 273;
+      else if (MonthP == 11) DoYP=DayP + 304;
+      else (DoYP = DayP + 334);
+
+      if (MonthH == 1) DoYH=DayH;
+      else if (MonthH == 2) DoYH=DayH + 31;
+      else if (MonthH == 3) DoYH=DayH + 59;
+      else if (MonthH == 4) DoYH=DayH + 90;
+      else if (MonthH == 5) DoYH=DayH + 120;
+      else if (MonthH == 6) DoYH=DayH + 151;
+      else if (MonthH == 7) DoYH=DayH + 181;
+      else if (MonthH == 8) DoYH=DayH + 212;
+      else if (MonthH == 9) DoYH=DayH + 243;
+      else if (MonthH == 10) DoYH=DayH + 273;
+      else if (MonthH == 11) DoYH=DayH + 304;
+      else (DoYH = DayH + 334);
+
+  // Calculate in-season N minerlization rate
+      var RangeMin = 0.2; //value depends on region
+      var RangeMax = 1;   //value depends on region
+      var MinAnnual = 80; //value depends on region
+
+      var Range = RangeMax - RangeMin;
+      var RangeAv = (RangeMax + RangeMin)/2;
+      var miner = 0;
+      var minerTot = 0;
+      var planting = YearP * 365 + DoYP;
+      var harvest = YearH * 365 + DoYH;
+      var LengthOfSeason = harvest - planting;
+      var DoY = planting ;
+
+      for (var i = planting ; i <= harvest; i++) {
+  	miner = (Math.sin(((DoY)/365*4+3)*Math.PI/2)/2*Range+RangeAv)/RangeAv*MinAnnual/365;
+  	minerTot = minerTot + miner;
+  	DoY = DoY + 1;
+          }
+          console.log("miner tot IE" + minerTot);
+          return minerTot
+
+  }
+
+
+
+
+
+
+document.getElementById('button2').addEventListener("click", function() {
+  var PlantingDate = document.getElementById('PlantingDate').valueAsDate;
+  var DayP = PlantingDate.getDate();
+  var MonthP = PlantingDate.getMonth();
+  var MonthPC = MonthP+1;
+  var YearP = PlantingDate.getFullYear();
+
+  var HarvestDate = document.getElementById('HarvestDate').valueAsDate;
+  var DayH = HarvestDate.getDate();
+  var MonthH = HarvestDate.getMonth();
+  var MonthHC = MonthH+1;
+  var YearH = HarvestDate.getFullYear();
+
+
+// Calculate day of the year for planting and harvest date
+  var DoYP = 0;
+  var DoYH = 0;
+
+  if (MonthP == 0) DoYP=DayP;
+  else if (MonthP == 1) DoYP=DayP + 31;
+  else if (MonthP == 2) DoYP=DayP + 59;
+  else if (MonthP == 3) DoYP=DayP + 90;
+  else if (MonthP == 4) DoYP=DayP + 120;
+  else if (MonthP == 5) DoYP=DayP + 151;
+  else if (MonthP == 6) DoYP=DayP + 181;
+  else if (MonthP == 7) DoYP=DayP + 212;
+  else if (MonthP == 8) DoYP=DayP + 243;
+  else if (MonthP == 9) DoYP=DayP + 273;
+  else if (MonthP == 10) DoYP=DayP + 304;
+  else (DoYP = DayP + 334);
+
+  if (MonthH == 0) DoYH=DayH;
+  else if (MonthH == 1) DoYH=DayH + 31;
+  else if (MonthH == 2) DoYH=DayH + 59;
+  else if (MonthH == 3) DoYH=DayH + 90;
+  else if (MonthH == 4) DoYH=DayH + 120;
+  else if (MonthH == 5) DoYH=DayH + 151;
+  else if (MonthH == 6) DoYH=DayH + 181;
+  else if (MonthH == 7) DoYH=DayH + 212;
+  else if (MonthH == 8) DoYH=DayH + 243;
+  else if (MonthH == 9) DoYH=DayH + 273;
+  else if (MonthH == 10) DoYH=DayH + 304;
+  else (DoYH = DayH + 334);
+
+// Calculate in-season N minerlization rate
+  var RangeMin = 0.2; //value depends on region
+  var RangeMax = 1;   //value depends on region
+  var MinAnnual = 80; //value depends on region
+
+  var Range = RangeMax - RangeMin;
+  var RangeAv = (RangeMax + RangeMin)/2;
+  var miner = 0;
+  var planting = YearP * 365 + DoYP;
+  var harvest = YearH * 365 + DoYH;
+  var LengthOfSeason = harvest - planting;
+  var DoY = planting ;
+
+  if (LengthOfSeason < 0) {
+    alert("The harvest date is before the planting date.\nPlease correct.");}
+
+  for (var i = planting ; i <= harvest; i++) {
+    miner = (Math.sin(((DoY)/365*4+3)*Math.PI/2)/2*Range+RangeAv)/RangeAv*MinAnnual/365;
+    minerTot = minerTot + miner;
+    DoY = DoY + 1;
+      }
+
+    console.log("miner tot " + minerTot);
+    return minerTot
+
+
+});
+
 
 // console.log(days);
 
@@ -611,7 +773,7 @@ document.getElementById("button2").addEventListener("click", function () {
    var sampling_depth = document.getElementById("samplingDepth").value;
    var residual_soil_N = document.getElementById("NppmSoil").value;
    var residual_soil_N_units = document.getElementById("NppmSoilUnits").value
-   var inSeasonNMineralized = document.getElementById('regionSelector').value;;
+   var inSeasonNMineralized = minerTot;
    var wae = (document.getElementById("wae").value)/100;
    var som = document.getElementById("som").value;
    var som_units = document.getElementById('som_units').value;
