@@ -196,7 +196,7 @@
 
 
        .soil, .Irrigation, .fieldCrop, .part2Output, .CanvasOutputDiv, .CalcButtonDiv, .intro {
-         max-width: 400px;
+         max-width: 375px;
 
        }
 
@@ -259,7 +259,7 @@
          flex-basis:50px;
          align-self: center;
          justify-content: center;
-         height:20px
+         height:25px
 
          /*flex-grow:1;*/
          /*border-radius:5px;
