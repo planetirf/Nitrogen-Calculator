@@ -102,7 +102,7 @@ data = [{
 		},
 
 		{
-			"name": "ForageSmallGrainEarly",
+			"name": "ForageSmallGrain",
 			"percentN": 13.35,
 			"unitsConc": "lbs/ton silage @ 70% moisture",
 			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
@@ -113,27 +113,6 @@ data = [{
 			"lateSeason": false,
 			"graphLate": "",
 			"note": "The earlier the harvest stage, the more N will be removed per ton of yield.  Early stage  N removal data represents an average for several small grain varieties harvested from boot through mid flowering. ",
-			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/8173.pdf\" target=\"_blank\"> UCANR Small grain forage production manual</a>",
-			"linkText": "",
-			"refs": [
-				"",
-				"",
-				""
-			]
-		},
-
-		{
-			"name": "ForageSmallGrainLate",
-			"percentN": 13.35,
-			"unitsConc": "lbs/ton silage @ 70% moisture",
-			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
-			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
-			"residueRemoved": false,
-			"nhi": 0.025,
-			"graph": "imgs/oat_gran_curve.png",
-			"lateSeason": false,
-			"graphLate": "",
-			"note": "The earlier the harvest stage, the more N will be removed per ton of yield.  This N removal data represents an average of several small grain varieties harvested from from mid-flowering through soft dough stage. ",
 			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/8173.pdf\" target=\"_blank\"> UCANR Small grain forage production manual</a>",
 			"linkText": "",
 			"refs": [
@@ -291,14 +270,14 @@ data = [{
 		},
 
 		{
-			"name": "SquashWinter",
+			"name": "Pumpkin",
 			"percentN": 7.12,
 			"unitsConc": "lbs/ton fresh weight",
 			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
 			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
 			"residueRemoved": false,
 			"nhi": 0.63,
-			"graph": "imgs/squash_curve.png",
+			"graph": "imgs/pumpkin.png",
 			"lateSeason": false,
 			"graphLate": "",
 			"note": "A wide variety of species are referred to as 'winter squash', and so the total N uptake and allocation to the fruit vary widely by type. These numbers have not been tested for California pumpkin and winter squash varieties. ",

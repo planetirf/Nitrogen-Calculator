@@ -189,8 +189,9 @@
 
        }
 
-
-
+       .test {
+         width: 200px;
+       }
 
 
 
@@ -218,8 +219,12 @@
          width:;
        }
 
-       #som_units,#NppmSoilUnits, #NppmWaterUnits {
-         width:45px;
+       #NppmSoilUnits, #NppmWaterUnits {
+         width:55px;
+       }
+
+       #som_units {
+         width:10px;
        }
 
        #NppmSoil {
