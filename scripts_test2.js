@@ -182,6 +182,25 @@ strawRemoved();
 
 document.getElementById("cropSelector").addEventListener("change", strawRemoved);
 
+function resetFunction(){
+  document.getElementById('totalNUptake2').innerHTML = "";
+  document.getElementById('nInIrrigation').innerHTML = "";
+  document.getElementById('residualN').innerHTML = "";
+  document.getElementById('nNeed').innerHTML = "";
+  document.getElementById('leachingRisk').innerHTML = "";
+  document.getElementById('nMineralized').innerHTML = "";
+  document.getElementById("NConcInYield").innerHTML = "";
+  document.getElementById("NInProduct").innerHTML = "";
+  document.getElementById("NUptake").innerHTML = "";
+  document.getElementById("NResidue").innerHTML = "";
+  document.getElementById("NRemoved").innerHTML = "";
+  document.getElementById("additionalN").innerHTML = "";
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+};
+
+document.getElementById("cropSelector").addEventListener("change",resetFunction);
+
 
 
 // F# add event listener to calculate button to determine nitrogen values
@@ -690,7 +709,11 @@ document.getElementById("button2").addEventListener("click", function () {
         lRisk = 0
       };
 
-      document.getElementById("additionalN").innerHTML = Number(Math.round(addN)) + "lbs/acre";
+      if (addN <= 0) {
+        addN = 0
+      };
+
+      document.getElementById("additionalN").innerHTML = Number(Math.round(addN)) + " lbs/acre";
       document.getElementById("NConcInYield").innerHTML =   Nconc + " " + unitsConcentration;
       document.getElementById("NInProduct").innerHTML =   Number(Math.round(NUptake)) + " " + units;
       document.getElementById("NUptake").innerHTML =   Number(Math.round(TotalN)) + " " + units;
