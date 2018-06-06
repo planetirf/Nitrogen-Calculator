@@ -101,7 +101,7 @@
          display:flex;
          background-color:;
          color:;
-         border: 1px dotted black;
+         border-bottom: 1px dotted black;
          /*align-items: center;
          align-content:center;
          justify-content: ;
