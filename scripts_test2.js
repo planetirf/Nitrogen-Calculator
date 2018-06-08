@@ -510,6 +510,7 @@ document.getElementById('button2').addEventListener("click", function() {
   var Range = RangeMax - RangeMin;
   var RangeAv = (RangeMax + RangeMin)/2;
   var miner = 0;
+  var minerTot = 0;
   var planting = YearP * 365 + DoYP;
   var harvest = YearH * 365 + DoYH;
   var LengthOfSeason = harvest - planting;
@@ -711,6 +712,7 @@ document.getElementById("button2").addEventListener("click", function () {
   var conversionFactor = "";
   var unitsConcentration = "";
   var NHI = "";
+  var inSeasonNMineralized = 0;
 
   // Grab input values from text boxes
   var expectedYield = document.getElementById("ExpectedYield").value;
