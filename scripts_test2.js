@@ -510,11 +510,11 @@ document.getElementById('button2').addEventListener("click", function() {
   var Range = RangeMax - RangeMin;
   var RangeAv = (RangeMax + RangeMin)/2;
   var miner = 0;
-  var minerTot = 0;
   var planting = YearP * 365 + DoYP;
   var harvest = YearH * 365 + DoYH;
   var LengthOfSeason = harvest - planting;
   var DoY = planting ;
+  minerTot = 0;
 
   if (LengthOfSeason < 0) {
     alert("The harvest date is before the planting date.\nPlease correct.");}
