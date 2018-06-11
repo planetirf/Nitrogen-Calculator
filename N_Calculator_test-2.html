@@ -369,8 +369,8 @@
           <select id="Units"></select>
         </div><br>
 
-
-        <div class="InputDivs">
+        <div id="bcd">
+        <div  class="InputDivs">
           <label for="PlantingDate">D. Planting date: </label>
 
           <input type="date" id="PlantingDate" placeholder="" value="2018-01-01" required>
@@ -380,19 +380,19 @@
          <label for="HarvestDate">E. Harvest date: </label>
 
          <input type="date" id="HarvestDate" placeholder="" value="2018-03-01" required>
-      </div><br>
+      </div></div><br>
 
-      <div id="bcd" style="display:none"> The planting date is: <input id="datePlant" type="date"/><br/>
+      <!-- <div id="bcd" style="display:none"> The planting date is: <input id="datePlant" type="date"/><br/>
           The harvest date is: <input id="dateHarvest" type="date"/><br/><br/>
 
 
-      </div>
+      </div> -->
           <div id="outputz"></div>
 
-      <div id="abc"> The planting date is <br/>
-          <input id="PlantingDate" type="text" onfocus="this.value=''" value="mm/dd/yyyy"><br/>
+      <div class = "InputDivs" id="abc"> The planting date is <br/>
+          <input id="PlantingDateIE" type="text" onfocus="this.value=''" value="mm/dd/yyyy"><br/>
           The harvest date is <br/>
-          <input id="HarvestDate" type="text" onfocus="this.value=''" value="mm/dd/yyyy"><br/>
+          <input id="HarvestDateIE" type="text" onfocus="this.value=''" value="mm/dd/yyyy"><br/>
 
       </div>
 
