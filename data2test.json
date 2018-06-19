@@ -21,7 +21,7 @@ data = [{
 		},
 
 		{
-			"name": "CornSweet",
+			"name": "Corn_Sweet",
 			"percentN": 7.17,
 			"unitsConc": "lbs/ton fresh weight",
 			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
@@ -42,7 +42,7 @@ data = [{
 		},
 
 		{
-			"name": "CabbageWhite",
+			"name": "Cabbage_White",
 			"percentN": 4.01,
 			"unitsConc": "lbs/ton fresh weight",
 			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
@@ -102,7 +102,7 @@ data = [{
 		},
 
 		{
-			"name": "ForageSmallGrain",
+			"name": "Forage_Small_Grain",
 			"percentN": 13.35,
 			"unitsConc": "lbs/ton silage @ 70% moisture",
 			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
@@ -116,14 +116,11 @@ data = [{
 			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/8173.pdf\" target=\"_blank\"> UCANR Small grain forage production manual</a>",
 			"linkText": "",
 			"refs": [
-				"",
-				"",
-				""
 			]
 		},
 
 		{
-			"name": "OatGrain",
+			"name": "Oat_Grain",
 			"percentN": 37.66,
 			"unitsConc": "lbs/ton @ 12% moisture",
 			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
@@ -145,7 +142,7 @@ data = [{
 
 
 		{
-			"name": "PeppersRedChili",
+			"name": "Peppers_Red_Chili",
 			"percentN": 7.25,
 			"unitsConc": "lbs/ton fresh weight",
 			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
@@ -167,7 +164,7 @@ data = [{
 
 
 		{
-			"name": "PeppersGreenChili",
+			"name": "Peppers_Green_Chili",
 			"percentN": 7.25,
 			"unitsConc": "lbs/ton fresh weight",
 			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
@@ -187,7 +184,7 @@ data = [{
 
 
 		{
-			"name": "PeppersBell",
+			"name": "Peppers_Bell",
 			"percentN": 3.31,
 			"unitsConc": "lbs/ton fresh weight",
 			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
@@ -208,7 +205,7 @@ data = [{
 		},
 
 		{
-			"name": "RyeGrain",
+			"name": "Rye_Grain",
 			"percentN": 35.35,
 			"unitsConc": "lbs/ton @ 12% moisture",
 			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
@@ -229,7 +226,7 @@ data = [{
 		},
 
 		{
-			"name": "SorghumGrain",
+			"name": "Sorghum_Grain",
 			"percentN": 33.00,
 			"unitsConc": "lbs/ton @ 13.5% moisture",
 			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
@@ -250,7 +247,7 @@ data = [{
 		},
 
 		{
-			"name": "SquashSummer",
+			"name": "Squash_Summer",
 			"percentN": 5.95,
 			"unitsConc": "lbs/ton fresh weight",
 			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
@@ -309,7 +306,7 @@ data = [{
 		},
 
 		{
-			"name": "SweetPotato",
+			"name": "Sweet_Potato",
 			"percentN": 4.74,
 			"unitsConc": "lbs/ton fresh weight",
 			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
@@ -330,7 +327,7 @@ data = [{
 		},
 
 		{
-			"name": "TomatoesFreshMarket",
+			"name": "Tomatoes_Fresh_Market",
 			"percentN": 2.61,
 			"unitsConc": "lbs/ton fresh weight",
 			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
@@ -392,7 +389,7 @@ data = [{
 		},
 
 		{
-			"name": "WheatDurum",
+			"name": "Wheat_Durum",
 			"percentN": 42.1,
 			"unitsConc": "lbs/ton @ 12% moisture",
 			"units": ["tons/acre"],

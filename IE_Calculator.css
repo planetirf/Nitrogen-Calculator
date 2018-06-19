@@ -125,7 +125,7 @@
        }
 
        .InputDivs > input {
-         width: 15px;
+         width: 25px;
          color:#414F12;
          background-color:#F7F2EE;
          text-align: center;
@@ -134,6 +134,9 @@
          align-self: center;
          justify-content: center;
 
+       }
+       #cropSelector {
+         width: 125px;
        }
 
        .InputDivs > span {
@@ -220,11 +223,11 @@
        }
 
        #NppmSoilUnits, #NppmWaterUnits {
-         width:55px;
+         width:65px;
        }
 
        #som_units {
-         width:10px;
+         width:20px;
        }
 
        #NppmSoil {
@@ -242,6 +245,7 @@
        .NOutputDivs  {
          display:flex;
          margin:1%;
+         width: 375px;
 
        }
 

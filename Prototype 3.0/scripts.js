@@ -382,18 +382,18 @@ document.getElementById("button2").addEventListener("click", function () {
 	}
 	else {
 	document.getElementById("abc").style.display = "none";
-	document.getElementById("bcd").style.display = "block";
+	document.getElementById("bcd").style.display = "";
         // NMineralization();
 	}
 
 
   function NMineralizationIE() {
-      var string = document.getElementById('PlantingDate').value;
+      var string = document.getElementById('PlantingDateIE').value;
       var numbersP = string.match(/[+-]?\d+(?:\.\d+)?/g).map(Number);
       var MonthP = numbersP[0];
       var DayP = numbersP[1];
       var YearP = numbersP[2];
-      var string = document.getElementById('HarvestDate').value;
+      var string = document.getElementById('HarvestDateIE').value;
       var numbersH = string.match(/[+-]?\d+(?:\.\d+)?/g).map(Number);
       var MonthH = numbersH[0];
       var DayH = numbersH[1];
@@ -452,9 +452,6 @@ document.getElementById("button2").addEventListener("click", function () {
           return minerTot
 
   }
-
-
-
 
 
 

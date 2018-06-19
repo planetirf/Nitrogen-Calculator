@@ -176,7 +176,7 @@
 	.box .box-works {
 	  position: relative;
 	  z-index:;
-	  width: 400px;
+	  width: 350px;
 	}
 	.Intro p {
 	  padding-left: 10%;
@@ -519,7 +519,7 @@
 
 
         <div class="InputDivs" id="waterAppliedEfficiency">
-          <label for="wae">K. Water application efficiency:</label>
+          <label for="wae">K. Water application efficiency (%):</label>
           <a onclick="toggle2('WaeInfo')" class="infoIcon"> &#9432;</a>
           <input id="wae" type="number" value="75" >
         </div><br>
@@ -546,8 +546,8 @@
 
           <span for="NppmWaterUnits">Units:</span>
             <select id="NppmWaterUnits">
-              <option value="NO3">ppm NO3</option>
-              <option value="NO3N">ppm NO3-N</option>
+              <option value="NO3">ppm NO&#x2083</option>
+              <option value="NO3N">ppm NO&#x2083-N</option>
             </select>
         </div><br>
 
@@ -559,9 +559,9 @@
       <section class="soil">
         <h3> Soil </h3>
         <div class="InputDivs" id="regionSelectorDiv">
-          <label for="regionSelector"> N. Region: </label>
+          <label for="regionSelector"> N.  </label>
 
-          <select id="regionSelector">
+          <!-- <select id="regionSelector">
             <option value="40"> San Joaquin Valley</option>
             <option value="40"> Sacramento Valley</option>
             <option value="40"> Imperial Valley</option>
@@ -570,7 +570,7 @@
             <option value="40"> Southern Coast</option>
             <option value="40"> Northern Coast</option>
             <option value="40"> Tule Lake</option>
-          </select>
+          </select> -->
         </div><br>
 
         <div class="InputDivs" id="soilTypeSelectorDiv">
@@ -581,7 +581,7 @@
             <option value="LoamySand"> Loamy Sand</option>
             <option value="SandyLoam"> Sandy Loam</option>
             <option value="Loam"> Loam</option>
-            <option value="SiltyLoam"> Silty Loam</option>
+            <option value="SiltyLoam" selected="selected"> Silty Loam</option>
             <option value="Silt"> Silt </option>
             <option value="SiltyClayLoam"> Silty Clay Loam</option>
             <option value="SiltyClay"> Silty Clay</option>
@@ -600,8 +600,8 @@
 
           <span for="NppmSoilUnits"> Units:</span>
             <select class="test" id="NppmSoilUnits">
-              <option value="NO3">ppm NO3</option>
-              <option value="NO3-N">ppm NO3-N</option>
+              <option value="NO3">ppm NO&#x2083</option>
+              <option value="NO3-N">ppm NO&#x2083-N</option>
             </select>
         </div><br>
 
