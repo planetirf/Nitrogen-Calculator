@@ -1,0 +1,398 @@
+    <!-- ----------------------------------------------------------- -->
+    <!--                                                             -->
+    <!--                   Code for main content                     -->
+    <!--                                                             -->
+    <!-- ----------------------------------------------------------- -->
+/* SELECTORS: .class #id */
+
+{}
+    /**********************************************************/
+    /*                                                        */
+    /*                   FOR N CALCULATOR                     */
+    /*                                                        */
+    /**********************************************************/
+    /*#part1{
+      padding-left: 20%;
+    }*/
+
+
+     @media only screen and (min-width: 400px) {
+
+       /*html {
+            box-sizing: border-box;
+          }
+          *, *:before, *:after {
+            box-sizing: inherit;
+          }*/
+
+       #top {
+         text-align:center;
+         background-color:white;
+       }
+
+       #ContentCalc {
+         background:white;
+       }
+
+       #calcContainer {
+         background:white;
+         /*display:flex;*/
+       }
+
+       form {
+         display: flex;
+         justify-content: center;
+       }
+
+
+       .CalcButtonDiv {
+         text-align:center;
+       }
+
+
+       .CanvasOutputDiv {
+         text-align:center;
+
+       }
+
+       #button {
+         color:white;
+         margin:5%;
+         padding: 2% 5% 2% 5%;
+         border-color: #A2BC13;
+         border-radius: 5px;
+         background-color: #A2BC13;
+         font-size: 14px;
+         font-family: Verdana, Arial, sans-serif;
+       }
+
+       #button2 {
+         color:white;
+         margin:5%;
+         padding: 2% 5% 2% 5%;
+         border-color: #A2BC13;
+         border-radius: 5px;
+         background-color: #A2BC13;
+         font-size: 14px;
+         font-family: Verdana, Arial, sans-serif;
+       }
+
+
+      #part1 h3{
+        text-align: center;
+        border-bottom: 3px solid #926C44;
+
+      }
+
+       .lateSeasonBox {
+         border-color:#926C44;
+         border-radius:5px;
+         border-width:1px;
+       }
+
+       .infoIcon {
+         color:#926C44
+
+       }
+
+
+
+       .InputDivs {
+         display:flex;
+         background-color:;
+         color:;
+         border-bottom: 1px dotted black;
+         /*align-items: center;
+         align-content:center;
+         justify-content: ;
+         flex:auto;
+         flex-grow:1;
+         flex-basis:auto;*/
+       }
+       #NppmSoilUnits, #som_units, #NppmWaterUnits {
+         text-align: left;
+         width:;
+
+       }
+       .InputDivs > label {
+         /*display:;*/
+         text-align: left;
+         flex-grow:3;
+         flex-basis:;
+         align-self: center;
+         justify-content: center;
+
+       }
+
+       .InputDivs > input {
+         width: 25px;
+         color:#414F12;
+         background-color:#F7F2EE;
+         text-align: center;
+         flex-grow:1;
+         flex-basis:;
+         align-self: center;
+         justify-content: center;
+
+       }
+       #cropSelector {
+         width: 125px;
+       }
+
+       .InputDivs > span {
+         display:none;
+         flex-grow:1;
+         flex-basis:;
+         text-align: center;
+         align-self: center;
+         justify-content: center;
+
+       }
+
+
+       .InputDivs > select {
+         border-color:#e0e9bb;
+         background-color:#F7F2EE;
+         text-align: center;
+         flex-grow:1;
+         flex-basis:;
+         align-self: center;
+         justify-content: center;
+
+       }
+
+       .InputDivs > a {
+         text-align: center;
+         flex-grow:1;
+         flex-basis:;
+         align-self: center;
+         justify-content: center;
+
+       }
+
+       #precentRemovedDiv {
+
+       }
+
+       .InputDivs select   {
+
+       }
+
+       #IrrInfo {
+         float:right;
+       }
+
+       #cropLinks a{
+         color: blue;
+
+       }
+
+       #cropLinks a:visited{
+         color: purple;
+
+       }
+
+       .test {
+         width: 200px;
+       }
+
+
+
+
+       .soil, .Irrigation, .fieldCrop, .part2Output, .CanvasOutputDiv, .CalcButtonDiv, .intro {
+         max-width: 375px;
+
+       }
+
+       input[type="date"] {
+         width:33%;
+
+       }
+
+       input[type="text"] {
+         width:  ;
+
+       }
+
+       #ExpectedYield {
+         width:;
+       }
+
+       #Units {
+         width:;
+       }
+
+       #NppmSoilUnits, #NppmWaterUnits {
+         width:65px;
+       }
+
+       #som_units {
+         width:20px;
+       }
+
+       #NppmSoil {
+         width:1px;
+
+       }
+
+
+       select{
+         width:20%;
+
+       }
+
+
+       .NOutputDivs  {
+         display:flex;
+         margin:1%;
+         width: 375px;
+
+       }
+
+       .NOutputDivs span {
+         text-align: left;
+         flex-grow:2;
+         flex-basis:50px;
+         align-self: center;
+         justify-content: center;
+
+       }
+
+       .NOutputDivs a {
+
+       }
+
+       .NOutputDivs p {
+         text-align: center;
+         flex-grow:1;
+         flex-basis:50px;
+         align-self: center;
+         justify-content: center;
+         height:25px
+
+         /*flex-grow:1;*/
+         /*border-radius:5px;
+         border: #926C44 solid 1px;
+         background-color:#F7F2EE;
+         font-size: 14px;
+         font-family: Verdana, Arial, sans-serif;*/
+
+       }
+
+       #footer p {
+         background-color:white;
+       }
+
+       #footer {
+         width: auto;
+         background-color:white;
+        }
+
+       }
+
+
+     @media only screen and (min-width: 455px) {
+
+     }
+
+     @media only screen and (min-width: 760px) {
+
+
+     }
+
+     @media only screen and (min-width: 960px) {
+
+     }
+
+     @media only screen and (min-width: 1200px) {
+
+     }
+
+
+    /**********************************************************/
+    /*                                                        */
+    /*                   END N CALCULATOR                     */
+    /*                                                        */
+    /**********************************************************/
+
+
+	body {
+
+	}
+
+
+	#fullpage {
+	  max-width: 1200px;
+	  margin: auto;
+	  padding: 0px;
+	  font-size: 14px;
+	  font-family: Verdana, Arial, sans-serif;
+	}
+
+
+    /**********************************************************/
+    /*                                                        */
+    /*                     Site specific code                 */
+    /*                                                        */
+    /**********************************************************/
+
+	h1 {
+	  font-size: 2em;
+	  border-width: 0px;
+	  color: #000;
+	}
+	h6 {
+	  font-size: 0.9em;
+	  border-width: 0px;
+	  color: #000;
+	}
+	.Intro  {
+	  border-width: 0px;
+	}
+	.box .box-works {
+	  position: relative;
+	  width: ;
+	  z-index: 50;
+	}
+	.Intro p, .Intro h4 {
+	  padding-left: 10%;
+	  padding-right: 10%;
+	}
+	.Intro p {
+	  font-size: 1em;
+	}
+	#lists {
+	  padding-left: 13%;
+	  padding-right: 10%;
+	}
+
+	.links_bottom {
+	  display: none;
+	}
+	#CDFA {
+	  width: 12%;
+	}
+	#FREP {
+	  width: 7%;
+	}
+	#UCD {
+	  width: 20%;
+	  padding-right: 5px;
+	}
+	#popup1 {
+          left: 0px;
+	}
+	#a_acknowledgments {
+	  margin-left: 0%;
+	  width: 40%;
+	}
+	#a_info {
+	  margin-left: 10%;
+	  width: 30%;
+	}
+	#lists li{
+	  text-align: left;
+	  font-size: 1em;
+	  font-weight: normal;
+	  font-family: Verdana, Arial, sans-serif;
+	}
