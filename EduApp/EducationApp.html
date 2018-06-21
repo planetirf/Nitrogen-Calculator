@@ -9,28 +9,28 @@
     <form>
 
       <div>
-          <input type="radio" name="root_type" id="shallow" checked> <label for ="shallow">Shallow</label>
-          <input type="radio" name="root_type" id="deep"><label for ="deep">Deep</label> <br>
+          <input type="radio" class="options" name="root_type" id="shallow"checked> <label for ="shallow">Shallow</label>
+          <input type="radio" class="options" name="root_type" id="deep" ><label for ="deep">Deep</label> <br>
         </div>
         <div>
-          <input type="radio" name="plant_stage" id="young" checked><label for ="young">Young</label>
-          <input type="radio" name="plant_stage" id="mature"><label for ="mature">Mature</label><br>
+          <input type="radio" class="options" name="plant_stage" id="young" checked><label for ="young">Young</label>
+          <input type="radio" class="options" name="plant_stage" id="mature"><label for ="mature">Mature</label><br>
         </div>
         <div>
-          <input type="radio" name="irr_type" id="drip" checked><label for ="drip">Drip</label>
-          <input type="radio" name="irr_type" id="furrow"><label for ="furrow">Furrow</label><br>
+          <input type="radio" class="options" name="irr_type" id="drip" checked><label for ="drip">Drip</label>
+          <input type="radio" class="options" name="irr_type" id="furrow"><label for ="furrow">Furrow</label><br>
         </div>
         <div>
-          <input type="radio" name="soil_type" id="fine" checked><label for ="fine">Fine</label>
-          <input type="radio" name="soil_type" id="coarse"><label for ="coarse">Coarse</label><br>
+          <input type="radio" class="options" name="soil_type" id="fine" checked><label for ="fine">Fine</label>
+          <input type="radio" class="options" name="soil_type" id="coarse"><label for ="coarse">Coarse</label><br>
         </div>
         <div>
-          <input type="radio" name="residual_nitrate" id="low_N" checked><label for ="low_N">Low</label>
-          <input type="radio" name="residual_nitrate" id="high_N"><label for ="high_N">High</label><br>
+          <input type="radio" class="options" name="residual_nitrate" id="low_N" checked><label for ="low_N">Low</label>
+          <input type="radio" class="options" name="residual_nitrate" id="high_N"><label for ="high_N">High</label><br>
         </div>
         <div>
-          <input type="radio" name="irr_level" id="low" checked><label for ="low">Low</label>
-          <input type="radio" name="irr_level" id="high"><label for ="low">High</label>
+          <input type="radio" class="options" name="irr_level" id="low" checked><label for ="low">Low</label>
+          <input type="radio" class="options" name="irr_level" id="high"><label for ="low">High</label>
         </div>
 
         <!-- SCENARIO 1 -->
@@ -502,19 +502,738 @@
   var soil_type_bool = document.getElementById('fine').checked;
   var residual_nitrate_bool = document.getElementById('low_N').checked;
   var irr_level_bool = document.getElementById('low').checked;
+  var options = document.querySelectorAll('.options');
 
 
-  if (rooting_type_bool == true &&
+function bool_checker(){
+  // Scenario 1
+    if (rooting_type_bool == true &&
+      plant_stage_bool == true &&
+      irr_type_bool == true &&
+      soil_type_bool == true &&
+      residual_nitrate_bool == true &&
+      irr_level_bool == true) {
+
+        // insert code to display proper div
+        document.getElementById('scenario_1').style.display = "";
+
+  // Scenario 2
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == false &&
+    irr_type_bool == true &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_2').style.display = "";
+
+  // Secnario 3
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == true &&
+    irr_type_bool == false &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_3').style.display = "";
+
+  // Scenario 4
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == true &&
+    irr_type_bool == true &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_4').style.display = "";
+
+  // Secnario 5
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == true &&
+    irr_type_bool == true &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_5').style.display = "";
+
+  // Scenario 6
+  } else if (rooting_type_bool == true &&
     plant_stage_bool == true &&
     irr_type_bool == true &&
     soil_type_bool == true &&
     residual_nitrate_bool == true &&
-    irr_level_bool == true) {
+    irr_level_bool == false
+  ) {
 
-      // insert code to display proper div
-      document.getElementById('scenario_1').style.display = "";
+    document.getElementById('scenario_6').style.display = "";
+
+  // Secnario 7
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == false &&
+    irr_type_bool == false &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_7').style.display = "";
+
+  // Scenario 8
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == false &&
+    irr_type_bool == true &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_8').style.display = "";
+
+  // Secnario 9
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == false &&
+    irr_type_bool == true &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_9').style.display = "";
+
+  // Scenario 10
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == false &&
+    irr_type_bool == true &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_10').style.display = "";
+
+  // Secnario 11
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == true &&
+    irr_type_bool == false &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_11').style.display = "";
+
+  // Scenario 12
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == true &&
+    irr_type_bool == false &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_12').style.display = "";
+
+  // Secnario 13
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == true &&
+    irr_type_bool == false &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_13').style.display = "";
+
+  // Scenario 14
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == true &&
+    irr_type_bool == true &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_14').style.display = "";
+
+  // Secnario 15
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == true &&
+    irr_type_bool == true &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_15').style.display = "";
+
+  // Scenario 16
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == true &&
+    irr_type_bool == true &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_16').style.display = "";
+
+  // Secnario 17
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == false &&
+    irr_type_bool == false &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_17').style.display = "";
+
+  // Scenario 18
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == false &&
+    irr_type_bool == false &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_18').style.display = "";
+
+  // Secnario 19
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == false &&
+    irr_type_bool == false &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_19').style.display = "";
+
+  // Scenario 20
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == false &&
+    irr_type_bool == true &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_20').style.display = "";
+
+  // Secnario 21
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == false &&
+    irr_type_bool == true &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_21').style.display = "";
+
+  // Scenario 22
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == true &&
+    irr_type_bool == true &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_22').style.display = "";
+
+  // Secnario 23
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == true &&
+    irr_type_bool == false &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_23').style.display = "";
+
+  // Scenario 24
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == true &&
+    irr_type_bool == false &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_24').style.display = "";
+
+  // Secnario 25
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == true &&
+    irr_type_bool == false &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_25').style.display = "";
+
+  // Scenario 26
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == true &&
+    irr_type_bool == true &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_26').style.display = "";
+
+  // Secnario 27
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == false &&
+    irr_type_bool == false &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_27').style.display = "";
+
+  // Scenario 28
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == false &&
+    irr_type_bool == false &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_28').style.display = "";
+
+  // Secnario 29
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == false &&
+    irr_type_bool == false &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_29').style.display = "";
+
+  // Secnario 30
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == false &&
+    irr_type_bool == true &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_30').style.display = "";
+
+  // Scenario 31
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == true &&
+    irr_type_bool == false &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_31').style.display = "";
+
+  // Secnario 32
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == false &&
+    irr_type_bool == false &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_32').style.display = "";
+
+  // Scenario 33
+  }  else if (rooting_type_bool == false &&
+    plant_stage_bool == true &&
+    irr_type_bool == true &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_33').style.display = "";
+
+  // Secnario 34
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == false &&
+    irr_type_bool == true &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_34').style.display = "";
+
+  // Scenario 35
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == true &&
+    irr_type_bool == false &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_35').style.display = "";
+
+  // Secnario 36
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == true &&
+    irr_type_bool == true &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_36').style.display = "";
+
+  // Scenario 37
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == true &&
+    irr_type_bool == true &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_37').style.display = "";
+
+  // Secnario 38
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == true &&
+    irr_type_bool == true &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_38').style.display = "";
+
+  // Scenario 39
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == false &&
+    irr_type_bool == false &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_39').style.display = "";
+
+  // Secnario 40
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == false &&
+    irr_type_bool == true &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_40').style.display = "";
+
+  // Scenario 41
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == false &&
+    irr_type_bool == true &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_41').style.display = "";
+
+  // Secnario 42
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == false &&
+    irr_type_bool == true &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_42').style.display = "";
+
+  // Scenario 43
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == true &&
+    irr_type_bool == false &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_43').style.display = "";
+
+  // Secnario 44
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == true &&
+    irr_type_bool == false &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_44').style.display = "";
+
+  // Scenario 45
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == true &&
+    irr_type_bool == false &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_45').style.display = "";
+
+  // Secnario 46
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == true &&
+    irr_type_bool == true &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_46').style.display = "";
+
+  // Scenario 47
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == true &&
+    irr_type_bool == true &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_47').style.display = "";
+
+  // Secnario 48
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == true &&
+    irr_type_bool == true &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_48').style.display = "";
+
+  // Scenario 49
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == false &&
+    irr_type_bool == false &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_49').style.display = "";
+
+  // Secnario 50
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == false &&
+    irr_type_bool == false &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_50').style.display = "";
+
+  // Scenario 51
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == false &&
+    irr_type_bool == false &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_51').style.display = "";
+
+  // Secnario 52
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == false &&
+    irr_type_bool == true &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_52').style.display = "";
+
+  // Scenario 53
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == false &&
+    irr_type_bool == true &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_53').style.display = "";
+
+  // Secnario 54
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == true &&
+    irr_type_bool == true &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_54').style.display = "";
+
+  // Scenario 55
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == true &&
+    irr_type_bool == false &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_55').style.display = "";
+
+  // Secnario 56
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == true &&
+    irr_type_bool == false &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_56').style.display = "";
+
+  // Scenario 57
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == true &&
+    irr_type_bool == false &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_57').style.display = "";
+
+  // Secnario 58
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == true &&
+    irr_type_bool == true &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_58').style.display = "";
+
+  // Scenario 59
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == false &&
+    irr_type_bool == false &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == true
+  ) {
+
+    document.getElementById('scenario_59').style.display = "";
+
+  // Secnario 60
+  } else if (rooting_type_bool == true &&
+    plant_stage_bool == false &&
+    irr_type_bool == false &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == true &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_60').style.display = "";
+
+  // Scenario 61
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == false &&
+    irr_type_bool == false &&
+    soil_type_bool == true &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_61').style.display = "";
+
+  // Secnario 62
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == false &&
+    irr_type_bool == true &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_62').style.display = "";
+
+  // Scenario 63
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == true &&
+    irr_type_bool == false &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_63').style.display = "";
+
+  // Secnario 64
+  } else if (rooting_type_bool == false &&
+    plant_stage_bool == false &&
+    irr_type_bool == false &&
+    soil_type_bool == false &&
+    residual_nitrate_bool == false &&
+    irr_level_bool == false
+  ) {
+
+    document.getElementById('scenario_64').style.display = "";
+
+  };
 
 };
+
+
+// document.querySelectorAll('options').addEventListener('change',bool_checker);
+document.getElementById("shallow").addEventListener('click',bool_checker);
+document.getElementById("deep").addEventListener('click',bool_checker);
+
+document.getElementById("young").addEventListener('click',bool_checker);
+document.getElementById("mature").addEventListener('click',bool_checker);
+
+document.getElementById("drip").addEventListener('click',bool_checker);
+document.getElementById("furrow").addEventListener('click',bool_checker);
+
+document.getElementById("fine").addEventListener('click',bool_checker);
+document.getElementById("coarse").addEventListener('click',bool_checker);
+
+document.getElementById("low_N").addEventListener('click',bool_checker);
+document.getElementById("high_N").addEventListener('click',bool_checker);
+
+document.getElementById("low").addEventListener('click',bool_checker);
+document.getElementById("high").addEventListener('click',bool_checker);
+
 
 
   </script>
