@@ -521,7 +521,7 @@
         <div class="InputDivs" id="waterAppliedEfficiency">
           <label for="wae">K. Water application efficiency (%):</label>
           <a onclick="toggle2('WaeInfo')" class="infoIcon"> &#9432;</a>
-          <input id="wae" type="number" value="75" >
+          <input id="wae" type="number" value="" placeholder="90-95%" >
         </div><br>
 
         <div  class="box-works frame" id="WaeInfo" style="display:none">
@@ -559,7 +559,7 @@
       <section class="soil">
         <h3> Soil </h3>
         <div class="InputDivs" id="regionSelectorDiv">
-          <label for="regionSelector"> N.  </label>
+          <!-- <label for="regionSelector"> N.  </label> -->
 
           <!-- <select id="regionSelector">
             <option value="40"> San Joaquin Valley</option>
@@ -689,8 +689,8 @@
           <a onclick="toggle2('output11')" class="infoIcon"> &#9432;</a>
         </div>
         <div  class="box-works frame" id="output11" style="display:none">
-          Nitrate at risk of leaching calculated as<br>
-          (line 7.) + (line 8.) + (line 9.)
+          Calculated as<br>
+          ((line 7) + (line 8) + (line 9) + (line 10)) * (100 - line K) / 100
         </div>
 
 
@@ -699,8 +699,8 @@
           <a onclick="toggle2('output12')" class="infoIcon"> &#9432;</a>
         </div>
         <div  class="box-works frame" id="output12" style="display:none">
-          calculated as <br>
-          N at risk of leaching (line 11.) / water application effeciencey (line K.)
+          Calculated as <br>
+          ((line 6) - (line 7) - (line 8) - (line 9) - (line 10) + (line 11)) / (line K / 100)
         </div><br><br>
 
         <div class="references">

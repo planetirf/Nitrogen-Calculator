@@ -136,7 +136,7 @@
 
        }
        #cropSelector {
-         width: 125px;
+         width: 145px;
        }
 
        .InputDivs > span {
@@ -231,8 +231,12 @@
        }
 
        #NppmSoil {
-         width:1px;
+         ;
 
+       }
+
+       #wae {
+         width: 50px;
        }
 
 

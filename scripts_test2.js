@@ -862,7 +862,7 @@ document.getElementById("button2").addEventListener("click", function () {
       var soilN = dFactor * residual_soil_N;
       units = "lbs/acre";
       var reqN = TotalN - soilN - NInIrrWater - inSeasonNMineralized;
-      var lRisk = soilN + NInIrrWater + reqN * (100-wae)/100;
+      var lRisk = (soilN + NInIrrWater + reqN +inSeasonNMineralized) * (100-wae)/100;
       var addN = (TotalN - soilN - NInIrrWater - inSeasonNMineralized - reqN + lRisk) / (wae/100);
 
       console.log("ADD N : " + addN)
