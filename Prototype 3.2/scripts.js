@@ -678,7 +678,7 @@ document.getElementById('irrigationSystemSelector').addEventListener("change", f
 
   if(wae_range === "Drip") {
     document.getElementById('wae').value = "";
-    document.getElementById('wae').placeholder = 90 + "-" + 95 + "%"
+    document.getElementById('wae').placeholder = ">" + 95 + "%";
   } else if (wae_range === "Furrow") {
     document.getElementById('wae').value = "";
     document.getElementById('wae').placeholder = 45 + "-" + 80 + "%";
@@ -807,35 +807,9 @@ document.getElementById("button2").addEventListener("click", function () {
   var TotalN = NUptake + NinResidue;
   var NRemoved = NUptake + (NinResidue * percentRemoved);
 
-
   // console.log("depth_water_applied" + depth_water_applied);
   // console.log("PPM" + ppm);
   // console.log("soiLTexture: "+  soilTexture);
-  var wae_range = document.getElementById('irrigationSystemSelector').value;
-
-    if(wae_range === "Drip" && wae == "") {
-      wae = 90
-      document.getElementById('wae').placeholder = 90 + "-" + 95 + "%"
-    } else if (wae_range === "Furrow" && wae == "") {
-      wae = 62.5
-      document.getElementById('wae').placeholder = 45 + "-" + 80 + "%";
-    } else if (wae_range === "Sprinkler" && wae == "") {
-      wae = 75
-      document.getElementById('wae').placeholder = 65 + "-" + 85 + "%";
-    } else if (wae_range === "Flood" && wae == "") {
-      wae = 60
-      document.getElementById('wae').placeholder = 40 + "-" + 80 + "%";
-    } else if (wae_range === "Center Pivot" && wae == "") {
-      wae = 80
-      document.getElementById('wae').placeholder = 75 + "-" + 85 + "%";
-    } else if (wae_range === "Linear Move" && wae == "") {
-      wae =
-      document.getElementById('wae').placeholder = 85 + "-" + 90 + "%";
-    } else if (wae_range === "Microsprayer" && wae == "") {
-
-
-    }
-
 
   if (NppmWaterUnits === "NO3") {
     var NInIrrWater = ppm * NO3_to_NO3N * depth_water_applied * ppm_NO3N_to_lbs_N;

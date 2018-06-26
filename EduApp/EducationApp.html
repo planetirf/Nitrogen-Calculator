@@ -6,11 +6,11 @@
   </head>
   <body>
 
-    <form>
+    <form id="test">
 
       <div>
-          <input type="radio" class="options" name="root_type" id="shallow"checked> <label for ="shallow">Shallow</label>
-          <input type="radio" class="options" name="root_type" id="deep" ><label for ="deep">Deep</label> <br>
+          <input type="radio" class="options" name="root_type" id="shallow" checked='true'> <label for ="shallow">Shallow</label>
+          <input type="radio" class="options" name="root_type" id="deep"><label for ="deep">Deep</label> <br>
         </div>
         <div>
           <input type="radio" class="options" name="plant_stage" id="young" checked><label for ="young">Young</label>
@@ -32,6 +32,7 @@
           <input type="radio" class="options" name="irr_level" id="low" checked><label for ="low">Low</label>
           <input type="radio" class="options" name="irr_level" id="high"><label for ="low">High</label>
         </div>
+    </form>
 
         <!-- SCENARIO 1 -->
       <div id="scenario_1" style="display:none"> <img src="scenario_1.png">
@@ -1213,26 +1214,28 @@ function bool_checker(){
   };
 
 };
+function bool_changer(){
+  
+};
 
-
-// document.querySelectorAll('options').addEventListener('change',bool_checker);
-document.getElementById("shallow").addEventListener('click',bool_checker);
-document.getElementById("deep").addEventListener('click',bool_checker);
-
-document.getElementById("young").addEventListener('click',bool_checker);
-document.getElementById("mature").addEventListener('click',bool_checker);
-
-document.getElementById("drip").addEventListener('click',bool_checker);
-document.getElementById("furrow").addEventListener('click',bool_checker);
-
-document.getElementById("fine").addEventListener('click',bool_checker);
-document.getElementById("coarse").addEventListener('click',bool_checker);
-
-document.getElementById("low_N").addEventListener('click',bool_checker);
-document.getElementById("high_N").addEventListener('click',bool_checker);
-
-document.getElementById("low").addEventListener('click',bool_checker);
-document.getElementById("high").addEventListener('click',bool_checker);
+ document.getElementById('test').addEventListener('click',bool_checker);
+// document.getElementById("shallow").addEventListener('click',bool_checker);
+// document.getElementById("deep").addEventListener('click',bool_checker);
+//
+// document.getElementById("young").addEventListener('click',bool_checker);
+// document.getElementById("mature").addEventListener('click',bool_checker);
+//
+// document.getElementById("drip").addEventListener('click',bool_checker);
+// document.getElementById("furrow").addEventListener('click',bool_checker);
+//
+// document.getElementById("fine").addEventListener('click',bool_checker);
+// document.getElementById("coarse").addEventListener('click',bool_checker);
+//
+// document.getElementById("low_N").addEventListener('click',bool_checker);
+// document.getElementById("high_N").addEventListener('click',bool_checker);
+//
+// document.getElementById("low").addEventListener('click',bool_checker);
+// document.getElementById("high").addEventListener('click',bool_checker);
 
 
 

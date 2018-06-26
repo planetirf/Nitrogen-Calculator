@@ -352,7 +352,7 @@
       <div id='basicContainer'>
         <h3> Basic Inputs: Field and Crop</h3>
         <div class="InputDivs">
-          <label for="FieldId">A. Field ID: </label>
+          <label for="FieldId">A. Field id: </label>
 
           <input type="text" id="FieldId">
         </div><br>
@@ -364,7 +364,7 @@
         <div class="InputDivs" id="yieldInput">
           <label for="ExpectedYield">C. Expected yield:</label>
 
-          <input type="number" value="5" id="ExpectedYield" required>
+          <input type="number" value="" id="ExpectedYield" required>
           <span for="Units">Units: </span>
           <select id="Units"></select>
         </div><br>
@@ -373,13 +373,13 @@
         <div  class="InputDivs">
           <label for="PlantingDate">D. Planting date: </label>
 
-          <input type="date" id="PlantingDate" placeholder="" value="2018-01-01" required>
+          <input type="date" id="PlantingDate" placeholder="" value="" required>
         </div><br>
 
       <div class="InputDivs">
          <label for="HarvestDate">E. Harvest date: </label>
 
-         <input type="date" id="HarvestDate" placeholder="" value="2018-03-01" required>
+         <input type="date" id="HarvestDate" placeholder="" value="" required>
       </div></div><br>
 
       <!-- <div id="bcd" style="display:none"> The planting date is: <input id="datePlant" type="date"/><br/>
@@ -536,13 +536,13 @@
         <div class="InputDivs" id="waterApplied">
           <label for="inchesOfWater">L. Acre inches of water applied:</label>
 
-          <input id="inchesOfWater" type="number" value="10">
+          <input id="inchesOfWater" type="number" value="">
         </div><br>
 
         <div class="InputDivs" id="nitrogenConcentration">
           <label for="NppmWater">M. <strong>N</strong> concentration:</label>
 
-          <input id="NppmWater" type="number" value="10">
+          <input id="NppmWater" type="number" value="">
 
           <span for="NppmWaterUnits">Units:</span>
             <select id="NppmWaterUnits">
@@ -596,7 +596,7 @@
         <div class="InputDivs" id="residualNitrate">
           <label for="NppmSoil">P.  Residual soil nitrate:  </label>
 
-          <input id="NppmSoil" value="10" type="number" step="">
+          <input id="NppmSoil" value="" type="number" step="">
 
           <span for="NppmSoilUnits"> Units:</span>
             <select class="test" id="NppmSoilUnits">
@@ -608,7 +608,7 @@
         <div class="InputDivs" class="">
           <label for="samplingDepth"> R. Sampling depth (inches):</label>
 
-          <input id="samplingDepth" value="6" type="number">
+          <input id="samplingDepth" value="" type="number">
         </div><br>
 
         <div class="InputDivs" id="soilOrganicMatter">
@@ -636,7 +636,7 @@
 
        <!-- BEGIN: ADVANCED OUTPUT -->
       <div class="part2Output box">
-        <h3> Potential Nitrate Leaching Risks </h3>
+        <h3> Potential Nitrate Leachings Risks </h3>
 
         <!-- OUTPUT 6 -->
         <div class='NOutputDivs'><span>6. Total <strong>N</strong> uptake:</span><div id='test'></div><p id='totalNUptake2'></p>
@@ -762,7 +762,7 @@
    </div>
   </body>
 <!-- N calc scripts -->
-  <script type="text/javascript" src="data2test.json"></script>
-  <script type="text/javascript" src="scripts_test2.js"></script>
+  <script type="text/javascript" src="data.json"></script>
+  <script type="text/javascript" src="scripts.js"></script>
 
 </html>
