@@ -1,4 +1,4 @@
-<!-- ----------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------- -->
     <!--                                                             -->
     <!--                   Code for main content                     -->
     <!--                                                             -->
@@ -102,7 +102,7 @@
          display:flex;
          background-color:;
          color:;
-         border-bottom: 0.5px black;
+         border-bottom: 1px dotted black;
          /*align-items: center;
          align-content:center;
          justify-content: ;
@@ -152,7 +152,7 @@
 
 
        .InputDivs > select {
-         border-color:;
+         border-color:#e0e9bb;
          background-color:#F7F2EE;
          text-align: center;
          flex-grow:1;
