@@ -16,7 +16,32 @@ data = [{
 			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/8096.pdf\" target=\"_blank\"> Beetroot and swiss chard production in California</a>",
 			"linkText": "",
 			"refs": [
-				"Feller, C., Fink, M., 2002. Nitrogen uptake by table beet--validation of a model. Journal of the American Society for Horticultural Science 127, 1013-1017. "
+				"Feller, C., Fink, M., 2002. Nitrogen uptake by table beet--validation of a model. Journal of the American Society for Horticultural Science 127, 1013-1017. ", "Christiansen, J.S., Thorup-Kristensen, K., Kristensen, H.L., 2006.  Root development of beetroot, sweet corn and celeriac, and soil N content after incorporation of green manure. The Journal of Horticultural Science and Biotechnology 81, 831-838.",
+				"Gunnarsson, A., Linden, B., Gertsson, U., 2011. Biodigestion of plant material can improve nitrogen use efficiency in a red beet crop sequence. HortScience 46, 765-775.",
+				"Riley, H., Dragland, S., 2002. Living and surface mulches as nutrient sources in organic vegetable growing. Acta Horticulturae 571, 109-117.",
+
+			]
+		},
+
+		{
+			"name": "Cabbage_White",
+			"percentN": 4.01,
+			"unitsConc": "lbs/ton fresh weight",
+			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
+			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
+			"residueRemoved": false,
+			"nhi": 0.53,
+			"graph": "imgs/cabbage_white.png",
+			"lateSeason": false,
+			"graphLate": "",
+			"note": "",
+			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/7208.pdf\" target=\"_blank\">Cabbage production in California</a>",
+			"linkText": "",
+			"refs": [
+				"Smith, R., Cahn, M., Hartz, T., Love, P., Farrara, B., 2016. Nitrogen dynamics of cole crop production: implications for fertility management and environmental protection. HortScience 51, 1586-1591.",
+				"Katroschan, K.-U., Uptmoor, R., Stützel, H., 2014. Nitrogen use efficiency of organically fertilized white cabbage and residual effects on subsequent beetroot. Plant and Soil 382, 237-251.",
+				"Riley, H., Dragland, S., 2002. Living and surface mulches as nutrient sources in organic vegetable growing. Acta Horticulturae 571, 109-117.",
+				"Thorup-Kristensen, K., Dresbøll, D.B., Kristensen, H.L., 2012. Crop yield, root growth, and nutrient dynamics in a conventional and three organic cropping systems with different levels of external inputs and N re-cycling through fertility building crops. European Journal of Agronomy, 66-82.",
 			]
 		},
 
@@ -37,26 +62,11 @@ data = [{
 			"refs": [
 				"Doerge, T. A., Stroehlein, J. L., Tucker, T. C., Fangmeier, D. D., Oebker, N. F., McCreary, T. W., Husman, S. H., 1990. Effects of Nitrogen and Water Rates on Nitrogen Uptake Dynamics in Drip Irrigated Sweet Corn. University of Arizona Vegetable Report, 1990. ",
 				"Doerge, T. A., Stroehlein, J. L., Tucker, T. C., Fangmeier, D. D., Oebker, N. F., McCreary, T. W., Husman, S. H., Lakatos, E.A., 1990. Nitrogen and Water Effects on the Growth, Yield and Quality of Drip Irrigated Sweet Corn. University of Arizona Vegetable Report, 1989. ",
-				"Wu, P., Dai, Q., Tao, Q., 1993. Effect of fertilizer rates on the growth, yield and kernel composition of sweet corn. Communications in Soil Science and Plant Analysis, 24, 237-253. "
-			]
-		},
-
-		{
-			"name": "Cabbage_White",
-			"percentN": 4.01,
-			"unitsConc": "lbs/ton fresh weight",
-			"units": ["tons/acre", "lbs/acre", "Box(100lbs)", "Box(50lbs)", "Box(33lbs)", "Box(30lbs)", "Box(25lbs)", "Box(20lbs)", "Box(15lbs)", "Box(10lbs)"],
-			"conversionFactor": [1, 0.0005, 0.05, 0.025, 0.0165, 0.015, 0.0125, 0.01, 0.0075, 0.005],
-			"residueRemoved": false,
-			"nhi": 0.53,
-			"graph": "imgs/cabbage_white.png",
-			"lateSeason": false,
-			"graphLate": "",
-			"note": "",
-			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/7208.pdf\" target=\"_blank\">Cabbage production in California</a>",
-			"linkText": "",
-			"refs": [
-				"Smith, R., Cahn, M., Hartz, T., Love, P., Farrara, B., 2016. Nitrogen dynamics of cole crop production: implications for fertility management and environmental protection. HortScience 51, 1586-1591."
+				"Wu, P., Dai, Q., Tao, Q., 1993. Effect of fertilizer rates on the growth, yield and kernel composition of sweet corn. Communications in Soil Science and Plant Analysis, 24, 237-253. ",
+				"Heckman, J.R., 2007. Sweet corn nutrient uptake and removal. HortTechnology 17, 82-86.",
+				"Salardini, A.A., Sparrow, A., Holloway, R.J, 1992. Sweet corn responses to basal and top-dressed rates and sources of nitrogenous fertilizers. Australian Journal of Agricultural Research 43, 171-180.",
+				"Sanmaneechai, M., Koehler, F.E., Roberts, S., 1984. Nitrogen fertilization practices for sequential cropping of wheat, turnips, and sweet corn. Soil Science Society of America Journal 48, 81-86.",
+				"Zotarelli, L., Scholberg, J.M., Dukes, M.D., Muñoz-Carpena, R. 2008. Fertilizer residence time affects nitrogen uptake efficiency and growth of sweet corn. Journal of Environmental Quality 37, 1271–1278.",
 			]
 		},
 
@@ -76,7 +86,16 @@ data = [{
 			"linkText": "",
 			"refs": [
 				"Guo, R., Li, X., Christie, P., Chen, Q., Fusuo, Z., 2008. Seasonal temperatures have more influence than nitrogen fertilizer rates on cucumber yield and nitrogen uptake in a double cropping system. Environmental Pollution 151, 443-451.",
-				"Gallardo, M., Gimenez, R.B.C., Fernández, M.D., Padilla, F.M., Thompson, R.B., 2015. Use of the VegSyst model to calculate crop N uptake and ETc of autumn and spring grown cucumber in Mediterranean greenhouses. Oral Presentation at MODEL-IT 2015 <a href= 'http://hortilink.nl/hams/hams-model-it/modules/request.php?module=oc_proceedings&action=summary.php&id=13&a=Accept+Oral'> Available Online: http://hortilink.nl/hams/hams-model-it/modules/request.php?module=oc_proceedings&action=summary.php&id=13&a=Accept+Oral </a>"
+				"Gallardo, M., Gimenez, R.B.C., Fernández, M.D., Padilla, F.M., Thompson, R.B., 2015. Use of the VegSyst model to calculate crop N uptake and ETc of autumn and spring grown cucumber in Mediterranean greenhouses. Oral Presentation at MODEL-IT 2015",
+				"Davies, J.N. and Kempton, R.J., 1976. Some changes in the composition of the fruit of the glasshouse cucumber (Cucumis sativus) during growth, maturation and senescence. Journal of the Science of Food and Agriculture 27, 413-418.",
+				"Dong, J., Li, X., Duan, Z.-Q., 2016. Biomass allocation and organs growth of cucumber (Cucumis sativus L.) under elevated CO2 and different N supply. Archives of Agronomy and Soil Science 62, 277-288.",
+				"Geissler, T., 1957. Der Nährstoffentzug einer frühen Treibgurkenkultur. Archiv für Gartenbau 5, 431-466.",
+				"Grewal, H.S., Maheshwari, B., Parkes, S.E., 2011. Water and nutrient use efficiency of a low-cost hydroponic greenhouse for a cucumber crop: An Australian case study. Agricultural Water Management 98, 841-846",
+				"Howard, F.D., MacGillivray, J.H., Yamaguchi, M., 1962. Nutrient composition of fresh California-grown vegetables. California Agricultural Experiment Station, Bulletin No. 788, California Department of Agriculture.",
+				"Van Eerd, L.L., O'Reilly, K.A., 2009. Yield, nitrogen dynamics, and fertilizer use efficiency in machine-harvested cucumber. HortScience 44,  1712-1718.",
+				"Ward, G.M., 1967. Greenhouse cucumber nutrition a growth analysis study. Plant and Soil 26, 324-332.",
+				"Ward, G.M., Miller, M.J., 1970. Relationship between fruit sizes and nutrient content of greenhouse tomatoes and cucumbers. Canadian Journal of Plant Sciences 50, 451-455.",
+
 			]
 		},
 
@@ -97,7 +116,11 @@ data = [{
 			"linkText": "",
 			"refs": [
 				"Rosati, A., Troisi, A., 2001. Seasonal patterns of N uptake in eggplant (Solanum melongena L.) grown with different N fertigation levels. Acta Horticulturae 563, 195-200.",
-				"Pessarakli, M., Tucker, T.C., 1988. Nitrogen-15 uptake by eggplant under sodium chloride stress. Soil Science Society of America Journal 52, 1673-1676. "
+				"Pessarakli, M., Tucker, T.C., 1988. Nitrogen-15 uptake by eggplant under sodium chloride stress. Soil Science Society of America Journal 52, 1673-1676. ",
+				"Kostadinov, K., Kostadinova, S., 2014. Nitrogen  efficiency in eggplant (Solanum melongena l.) depending on fertilizing. Bulgarian Journal of Agricultural Science 20, 287-292.",
+				"Leogrande, R., Lopedota, O., Vitti, C., Ventrella, D., Montemurro, F., 2014.  Effects of irrigation volumes and organic fertilizers on eggplant grown in Mediterranean environment. Acta Agriculturae Scandinavica, Section C-- Soil & Plant Science 64, 518-528.",
+				"Markiewicz, B., Golcz, A., Kleiber, T., Bosiakim M., 2011. Effect of nitrogen, phosphorus and potassium fertilization on the content of macroelements in fruits of aubergine (Solanum melongena l.) grown on organic substrates. Journal of Elementology 16(1), 69-74.",
+
 			]
 		},
 
@@ -200,7 +223,18 @@ data = [{
 			"refs": [
 				"Marcussi, F.F.N., Villas Boas, R.L., Godoy, L.J.G.d., Goto, R., 2004. Macronutrient accumulation and partioning in fertigated sweet pepper plants. Scientia Agricola (Piracicaba, Brazil) 61, 62-68. ",
 				"Gimenez, C., Gallardo, M., Martinez-Gaitan, C., Stockle, C.O., Thompson, R.B., Granados, M.R., 2013. VegSyst, a simulation model of daily crop growth, nitrogen uptake and evapotranspiration for pepper crops for use in an on-farm decision support system. Irrigation Science 2013, 464-477. ",
-				"Contreras, J.I., Lopez, J.G., Lao, M.T., Eymar, E.,. Segura, M.L., 2013. Dry-matter allocation and nutrient uptake dynamic in pepper plant irrigated with recycled water by different nitrogen and potassium rate. Communications in Soil Science and Plant Analysis 44, 758-766."
+				"Contreras, J.I., Lopez, J.G., Lao, M.T., Eymar, E.,. Segura, M.L., 2013. Dry-matter allocation and nutrient uptake dynamic in pepper plant irrigated with recycled water by different nitrogen and potassium rate. Communications in Soil Science and Plant Analysis 44, 758-766.",
+				"Baameur, A., Smith, R., 2012. Pepper N Uptake: 1st Year study Report. Available online at: http://www.calpeppers.com/page.php?s=7&c=42",
+				"Contreras, J.I., López, J.G., Lao, M.T., Eymar, E., Sugura, M.L., 2013.  Dry-matter allocation and nutrient uptake dynamic in pepper plant irrigated with recycled water by different nitrogen and potassium rate.  Communications in Soil Science and Plant Analysis 44, 758-766.",
+				"Ehaliotis, C., Massas, J., Pavlou, G., 2010. Efficient urea-N and KNO3-N uptake by vegetable plants using fertigation. Agronomy for Sustainable Development 50, 763-768.",
+				"Haynes, R.J., 1988. Comparison of fertigation with broadcast applications of urea-N on levels of available soil nutrients and on growth and yield of trickle-irrigated peppers. Scientia Horticulturae 35, 189-198.",
+				"Hegde, D.M., 1987. Effect of soil moisture and n fertilization on growth, yield, N uptake, and water use of bell pepper (Capsicum annuum l.). Gartenbauwissenschaft 52(4), 180-185.",
+				"Marti, H.R., Mills, H.A., 1991. Nutrient uptake and yield of sweet pepper as affected by stage of development and N form. Journal of Plant Nutrition 14, 1165-1175.",
+				"Olsen, J.K., Lyons, P.J., Kelly, M.M., 1993. Nitrogen uptake and utiization by bell pepper in subtropical Australia. Journal of Plant Nutrition 16, 177-193.",
+				"Russo, V.M., 1991. Effects of fertilizer rate, application timing and plant spacing on yield and nutrient content of bell pepper. Journal of Plant Nutrition 14, 1047-1056.",
+				"Tei, F., Benincasa, P., Guiducci, M., 1999. Nitrogen fertilisation of lettuce, processing tomato ans sweet pepper: yield, nitrogen uptake and the risk of nitrate leaching. Acta Horticulturae 506, 61-67.",
+				"Van Eerd, L.L., 2007. Evaluation of different nitrogen use efficiency indices using field-grown green bell peppers (Capsicum annuum L.). Canadian Journal of Plant Science 87, 565-569.",
+				"Yasuor, H., Ben-Gal, A., Yermiyahu, U., Beit-Yannai, E., Cohen, S., 2013. Nitrogen management of greenhouse pepper production: agronomic, nutritional, and environmental implications. HortScience 48, 1241-1249.",
 			]
 		},
 
@@ -384,7 +418,9 @@ data = [{
 				"Macedo de Lucena, R.R., Zuleide de Negreiros, M., de Medieros, J.F., Costa Grangeiro, L., de Tarcio Pereira Marrocos, S., 2011. Crescimento e acumulo de macronutrientes em malancia 'Quetzale' cultivada sob diferentes niveis de salinidade da agua de irrigacao. Revista Caatinga 24 (1), 34-42.",
 				"Grangeiro, L.C., Cecilio Filho, A.B., 2004. Acumulo e exportacao de macronutrientes pelo hibrido de melancia Tide. Horticultura Brasiliera 22 (1), 93-97.",
 				"Grangeiro, L.C., Cecilio Filho, A.B., 2005. Acumulo e exportacao de macronutrientes em melancia sem sementes. Horticultura Brasiliera 22 (1), 93-97.",
-				"Doerge, T.A., Pritchard, K.H., Pier, J.W., Fernández, P., McCreary, T.W., 1991. Nitrogen utilization efficiency in melons using soluble and slow release fertilizers. University of Arizona College of Agriculture, Vegetable Report. "
+				"Doerge, T.A., Pritchard, K.H., Pier, J.W., Fernández, P., McCreary, T.W., 1991. Nitrogen utilization efficiency in melons using soluble and slow release fertilizers. University of Arizona College of Agriculture, Vegetable Report. ",
+				"Howard, F.D., MacGillivray, J.H., Yamaguchi, M., 1962. Nutrient composition of fresh California-grown vegetables. California Agricultural Experiment Station, Bulletin No. 788, California Department of Agriculture.",
+
 			]
 		},
 
