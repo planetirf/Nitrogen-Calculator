@@ -1,3 +1,5 @@
+
+
 data = [{
 	"crops": [
 
@@ -139,6 +141,15 @@ data = [{
 			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/8173.pdf\" target=\"_blank\"> UCANR Small grain forage production manual</a>",
 			"linkText": "",
 			"refs": [
+				"Cambell Matthews, M., 1985. When to cut oats. Available online: <a href='http://cestanislaus.ucanr.edu/files/111020.html'><b>here</b></a> ",
+				"Campbell Matthews, M., 1997. 1997 Stanislaus winter forage variety trial. Available online: <a href=' http://cestanislaus.ucanr.edu/files/111032.html'><b>here</b></a>",
+				"Cambpell Matthews, M., 2002. Using winter forages for dairy nitrogen management. Proceedings of the 32st California Alfalfa Forage Symposium, 2002.  Available online: <a href=' http://alfalfa.ucdavis.edu/+symposium/proceedings/2002.html'><b>here</b></a>",
+				"Collar, C., Kings County Winter Forage Trial Results. Available online: <a href='http://cekings.ucanr.edu/Agriculture/Dairy_Livestock_and_Forage/Forage_Information_69/'><b>here</b></a>",
+				"Collar, C., Aksland, G., 2001. Harvest stage effects on yield and quality of winter forage. Proceedings of the 31st California and Forage Symposium, 12-13 December, 2001, Modesto, CA, 130-139. Available online:<a href='http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.115.1969&rep=rep1&type=pdf'><b>here</b></a>",
+				"Qualset, C.O., Zwer, P.K., Heaton, J., Vogt, H.E., Jackson, L.F., Putnam, D., 2012. Enhancing diversity and productivity of the California oat crop: eight new varieties. University of California, Davis Agronomy Progress Report no. 305, May 2012. Available online: <a href='http://smallgrains.ucdavis.edu/Agron_Prog_Rep_305_Enhancing_Diversity_and_Productivity_of_the_California_Oat_Crop.pdf'><b>here</b></a> ",
+				"Wright, S., Silva-del-Rio, N., Collar, C., Banuelos, L., 2009. Small grain silage variety study. UC ANR Small Grain News Tulare County October 2009, 11-12. Available online: <a href='http://cetulare.ucanr.edu/newsletters/Small_Grain_News41326.pdf'><b>here</b></a> ",
+				"Wright, S., Banuelos, L., Silva-del-Rio, N., Collar, C., Hernandez, K., Stambach, H., 2012. Small grain silage variety trial 2011. UC ANR Small Grain News Tulare County 6(3), 10. Available online: <a href='http://cetulare.ucanr.edu/newsletters/Small_Grain_News44749.pdf'><b>here</b></a> ",
+				"Wright, S., Banuelos, L., Souza, Collar, C., 2014. Small grain silage variety trial 2014. UC ANR Small Grain News Tulare County 10(3), 7-9. Available online: <a href='http://cetulare.ucanr.edu/newsletters/Small_Grain_News52831.pdf'><b>here</b></a> "
 			]
 		},
 
@@ -159,7 +170,17 @@ data = [{
 			"refs": [
 				"Malhi, S.S., Johnston, A.M., Schoenau, J.J., Wang, Z.H., Vera, C.L., 2012. Seasonal biomass accumulation and nutrient uptake of wheat, barley and oat on a Blank Chernozem soil in Saskatchewan. Canadian Journal of Plant Science 86, 1005-1014.",
 				"Neugschwandtner, R.,W., Wagentrist, H., Kaul, H.-P., 2014. Nitrogen concentrations and nitrogen yields of above-ground dry matter and chickpea during crop growth compared to pea, barley and oat in central Europe. Turkish Journal of Field Crops 19(1), 136-141. ",
-				"Zhou, Q.-P., Biswas, D.K., Ma, B.-L., 2013. Comparisons among cultivars of wheat, hulless and hulled oats: dry matter, N and P accumulation and partitioning as affected by N supply. Journal of Plant Nutrition and Soil Science 176, 929-941. "
+				"Zhou, Q.-P., Biswas, D.K., Ma, B.-L., 2013. Comparisons among cultivars of wheat, hulless and hulled oats: dry matter, N and P accumulation and partitioning as affected by N supply. Journal of Plant Nutrition and Soil Science 176, 929-941. ",
+				"Buckley, K.E., Mohr, R.M., Therrien, M.C., 2010. Yield and quality of oat in response to varying rates of swine slurry. Canadian Journal of Plant Science 90, 645-653.",
+				"Franke, C., Dänicke, S., Kluge, H., Jeroch H., 1999. Inhaltsstoffe und Futterwert von Hafer aus dem mitteldeutschen Anbaugebiet für Broiler. Archiv für Geflügelkunde 63, 204-207.",
+				"Ma, B.L., Zheng, Z., Pageau, D., Vera, C., Fregeau-Reid, J., Xue, A., Yan, W., 2017. Nitrogen and phosphorus uptake, yield and agronomic traits of oat cultivars as affected by fertilizer N rates under diverse environments. Nutrient Cycling in Agroecosystems 108, 245-265.",
+				"Muurinen, S., Kleemola, J., Peltonen-Sainio, P., 2007. Accumulation and translocation of nitrogen in spring cereal cultivars differing in nitrogen use efficiency. Agronomy Journal 99, 441-449.",
+				"Marshall, H.G. and Kolb, F.L., 1986. Relationships among grain quality indicators in oats. Crop Science 26, 800-804.",
+				"Peterson, R.M., Rendig, V.V., 2001. Effect of nitrogen availability on oat grain growth and nutrient deposition. Acta Agriculturae Scandinavica, Section B, Soil & Plant Science 51, 106–112.",
+				"Rattunde, H.F., Frey, K.J., 1986. Nitrogen harvest index in oats: its repeatability and 1 association with adaptation. Crop Science 26, 606-610.",
+				"Thorup-Kristensen, K., Dresbøll, D.B., Kristensen, H.L., 2012. Crop yield, root growth, and nutrient dynamics in a conventional and three organic cropping systems with different levels of external inputs and N re-cycling through fertility building crops. European Journal of Agronomy, 66-82.",
+				"Youngs, V.L., 1972. Protein distribution in the oat kernel. Cereal Chemistry 49, 407-411."
+
 			]
 		},
 
@@ -179,9 +200,10 @@ data = [{
 			"links": "",
 			"linkText": "",
 			"refs": [
-				"",
-				"",
-				""
+				"Soto-Ortiz, R., 2008. Crop phenology, dry matter production, and nutrient uptake and partitioning in cantaloupe (Cucumis melo L.) and chile (Capsicum annuum L.). Dissertation. Available online: <a href='http://hdl.handle.net/10150/194813'><b>here</b></a>",
+				"Baameur, A., Smith, R., 2012. Pepper N Uptake: 1st Year study Report. Available online: <a href='http://www.calpeppers.com/page.php?s=7&c=42'><b>here</b></a>",
+				"Zhu, J.H., Li, X.L., Zhang, F.S., Li, J.L., Christie, P., 2004.  Responses of greenhouse tomato and pepper yields and nitrogen dynamics to applied compound fertilizers. Pedosphere, 14, 213-222.",
+				"Zhu, J.H., Li, X.L., Christie, P., Li, J.L., 2005. Environmental implications of low nitrogen use efficiency in excessively fertilized hot pepper (Capsicum frutescens L.) cropping systems. Agriculture, Ecosystems and Environment 111, 70-80",
 			]
 		},
 
@@ -201,7 +223,10 @@ data = [{
 			"links": "<a href=\"http://anrcatalog.ucanr.edu/pdf/7244.pdf\" target=\"_blank\"> Chile pepper production in California</a>",
 			"linkText": "",
 			"refs": [
-				"Soto-Ortiz, R., 2008. Crop phenology, dry matter production, and nutrient uptake and partitioning in cantaloupe (Cucumis melo L.) and chile (Capsicum annuum L.). Dissertation. Available online at: <a href='http://hdl.handle.net/10150/194813'>http://hdl.handle.net/10150/194813</a>"
+				"Soto-Ortiz, R., 2008. Crop phenology, dry matter production, and nutrient uptake and partitioning in cantaloupe (Cucumis melo L.) and chile (Capsicum annuum L.). Dissertation. Available online: <a href='http://hdl.handle.net/10150/194813'><b>here</b></a>",
+				"Baameur, A., Smith, R., 2012. Pepper N Uptake: 1st Year study Report. Available online: <a href='http://www.calpeppers.com/page.php?s=7&c=42'><b>here</b></a>",
+				"Zhu, J.H., Li, X.L., Zhang, F.S., Li, J.L., Christie, P., 2004.  Responses of greenhouse tomato and pepper yields and nitrogen dynamics to applied compound fertilizers. Pedosphere, 14, 213-222.",
+				"Zhu, J.H., Li, X.L., Christie, P., Li, J.L., 2005. Environmental implications of low nitrogen use efficiency in excessively fertilized hot pepper (Capsicum frutescens L.) cropping systems. Agriculture, Ecosystems and Environment 111, 70-80",
 			]
 		},
 
@@ -234,7 +259,7 @@ data = [{
 				"Russo, V.M., 1991. Effects of fertilizer rate, application timing and plant spacing on yield and nutrient content of bell pepper. Journal of Plant Nutrition 14, 1047-1056.",
 				"Tei, F., Benincasa, P., Guiducci, M., 1999. Nitrogen fertilisation of lettuce, processing tomato ans sweet pepper: yield, nitrogen uptake and the risk of nitrate leaching. Acta Horticulturae 506, 61-67.",
 				"Van Eerd, L.L., 2007. Evaluation of different nitrogen use efficiency indices using field-grown green bell peppers (Capsicum annuum L.). Canadian Journal of Plant Science 87, 565-569.",
-				"Yasuor, H., Ben-Gal, A., Yermiyahu, U., Beit-Yannai, E., Cohen, S., 2013. Nitrogen management of greenhouse pepper production: agronomic, nutritional, and environmental implications. HortScience 48, 1241-1249.",
+				"Yasuor, H., Ben-Gal, A., Yermiyahu, U., Beit-Yannai, E., Cohen, S., 2013. Nitrogen management of greenhouse pepper production: agronomic, nutritional, and environmental implications. HortScience 48, 1241-1249."
 			]
 		},
 
@@ -255,7 +280,11 @@ data = [{
 			"refs": [
 				"Mugwira, L.M., Bishnoi, U.R., 1980. Triticale, wheat and rye growth rates and mineral accumulation at various growth stages. Communications in Soil Science and Plant Analysis 11, 1129-1146. ",
 				"Rumberg and Sneva, 1970. Accumulation and loss of nitrogen during growth and maturation of cereal rye (Secale cereale). Agronomy Journal 62, 311-313.",
-				"Lithourgidis, A.S., Dordas, C.A., 2010. Forage yield, growth rate, and nitrogen uptake of faba bean intercrops with wheat, barley, and rye in three seeding ratios. Crop Science 50, 2148-2158. "
+				"Lithourgidis, A.S., Dordas, C.A., 2010. Forage yield, growth rate, and nitrogen uptake of faba bean intercrops with wheat, barley, and rye in three seeding ratios. Crop Science 50, 2148-2158. ",
+				"Ellen, J., 1993. Growth, yield and composition of four winter cereals. II. Nitrogen and carbohydrate economy. Netherlands Journal of Agricultural Science 41, 235-246.",
+				"Richter, G.M., 1999. Variability of winter rye grain yield in a glacial plain catchment — modelling and observation. European Journal of Agronomy 11, 239-253.",
+				"Thorup-Kristensen, K., Dresbøll, D.B., Kristensen, H.L., 2012. Crop yield, root growth, and nutrient dynamics in a conventional and three organic cropping systems with different levels of external inputs and N re-cycling through fertility building crops. European Journal of Agronomy, 66-82.",
+				"White, J.G., Scott, T.W., 1991. Effects of perennial forage-legume living mulches on no-till winter wheat and rye. Field Crops Research 28, 135-148."
 			]
 		},
 
@@ -276,7 +305,8 @@ data = [{
 			"refs": [
 				"Amouzou, K.A., Naab, J.B., Lamers, J.P.A., Becker, M., 2018. CERES-Maize and CERES-Sorghum for modeling growth, nitrogen and phosphorus uptake, and soil moisture dynamics in the dry savanna of West Africa. Field Crops Research 217, 134-149.",
 				"Youngquist, J.B., Maranville, J.W., 1992. Patterns of nitrogen mobilization in grain sorghum hybrids and the relationship to grain and dry matter production. Journal of Plant Nutrition 15, 445-455. ",
-				"Nakamura, T., Adu-Gyamfi, J.J., Yamamoto, A., Ishikawa, S., Nakano, H., Ito, O., 2002. Varietal differences in root growth as related to nitrogen uptake by sorghum plants in low-nitrogen environment. Plant and Soil 245, 17-24. "
+				"Nakamura, T., Adu-Gyamfi, J.J., Yamamoto, A., Ishikawa, S., Nakano, H., Ito, O., 2002. Varietal differences in root growth as related to nitrogen uptake by sorghum plants in low-nitrogen environment. Plant and Soil 245, 17-24. ",
+				"Ciampitti, I.A., Vara Prasad, P.V., 2016. Historical synthesis – Analysis of changes in grain nitrogen dynamics in sorghum. Frontiers in Plant Science 7, 1–11.",
 			]
 		},
 
@@ -296,7 +326,9 @@ data = [{
 			"linkText": "",
 			"refs": [
 				"Swiader, J.M., 1985. Seasonal growth and composition and accumulation of N-P-K in dryland and irrigated pumpkins. Journal of Plant Nutrition 8, 909-919. ",
-				"Vidigal, S.M., Pacheco, D.D., Facion, C.E., 2007. Crescimento e ecumulo de nutrientes pela abobora hybrida tipo Tetsukabuto. Horticultura Brasileira 25, 375-380."
+				"Vidigal, S.M., Pacheco, D.D., Facion, C.E., 2007. Crescimento e ecumulo de nutrientes pela abobora hybrida tipo Tetsukabuto. Horticultura Brasileira 25, 375-380.",
+				"Mohammad, M.J., 2004. Utilization of applied fertilizer nitrogen and irrigation water by drip-fertigated squash as determined by nuclear and traditional techniques. Nutrient Cycling in Agroecosystems 68, 1-11",
+				"Clough, G.H., Locascio, S.J., Olson, S.M., 1992. Mineral concentration of yellow squash responds to irrigation method and fertilization management. Journal of the American Society of Horticultural Science 117, 725-729."
 			]
 		},
 
@@ -316,7 +348,15 @@ data = [{
 			"linkText": "",
 			"refs": [
 				"Swiader, J.M., 1985. Seasonal growth and composition and accumulation of N-P-K in dryland and irrigated pumpkins. Journal of Plant Nutrition 8, 909-919. ",
-				"Vidigal, S.M., Pacheco, D.D., Facion, C.E., 2007. Crescimento e ecumulo de nutrientes pela abobora hybrida tipo Tetsukabuto. Horticultura Brasileira 25, 375-380."
+				"Vidigal, S.M., Pacheco, D.D., Facion, C.E., 2007. Crescimento e ecumulo de nutrientes pela abobora hybrida tipo Tetsukabuto. Horticultura Brasileira 25, 375-380.",
+				"Sotomayor-Ramírez, D., Oliveras-Berrocales, M.,  Wessel-Beaver, L., 2016. Fertilizer-nitrogen management in an onion and tropical pumpkin rotation in Puerto Rico. HortTechnology 26, 831-838.",
+				"Swiader, J.M., 1985. Seasonal growth and composition and accumulation of N-P-K in dryland and irrigated pumpkins. Journal of Plant Nutrition. 8, 909-919.",
+				"Howard, F.D., MacGillivray, J.H., Yamaguchi, M., 1962. Nutrient composition of fresh California-grown vegetables. California Agricultural Experiment Station, Bulletin No. 788, California Department of Agriculture.",
+				"Santos, M.R., Sediyama, M.A.N., Moreira, M.A., Megguer, C.A., Vidigal, S.M., 2012. Rendimento, qualidade e absorção de nutrientes pelos frutos de abóbora em função de doses de biofertilizante. Horticultura Brasileira 30, 160-167.",
+				"Van Eerd, LL., 2010. Use of a nitrogen budget to predict nitrogen losses in processing butternut squash with different nitrogen fertilization strategies. HortScience 45, 1734-1740. ",
+				"Vidigal, S.M., Pacheco, D.D., Facion, C.E., 2007.   Crescimento e acúmulo de nutrientes pela abóbora híbrida tipo Tetsukabuto. Horticultura Brasileira 25, 375-380.",
+				"",
+				""
 			]
 		},
 
@@ -335,7 +375,12 @@ data = [{
 			"links": "<a href=\"http://sugarbeet.ucdavis.edu/\" target=\"_blank\"> University of California Sugarbeet Research and Information</a>",
 			"linkText": "",
 			"refs": [
-				"Mackenzie, A.J., Stockinger, K.R., Krantz, B.A., 1957. Growth and Nutrient Uptake of Sugar Beets in the Imperial Valley, California. Journal of the American Society of Sugar Beet Technology 9,400-407. "
+				"Mackenzie, A.J., Stockinger, K.R., Krantz, B.A., 1957. Growth and Nutrient Uptake of Sugar Beets in the Imperial Valley, California. Journal of the American Society of Sugar Beet Technology 9,400-407. ",
+				"Hills, F.J., Broadbent, F.E., Lorenz, O.A., 1983. Fertilizer nitrogen utilization by corn, tomato, and sugarbeet.  Agronomy Journal 75, 423-426. ",
+				"Laufer, D., Nielsen, O., Wilting, P., Koch, H.-J., Märländer, B., 2016. Yield and nitrogen use efficiency of fodder and sugar beet (Beta vulgaris L.) in contrasting environments of northwestern Europe. European Journal of Agronomy 73, 124-132.",
+				"Montemurro, D., Maiorana, M., 2013. Nitrogen utilization, yield, quality and soil properties in a sugarbeet crop amended with municipal solid waste compost. Compost Science and Utilization 15, 84-92.",
+				"Shock, C.C., Seddigh, M., Saunders, L.D., Stieber, T.D., Miller, J.G., 2000.  Sugarbeet nitrogen uptake and performance following heavily fertilized onion. Agronomy Journal 92, 10-15.",
+				"Martín-Olmedo, P., Murillo, J.M., Cabrera, F., López, R., 1999. Sugarbeet (Beta vulgaris) response to residual soil N under Mediterranean agronomic practices. Journal of Agricultural Science, Cambridge 132, 273-280. "
 			]
 		},
 
@@ -356,7 +401,11 @@ data = [{
 			"refs": [
 				"Osaki, M., Ueda, H., Shinano, T., Matsui, H., Tadano, T., 1995b. Accumulation of carbon and nitrogen compounds in sweet potato plants grown under deficiency of N, P or K nutrients. Soil Science and Plant Nutrition 41, 557-566",
 				"Osaki, M., Ueda, H., Shinano, T., Matsui, H., Tadano, T., 1995a. Accumulation of carbon and nitrogen compounds in sweet potato plants grown under different nitrogen application rates. Soil Science and Plant Nutrition 41, 547-555",
-				"Echer, F.R., Dominato, J.C., Creste, J.E., 2009. Absorbacao de nutrientes e distribuicao da massa fresca e seca  entre orgaos de batata-doce. Horticultura Brasiliera 27, 176-182."
+				"Echer, F.R., Dominato, J.C., Creste, J.E., 2009. Absorbacao de nutrientes e distribuicao da massa fresca e seca  entre orgaos de batata-doce. Horticultura Brasiliera 27, 176-182.",
+				"Philips, S.B., Warren, J.G., Mullins, G.L., 2005. Nitrogen rate and application timing affect 'Beauregard' sweetpotato yield and quality. HortScience 40, 214-217.",
+				"Stoddard, C.S., 2015. Phosphorous and boron fertilizer impacts on sweetpotato production and long-term storage. FREP Final Report. Available online: <a href='https://www.cdfa.ca.gov/is/ffldrs/frep/pdfs/completedprojects/13-0266-SA_Stoddard.pdf'><b>here</b></a> ",
+				"Stoddard, S., 2009. Sweetpotato fertilizer study 2008-09. Sweetpotato Research Progress Report 2009, 23-34. Available online: <a href='http://cemerced.ucanr.edu/files/40704.pdf'><b>here</b></a> ",
+				"Weir, B., Stoddard, S., 2001. Drip irrigated fertilizer trial. Sweetpotato research trials. 2001 Research Progress Report, 35-39. Available online: <a href='http://cemerced.ucanr.edu/files/40391.pdf'><b>here</b></a> "
 			]
 		},
 
@@ -377,7 +426,13 @@ data = [{
 			"refs": [
 				"Scholberg, J., McNeal, B., Boote, K.J., Jones, J.W., Locascio, S.J., Olson, S.M., 2000. Nitrogen stress effects on grown and nitrogen accumulation by field-grown tomato. Additional info in: Scholberg, J., McNeal, B.L., Jones, J.W., Boote, K.J., Stanley, C.D., Obreza, T.A., 2000. Growth and canopy characteristics of field-grown tomato. Agronomy Journal 92, 152-159.  ",
 				"Zotarelli, L., Dukes, M.D., Scholberg, J.M.S., Munoz-Carpena, R., Icerman, J., 2009. Tomato nitrogen accumulation and fertilizer use efficiency on a sandy soil, as affected by nitrogen rate and irrigation scheduling. Agricultural Water Management 96, 1247-1258. ",
-				"Ren, T., Christie, P., Wang, J., Chen, Q., Zhang, F., 2010. Root zone soil nitrogen management to maintain high tomato yields and minimum nitrogen losses to the environment. Scientia Horticultuarae 125, 25-33. "
+				"Ren, T., Christie, P., Wang, J., Chen, Q., Zhang, F., 2010. Root zone soil nitrogen management to maintain high tomato yields and minimum nitrogen losses to the environment. Scientia Horticultuarae 125, 25-33. ",
+				"Andersen, P.C., Rhaods, F.M., Olson, S.M., Hill, K.D., 1999. Carbon and nitrogen budgets in spring and fall tomato crops. HortScience 34, 648-652.",
+				"Kleiber, T., 2014. Changes of nutrient contents in tomato fruits under the influence of increasing intensity of manganese nutrition. Ecological Chemistry and Engineering S 21, 297-307.",
+				"Ozores-Hampton, M., Di Gioia, F., Sato, S., Simonne, E., Morgan, K., 2015. Effects of nitrogen rates on nitrogen, phosphorus, and potassium partitioning, accumulation, and use efficiency in seepage-irrigated fresh market tomatoes. HortScience 50, 1636-1643.",
+				"Stark, J.C., Jarrell, W.M., Letey, J., Valoras, N., 1983. Nitrogen use efficiency of trickle-irrigated tomatoes receiving continuous injection of N. Agronomy Journal 75, 672-676. ",
+				"Zhu, J.H., Li, X.L., Zhang, F.S., Li, J.L., Christie, P., 2004.  Responses of greenhouse tomato and pepper yields and nitrogen dynamics to applied compound fertilizers. Pedosphere, 14, 213-222.",
+				"Zotarelli, L., Dukes, M.D., Scholberg, J.M.S., Muñoz-Carpena, R., Icerman, J., 2009. Tomato nitrogen accumulation and fertilizer use efficiency on a sandy soil, as affected by nitrogen rate and irrigation scheduling. Agricultural Water Management 96, 1247-1258."
 			]
 		},
 
@@ -396,7 +451,14 @@ data = [{
 			"links": "<a href=\"http://smallgrains.ucanr.edu/\" target=\"_blank\"> University of California Small Grains Research and Information </a>",
 			"linkText": "",
 			"refs": [
-				"Mugwira, L.M., Bishnoi, U.R., 1980. Triticale, wheat and rye growth rates and mineral accumulation at various growth stages. Communications in Soil Science and Plant Analysis 11, 1129-1146. "
+				"Mugwira, L.M., Bishnoi, U.R., 1980. Triticale, wheat and rye growth rates and mineral accumulation at various growth stages. Communications in Soil Science and Plant Analysis 11, 1129-1146. ",
+				"Brittan, K.L., 2011. 2011 Southern Sacramento Valley small grains research program. Available online: <a href='http://www.californiawheat.org/uploads/resources/402/brittan-2011-southern-sacramento-valley-small-grainsresearch-program-report-with-tables.pdf'><b>here</b></a>: ",
+				"Brittan, K.L., 2012. 2011-12 Southern Sacramento Valley small grains research program cultivar assessment. Available online: <a href='http://www.californiawheat.org/uploads/resources/505/11.12-brittan-full-report.pdf'><b>here</b></a>",
+				"Ehdaie, B., Shakiba, M.R., Waines, J.G., 2001.   Sowing date and nitrogen input influence nitrogen-use efficiency in spring bread and durum wheat genotypes. Journal of Plant Nutrition 24, 899-919.",
+				"Ellen, J., 1993. Growth, yield and composition of four winter cereals. II. Nitrogen and carbohydrate economy. Netherlands Journal of Agricultural Science 41, 235-246.",
+				"Fossati, D., Fossati, A., Feil, B., 1993. Relationship between grain yield and grain nitrogen concentration in winter triticale. Euphytica 71, 115-123. ",
+				"Guinta, F., Pruneddu, G., Motzo, R., 2009. Radiation interception and biomass and nitrogen accumulation in different cereal and grain legume species. Field Crops Research 110, 76-84.",
+				"Koutroubas, S., D., Fotiadis, S., Damalas, C.A., 2016. Grain yield and nitrogen dynamics of Mediterranean barley and triticale. Archives of Agronomy and Soil Science 62, 484-501."
 			]
 		},
 
@@ -441,7 +503,12 @@ data = [{
 			"linkText": "",
 			"refs": [
 				"Kutman, U.B., Yildiz, H., Cakmak, I., 2011. Effect of nitrogen on uptake, remobilization and partitioning of zinc and iron throughout the development of durum wheat. Plant and Soil 342, 149-164. ",
-				"Liang, Z., Bronson, K.F., Thorp, K.R., Mon, J., Badaruddin, M., Wang, G., 2014. Cultivar and N fertilizer rate affect yield and N use efficiency in irrigated durum wheat. Crop Science 54, 1175-1183. "
+				"Liang, Z., Bronson, K.F., Thorp, K.R., Mon, J., Badaruddin, M., Wang, G., 2014. Cultivar and N fertilizer rate affect yield and N use efficiency in irrigated durum wheat. Crop Science 54, 1175-1183. ",
+				"Ehdaie, B., Shakiba, M.R., Waines, J.G., 2001.   Sowing date and nitrogen input influence nitrogen-use efficiency in spring bread and durum wheat genotypes. Journal of Plant Nutrition 24, 899-919.",
+				"Mayo P., Prato D., Fraser J., Jackson, L., Gallagher, L.W., Chicaiza, O., del Blanco, A., Maciel, F.T., Culp, D., Banuelos, G., Kirby, D., Wilson, R., Marcum, D., Marsh, B., Orloff, S., Lundy, M., Munier, D., Wright, S., Dubcovsky, J. Regional barley, common wheat and triticale, and durum wheat performance tests in California. Available online <a href='http://smallgrains.ucdavis.edu/'><b>here</b></a>",
+				"Ottman, M.J., Doerge, T.A., Martin, E.C., 2000. Durum grain quality as affected by nitrogen fertilization near anthesis and irrigation during grain fill. Agronomy Journal 92, 1035-1041.",
+				"Wang, G., Brunson, K., Thorp, K., Ottman, M., 2013. Cultivar and nitrogen effects on yield and grain protein in irrigated durum wheat. Forage and Grain Report, University of Arizona College of Agriculture and Life Sciences, May 2013. Available online: <a href='http://hdl.handle.net/10150/312150'><b>here</b></a> ",
+
 			]
 		},
 
@@ -461,7 +528,14 @@ data = [{
 			"linkText": "",
 			"refs": [
 				"Zotarelli, L., Dukes, M.D., Scholberg, J.M.S., Hanselman, T., Le Femminella, K.,  Munoz-Carpena, R., 2008. Nitrogen use and water use efficiency of zucchini squash for a plastic mulch bed system on a sandy soil. Scientia Horticulturae 116, 8-16. ",
-				"Rodas-Gaitan, H., A., Rodriguez-Fuentes, H., Ojeda-Zacarias, M. del, Vidales-Contreras, J.A., Luna-Maldonado, A.I., 2012. Curvas de absorbcion de macronutrientes en calabacita italiana (Cucurbita pepo L.). Rev. Fitotec. Mex. 35(5), 57-60. "
+				"Rodas-Gaitan, H., A., Rodriguez-Fuentes, H., Ojeda-Zacarias, M. del, Vidales-Contreras, J.A., Luna-Maldonado, A.I., 2012. Curvas de absorbcion de macronutrientes en calabacita italiana (Cucurbita pepo L.). Rev. Fitotec. Mex. 35(5), 57-60. ",
+				"Chance, W.O., Somda, Z.C., Mills, H.A., 1999. Effect of nitrogen form during the flowering period on zucchini squash growth and nutrient element uptake, Journal of Plant Nutrition, 22:3, 597-607.",
+				"Huett, D.O., Dettman, E.B., 1992. Nutrient uptake and partitioning by zucchini squash, head lettuce and potato in response to nitrogen. Australian Journal of Agricultural Research 43, 1653-1665.",
+				"Kolota, E., Slociak, A., 2006. Nitrogen fertilization of zucchini harvested at different stages of fruit development. Acta Horticulturae 700, 121.124.",
+				"Martinetti, L., Paganini, F., 2006. Effect of organic and mineral fertilisation on yield and quality of zucchini. Acta Horticulturae 700, 125-128.",
+				"Rouphael, Y., Colla, G., 2005. Growth, yield, fruit quality and nutrient uptake of hydroponically cultivated zucchini squash as affected by irrigation systems and growing seasons. Scientia Horticulturae 105, 177–195.",
+				"Rouphael, Y., Colla, G., 2009. The influence of drip irrigation or subirrigation on zucchini squash grown in closed-loop substrate culture with high and low nutrient solution concentrations. HORTSCIENCE 44, 306–311.",
+				""
 			]
 		}
 	]
