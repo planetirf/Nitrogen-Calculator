@@ -9,27 +9,27 @@
     <form id="test">
 
       <div>
-          <input type="radio" class="options" name="root_type" id="shallow" checked='true'> <label for ="shallow">Shallow</label>
+          <input type="radio" class="options" name="root_type" id="shallow" > <label for ="shallow">Shallow</label>
           <input type="radio" class="options" name="root_type" id="deep"><label for ="deep">Deep</label> <br>
         </div>
         <div>
-          <input type="radio" class="options" name="plant_stage" id="young" checked><label for ="young">Young</label>
+          <input type="radio" class="options" name="plant_stage" id="young" =''><label for ="young">Young</label>
           <input type="radio" class="options" name="plant_stage" id="mature"><label for ="mature">Mature</label><br>
         </div>
         <div>
-          <input type="radio" class="options" name="irr_type" id="drip" checked><label for ="drip">Drip</label>
+          <input type="radio" class="options" name="irr_type" id="drip" =''><label for ="drip">Drip</label>
           <input type="radio" class="options" name="irr_type" id="furrow"><label for ="furrow">Furrow</label><br>
         </div>
         <div>
-          <input type="radio" class="options" name="soil_type" id="fine" checked><label for ="fine">Fine</label>
+          <input type="radio" class="options" name="soil_type" id="fine" =''><label for ="fine">Fine</label>
           <input type="radio" class="options" name="soil_type" id="coarse"><label for ="coarse">Coarse</label><br>
         </div>
         <div>
-          <input type="radio" class="options" name="residual_nitrate" id="low_N" checked><label for ="low_N">Low</label>
+          <input type="radio" class="options" name="residual_nitrate" id="low_N" =''><label for ="low_N">Low</label>
           <input type="radio" class="options" name="residual_nitrate" id="high_N"><label for ="high_N">High</label><br>
         </div>
         <div>
-          <input type="radio" class="options" name="irr_level" id="low" checked><label for ="low">Low</label>
+          <input type="radio" class="options" name="irr_level" id="low" =''><label for ="low">Low</label>
           <input type="radio" class="options" name="irr_level" id="high"><label for ="low">High</label>
         </div>
     </form>
@@ -1215,7 +1215,7 @@ function bool_checker(){
 
 };
 function bool_changer(){
-  
+
 };
 
  document.getElementById('test').addEventListener('click',bool_checker);

@@ -322,7 +322,7 @@
           <div class="Intro">
 
 
-              <h1>Nitrogen Calculator</h1>
+              <h1>Nitrogen Calculator For Central Valley Crops</h1>
               <h6> <i><b>Created by Irfan Ainuddin, Patricia Lazicki and Daniel Geisseler* </b></i></h6>
 
 	    <div id="NoScriptPopup"><h1 style="font-size:1.1em; color:red">Javascript is disabled on your browser.
@@ -364,7 +364,7 @@
         <div class="InputDivs" id="yieldInput">
           <label for="ExpectedYield">C. Expected yield:</label>
 
-          <input type="number" value="5" id="ExpectedYield" required>
+          <input type="number" value="" id="ExpectedYield" required>
           <span for="Units">Units: </span>
           <select id="Units"></select>
         </div><br>
@@ -373,13 +373,13 @@
         <div  class="InputDivs">
           <label for="PlantingDate">D. Planting date: </label>
 
-          <input type="date" id="PlantingDate" placeholder="" value="2018-01-01" required>
+          <input type="date" id="PlantingDate" placeholder="" value="" required>
         </div><br>
 
       <div class="InputDivs">
          <label for="HarvestDate">E. Harvest date: </label>
 
-         <input type="date" id="HarvestDate" placeholder="" value="2018-03-01" required>
+         <input type="date" id="HarvestDate" placeholder="" value="" required>
       </div></div><br>
 
       <!-- <div id="bcd" style="display:none"> The planting date is: <input id="datePlant" type="date"/><br/>
@@ -390,9 +390,9 @@
           <div id="outputz"></div>
 
       <div class = "InputDivs" id="abc"> The planting date is <br/>
-          <input id="PlantingDateIE" type="text" onfocus="this.value=''" value="mm/dd/yyyy"><br/>
+          <input id="PlantingDateIE" type="text" onfocus="this.value=''" placeholder="mm/dd/yyyy"><br/>
           The harvest date is <br/>
-          <input id="HarvestDateIE" type="text" onfocus="this.value=''" value="mm/dd/yyyy"><br/>
+          <input id="HarvestDateIE" type="text" onfocus="this.value=''" placeholder="mm/dd/yyyy"><br/>
 
       </div>
 
@@ -536,13 +536,13 @@
         <div class="InputDivs" id="waterApplied">
           <label for="inchesOfWater">L. Acre inches of water applied:</label>
 
-          <input id="inchesOfWater" type="number" value="10">
+          <input id="inchesOfWater" type="number" value="">
         </div><br>
 
         <div class="InputDivs" id="nitrogenConcentration">
           <label for="NppmWater">M. <strong>N</strong> concentration:</label>
 
-          <input id="NppmWater" type="number" value="10">
+          <input id="NppmWater" type="number" value="">
 
           <span for="NppmWaterUnits">Units:</span>
             <select id="NppmWaterUnits">
@@ -596,7 +596,7 @@
         <div class="InputDivs" id="residualNitrate">
           <label for="NppmSoil">O.  Residual soil nitrate:  </label>
 
-          <input id="NppmSoil" value="10" type="number" step="">
+          <input id="NppmSoil" value="" type="number" step="">
 
           <span for="NppmSoilUnits"> Units:</span>
             <select class="test" id="NppmSoilUnits">
@@ -608,7 +608,7 @@
         <div class="InputDivs" class="">
           <label for="samplingDepth"> P. Sampling depth (inches):</label>
 
-          <input id="samplingDepth" value="6" type="number">
+          <input id="samplingDepth" value="" type="number">
         </div><br>
 
         <div class="InputDivs" id="soilOrganicMatter">
@@ -762,7 +762,7 @@
    </div>
   </body>
 <!-- N calc scripts -->
-  <script type="text/javascript" src="data2test.json"></script>
-  <script type="text/javascript" src="scripts_test2.js"></script>
+  <script type="text/javascript" src="data.json"></script>
+  <script type="text/javascript" src="scripts.js"></script>
 
 </html>
